@@ -60,24 +60,33 @@ function Grid() {
     </div>
 
  
+    <div className='phone:hidden mt-[10%]'>
+        <div className='flex flex-row mb-[5%] capitalize font-bold items-center justify-center'>
+            unleash your style
+        </div>
+        <div className='  relative pb-[110%]  w-full'>
+          
+          <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              className=" phone:hidden px-[22%]  absolute w-full h-full"
+            >
+              {slideCards.map(c=>{
+                return <div key={c.num}>
+                            <SwiperSlide key={c.num}>
+                                <SwiperCard card={c}/>
+                                
+                              </SwiperSlide>
+                              
+                      </div>
+              })}
+                            
+            </Swiper>
+          </div>
+        </div>
 
-    <div className=' relative pb-[100%] mt-[15%] w-full'>
-      <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          className=" phone:hidden px-[20%]  absolute w-full h-full"
-        >
-          {slideCards.map(c=>{
-            return <div key={c.num}>
-                        <SwiperSlide key={c.num}>
-                            <SwiperCard card={c}/>
-                          </SwiperSlide>
-                  </div>
-          })}
-                        
-        </Swiper>
-      </div>
+
     </>
   )
 }
@@ -85,12 +94,19 @@ function Grid() {
 const SwiperCard = ({card})=>{
   const swiperSlide = useSwiperSlide()
   return<>
-        <div className={`relative flex items-center justify-center ${swiperSlide.isActive  ? '':'p-[5%]' } transition-all duration-200`} >
-          <img src="https://i.pinimg.com/736x/86/a6/1a/86a61a1ba2ad9a6e147f62b4cdee63ab.jpg" alt="" />
-          <div  className={`  text-black w-full h-full absolute flex items-center justify-center text-center z-10 translate-y-[-100%]`}>
-          {card.num}
-          </div>
+        <div className={`relative  ${swiperSlide.isActive  ? '':'' } pb-[150%]  bg-red-500 transition-all duration-200`} >
+        
+         <div className={`absolute w-full h-full ${swiperSlide.isActive ? '':'p-[5%]'} transition-all duration-400`}>
+           <img loading="lazy" src="https://i.pinimg.com/736x/86/a6/1a/86a61a1ba2ad9a6e147f62b4cdee63ab.jpg"
+           className={`w-full h-full `} alt="" />
+            <div className='text-[90%] text-black  flex flex-col  items-center justify-center'>
+                    <div >shirt</div>
+                    <div >10.5$</div>
+            </div>
+         </div>
+    
         </div>
+
   </>
 }
 

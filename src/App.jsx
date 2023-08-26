@@ -33,6 +33,7 @@
 import React, { useState } from 'react'
 import {Routes,Route,Link, BrowserRouter, useLocation} from 'react-router-dom'
 import NavBar from './components/Navbar/NavBar'
+import Footer from './components/Fotter/Fotter'
 import Home from './pages/Home'
 import Store from './pages/Store'
 import { WishlistContext,setWishlistContext } from './contexts/cartContext'
@@ -50,6 +51,7 @@ function App() {
                   <Route path='/' element={<Home/>}></Route>
                   <Route path='/store' element={<Store />}></Route>
                </Routes>
+               <Footer></Footer>
          </setWishlistContext.Provider>
      </WishlistContext.Provider>
      </>
