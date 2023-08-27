@@ -2,6 +2,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { useSwiperSlide } from 'swiper/react';
+import './styles/grid.css'
 
 const slideCards = [
   {
@@ -41,18 +42,18 @@ function Grid() {
     <div className='w-full mt-[5%] px-[10%] hidden phone:block mb-[2rem]'>
         <div className=' w-full h-full grid gap-[2%] gap-x-[1%] grid-cols-3'>
            
-             <div style={{background:`url('https://media.gettyimages.com/id/1127827069/photo/flat-lay-of-menswear-with-personal-accessories.jpg?s=612x612&w=gi&k=20&c=l3wArOxgaSqAbjUHHskiPQEot858PAgQQO4kYwxExJ4=')`,backgroundSize:'cover',backgroundPosition:'center'}}
-              className='bg-p1 pb-[80%] w-[100%] bg-cover bg-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'>
+             <div 
+              className='bg-p1 pb-[70%] g1ImgBack relative w-[100%] bg-cover bg-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'>
              </div>
            
-             <div className='bg-p1 pb-[80%] bg-repeat w-[100%] bg-cover bg-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'
-             style={{backgroundRepeat:'no-repeat',background:`url('https://img.freepik.com/free-photo/portrait-handsome-confident-stylish-hipster-lambersexual-modelmodern-man-dressed-white-shirt-fashion-male-posing-street-background-sunglasses-outdoors-sunset_158538-20624.jpg?w=360')`,backgroundPosition:'center',backgroundSize:'cover'}}></div>
+             <div className='bg-p1 pb-[70%] g2ImgBack bg-repeat w-[100%] bg-cover bg-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'
+             ></div>
             
-             <div className='bg-p1 pb-[40%] w-[100%]  row-span-2 bg-cover bg-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]' 
-              style={{background:`url('https://www.kosha.co/journal/wp-content/uploads/2022/06/casual-outfit-accessories.jpg')`,backgroundPosition:'center',backgroundSize:'cover'}}></div>
+             <div className='bg-p1 pb-[70%] g3ImgBack w-[100%]  row-span-2 bg-cover bg-center relative shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'>
+             </div>
             
-             <div className='bg-p1 pb-[40%] w-[100%] col-span-2 bg-cover bg-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'
-             style={{backgroundPosition:'center',backgroundSize:'cover',background:`url('https://www.apetogentleman.com/wp-content/uploads/2022/05/FALL-WINTER-TRENDS.jpg')`}}></div>
+             <div className='bg-p1 pb-[45%] w-[100%] g4ImgBack col-span-2 bg-cover bg-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]'
+             ></div>
                        
                                
 

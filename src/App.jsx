@@ -44,16 +44,18 @@ function App() {
   )
   return (
      <>
-     <WishlistContext.Provider value={wishlist}>
-         <setWishlistContext.Provider value={setWishlist}>
-               <NavBar></NavBar>
-               <Routes>
-                  <Route path='/' element={<Home/>}></Route>
-                  <Route path='/store' element={<Store />}></Route>
-               </Routes>
-               <Footer></Footer>
-         </setWishlistContext.Provider>
-     </WishlistContext.Provider>
+     <div className=' bg-light2'>
+      <WishlistContext.Provider value={wishlist}>
+            <setWishlistContext.Provider value={setWishlist}>
+                  <NavBar></NavBar>
+                  <Routes>
+                     <Route path='/' element={<Home/>}></Route>
+                     <Route path='/store' element={<Store />}></Route>
+                  </Routes>
+                  <Footer></Footer>
+            </setWishlistContext.Provider>
+      </WishlistContext.Provider>
+     </div>
      </>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Bottom from '../components/Home/Bottom'
 import Grid from '../components/Home/Grid'
+import GridContent from '../components/Home/GridContent'
 import Header from '../components/Home/Header'
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       <Header></Header>
       <Grid></Grid>
       <Bottom></Bottom>
+      <GridContent></GridContent>
      </div>
      </>
   )

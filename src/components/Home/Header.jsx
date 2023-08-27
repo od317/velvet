@@ -17,9 +17,10 @@ function Header() {
                     </div>
                 </div>
                 
-                <div className=' w-[100%] relative phone:w-[50%] flex flex-col phone:flex-row justify-end '>
+                <div className=' w-[100%] pb-[70%] phone:pb-[38%] phone:w-[50%] relative  '>
 
-                    <img className='h-[100%]' src="https://img.freepik.com/free-photo/portrait-young-beautiful-hipster-bad-girl-trendy-red-hoodie-earring-her-nose-positive-model-having-fun-shows-tongue_158538-15460.jpg" alt="" />
+                    <img className='h-[100%] w-full absolute' src="https://img.freepik.com/free-photo/portrait-young-beautiful-hipster-bad-girl-trendy-red-hoodie-earring-her-nose-positive-model-having-fun-shows-tongue_158538-15460.jpg" alt="" />
+           
                 </div>
 
             </div>

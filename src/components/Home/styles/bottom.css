@@ -1,0 +1,20 @@
+.imgBg1{
+    background-image: url('https://img.freepik.com/free-photo/positive-woman-stylish-outfit-moves-pink-background-pretty-woman-white-blouse-red-high-heels-is-smiling-camera_197531-18611.jpg?w=2000');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imgBg2{
+    background-image: url('https://img.freepik.com/free-photo/wonderful-young-woman-funny-dancing-with-sincere-smile-purple-background_197531-7067.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imgBg3{
+    background-image: url('https://img.freepik.com/free-photo/curly-brunette-dancing-pink-background-portrait-girl-great-mood-warm-sweater-mom-jeans_197531-13499.jpg?w=2000');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,28 @@
+.g1ImgBack{
+    background-image: url('https://media.gettyimages.com/id/505729648/photo/fashion-model-pamina-wei%C3%A3-wearing-sabrina-weigt-dress-and-jacket-sunglasses-kerbholz-socks.jpg?s=612x612&w=gi&k=20&c=g9oIc8NL_qt9bi0hjF8TTxzqwOM1ieHCY6AWyQgJvOU=');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.g2ImgBack{
+    background-image: url('https://img.freepik.com/premium-photo/girl-holding-shopping-bags-shopping-store-style-light-red-amber-exquisite-cloth_780838-6807.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.g3ImgBack{
+    background-image: url('https://i.pinimg.com/736x/d8/fb/cb/d8fbcb29d05e4855a9c31e425959f4cc.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.g4ImgBack{
+    background-image: url('https://img.freepik.com/premium-photo/smiling-attractive-young-women-shopping-shoes-store-ai-generated_154515-11542.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
