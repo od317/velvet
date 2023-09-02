@@ -1,0 +1,10 @@
+.poly{
+    clip-path: polygon(4% 15%, 86% 0, 96% 96%, 0 100%);
+}
+
+.imgb{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),wurl('https://img.freepik.com/premium-photo/san-francisco-urban-woman-commuter-walking-drinking-coffee-morning-confident-asian-pedestrian-going-work-with-crowd-people-background-busy-city-young-music-girl-with-headsets_678158-5411.jpg?w=2000');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

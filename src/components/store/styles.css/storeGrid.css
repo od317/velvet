@@ -1,0 +1,10 @@
+.storePhoneHeader{
+     background-image: url('https://s3-media0.fl.yelpcdn.com/bphoto/s3J5l1SCn7p1fRY8zdU2cg/348s.jpg');
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.storePhoneHeader .abs{
+    background: transparent;
+}

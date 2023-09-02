@@ -14,6 +14,7 @@ export default {
     colors: {
       p1:'#fdfffe',
       dark1:'#95BDFF',
+      dark2:'#191919',
       light1:'#47A992',
       light2:'#EEEEEE',
       light3:'#fefefe',
