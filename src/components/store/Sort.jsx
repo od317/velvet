@@ -8,7 +8,7 @@ function Sort({handleSortChange,sort}) {
   }
 
   return (
-    <div className='p-[2%] relative   phone:flex bg-light2 flex-row justify-between items-center'>
+    <div className='p-[2%] relative  flex phone:flex  flex-row  justify-between items-center'>
           <div className=' hidden phone:block'>showing 18 of 100 items</div>
              <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}} className='phone:relative z-[6] w-[30%] phone:w-[12%] text-start'>
                     <div  className=' phone:border-black phone:border-[1px]  flex flex-row justify-between items-center  px-[5%] cursor-pointer '>

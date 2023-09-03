@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import FIlters from './FIlters'
 import Sort from './Sort'
 import StoreGrid from './StoreGrid'
-
+import vimg from '../../assets/vimg.jpg'
 function StoreLayout({sortP}) {
 
      const [sort,setSort] = useState(sortP||'recomended')
@@ -109,7 +109,7 @@ function StoreLayout({sortP}) {
                      src="https://s3-media0.fl.yelpcdn.com/bphoto/s3J5l1SCn7p1fRY8zdU2cg/348s.jpg" alt="" />
          </div>
       
-         <div className='phone:hidden bg-light2 z-[2] p-[3%] rounded-tl-3xl w-[70%]'>
+         <div className='phone:hidden bg-light2 z-[2] pl-[2%] flex flex-row justify-between rounded-tl-3xl w-[70%]'>
              <Sort sort={sort} handleSortChange={handleSortChange} />
              <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
@@ -118,7 +118,7 @@ function StoreLayout({sortP}) {
               <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
       
-         <div className=' phone:w-[80%] h-[300rem] z-[1] bg-light2 px-[2%] pb-[100%]'>
+         <div className=' phone:w-[80%]  z-[1] bg-light2 px-[2%] pb-[100%]'>
               <StoreGrid items={items_show}/>
          </div>
 
@@ -135,7 +135,7 @@ const items = [
           price:'10',
           date:'15',
           id:'t1',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
      },
      {
           name:'tshirt',
@@ -143,7 +143,7 @@ const items = [
           price:'30',
           date:'1',
           id:'t2',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
      
      },
      {
@@ -152,7 +152,7 @@ const items = [
           price:'15',
           date:'13',
           id:'t10',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
      
      },
      {
@@ -161,7 +161,7 @@ const items = [
           price:'120',
           date:'10',
           id:'t4',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
      
      },
      {
@@ -170,7 +170,7 @@ const items = [
           price:'20',
           date:'100',
           id:'t5',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
      
      },
      {
@@ -179,7 +179,7 @@ const items = [
           price:'13',
           date:'12',
           id:'t6',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
      
      },
      {
@@ -188,7 +188,7 @@ const items = [
           price:'30',
           date:'1',
           id:'t7',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
      
      },
      {
@@ -197,7 +197,7 @@ const items = [
           price:'11',
           date:'15',
           id:'t8',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
      
      },
      {
@@ -206,7 +206,15 @@ const items = [
           price:'50',
           date:'21',
           id:'t9',
-          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+          img:vimg
+     },
+     {
+          name:'tshirt',
+          size:'2xl',
+          price:'150',
+          date:'22',
+          id:'t15',
+          img:vimg
      },
 ]
 

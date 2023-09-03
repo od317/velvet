@@ -3,7 +3,6 @@ import { useContext} from 'react'
 import {WishlistContext, setWishlistContext} from '../contexts/cartContext'
 import { Routes, Route, useSearchParams } from 'react-router-dom'
 import {useEffect} from 'react'
-import HeaderSlider from '../components/store/HeaderSlider'
 import StoreLayout from '../components/store/StoreLayout'
 function Store() {
   const wishlist = useContext(WishlistContext)

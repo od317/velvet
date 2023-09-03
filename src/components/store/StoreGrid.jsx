@@ -34,8 +34,9 @@ function StoreGrid({items}) {
               return(<div key={i}>
               <div className='w-[100%]'>
                     <div className='mb-[5%]'>
-                    <Link to={`/product/${v.id}`}>
-                          <img src={`${v.img}`} alt="" />
+                    <Link className=' ' to={`/product/${v.id}`}>
+                           <div style={{backgroundImage: `url(${v.img})`}} className=' backimg bg-gray relative w-full pb-[150%]'>
+                           </div>
                     </Link>
                     </div>
                     <div className='flex flex-col'>
