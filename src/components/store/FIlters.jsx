@@ -32,7 +32,7 @@ function FIlters({handlefilterChange,filter}) {
 
 
             <div className=' phone:hidden  w-[20%] text-white rounded-full relative  '>
-                  <div className='  w-[110%] pb-[110%] translate-x-[50%] bg-dark2 rounded-full relative'>
+                  <div className='  w-[100%] pb-[100%] translate-x-[50%] bg-dark2 rounded-full relative'>
                        <div className=' absolute flex items-center text-[150%] justify-center w-full h-full '>
                        <ion-icon name="filter-outline"></ion-icon>
                        </div>

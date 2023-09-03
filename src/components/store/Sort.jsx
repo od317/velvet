@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-function Sort({handleSortChange,sort}) {
+function Sort({handleSortChange,sort,numShow}) {
   const [showSort,setShowSort] = useState(false)
 
   const handleClick = (value)=>{
@@ -9,7 +9,7 @@ function Sort({handleSortChange,sort}) {
 
   return (
     <div className='p-[2%] relative  flex phone:flex  flex-row  justify-between items-center'>
-          <div className=' hidden phone:block'>showing 18 of 100 items</div>
+          <div className=' hidden phone:block'>showing {numShow} of 100 items</div>
              <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}} className='phone:relative z-[6] w-[30%] phone:w-[12%] text-start'>
                     <div  className=' phone:border-black phone:border-[1px]  flex flex-row justify-between items-center  px-[5%] cursor-pointer '>
                       <label className='cursor-pointer hidden phone:block' htmlFor="">{sort}</label>

@@ -35,7 +35,7 @@ function StoreGrid({items}) {
               <div className='w-[100%]'>
                     <div className='mb-[5%]'>
                     <Link className=' ' to={`/product/${v.id}`}>
-                           <div style={{backgroundImage: `url(${v.img})`}} className=' backimg bg-gray relative w-full pb-[150%]'>
+                           <div style={{backgroundImage: `url(${v.img})`}} className=' backimg bg-gray relative w-full pb-[150%] phone:pb-[120%]'>
                            </div>
                     </Link>
                     </div>

@@ -10,7 +10,6 @@ function StoreLayout({sortP}) {
      const [items_show,setItemsShow] = useState(
           sortP ? StartFilter() : items
      )
-
        function StartFilter(){
           let nextItems = items
           switch(sort){
@@ -100,7 +99,7 @@ function StoreLayout({sortP}) {
 
   return (<>
     <div className=' hidden phone:block'>
-          <Sort sort={sort} handleSortChange={handleSortChange} />
+          <Sort sort={sort} numShow={items_show.length} handleSortChange={handleSortChange} />
     </div>
     <div className=' flex flex-col relative phone:flex-row'>
       

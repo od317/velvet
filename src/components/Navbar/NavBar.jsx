@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useRef,useContext } from 'react'
+import { useState,useRef,useContext,useEffect } from 'react'
 import { WishlistContext,setWishlistContext } from '../../contexts/cartContext'
 import {Routes,Route,Link, BrowserRouter, useLocation} from 'react-router-dom'
 import TopNav from './TopNav'
@@ -12,8 +12,24 @@ function NavBar() {
     const [curScroll,setCurScroll] = useState(0)
     const [show,setShow] = useState(true)
     const [showMore,setShowMore] = useState(false)
-
+    const [showSide,setShowSide] = useState(false)
     const navRef = useRef(null)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+    useEffect(()=>{
+        const handleWindowResize = ()=>{
+            setWindowWidth(window.innerWidth)
+            if(window.innerWidth >= 450){
+                 document.querySelector('body').style.overflowY='auto'
+                 setShow(false)
+            }
+               
+        }
+        window.addEventListener('resize', handleWindowResize)
+        return ()=>{
+            window.removeEventListener('resize',handleWindowResize)
+        }
+    })
 
     window.addEventListener('scroll',(e)=>{
         
@@ -36,10 +52,16 @@ function NavBar() {
         setCurScroll(window.scrollY)
     }) 
 
-   
+   const handleSideShowChange = (value)=>{
+    setShowSide(value)
+    if(value)
+      document.querySelector('body').style.overflowY='hidden'
+    else 
+      document.querySelector('body').style.overflowY='auto'
+}
     
     return (<>
-        <div ref={navRef} className={` ${show? '':' translate-y-[-100%]'}  hidden phone:block bg-p1 text-black  transition-all duration-[500ms]   sticky top-0 z-[10] py-[.7%] `}>
+        <div ref={navRef} className={`   hidden phone:block bg-p1 text-black  transition-all duration-[500ms]   sticky top-0 z-[10] py-[.7%] `}>
             <div className=' relative flex flex-row justify-center '>
                         <div className='w-[25%] flex justify-end items-center'>
                             <label htmlFor="" className='border-[1px] border-black px-[5%] p-[1%]'>
@@ -103,16 +125,22 @@ function NavBar() {
 
         <div className=' fixed  z-[20] w-full phone:hidden'>
                  <div className='flex flex-row justify-between px-[5%] py-[5%] w-full '>
-                       <div>
+                       <div onClick={()=>handleSideShowChange(!showSide)}>
                           <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                        </div>
                        <div className=' w-[20%] flex justify-evenly'>
                           <ion-icon name="search-outline"></ion-icon>
                           <ion-icon name="heart-outline"></ion-icon>
-                          <Link to={'/'}>Home</Link>
-                          <Link  to={'/store'}>Store</Link>
                        </div>
                  </div>
+        </div>
+
+     
+        <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all duration-100 phone:hidden fixed h-full w-[100%] flex flex-row z-20`}>
+            <div className=' w-[60%] bg-light1 h-full flex flex-col'>
+                 <div>Velevet</div>
+            </div>
+            <div onClick={()=>handleSideShowChange(false)} className=' w-[40%] h-full'></div>
         </div>
 
     </>
