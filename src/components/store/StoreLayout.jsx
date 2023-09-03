@@ -135,6 +135,7 @@ const items = [
           price:'10',
           date:'15',
           id:'t1',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
      },
      {
           name:'tshirt',
@@ -142,13 +143,17 @@ const items = [
           price:'30',
           date:'1',
           id:'t2',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+     
      },
      {
           name:'jacket',
           size:'xl',
           price:'15',
           date:'13',
-          id:'t10'
+          id:'t10',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+     
      },
      {
           name:'shirt',
@@ -156,6 +161,8 @@ const items = [
           price:'120',
           date:'10',
           id:'t4',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+     
      },
      {
           name:'tshirt',
@@ -163,6 +170,8 @@ const items = [
           price:'20',
           date:'100',
           id:'t5',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+     
      },
      {
           name:'shirt',
@@ -170,6 +179,8 @@ const items = [
           price:'13',
           date:'12',
           id:'t6',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+     
      },
      {
           name:'jacket',
@@ -177,6 +188,8 @@ const items = [
           price:'30',
           date:'1',
           id:'t7',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+     
      },
      {
           name:'jacket',
@@ -184,6 +197,8 @@ const items = [
           price:'11',
           date:'15',
           id:'t8',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+     
      },
      {
           name:'tshirt',
@@ -191,6 +206,7 @@ const items = [
           price:'50',
           date:'21',
           id:'t9',
+          img:'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
      },
 ]
 
