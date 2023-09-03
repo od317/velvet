@@ -5,15 +5,22 @@
     background-repeat: no-repeat;
 }
 
-.imgBg2{
-    background-image: url('https://img.freepik.com/free-photo/wonderful-young-woman-funny-dancing-with-sincere-smile-purple-background_197531-7067.jpg');
+.imgBack1{
+    background-image: url('https://media.gettyimages.com/id/505729648/photo/fashion-model-pamina-wei%C3%A3-wearing-sabrina-weigt-dress-and-jacket-sunglasses-kerbholz-socks.jpg?s=612x612&w=gi&k=20&c=g9oIc8NL_qt9bi0hjF8TTxzqwOM1ieHCY6AWyQgJvOU=');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.imgBg3{
-    background-image: url('https://img.freepik.com/free-photo/curly-brunette-dancing-pink-background-portrait-girl-great-mood-warm-sweater-mom-jeans_197531-13499.jpg?w=2000');
+.imgBack2{
+    background-image: url('https://media.gettyimages.com/id/506927944/photo/fashion-student-jaime-lo-wears-a-dress-from-korea-acne-studio-jacket-dior-bag-topshop-hat-and.jpg?s=612x612&w=gi&k=20&c=LelsB0PKf-vV9RX1L-dZq575QbkBiHlC_Csdbv12ZOc=');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imgBack3{
+    background-image: url('https://i.pinimg.com/1200x/18/70/2c/18702c0361bb0bd0e917272d69dc6c77.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -109,6 +109,8 @@ function NavBar() {
                        <div className=' w-[20%] flex justify-evenly'>
                           <ion-icon name="search-outline"></ion-icon>
                           <ion-icon name="heart-outline"></ion-icon>
+                          <Link to={'/'}>Home</Link>
+                          <Link  to={'/store'}>Store</Link>
                        </div>
                  </div>
         </div>

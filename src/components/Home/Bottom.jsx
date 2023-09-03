@@ -41,18 +41,18 @@ function Bottom() {
 
           <div className='w-full grid grid-cols-2 phone:hidden px-[10%] mb-[10%] gap-[5%]'>
                 
-                  <div style={{backgroundPosition:'center',backgroundSize:'cover',background:`url('https://media.gettyimages.com/id/505729648/photo/fashion-model-pamina-wei%C3%A3-wearing-sabrina-weigt-dress-and-jacket-sunglasses-kerbholz-socks.jpg?s=612x612&w=gi&k=20&c=g9oIc8NL_qt9bi0hjF8TTxzqwOM1ieHCY6AWyQgJvOU=')`}}
-                  className=' imgBack col-span-2 bg-cover bg-center pb-[100%]'>
+                  <div 
+                  className=' imgBack1 col-span-2 bg-cover bg-center pb-[100%]'>
 
                   </div>
                   
-                  <div style={{backgroundPosition:'center',backgroundSize:'cover',background:`url('https://media.gettyimages.com/id/506927944/photo/fashion-student-jaime-lo-wears-a-dress-from-korea-acne-studio-jacket-dior-bag-topshop-hat-and.jpg?s=612x612&w=gi&k=20&c=LelsB0PKf-vV9RX1L-dZq575QbkBiHlC_Csdbv12ZOc=')`}}
-                  className=' imgBack pb-[100%]'>
+                  <div 
+                  className=' imgBack2 pb-[100%]'>
 
                   </div>
                   
-                  <div style={{backgroundPosition:'center',backgroundSize:'cover',background:`url('https://i.pinimg.com/1200x/18/70/2c/18702c0361bb0bd0e917272d69dc6c77.jpg')`}}
-                  className=' imgBack pb-[100%]'>
+                  <div 
+                  className=' imgBack3 pb-[100%]'>
 
 
                   </div>
