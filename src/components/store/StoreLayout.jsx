@@ -3,14 +3,19 @@ import FIlters from './FIlters'
 import Sort from './Sort'
 import StoreGrid from './StoreGrid'
 import vimg from '../../assets/vimg.jpg'
-function StoreLayout({sortP}) {
+function StoreLayout({sortP,filterP}) {
 
      const [sort,setSort] = useState(sortP||'recomended')
-     const [filter,setFilter] = useState('')
+     const [filter,setFilter] = useState(filterP||'')
      const [items_show,setItemsShow] = useState(
-          sortP ? StartFilter() : items
+          sortP ? StartSort() : items
      )
-       function StartFilter(){
+     
+     function StartFilter(){
+
+     }
+
+     function StartSort(){
           let nextItems = items
           switch(sort){
                case 'price low to high':
@@ -33,6 +38,7 @@ function StoreLayout({sortP}) {
           }
            return nextItems
      }
+     
 
     const handlefilterChange = (value)=>{
          if(filter === value){

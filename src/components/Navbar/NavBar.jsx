@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useRef,useContext,useEffect } from 'react'
 import { WishlistContext,setWishlistContext } from '../../contexts/cartContext'
-import {Routes,Route,Link, BrowserRouter, useLocation} from 'react-router-dom'
+import {Routes,Route,NavLink, BrowserRouter, useLocation} from 'react-router-dom'
 import TopNav from './TopNav'
 function NavBar() {
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
@@ -71,9 +71,9 @@ function NavBar() {
                         <div className='w-[50%]'>        
                                         <nav className='flex flex-row justify-evenly h-full items-center'>
                                     
-                                            <Link to={'/'}>Home</Link>
-                                            <Link  to={'/store'}>Store</Link>
-                                            <Link className='  flex items-center justify-center h-full' onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} to={'/store/new'}>New</Link>
+                                            <NavLink to={'/'}>Home</NavLink>
+                                            <NavLink  to={'/store'}>Store</NavLink>
+                                            <NavLink className='  flex items-center justify-center h-full' onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} to={'/store/new'}>New</NavLink>
                                     
                                         </nav>
 
@@ -96,12 +96,12 @@ function NavBar() {
                                                 <div className='flex flex-row w-[50%] p-[5%]'>
                                                       <div onClick={()=> setShowMore(false)} className=" flex flex-col ">
                                                         <label className=' font-bold text-[110%] ' htmlFor="">osama</label>
-                                                        <Link to={'store'}>
+                                                        <NavLink to={'/store'}>
                                                             <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">T-shirt</label>
-                                                        </Link>
-                                                        <Link to={'store'}>
+                                                        </NavLink>
+                                                        <NavLink to={'/store'}>
                                                             <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(2)} htmlFor="">shirt</label>
-                                                        </Link>
+                                                        </NavLink>
                                                       </div>
                                                 </div>
 
@@ -137,8 +137,34 @@ function NavBar() {
 
      
         <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all duration-100 phone:hidden fixed h-full w-[100%] flex flex-row z-20`}>
-            <div className=' w-[60%] bg-light1 h-full flex flex-col'>
-                 <div>Velevet</div>
+            <div className=' w-[60%] bg-light1 text-white p-[2%] h-full flex flex-col'>
+                
+                 <div className=' flex justify-between flex-row mt-[2%]'>
+                    <div className='w-[60%] border-white border-[1px] p-[1%] text-white text-center'>Velevet</div>
+                    <div className='flex p-[1%] items-center justify-center text-[180%] text-white'>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
+                 </div>
+
+                 <div className="grid grid-cols-1 gap-y-[10%] mt-[10%] pb-[20%] border-b-[1px] border-white text-[130%]">
+                      
+                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-light1':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to='/'>
+                            <ion-icon name="home-outline"></ion-icon>
+                            <span className="ml-[5%]">Home</span>
+                        </NavLink>
+
+                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-light1':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to='/store'>
+                            <ion-icon name="bag-outline"></ion-icon>
+                            <span className="ml-[5%]">Store</span>
+                        </NavLink>
+
+                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-light1':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to='/new'>
+                            <ion-icon name="planet-outline"></ion-icon>
+                            <span className="ml-[5%]">New</span>
+                        </NavLink>                                                       
+                        
+                 </div>
+
             </div>
             <div onClick={()=>handleSideShowChange(false)} className=' w-[40%] h-full'></div>
         </div>
