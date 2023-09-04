@@ -15,7 +15,23 @@ function NavBar() {
     const [showSide,setShowSide] = useState(false)
     const navRef = useRef(null)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
+    const sideBarLinks = [
+        {
+            name:'home',
+            dist:'',
+            icon:'home-outline'
+        },
+        {
+            name:'store',
+            dist:'store',
+            icon:'bag-outline'
+        },
+        {
+            name:'new',
+            dist:'new',
+            icon:'planet-outline'
+        },
+    ]
     useEffect(()=>{
         const handleWindowResize = ()=>{
             setWindowWidth(window.innerWidth)
@@ -58,7 +74,7 @@ function NavBar() {
       document.querySelector('body').style.overflowY='hidden'
     else 
       document.querySelector('body').style.overflowY='auto'
-}
+   }
     
     return (<>
         <div ref={navRef} className={`   hidden phone:block bg-p1 text-black  transition-all duration-[500ms]   sticky top-0 z-[10] py-[.7%] `}>
@@ -88,7 +104,7 @@ function NavBar() {
                                     </form>
                                     <button className='text-[#f54242] text-[150%]'>
                                     <ion-icon name="heart"></ion-icon>
-                                    {wishlist.length}
+                                    {wishlist}
                                     </button>
                          </div>
             </div>
@@ -123,7 +139,7 @@ function NavBar() {
 
 
 
-        <div className=' fixed  z-[20] w-full phone:hidden'>
+        <div className=' fixed text-[150%] z-[20] w-full phone:hidden'>
                  <div className='flex flex-row justify-between px-[5%] py-[5%] w-full '>
                        <div onClick={()=>handleSideShowChange(!showSide)}>
                           <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
@@ -147,22 +163,9 @@ function NavBar() {
                  </div>
 
                  <div className="grid grid-cols-1 gap-y-[10%] mt-[10%] pb-[20%] border-b-[1px] border-white text-[130%]">
-                      
-                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-light1':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to='/'>
-                            <ion-icon name="home-outline"></ion-icon>
-                            <span className="ml-[5%]">Home</span>
-                        </NavLink>
-
-                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-light1':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to='/store'>
-                            <ion-icon name="bag-outline"></ion-icon>
-                            <span className="ml-[5%]">Store</span>
-                        </NavLink>
-
-                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-light1':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to='/new'>
-                            <ion-icon name="planet-outline"></ion-icon>
-                            <span className="ml-[5%]">New</span>
-                        </NavLink>                                                       
-                        
+                      {sideBarLinks.map(l=>
+                        <SideBarLink key={l.dist}  handleSideShowChange={handleSideShowChange} l={l} />
+                      )}                        
                  </div>
 
             </div>
@@ -171,6 +174,16 @@ function NavBar() {
 
     </>
   )
+}
+
+
+const SideBarLink = ({handleSideShowChange,l})=>{
+    return(<>
+                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-light1':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to={`/${l.dist}`}>
+                            <ion-icon name={l.icon}></ion-icon>
+                            <span className="ml-[5%] capitalize">{l.name}</span>
+                        </NavLink>   
+          </>)
 }
 
 export default NavBar

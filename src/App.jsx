@@ -36,26 +36,41 @@ import NavBar from './components/Navbar/NavBar'
 import Footer from './components/Fotter/Fotter'
 import Home from './pages/Home'
 import Store from './pages/Store'
-import { WishlistContext,setWishlistContext } from './contexts/cartContext'
+import { WishlistContext,setWishlistContext,handleWishlistChangeContext } from './contexts/cartContext'
 import Product from './pages/Product'
 
 
 function App() {
   const [wishlist,setWishlist] = useState(
-   JSON.parse(localStorage.getItem("wishlist")) || []
+   new Set(JSON.parse(localStorage.getItem("wishlist")) || [])
   )
+  const handleWishlistEdit = (id)=>{        
+      if(wishlist.has(id)){
+             let nextWishList = new Set(Array.from(wishlist).filter(i => i !== id))
+             console.log(nextWishList)
+             setWishlist(nextWishList)
+             localStorage.setItem('wishlist',JSON.stringify(Array.from(nextWishList)))
+             return 
+            }
+      let nextWishList = new Set(Array.from(wishlist))
+      nextWishList.add(id)
+      setWishlist(nextWishList)
+      localStorage.setItem('wishlist',JSON.stringify(Array.from(nextWishList)))
+  }
   return (
      <>
      <div className=' bg-light2'>
       <WishlistContext.Provider value={wishlist}>
             <setWishlistContext.Provider value={setWishlist}>
-                  <NavBar></NavBar>
-                  <Routes>
-                     <Route path='/' element={<Home/>}></Route>
-                     <Route path='/store' element={<Store />}></Route>
-                     <Route path='/product/:id' element={<Product/>}></Route>
-                  </Routes>
-                  <Footer></Footer>
+                  <handleWishlistChangeContext.Provider value={handleWishlistEdit}>
+                              <NavBar></NavBar>
+                              <Routes>
+                              <Route path='/' element={<Home/>}></Route>
+                              <Route path='/store' element={<Store />}></Route>
+                              <Route path='/product/:id' element={<Product/>}></Route>
+                              </Routes>
+                              <Footer></Footer>
+                  </handleWishlistChangeContext.Provider>
             </setWishlistContext.Provider>
       </WishlistContext.Provider>
      </div>

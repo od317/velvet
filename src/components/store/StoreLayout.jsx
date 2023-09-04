@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import FIlters from './FIlters'
 import Sort from './Sort'
 import StoreGrid from './StoreGrid'
-import vimg from '../../assets/vimg.jpg'
+import items from '../../Data/items'
+
 function StoreLayout({sortP,filterP}) {
 
      const [sort,setSort] = useState(sortP||'recomended')
@@ -55,17 +56,17 @@ function StoreLayout({sortP,filterP}) {
       switch(value){
           case 'sm':
                nextItems = nextItems.filter(i=>{
-                    return i.size === 'sm'
+                    return i.size.has('sm')
                })
                break
           case 'medium':
                nextItems = nextItems.filter(i=>{
-                         return i.size === 'medium'
-                    })
+                    return i.size.has('medium')
+               })
                     break  
           case 'lg':
                nextItems = nextItems.filter(i=>{
-                         return i.size === 'lg'
+                         return i.size.has('lg')
                     })
                     break               
           default :
@@ -133,95 +134,7 @@ function StoreLayout({sortP,filterP}) {
 }
 
 
-const items = [
-     {
-          name:'shirt',
-          size:'sm',
-          price:'10',
-          date:'15',
-          id:'t1',
-          img:vimg
-     },
-     {
-          name:'tshirt',
-          size:'lg',
-          price:'30',
-          date:'1',
-          id:'t2',
-          img:vimg
-     
-     },
-     {
-          name:'jacket',
-          size:'xl',
-          price:'15',
-          date:'13',
-          id:'t10',
-          img:vimg
-     
-     },
-     {
-          name:'shirt',
-          size:'lg',
-          price:'120',
-          date:'10',
-          id:'t4',
-          img:vimg
-     
-     },
-     {
-          name:'tshirt',
-          size:'2xl',
-          price:'20',
-          date:'100',
-          id:'t5',
-          img:vimg
-     
-     },
-     {
-          name:'shirt',
-          size:'sm',
-          price:'13',
-          date:'12',
-          id:'t6',
-          img:vimg
-     
-     },
-     {
-          name:'jacket',
-          size:'sm',
-          price:'30',
-          date:'1',
-          id:'t7',
-          img:vimg
-     
-     },
-     {
-          name:'jacket',
-          size:'medium',
-          price:'11',
-          date:'15',
-          id:'t8',
-          img:vimg
-     
-     },
-     {
-          name:'tshirt',
-          size:'xl',
-          price:'50',
-          date:'21',
-          id:'t9',
-          img:vimg
-     },
-     {
-          name:'tshirt',
-          size:'2xl',
-          price:'150',
-          date:'22',
-          id:'t15',
-          img:vimg
-     },
-]
+
 
 
 export default StoreLayout
