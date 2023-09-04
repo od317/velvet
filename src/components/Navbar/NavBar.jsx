@@ -104,7 +104,7 @@ function NavBar() {
                                     </form>
                                     <button className='text-[#f54242] text-[150%]'>
                                     <ion-icon name="heart"></ion-icon>
-                                    {wishlist}
+                                    {wishlist.size}
                                     </button>
                          </div>
             </div>
@@ -147,6 +147,8 @@ function NavBar() {
                        <div className=' w-[20%] flex justify-evenly'>
                           <ion-icon name="search-outline"></ion-icon>
                           <ion-icon name="heart-outline"></ion-icon>
+                          {wishlist.size}
+
                        </div>
                  </div>
         </div>
