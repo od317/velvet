@@ -14,20 +14,25 @@ function ProductLayout({product}) {
     '3xl',
   ]
   return (
-    <div className='text-black'>
+    <div className='text-black mb-[1%]'>
       
-        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[100%] mb-[3%] imgBack relative w-full'>
+        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[150%] mb-[3%] imgBack relative w-full'>
             {/* product image */}            
         </div>
  
         <div className='flex flex-col px-[3%]'>
+               
                 <div className='flex flex-row justify-between '>
                     <label className='text-[110%] font-semibold' htmlFor="">{product.name}</label>
                     <label htmlFor="">{product.price}</label>
                 </div>
-                
+
+               <div className='text-[120%] mb-[2%]'>
+                  sizes
+               </div>
+
                 <div className='flex flex-row justify-between'>
-                    <div className='w-[80%]'> 
+                    <div className='w-[80%] flex '> 
                         {sizes.map(i=>{
                             if(product.size.has(i)){
                                 return (
@@ -50,8 +55,15 @@ function ProductLayout({product}) {
                         </button>
                     </div>
                 </div>
+
+
+                <div className=' grid grid-cols-2 '>
+                         
+                </div>
+
         </div>
 
+    
     </div>
   );
 }
