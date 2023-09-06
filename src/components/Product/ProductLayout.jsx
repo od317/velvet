@@ -7,7 +7,7 @@ function ProductLayout({product}) {
   const handleWishlistChange = useContext(handleWishlistChangeContext)
   const pSize = Array.from(product.size)
   const [curSize,setCurSize] = useState(pSize[0])
-  console.log(curSize)
+  const [showsize,setShowsize] = useState(false)
   const sizes = [
     'sm',
     'md',
@@ -31,21 +31,15 @@ function ProductLayout({product}) {
                 </div>
 
                <div className='text-[120%] mb-[2%]'>
-                  sizes
+                  colors
                </div>
 
                 <div className='flex flex-row justify-between'>
                     <div className='w-[80%] flex '> 
-                        {sizes.map(i=>{
-                            if(product.size.has(i)){
+                        {product.colors.map(i=>{
                                 return (
-                                     <button key={i} onClick={()=> setCurSize(i)} className={`${curSize == i ? 'bg-black text-white':' bg-white text-black'} pb-[13%] transition-all duration-200 w-[13%] mr-[2%] border-black border-[1px] relative`}>
-                                        <div className=' absolute w-full h-full flex text-[110%]  items-center justify-center'>
-                                            {i}
-                                        </div>   
+                                     <button key={i} style={{backgroundColor:i}} className={` bg-${i} pb-[12%] transition-all duration-200 w-[12%] rounded-full mr-[2%] border-black border-[1px] relative`}>
                                      </button>)
-                            }
-                            return
                         })}
                     </div>
                     <div className='w-[10%]'>
@@ -60,7 +54,41 @@ function ProductLayout({product}) {
                 </div>
 
 
-                <div className=' grid grid-cols-2 my-[10%] gap-[2%]'>
+                <div className='flex flex-row mt-[5%] justify-between items-center w-full space-x-[5%]'>
+ 
+                    <div className='w-[50%] relative border-black border-[1px] text-[120%] py-[4%]'>
+                            <button onClick={()=> setShowsize(s=> !s)} className=' relative w-full h-full  flex flex-row items-center justify-center   text-center'>
+                            <label className='mr-[2%]' htmlFor="">size</label>  
+                            <label className='h-full text-center flex items-center justify-center' htmlFor=""><ion-icon  name="chevron-down-outline"></ion-icon></label> 
+                            </button>
+                            <div className={` ${showsize ? '':'hidden'} absolute w-full flex flex-col items-center space-y-1 pt-[5%] z-10 bg-light2 border-[1px] border-t-0`}>
+                                    {sizes.map(i=>{
+                                        if(product.size.has(i)){
+                                            return (
+                                                <button  key={i} onClick={()=>{
+                                                    setShowsize(s=> false)
+                                                    setCurSize(i)}} className={`${curSize == i ? 'bg-black text-white':' bg-ligth2 text-black'}  pb-[20%] transition-all duration-200 w-[100%]   relative`}>
+                                                    <div className=' absolute w-full h-full flex text-[110%]  items-center justify-center'>
+                                                        {i}
+                                                    </div>   
+                                                </button>)
+                                        }
+                                        return
+                                    })}
+                            </div>
+                    </div>
+
+                    <button className=' bg-light1 w-[50%] text-center text-[120%] py-[4%] text-white '>
+                        Add To Cart
+                    </button>
+
+                </div>
+
+
+                <div className='mt-[6%] mb-[5%] text-[120%]'>
+                    simillar
+                </div>
+                <div className=' grid grid-cols-2 mb-[10%]  gap-[2%]'>
                         <div style={{backgroundImage:`url(${product.img})`}} className='pb-[150%] imgBack'>
                         </div>
                         <div style={{backgroundImage:`url(${product.img})`}} className='pb-[150%] imgBack'>

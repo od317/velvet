@@ -21,7 +21,14 @@ export default {
       text1:'#ffffff',
       white:'#ffffff',
       black:'#000000',
-      gray:'#616161'
+      gray:'#616161',
+      blue:'#0985de',
+      pink:'#e009b2',
+      red:'#de0707',
+      lightGreen:'#27d117',
+      yellow:'#d4ca0f',
+      purple:'#9b0ac7',
+      cream:'#FFFDD0',
     }
     ,
     extend: {

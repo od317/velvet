@@ -1,6 +1,20 @@
 import vimg from '../assets/vimg.jpg'
 import vimg2 from '../assets/vimg2.jpg'
 
+const colors = [
+     '#0985de',
+     '#000000',
+     '#de0707',
+     '#e009b2',
+     '#27d117',
+     '#d4ca0f',
+     '#9b0ac7',
+     '#FFFDD0'
+]
+
+let Indexes = [0,1,2,3,4,5,6,7]
+
+
 
 const items = [
     {
@@ -9,7 +23,8 @@ const items = [
          price:'10',
          date:'15',
          id:'t1',
-         img:vimg
+         img:vimg,
+         colors:['s']
     },
     {
          name:'tshirt',
@@ -91,4 +106,18 @@ const items = [
          img:vimg
     },
 ]
+
+for(let i of items){
+     
+     let tcolors = new Array(Math.floor(Math.random() * (5 - 1) + 1))
+     let newI = [...Indexes]
+     for(let j=0;j<tcolors.length;j++){
+        let r = newI[(Math.floor(Math.random() * newI.length))]
+        tcolors[j] = colors[r]
+        newI = newI.filter((v,index)=>{
+          return index !== r
+        })
+     }
+     i.colors = tcolors
+}
 export default items
