@@ -1,10 +1,13 @@
 import React from 'react';
 import './styles/productLayout.css'
 import {WishlistContext,setWishlistContext,handleWishlistChangeContext} from '../../contexts/cartContext'
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 
 function ProductLayout({product}) {
   const handleWishlistChange = useContext(handleWishlistChangeContext)
+  const pSize = Array.from(product.size)
+  const [curSize,setCurSize] = useState(pSize[0])
+  console.log(curSize)
   const sizes = [
     'sm',
     'md',
@@ -16,7 +19,7 @@ function ProductLayout({product}) {
   return (
     <div className='text-black mb-[1%]'>
       
-        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[150%] mb-[3%] imgBack relative w-full'>
+        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[120%] mb-[3%] imgBack relative w-full'>
             {/* product image */}            
         </div>
  
@@ -36,8 +39,8 @@ function ProductLayout({product}) {
                         {sizes.map(i=>{
                             if(product.size.has(i)){
                                 return (
-                                     <button key={i} className='pb-[13%] w-[13%] mr-[2%] border-black border-[1px] relative'>
-                                        <div className=' absolute w-full h-full flex items-center justify-center'>
+                                     <button key={i} onClick={()=> setCurSize(i)} className={`${curSize == i ? 'bg-black text-white':' bg-white text-black'} pb-[13%] transition-all duration-200 w-[13%] mr-[2%] border-black border-[1px] relative`}>
+                                        <div className=' absolute w-full h-full flex text-[110%]  items-center justify-center'>
                                             {i}
                                         </div>   
                                      </button>)
@@ -57,8 +60,15 @@ function ProductLayout({product}) {
                 </div>
 
 
-                <div className=' grid grid-cols-2 '>
-                         
+                <div className=' grid grid-cols-2 my-[10%] gap-[2%]'>
+                        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[150%] imgBack'>
+                        </div>
+                        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[150%] imgBack'>
+                        </div>
+                        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[150%] imgBack'>
+                        </div>
+                        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[150%] imgBack'>
+                        </div>
                 </div>
 
         </div>
