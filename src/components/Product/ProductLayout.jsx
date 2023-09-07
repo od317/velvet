@@ -19,7 +19,7 @@ function ProductLayout({product}) {
   return (
     <div className='text-black mb-[1%]'>
       
-        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[120%] mb-[3%] imgBack relative w-full'>
+        <div style={{backgroundImage:`url(${product.img})`}} className='pb-[110%] mb-[3%] imgBack relative w-full'>
             {/* product image */}            
         </div>
  
@@ -38,7 +38,7 @@ function ProductLayout({product}) {
                     <div className='w-[80%] flex '> 
                         {product.colors.map(i=>{
                                 return (
-                                     <button key={i} style={{backgroundColor:i}} className={` bg-${i} pb-[12%] transition-all duration-200 w-[12%] rounded-full mr-[2%] border-black border-[1px] relative`}>
+                                     <button key={i} style={{backgroundColor:i}} className={` bg-${i} pb-[10%] transition-all duration-200 w-[10%] rounded-full mr-[2%] border-black border-[1px] relative`}>
                                      </button>)
                         })}
                     </div>
@@ -56,7 +56,7 @@ function ProductLayout({product}) {
 
                 <div className='flex flex-row mt-[5%] justify-between items-center w-full space-x-[5%]'>
  
-                    <div className='w-[50%] relative border-black border-[1px] text-[120%] py-[4%]'>
+                    <div className='w-[50%] relative border-black border-[1px] box-border text-[100%] py-[2%]'>
                             <button onClick={()=> setShowsize(s=> !s)} className=' relative w-full h-full  flex flex-row items-center justify-center   text-center'>
                             <label className='mr-[2%]' htmlFor="">size</label>  
                             <label className='h-full text-center flex items-center justify-center' htmlFor=""><ion-icon  name="chevron-down-outline"></ion-icon></label> 
@@ -78,7 +78,7 @@ function ProductLayout({product}) {
                             </div>
                     </div>
 
-                    <button className=' bg-light1 w-[50%] text-center text-[120%] py-[4%] text-white '>
+                    <button className=' bg-light1 border-light1 border-[1px] w-[50%] text-center text-[100%] py-[2%] text-white '>
                         Add To Cart
                     </button>
 
