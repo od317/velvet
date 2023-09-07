@@ -38,8 +38,6 @@ import Home from './pages/Home'
 import Store from './pages/Store'
 import { WishlistContext,setWishlistContext,handleWishlistChangeContext } from './contexts/cartContext'
 import Product from './pages/Product'
-import WishList from './pages/WishList'
-
 
 function App() {
   const [wishlist,setWishlist] = useState(
@@ -69,7 +67,6 @@ function App() {
                               <Route path='/' element={<Home/>}></Route>
                               <Route path='/store' element={<Store />}></Route>
                               <Route path='/product/:id' element={<Product/>}></Route>
-                              <Route path='/wishlist' element={<WishList/>}></Route>
                               </Routes>
                               <Footer></Footer>
                   </handleWishlistChangeContext.Provider>
