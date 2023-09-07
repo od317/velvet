@@ -1,9 +1,9 @@
 import React from 'react'
-
+import WishlistLayout from '../components/Wishlist/WishlistLayout'
 function WishList() {
   return (
     <div>
-        w
+        <WishlistLayout/>
     </div>
   )
 }
