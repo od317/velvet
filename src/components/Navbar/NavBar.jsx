@@ -102,10 +102,10 @@ function NavBar() {
                                         <ion-icon name="search"></ion-icon>
                                         </button>
                                     </form>
-                                    <button className='text-[#f54242] text-[150%]'>
+                                    <NavLink to='/wishlist' className='text-[#f54242] text-[150%]'>
                                     <ion-icon name="heart"></ion-icon>
                                     {wishlist.size}
-                                    </button>
+                                    </NavLink>
                          </div>
             </div>
             <div onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} className={`${showMore ? '  inline-block':'hidden'}  w-full absolute bg-p1 flex flex-row `} >
@@ -145,10 +145,13 @@ function NavBar() {
                           <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                        </div>
                        <div className=' w-[20%] flex justify-evenly'>
-                          <ion-icon name="search-outline"></ion-icon>
-                          <ion-icon name="heart-outline"></ion-icon>
-                          {wishlist.size}
-
+                          <NavLink className='flex items-center justify-center' to='/wishlist'>
+                                <ion-icon name="heart-outline"></ion-icon>
+                          </NavLink>                  
+                          <NavLink className='flex items-center justify-center' to='/wishlist'>
+                                <ion-icon name="heart-outline"></ion-icon>
+                                {wishlist.size}
+                          </NavLink>
                        </div>
                  </div>
         </div>

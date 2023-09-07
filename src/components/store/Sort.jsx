@@ -16,7 +16,7 @@ function Sort({handleSortChange,sort,numShow}) {
                       <label className='cursor-pointer phone:hidden' htmlFor="">Show</label>
                       <label className={`${showSort ? ' rotate-180 ':''} flex items-center justify-center text-center transition-all duration-200`} htmlFor=""><ion-icon name="chevron-down-outline"></ion-icon></label>
                     </div>
-                    <div className={`flex ${showSort ? '':'hidden'} bg-light2 flex-col text-start border-t-0 phone:border-black phone:border-[1px]  w-full absolute`}>
+                    <div className={`flex ${showSort ? '':'hidden'} bg-light2 flex-col text-start phone:border-t-0 phone:border-black phone:border-[1px]  w-full absolute`}>
                           <button onClick={()=>handleClick('recomended')} className='w-full cursor-pointer text-start px-[5%]'>recomended</button>
                           <button onClick={()=>handleClick('price low to high')} className='w-full cursor-pointer text-start px-[5%]'>price low to high</button>
                           <button onClick={()=>handleClick('price high to low')} className='w-full cursor-pointer text-start px-[5%]'>price high to low</button>
