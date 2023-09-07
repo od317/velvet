@@ -69,7 +69,6 @@ function App() {
                               <Route path='/' element={<Home/>}></Route>
                               <Route path='/store' element={<Store />}></Route>
                               <Route path='/product/:id' element={<Product/>}></Route>
-                              <Route path='/wishlist' element={<WishList/>}></Route>
                               </Routes>
                               <Footer></Footer>
                   </handleWishlistChangeContext.Provider>
