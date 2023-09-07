@@ -38,6 +38,7 @@ import Home from './pages/Home'
 import Store from './pages/Store'
 import { WishlistContext,setWishlistContext,handleWishlistChangeContext } from './contexts/cartContext'
 import Product from './pages/Product'
+import WishList from './pages/WishList'
 
 
 function App() {
