@@ -36,9 +36,9 @@ import NavBar from './components/Navbar/NavBar'
 import Footer from './components/Fotter/Fotter'
 import Home from './pages/Home'
 import Store from './pages/Store'
+import WishList from './pages/Wishlist'
 import { WishlistContext,setWishlistContext,handleWishlistChangeContext } from './contexts/cartContext'
 import Product from './pages/Product'
-
 function App() {
   const [wishlist,setWishlist] = useState(
    new Set(JSON.parse(localStorage.getItem("wishlist")) || [])
@@ -67,6 +67,7 @@ function App() {
                               <Route path='/' element={<Home/>}></Route>
                               <Route path='/store' element={<Store />}></Route>
                               <Route path='/product/:id' element={<Product/>}></Route>
+                              <Route path='/wishlist' element={<WishList/>}></Route>
                               </Routes>
                               <Footer></Footer>
                   </handleWishlistChangeContext.Provider>
