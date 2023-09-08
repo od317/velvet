@@ -58,7 +58,7 @@ function App() {
   }
   return (
      <>
-     <div className=' bg-light2'>
+     <div className=' bg-light2 flex justify-between flex-col min-h-screen'>
       <WishlistContext.Provider value={wishlist}>
             <setWishlistContext.Provider value={setWishlist}>
                   <handleWishlistChangeContext.Provider value={handleWishlistEdit}>
