@@ -38,30 +38,32 @@ const Card = ({product})=>{
                     <div className=''>
                     <Link className=' ' to={`/product/${product.id}?color=${mainImgIndex}`}>
                            <div style={{backgroundImage: `url(${product.img[mainImgIndex].imgs[0]})`}} className=' backimg bg-gray relative w-full pb-[150%] phone:pb-[150%]'>
+                            <div className=' absolute w-full h-full p-[5%] flex items-start justify-end'>
+                                    <button  onClick={()=>handleWishlistChange(product.id)} className={`text-[#f54242]`}>
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                                          <g transform="translate(0 -1028.4)">
+                                          <path d="m7 1031.4c-1.5355 0-3.0784 0.5-4.25 1.7-2.3431 2.4-2.2788 6.1 0 8.5l9.25 9.8 9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-0.75 0.8-0.75-0.8c-1.172-1.2-2.7145-1.7-4.25-1.7z" fill="#e74c3c"/>
+                                          </g>
+                                    </svg>
+                                    </button>
+                            </div>
                            </div>
                     </Link>
                     </div>
                     <div className='flex flex-col pt-[6%] px-[3%] border-[2px]  border-t-0 p-[2%] border-gray2'>
-                        <div className='flex space-x-[5%] flex-row'>
+                        <div className='flex space-x-[5%] mt-[2%] mb-[2%] phone:mb-[0%] phone:mt-[0%] flex-row phone:justify-start justify-center'>
                               {product.img.map((b,bindex)=>
                               <button key={bindex}  onClick={()=>{
                                 setMainImgIndex(bindex)
                                 }}  
                                 style={{backgroundColor:b.color}} 
-                                className='flex flex-row items-center justify-center  pb-[10%] rounded-full w-[10%]'>
+                                className='flex flex-row items-center justify-center pb-[15%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]'>
                                </button>)}
                         </div>
-                        <div className='flex flex-row items-center justify-between'>
+                        <div className='flex flex-col text-center phone:flex-row items-center justify-between'>
                             <label className='text-[110%]' htmlFor="">{product.name}</label>
-                            <button onClick={()=>handleWishlistChange(product.id)} className={`text-[#f54242]`}>
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-                                <g transform="translate(0 -1028.4)">
-                                  <path d="m7 1031.4c-1.5355 0-3.0784 0.5-4.25 1.7-2.3431 2.4-2.2788 6.1 0 8.5l9.25 9.8 9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-0.75 0.8-0.75-0.8c-1.172-1.2-2.7145-1.7-4.25-1.7z" fill="#e74c3c"/>
-                                </g>
-                            </svg>
-                            </button>
                         </div>
-                        <div>{product.price}$</div>    
+                        <div className='text-center '>{product.price}$</div>    
                   </div>
               </div>
              </>)      
