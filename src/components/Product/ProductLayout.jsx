@@ -27,7 +27,7 @@ function ProductLayout({product,color,setSearchParams}) {
         <div className='flex flex-col px-[3%]'>
                
                 <div className='flex flex-row justify-between '>
-                    <label className='text-[110%] font-semibold' htmlFor="">{product.name}</label>
+                    <label className='text-[150%] font-bold' htmlFor="">{product.name}</label>
                     <label htmlFor="">{product.price}</label>
                 </div>
 
@@ -39,7 +39,7 @@ function ProductLayout({product,color,setSearchParams}) {
                     <div className='w-[80%] flex '> 
                         {product.img.map((i,index)=>{
                                 return (
-                                     <button onClick={()=>setSearchParams({color:index})} key={i.color} style={{backgroundColor:i.color}} className={`  pb-[10%] transition-all duration-200 w-[10%] rounded-full mr-[2%] border-black border-[1px] relative`}>
+                                     <button onClick={()=>setSearchParams({color:index})} key={i.color} style={{backgroundImage:`url(${i.imgs[0]})`,backgroundColor:i.color}} className={`  pb-[15%] transition-all imgBack duration-200 w-[15%] rounded-md mr-[2%] border-black border-[1px] relative`}>
                                      </button>)
                         })}
                     </div>

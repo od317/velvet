@@ -17,7 +17,7 @@ let Indexes = [0,1,2,3,4,5,6,7]
 
 const items = [
     {
-         name:'shirt',
+         name:'Reefer Wool Blend Coat',
          size:new Set(['sm','xl']),
          price:'10',
          date:'15',
