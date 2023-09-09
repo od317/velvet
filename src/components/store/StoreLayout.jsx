@@ -104,6 +104,16 @@ function StoreLayout({sortP,filterP}) {
           setItemsShow(nextItems)
     }
 
+    const handleItemsHover = (id,index)=>{
+          setItemsShow(prev=>prev.map(p=>{
+             console.log(p.id)
+               if(p.id === id){
+               return {...p,
+                       index:index}
+             }
+             return p
+          }))
+    }
   return (<>
     <div className=' hidden phone:block'>
           <Sort sort={sort} numShow={items_show.length} handleSortChange={handleSortChange} />
@@ -125,7 +135,7 @@ function StoreLayout({sortP,filterP}) {
          </div>
       
          <div className=' phone:w-[80%]  z-[1] bg-light2 px-[2%] pb-[100%]'>
-              <StoreGrid items={items_show}/>
+              <StoreGrid items={items_show} />
          </div>
 
     </div>

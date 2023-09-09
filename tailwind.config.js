@@ -29,6 +29,7 @@ export default {
       yellow:'#d4ca0f',
       purple:'#9b0ac7',
       cream:'#FFFDD0',
+      gray2:'#e4e4e4',
     }
     ,
     extend: {
