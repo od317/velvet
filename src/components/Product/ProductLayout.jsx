@@ -16,22 +16,25 @@ function ProductLayout({product,color,setSearchParams}) {
     '2xl',
     '3xl',
   ]
-  console.log(color)
   return (
     <div className='text-black mb-[1%]'>
-      
-        <div style={{backgroundImage:`url(${product.img[color].imgs[0]})`}} className='pb-[130%] mb-[3%] imgBack relative w-full'>
-            {/* product image */}            
+         <div className='grid grid-cols-2'>
+                {product.img[color].imgs.map((image,index)=>{
+                         return(<div style={{backgroundImage:`url(${image})`}} className={`pb-[130%] ${index == 0 ?'row-span-2':''} mb-[3%] imgBack relative w-full`} key={index}>
+                                     
+                               </div>)
+                })}
+
+
         </div>
- 
         <div className='flex flex-col px-[3%]'>
                
                 <div className='flex flex-row justify-between '>
                     <label className='text-[150%] font-bold' htmlFor="">{product.name}</label>
-                    <label htmlFor="">{product.price}</label>
+                    <label className='flex flex-row justify-center items-center text-[150%]' htmlFor="">{product.price}$</label>
                 </div>
 
-               <div className='text-[120%] mb-[2%]'>
+               <div className='text-[120%] mt-[5%] mb-[2%]'>
                   colors
                </div>
 
@@ -39,7 +42,7 @@ function ProductLayout({product,color,setSearchParams}) {
                     <div className='w-[80%] flex '> 
                         {product.img.map((i,index)=>{
                                 return (
-                                     <button onClick={()=>setSearchParams({color:index})} key={i.color} style={{backgroundImage:`url(${i.imgs[0]})`,backgroundColor:i.color}} className={`  pb-[15%] transition-all imgBack duration-200 w-[15%] rounded-md mr-[2%] border-black border-[1px] relative`}>
+                                     <button onClick={()=>setSearchParams({color:index})} key={i.color} style={{backgroundImage:`url(${i.imgs[0]})`,backgroundColor:i.color}} className={` box-sizing:content-box pb-[15%] transition-all imgBack duration-200 w-[15%] rounded-md mr-[2%] border-black border-[1px] relative`}>
                                      </button>)
                         })}
                     </div>
@@ -60,7 +63,7 @@ function ProductLayout({product,color,setSearchParams}) {
                     <div className='w-[50%] relative border-black border-[1px] box-border text-[100%] py-[2%]'>
                             <button onClick={()=> setShowsize(s=> !s)} className=' relative w-full h-full  flex flex-row items-center justify-center   text-center'>
                             <label className='mr-[2%]' htmlFor="">size</label>  
-                            <label className='h-full text-center flex items-center justify-center' htmlFor=""><ion-icon  name="chevron-down-outline"></ion-icon></label> 
+                            <label className={`h-full ${showsize ? ' rotate-180':''} transition-all duration-200 text-center flex items-center justify-center`} htmlFor=""><ion-icon  name="chevron-down-outline"></ion-icon></label> 
                             </button>
                             <div className={` ${showsize ? '':'hidden'} absolute w-full flex flex-col items-center space-y-1 pt-[5%] z-10 bg-light2 border-[1px] border-t-0`}>
                                     {sizes.map(i=>{
