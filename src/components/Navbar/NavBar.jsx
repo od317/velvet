@@ -3,6 +3,8 @@ import { useState,useRef,useContext,useEffect } from 'react'
 import { WishlistContext,setWishlistContext } from '../../contexts/cartContext'
 import {Routes,Route,NavLink, BrowserRouter, useLocation} from 'react-router-dom'
 import TopNav from './TopNav'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
 function NavBar() {
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
     const [searchBar,setSearchBar] = useState(false)
@@ -102,8 +104,8 @@ function NavBar() {
                                         <ion-icon name="search"></ion-icon>
                                         </button>
                                     </form>
-                                    <NavLink to='/wishlist' className='text-[#f54242] text-[150%]'>
-                                    <ion-icon name="heart"></ion-icon>
+                                    <NavLink to='/wishlist' className='text-black text-[150%]'>
+                                    <FontAwesomeIcon size="lg" icon={faHeart} />
                                     {wishlist.size}
                                     </NavLink>
                          </div>
@@ -144,12 +146,9 @@ function NavBar() {
                        <div onClick={()=>handleSideShowChange(!showSide)}>
                           <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                        </div>
-                       <div className=' w-[20%] flex justify-evenly'>
+                       <div className=' w-[20%] flex justify-evenly'>                 
                           <NavLink className='flex items-center justify-center' to='/wishlist'>
-                                <ion-icon name="heart-outline"></ion-icon>
-                          </NavLink>                  
-                          <NavLink className='flex items-center justify-center' to='/wishlist'>
-                                <ion-icon name="heart-outline"></ion-icon>
+                                <FontAwesomeIcon size="medium" icon={faHeart} />
                                 {wishlist.size}
                           </NavLink>
                        </div>
