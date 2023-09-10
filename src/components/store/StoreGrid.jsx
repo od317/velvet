@@ -49,14 +49,16 @@ const Card = ({product,handleWishlistChange})=>{
                            </div>
                     </Link>
                     </div>
-                    <div className='flex flex-col pt-[6%] px-[3%] border-[2px]  border-t-0 p-[2%] border-gray2'>
-                        <div className='flex space-x-[5%] mt-[2%] mb-[2%] phone:mb-[0%] phone:mt-[0%] flex-row phone:justify-start justify-center'>
+                    <div className='flex flex-col  px-[3%] border-[2px]  border-t-0 p-[2%] border-gray2'>
+                        <div className='  mt-[2%] mb-[2%] phone:mb-[0%] phone:mt-[0%] '>
                               {product.img.map((b,bindex)=>
                               <button key={bindex}  onClick={()=>{
                                 setMainImgIndex(bindex)
-                                }}  
-                                style={{backgroundColor:b.color}} 
-                                className='flex flex-row items-center justify-center pb-[15%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]'>
+                                }}   
+                                className=' mr-[2%] items-center relative border-[1px] justify-center pb-[15%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]'>
+                                          <div
+                                           style={{backgroundColor:b.color}} 
+                                           className=' absolute rounded-full top-[5%] left-[5%] w-[90%] h-[90%]'></div>
                                </button>)}
                         </div>
                         <div className='flex flex-col text-center phone:flex-row items-center justify-between'>
@@ -64,7 +66,11 @@ const Card = ({product,handleWishlistChange})=>{
                         </div>
                         <div className='text-center '>{product.price}$</div>    
                   </div>
+
               </div>
+
+
+
              </>)      
 }
 

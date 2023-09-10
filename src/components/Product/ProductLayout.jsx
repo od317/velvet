@@ -62,8 +62,8 @@ function ProductLayout({product,color,setSearchParams}) {
  
                     <div className='w-[50%] relative border-black border-[1px] box-border text-[100%] py-[2%]'>
                             <button onClick={()=> setShowsize(s=> !s)} className=' relative w-full h-full  flex flex-row items-center justify-center   text-center'>
-                            <label className='mr-[2%]' htmlFor="">size</label>  
-                            <label className={`h-full ${showsize ? ' rotate-180':''} transition-all duration-200 text-center flex items-center justify-center`} htmlFor=""><ion-icon  name="chevron-down-outline"></ion-icon></label> 
+                                    <label className='mr-[2%]' htmlFor="">size</label>  
+                                    <label className={`h-full ${showsize ? ' rotate-180':''} transition-all duration-200 text-center flex items-center justify-center`} htmlFor=""><ion-icon  name="chevron-down-outline"></ion-icon></label> 
                             </button>
                             <div className={` ${showsize ? '':'hidden'} absolute w-full flex flex-col items-center space-y-1 pt-[5%] z-10 bg-light2 border-[1px] border-t-0`}>
                                     {sizes.map(i=>{
@@ -105,8 +105,14 @@ function ProductLayout({product,color,setSearchParams}) {
 
         </div>
 
-    
+        <div className='flex w-full  items-center justify-center'>
+                <div className='  border-black border-[2px] pb-[10%] w-[10%]  rounded-full relative'>
+                       <div className=' absolute w-[90%] h-[90%] bg-blue rounded-full  top-[5%] left-[5%]'></div>
+                </div>
+        </div>
+
     </div>
+    
   );
 }
 
