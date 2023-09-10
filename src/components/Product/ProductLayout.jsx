@@ -6,6 +6,7 @@ import { useContext,useState } from 'react';
 function ProductLayout({product,color,setSearchParams}) {
   const handleWishlistChange = useContext(handleWishlistChangeContext)
   const pSize = Array.from(product.size)
+  const [curHeaderImg,setCurHeaderImg] = useState(0)
   const [curSize,setCurSize] = useState(pSize[0])
   const [showsize,setShowsize] = useState(false)
   const sizes = [
@@ -18,12 +19,17 @@ function ProductLayout({product,color,setSearchParams}) {
   ]
   return (
     <div className='text-black mb-[1%]'>
-         <div className='grid grid-cols-2'>
+         <div className='grid grid-cols-2 pl-[3%] py-[5%]'>
+                <div 
+                style={{backgroundImage:`url(${product.img[color].imgs[curHeaderImg]})`}}
+                className=' imgBack  '>
+                </div>
+                <div className='flex flex-col items-center w-[100%]  justfiy-center'>
                 {product.img[color].imgs.map((image,index)=>{
-                         return(<div style={{backgroundImage:`url(${image})`}} className={`pb-[130%] ${index == 0 ?'row-span-2':''} mb-[3%] imgBack relative w-full`} key={index}>
-                                     
-                               </div>)
+                         return(<div style={{backgroundImage:`url(${image})`}} className={` pb-[50%] w-[40%] mb-[3%] imgBack relative `} key={index}>
+                                </div>)
                 })}
+                </div>
 
 
         </div>
@@ -105,11 +111,6 @@ function ProductLayout({product,color,setSearchParams}) {
 
         </div>
 
-        <div className='flex w-full  items-center justify-center'>
-                <div className='  border-black border-[2px] pb-[10%] w-[10%]  rounded-full relative'>
-                       <div className=' absolute w-[90%] h-[90%] bg-blue rounded-full  top-[5%] left-[5%]'></div>
-                </div>
-        </div>
 
     </div>
     

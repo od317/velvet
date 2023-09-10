@@ -49,13 +49,13 @@ const Card = ({product,handleWishlistChange})=>{
                            </div>
                     </Link>
                     </div>
-                    <div className='flex flex-col  px-[3%] border-[2px]  border-t-0 p-[2%] border-gray2'>
-                        <div className='  mt-[2%] mb-[2%] phone:mb-[0%] phone:mt-[0%] '>
+                    <div className='flex flex-col  px-[3%]   border-t-0 p-[2%] '>
+                        <div className='  mt-[2%] mb-[2%] flex justify-center phone:mb-[0%] phone:mt-[0%] '>
                               {product.img.map((b,bindex)=>
                               <button key={bindex}  onClick={()=>{
                                 setMainImgIndex(bindex)
                                 }}   
-                                className=' mr-[2%] items-center relative border-[1px] justify-center pb-[15%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]'>
+                                className={`mr-[2%] items-center relative ${ mainImgIndex === bindex ? '':'border-gray3'} border-[1px] justify-center pb-[15%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]`}>
                                           <div
                                            style={{backgroundColor:b.color}} 
                                            className=' absolute rounded-full top-[5%] left-[5%] w-[90%] h-[90%]'></div>
