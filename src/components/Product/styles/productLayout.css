@@ -4,3 +4,7 @@
     background-repeat: no-repeat;
     
 }
+
+.bs{
+    box-sizing: border-box; /* add this */
+}

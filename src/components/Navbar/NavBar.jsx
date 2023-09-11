@@ -106,7 +106,7 @@ function NavBar() {
                                         </button>
                                     </form>
                                     <NavLink to='/wishlist' className='text-black text-[150%]'>
-                                    <FontAwesomeIcon size="lg" icon={faHeart} />
+                                    <FontAwesomeIcon size="sm" icon={faHeart} />
                                     {wishlist.size}
                                     </NavLink>
                          </div>
@@ -149,7 +149,7 @@ function NavBar() {
                        </div>
                        <div className=' w-[20%] flex justify-evenly'>                 
                           <NavLink className='flex items-center justify-center' to='/wishlist'>
-                                <FontAwesomeIcon size="lg" icon={faHeart} />
+                                <FontAwesomeIcon size="sm" icon={faHeart} />
                           </NavLink>
                        </div>
                  </div>

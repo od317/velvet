@@ -19,7 +19,9 @@ const items = [
     {
          name:'Reefer Wool Blend Coat',
          size:new Set(['sm','xl']),
-         price:'250',
+         price:'250.00',
+         desc:'Saunter in sophisticated style with this single-breasted coat fashioned from a rich wool blend.',
+         brand:'Lauren Ralph Lauren',
          date:'15',
          id:'t1',
          img:[
