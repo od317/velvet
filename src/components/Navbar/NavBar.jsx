@@ -5,6 +5,7 @@ import {Routes,Route,NavLink, BrowserRouter, useLocation} from 'react-router-dom
 import TopNav from './TopNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 function NavBar() {
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
     const [searchBar,setSearchBar] = useState(false)
@@ -141,15 +142,14 @@ function NavBar() {
 
 
 
-        <div className=' fixed text-[150%] z-[20] w-full phone:hidden'>
+        <div className=' sticky top-0 bg-light2 text-[150%] z-[20] w-full phone:hidden'>
                  <div className='flex flex-row justify-between px-[5%] py-[5%] w-full '>
                        <div onClick={()=>handleSideShowChange(!showSide)}>
-                          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                            <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
                        </div>
                        <div className=' w-[20%] flex justify-evenly'>                 
                           <NavLink className='flex items-center justify-center' to='/wishlist'>
-                                <FontAwesomeIcon size="medium" icon={faHeart} />
-                                {wishlist.size}
+                                <FontAwesomeIcon size="lg" icon={faHeart} />
                           </NavLink>
                        </div>
                  </div>

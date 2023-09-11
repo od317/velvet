@@ -50,7 +50,7 @@ const Card = ({product,handleWishlistChange})=>{
                     </Link>
                     </div>
                     <div className='flex flex-col  px-[3%]   border-t-0 p-[2%] '>
-                        <div className='  mt-[2%] mb-[2%] flex justify-center phone:mb-[0%] phone:mt-[0%] '>
+                        <div className='  mt-[2%] mb-[2%] flex justify-center phone:justify-start phone:mb-[0%] phone:mt-[0%] '>
                               {product.img.map((b,bindex)=>
                               <button key={bindex}  onClick={()=>{
                                 setMainImgIndex(bindex)
@@ -61,10 +61,10 @@ const Card = ({product,handleWishlistChange})=>{
                                            className=' absolute rounded-full top-[5%] left-[5%] w-[90%] h-[90%]'></div>
                                </button>)}
                         </div>
-                        <div className='flex flex-col text-center phone:flex-row items-center justify-between'>
+                        <div className='flex flex-col text-center phone:flex-row items-center phone:text-start ponhe:items-start justify-between'>
                             <label className='text-[110%]' htmlFor="">{product.name}</label>
                         </div>
-                        <div className='text-center '>{product.price}$</div>    
+                        <div className='text-center phone:text-start '>{product.price}$</div>    
                   </div>
 
               </div>

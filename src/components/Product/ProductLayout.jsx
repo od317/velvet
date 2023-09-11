@@ -20,24 +20,30 @@ function ProductLayout({product,color,setSearchParams}) {
     '3xl',
   ]
   return (
-    <div className='text-black mb-[1%]'>
-         <div className='grid grid-cols-2 pl-[3%] py-[5%]'>
-                <div 
-                style={{backgroundImage:`url(${product.img[color].imgs[curHeaderImg]})`}}
-                className=' imgBack  '>
-                </div>
-                <div className='flex flex-col items-center w-[100%]  justfiy-center'>
-                {product.img[color].imgs.map((image,index)=>{
-                         return(<button onClick={()=> setCurHeaderImg(index)} style={{backgroundImage:`url(${image})`}} className={` ${index === curHeaderImg ? 'border-black border-[1px]':''} pb-[50%] rounded-md w-[40%] mb-[3%] imgBack relative `} key={index}>
-                                </button>)
-                })}
-                </div>
+    <div className='text-black mb-[1%] phone:flex phone:flex-row px-[3%] '>
 
+         <div className='flex flex-col phone:hidden items-start justify-start '>
+                    <label className='text-[150%] font-bold' htmlFor="">{product.name}</label>
+                    <label className='flex flex-row justify-center items-center text-[180%]' htmlFor="">{product.price}$</label>
+         </div>
 
+         <div className='flex flex-row phone:block  py-[5%] phone:py-[2%] phone:w-[50%]'>
+              <div className='flex flex-row w-full h-full phone:w-auto phone:h-auto'>
+                    <div 
+                    style={{backgroundImage:`url(${product.img[color].imgs[curHeaderImg]})`}}
+                    className=' imgBack bg-gray2 pb-[100%] w-[60%] phone:w-[60%] phone:pb-[80%] '>
+                    </div>
+                    <div className='flex flex-col justify-center items-center w-[40%] phone:w-[40%]  '>
+                    {product.img[color].imgs.map((image,index)=>{
+                            return(<button onClick={()=> setCurHeaderImg(index)} style={{backgroundImage:`url(${image})`}} className={` ${index === curHeaderImg ? 'border-black border-[1px]':''} pb-[70%] phone:pb-[50%] phone:w-[40%] bg-gray2 rounded-md w-[40%] mb-[3%] imgBack relative `} key={index}>
+                                    </button>)
+                    })}
+                    </div>
+             </div>
         </div>
-        <div className='flex flex-col px-[3%]'>
+        <div className='flex flex-col  phone:w-[50%] phone:py-[2%]'>
                
-                <div className='flex flex-col  justify-center items-start space-y-[2%] '>
+                <div className='phone:flex flex-col hidden justify-center items-start space-y-[2%] '>
                     <label className='text-[150%] font-bold' htmlFor="">{product.name}</label>
                     <label className='flex flex-row justify-center items-center text-[180%]' htmlFor="">{product.price}$</label>
                 </div>
