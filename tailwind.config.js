@@ -18,6 +18,7 @@ export default {
       light1:'#47A992',
       light2:'#EEEEEE',
       light3:'#fefefe',
+      light4:'#dbdbdb',
       text1:'#ffffff',
       white:'#ffffff',
       black:'#000000',

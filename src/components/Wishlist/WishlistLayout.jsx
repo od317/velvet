@@ -1,33 +1,37 @@
 import React, { useContext } from 'react'
 import { WishlistContext,setWishlistContext,handleWishlistChangeContext} from '../../contexts/cartContext'
 import items from '../../Data/items'
+import {Routes,Route,Link, BrowserRouter, useLocation} from 'react-router-dom'
+import Card from '../store/Card'
+import { useState } from 'react'
+import SavedForLater from './SavedForLater'
+import ShoppingBag from './ShoppingBag'
 function WishlistLayout() {
   const wishlist = useContext(WishlistContext)
   const setWishlist = useContext(setWishlistContext)
   const handleWishlistChange = useContext(handleWishlistChangeContext)
   const wishlistContent = items
+  const [curPage,setCurPage] = useState('bag')
   return (
-    <div className='grid gap-y-[1%] pt-[5%] pb-[30%] pl-[2%]'>
-           {wishlistContent.map(w=>{
-            if (wishlist.has(w.id))
-            return(
-                 <div key={w.id} className='flex flex-row'>
-                      <div style={{backgroundImage:`url(${w.img})`}} className='pb-[40%] imgBack w-[40%]'></div>
-                      <div className=' w-[60%] h-full px-[2%] flex flex-col justify-between  '>
-                        <div className='flex-grow flex flex-col justify-center'>
-                            <label className='text-[150%]' htmlFor="">{w.name}</label>
-                            <label htmlFor="">{w.price}$</label>
-                        </div>
-                        <div className='flex flex-row  w-full justify-between '>
-                         <button onClick={()=> handleWishlistChange(w.id)} className='text-center p-[3%] border-black border-[1px] w-[47%]'>remove</button>
-                         <button className='text-center p-[3%] bg-light1 border-light1 border-[1px] text-white w-[47%]'>add to cart</button>
-                        </div>
-                      </div>
-                 </div>
-            )
-            return 
-           })}
-    </div>
+    <>   
+        <div className='  flex flex-col h-full items-center justify-center w-full mt-[5%] bg-p1'>
+          <div className='flex flex-row w-full phone:w-[30%] px-[4%]'>
+                <button className={`w-[50%] text-center ${ curPage==='bag' ? 'border-b-[2px] border-b-black font-bold':'border-b-[1px] border-gray'} py-[5%] text-[105%]`} onClick={()=>setCurPage('bag')}>
+                  Shoping Bag (1)</button>
+                <button className={`w-[50%] text-center ${ curPage==='sfl' ? 'border-b-[2px] border-black font-bold':' border-b-[1px] border-gray '}   py-[5%] text-[105%]`} onClick={()=> setCurPage('sfl')}>sfl</button>
+          </div>
+          <p className=' px-[4%] py-[3%] w-full phone:w-[50%] phone:text-center'>
+            Items in your bag are not on hold. <br />
+            <ion-icon name="gift-outline"></ion-icon> Choose gift options when you check out.
+          </p>
+        </div>
+        
+        <br />
+        {curPage ==='bag'?
+        <ShoppingBag handlePageChange={setCurPage}></ShoppingBag>:
+        <SavedForLater handlePageChange={setCurPage}></SavedForLater>
+        }
+    </>
   )
 }
 

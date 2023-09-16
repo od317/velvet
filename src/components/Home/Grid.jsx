@@ -1,7 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import { useSwiperSlide } from 'swiper/react';
+import { useSwiperSlide } from 'swiper/react'
 import './styles/grid.css'
 
 const slideCards = [

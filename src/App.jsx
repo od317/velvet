@@ -37,42 +37,51 @@ import Footer from './components/Fotter/Fotter'
 import Home from './pages/Home'
 import Store from './pages/Store'
 import WishList from './pages/Wishlist'
-import { WishlistContext,setWishlistContext,handleWishlistChangeContext } from './contexts/cartContext'
+import { SbContext,setSbContext,setWishlistContext,handleSbChangeContext } from './contexts/cartContext'
 import Product from './pages/Product'
 function App() {
   const [wishlist,setWishlist] = useState(
    new Set(JSON.parse(localStorage.getItem("wishlist")) || [])
   )
-  const handleWishlistEdit = (id)=>{        
-      if(wishlist.has(id)){
-             let nextWishList = new Set(Array.from(wishlist).filter(i => i !== id))
-             console.log(nextWishList)
-             setWishlist(nextWishList)
-             localStorage.setItem('wishlist',JSON.stringify(Array.from(nextWishList)))
+  const [sb,setSb] = useState(
+      new Set(JSON.parse(localStorage.getItem("sb")) || [])
+  )
+  const [sfl,setSfl] = useState(
+      new Set(JSON.parse(localStorage.getItem("sfl")) || [])
+  )
+
+
+  const handleSbEdit = (pro)=>{        
+      if(sb.has(pro)){
+            console.log('ok')
+             let nextSb = new Set(Array.from(sb).filter(i => i.id !== pro.id))
+             setSb(nextSb)
+             localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))
              return 
             }
-      let nextWishList = new Set(Array.from(wishlist))
-      nextWishList.add(id)
-      setWishlist(nextWishList)
-      localStorage.setItem('wishlist',JSON.stringify(Array.from(nextWishList)))
+      let nextSb = new Set(Array.from(sb))
+      nextSb.add(pro)
+      setSfl(nextSb)
+      localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))        
   }
+
   return (
      <>
      <div className=' bg-light2 flex justify-between flex-col min-h-screen'>
-      <WishlistContext.Provider value={wishlist}>
-            <setWishlistContext.Provider value={setWishlist}>
-                  <handleWishlistChangeContext.Provider value={handleWishlistEdit}>
-                              <NavBar></NavBar>
-                              <Routes>
-                              <Route path='/' element={<Home/>}></Route>
-                              <Route path='/store' element={<Store />}></Route>
-                              <Route path='/product/:id' element={<Product/>}></Route>
-                              <Route path='/wishlist' element={<WishList/>}></Route>
-                              </Routes>
-                              <Footer></Footer>
-                  </handleWishlistChangeContext.Provider>
-            </setWishlistContext.Provider>
-      </WishlistContext.Provider>
+      <SbContext.Provider value={sb}>
+            <setSbContext.Provider value={setSb}>
+                                    <handleSbChangeContext.Provider value={handleSbEdit}>
+                                                <NavBar></NavBar>
+                                                <Routes>
+                                                <Route path='/' element={<Home/>}></Route>
+                                                <Route path='/store' element={<Store />}></Route>
+                                                <Route path='/product/:id' element={<Product/>}></Route>
+                                                <Route path='/shoping-bag' element={<WishList/>}></Route>
+                                                </Routes>
+                                                <Footer></Footer>
+                                    </handleSbChangeContext.Provider>
+            </setSbContext.Provider>
+      </SbContext.Provider>
      </div>
      </>
   )

@@ -9,7 +9,7 @@ function Product() {
     const product = items.filter(i=>i.id === id)[0]
     useEffect(() => {
       window.scrollTo(0, 0)
-       }, [])
+       }, [id])
     return (
        <ProductLayout color={searchParams.get('color') ? searchParams.get('color') : 0 } setSearchParams={setSearchParams} product={product}></ProductLayout>
       )

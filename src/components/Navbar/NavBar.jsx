@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState,useRef,useContext,useEffect } from 'react'
-import { WishlistContext,setWishlistContext } from '../../contexts/cartContext'
+import { SbContext} from '../../contexts/cartContext'
 import {Routes,Route,NavLink, BrowserRouter, useLocation} from 'react-router-dom'
 import TopNav from './TopNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,8 +10,6 @@ function NavBar() {
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
     const [searchBar,setSearchBar] = useState(false)
     const [searchq,setSearchq] = useState('')
-    const wishlist = useContext(WishlistContext)
-    const setWishlist = useContext(setWishlistContext)
     const [curScroll,setCurScroll] = useState(0)
     const [show,setShow] = useState(true)
     const [showMore,setShowMore] = useState(false)
@@ -105,9 +103,12 @@ function NavBar() {
                                         <ion-icon name="search"></ion-icon>
                                         </button>
                                     </form>
-                                    <NavLink to='/wishlist' className='text-black text-[150%]'>
-                                    <FontAwesomeIcon size="sm" icon={faHeart} />
-                                    {wishlist.size}
+                                    <NavLink to='/shoping-bag' className='text-black relative pb-[10%] w-[10%]'>
+                                         <div className=' absolute w-full h-full flex items-center justify-center text-[200%]'>
+                                            <ion-icon name="bag-outline"></ion-icon>
+                                         </div>
+                                         <div className=' absolute w-full h-full text-[100%]  flex items-end justify-center'>
+                                         </div>
                                     </NavLink>
                          </div>
             </div>
@@ -148,7 +149,7 @@ function NavBar() {
                             <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
                        </div>
                        <div className=' w-[20%] flex justify-evenly'>                 
-                          <NavLink className='flex items-center justify-center' to='/wishlist'>
+                          <NavLink className='flex items-center justify-center' to='/shoping-bag'>
                                 <FontAwesomeIcon size="sm" icon={faHeart} />
                           </NavLink>
                        </div>
