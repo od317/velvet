@@ -26,15 +26,15 @@ function WishlistLayout() {
 
   return (
     <>   
-        <div className='  flex flex-col h-full items-center justify-center w-full mt-[5%] bg-p1'>
-          <div className='flex flex-row w-full phone:w-[30%] px-[4%]'>
-                <button className={`w-[50%] text-center ${ curPage==='bag' ? 'border-b-[2px] border-b-black font-bold':'border-b-[1px] border-gray'} py-[5%] text-[105%]`} onClick={()=>setCurPage('bag')}>
-                  Shoping Bag {shopingBagContent.length}</button>
-                <button className={`w-[50%] text-center ${ curPage==='sfl' ? 'border-b-[2px] border-black font-bold':' border-b-[1px] border-gray '}   py-[5%] text-[105%]`} onClick={()=> setCurPage('sfl')}>
-                  Saved For Later {savedForLaterContent.length}
+        <div className='  flex flex-col h-full items-center justify-center phone:py-[2%] w-full mt-[5%] bg-p1'>
+          <div className='flex flex-row w-full phone:w-[40%]  px-[4%]'>
+                <button className={`w-[50%] text-center ${ curPage==='bag' ? 'border-b-[2px]  border-b-black font-semibold phone:bg-gray4':'border-b-[1px] border-gray'} phone:border-[1px] phone:border-gray3 py-[5%] phone:py-[3%] text-[105%]`} onClick={()=>setCurPage('bag')}>
+                  Shoping Bag {shopingBagContent.length?(<>({shopingBagContent.length})</>):''}</button>
+                <button className={`w-[50%] text-center ${ curPage==='sfl' ? 'border-b-[2px]  border-black font-semibold phone:bg-gray4 ':' border-b-[1px] border-gray '} phone:border-[1px] phone:border-gray3  py-[5%] phone:py-[3%] text-[105%]`} onClick={()=> setCurPage('sfl')}>
+                  Saved For Later {savedForLaterContent.length?(<>({savedForLaterContent.length})</>):''}
                 </button>
           </div>
-          <p className=' px-[4%] py-[3%] w-full phone:w-[50%] phone:text-center'>
+          <p className=' px-[4%] py-[3%] phone:py-[1%] w-full phone:w-[50%] phone:text-[90%] phone:text-center'>
             Items in your bag are not on hold. <br />
             <ion-icon name="gift-outline"></ion-icon> Choose gift options when you check out.
           </p>

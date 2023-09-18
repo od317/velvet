@@ -32,6 +32,8 @@ export default {
       cream:'#FFFDD0',
       gray2:'#e4e4e4',
       gray3:'#9c9c9c',
+      gray4:'#f5f2f2',
+      gray5:'#979999',
       priceColor:'#fc1c03'
     }
     ,
