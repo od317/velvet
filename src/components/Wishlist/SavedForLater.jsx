@@ -1,16 +1,9 @@
-import React from 'react';
-
+import React from 'react'
+import Content from './Content'
 function SavedForLater({items,handleSbSflChange}) {
-  console.log(items)
   return (
     <div>
-       {items.map(i=>{
-        return(<div key={i}>
-            {i}
-            <br />
-            <button onClick={()=>handleSbSflChange(i)}>click</button>
-        </div>)
-       })}
+       <Content items={items} text={'Move to bag'} />
     </div>
   );
 }

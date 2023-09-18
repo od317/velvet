@@ -9,7 +9,6 @@ function Content({items,text}) {
     items.forEach(i=>{
         let cur = i.split('-')
         let pro = m[cur[0]]
-        console.log(pro)
         content = [...content,{
           id:pro.id,
           name:pro.name,

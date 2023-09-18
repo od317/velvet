@@ -56,7 +56,6 @@ function App() {
              let nextSb = new Set(Array.from(sb).filter(i => i!== pro))
              setSb(nextSb)
              localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))
-             console.log(pro+'nope'+sb)   
              return 
             }
       let nextSb = new Set(sb)

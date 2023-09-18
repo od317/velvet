@@ -3,10 +3,8 @@ import {m} from '../../Data/items'
 
 function OrderSum({items}) {
   let total = 0
-  console.log(items)
   items.forEach(i => {
     let cur = i.split('-')
-    console.log(cur)
     total += parseFloat(m[cur[0]].price)
   })
   return (
