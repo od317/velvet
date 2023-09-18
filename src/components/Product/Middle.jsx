@@ -138,7 +138,7 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
                     </div>
 
                     <div className=' w-[100%] phone:w-[100%] border-dark2 border-[2px] hover:bg-light4 transition-all duration-200 flex flex-col rounded-sm text-dark2 relative mt-[1%]  box-border text-[90%] py-[2%] phone:mb-[5%]'>
-                            <button onClick={()=>handleSbChange({id:product.id,place:'bag'})} className={` relative w-full h-full  py-[2%]  cursor-pointer   ${ showsize ? 'phone:border-b-0':''} flex flex-row phone:justify-between phone:px-[5%] items-center justify-center   text-center`}>
+                            <button onClick={()=>handleSbChange(`${product.id}-${color}-${curSize}-sb`)} className={` relative w-full h-full  py-[2%]  cursor-pointer   ${ showsize ? 'phone:border-b-0':''} flex flex-row phone:justify-between phone:px-[5%] items-center justify-center   text-center`}>
                                     <label className='mr-[2%] text-[110%] cursor-pointer flex items-center justify-center text-center w-full font-semibold' htmlFor="">
                                         <div className='flex flex-row justify-center items-center text-[120%] mr-[3%]'>
                                         <FontAwesomeIcon size="sm" icon={faHeart} />

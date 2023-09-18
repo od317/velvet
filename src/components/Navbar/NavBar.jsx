@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 function NavBar() {
+    const sbList = useContext(SbContext)
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
     const [searchBar,setSearchBar] = useState(false)
     const [searchq,setSearchq] = useState('')
@@ -108,6 +109,7 @@ function NavBar() {
                                             <ion-icon name="bag-outline"></ion-icon>
                                          </div>
                                          <div className=' absolute w-full h-full text-[100%]  flex items-end justify-center'>
+                                          {sbList.size}
                                          </div>
                                     </NavLink>
                          </div>

@@ -37,7 +37,7 @@ import Footer from './components/Fotter/Fotter'
 import Home from './pages/Home'
 import Store from './pages/Store'
 import WishList from './pages/Wishlist'
-import { SbContext,setSbContext,setWishlistContext,handleSbChangeContext } from './contexts/cartContext'
+import { SbContext,setSbContext,setWishlistContext,handleSbSflChangeContext,handleSbChangeContext } from './contexts/cartContext'
 import Product from './pages/Product'
 function App() {
   const [wishlist,setWishlist] = useState(
@@ -51,19 +51,42 @@ function App() {
   )
 
 
-  const handleSbEdit = (pro)=>{        
+  const handleSbEdit = (pro)=>{     
       if(sb.has(pro)){
-            console.log('ok')
-             let nextSb = new Set(Array.from(sb).filter(i => i.id !== pro.id))
+             let nextSb = new Set(Array.from(sb).filter(i => i!== pro))
              setSb(nextSb)
              localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))
+             console.log(pro+'nope'+sb)   
              return 
             }
-      let nextSb = new Set(Array.from(sb))
+      let nextSb = new Set(sb)
       nextSb.add(pro)
-      setSfl(nextSb)
+      setSb(nextSb)
       localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))        
   }
+  const handleSbSflChange = (id)=>{     
+            let nextSb = []
+            let cur = id.split('-')
+            if(cur[cur.length-1] == 'sb'){
+                nextSb = new Set(Array.from(sb).map(i => {
+                if(id === i){
+                    return id.substring(0,id.length-2)+'sfl'
+                }
+                return i
+            }))
+           }
+           else{
+            nextSb = new Set(Array.from(sb).map(i => {
+                if(id === i){
+                    return id.substring(0,id.length-3)+'sb'
+                }
+                return i
+            }))
+           }
+           setSb(nextSb)
+           localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))
+           return 
+}
 
   return (
      <>
@@ -71,6 +94,7 @@ function App() {
       <SbContext.Provider value={sb}>
             <setSbContext.Provider value={setSb}>
                                     <handleSbChangeContext.Provider value={handleSbEdit}>
+                                        <handleSbSflChangeContext.Provider value={handleSbSflChange}>
                                                 <NavBar></NavBar>
                                                 <Routes>
                                                 <Route path='/' element={<Home/>}></Route>
@@ -79,6 +103,7 @@ function App() {
                                                 <Route path='/shoping-bag' element={<WishList/>}></Route>
                                                 </Routes>
                                                 <Footer></Footer>
+                                        </handleSbSflChangeContext.Provider>
                                     </handleSbChangeContext.Provider>
             </setSbContext.Provider>
       </SbContext.Provider>

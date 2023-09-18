@@ -11,11 +11,9 @@ function ProductsSlider({products}) {
     const [swiper, setSwiper] = React.useState(null)
 
     let swipeList  = []
-    console.log(products)
     for(let i=0;i<products.length;i+=5){
        swipeList = [...swipeList,products.slice(i,i+5)]
     }
-    console.log(swipeList)
     const nexTo = ()=>{
       swiper.slideNext()
     }

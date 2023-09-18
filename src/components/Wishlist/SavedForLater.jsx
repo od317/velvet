@@ -1,9 +1,16 @@
 import React from 'react';
 
-function SavedForLater() {
+function SavedForLater({items,handleSbSflChange}) {
+  console.log(items)
   return (
     <div>
-      sfl 
+       {items.map(i=>{
+        return(<div key={i}>
+            {i}
+            <br />
+            <button onClick={()=>handleSbSflChange(i)}>click</button>
+        </div>)
+       })}
     </div>
   );
 }

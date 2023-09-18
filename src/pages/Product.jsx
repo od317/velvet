@@ -1,12 +1,12 @@
 import React from 'react'
 import {useParams,useSearchParams} from 'react-router-dom'
 import ProductLayout from '../components/Product/ProductLayout'
-import items from '../Data/items'
+import {m} from '../Data/items'
 import {useEffect} from 'react'
 function Product() {
     const {id} = useParams()
     const [searchParams, setSearchParams] = useSearchParams()
-    const product = items.filter(i=>i.id === id)[0]
+    const product = m[id]
     useEffect(() => {
       window.scrollTo(0, 0)
        }, [id])

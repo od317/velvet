@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
+import {m} from '../../Data/items'
+import Content from './Content'
+function ShoppingBag({items,handleSbSflChange}) {
 
-function ShoppingBag() {
   return (
     <div>
-      sb
+       <Content items={items} text={'save for later'} />
     </div>
   );
 }
