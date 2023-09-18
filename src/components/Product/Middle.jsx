@@ -78,7 +78,7 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
                             </div>
                     </div>
 
-                    <label className='text-start w-full text-[#fc3003]' htmlFor=""> <span className=' font-bold'>107</span> people are viweing this</label>
+                    <label className='text-start w-full text-priceColor' htmlFor=""> <span className=' font-bold'>107</span> people are viweing this</label>
 
                     <div className='flex flex-col  w-full'>
                             {/* rounded bouttons */}
