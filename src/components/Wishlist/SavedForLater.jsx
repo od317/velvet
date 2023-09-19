@@ -2,12 +2,8 @@ import React from 'react'
 import Content from './Content'
 function SavedForLater({items,handleSbSflChange}) {
   return (
-    <div className='bg-p1 px-[4%] '>
-       <div className=' py-[5%] border-b-[.1px] border-b-gray2 flex flex-row'>
+    <div className='bg-p1 px-[4%] phone:px-[2%] phone:w-[67%] phone:float-left phone:mb-[5%] phone:inline-block '>
 
-
-       </div>
-       
        <Content items={items} text={'Move to bag'} />
 
 

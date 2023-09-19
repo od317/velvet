@@ -8,7 +8,7 @@ function OrderSum({items}) {
     total += parseFloat(m[cur[0]].price)
   })
   return (
-    <div className='px-[4%] phone:px-[1.5%] phone:pt-[1%] phone:float-right phone:w-[32%] flex flex-col pt-[2%] phone:my-[0%]  my-[5%] bg-p1 phone:py-[3%] py-[5%]'>
+    <div className='px-[4%] phone:px-[1.5%] phone:pt-[1%] phone:float-right phone:w-[32%] phone:mb-[2%] flex flex-col pt-[2%] phone:my-[0%]  my-[5%] bg-p1 phone:py-[3%] py-[5%]'>
          <label className=' font-bold text-[120%] my-[3%] phone:text-[135%] text-black' htmlFor="">Order summary</label> 
          <div className='pb-[3%] border-b-gray3 border-b-[1px] flex flex-col'>
               <div className='flex flex-row justify-between items-center phone:text-[110%] mb-[5%]'>
