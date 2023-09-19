@@ -58,8 +58,8 @@ const Card = ({c,text})=>{
             </div>
 
             <div className='flex flex-row items-center justify-start my-[5%]'>
-                 <button className='w-[50%] text-start' onClick={()=>handleSbChange(c.p)}>Remove</button>
-                 <button className='w-[50%] text-start' onClick={()=>handleSbSflChange(c.p)}>{text}</button>
+                 <button className=' w-[30%]  text-start' onClick={()=>handleSbChange(c.p)}>Remove</button>
+                 <button className=' w-[40%]  text-start' onClick={()=>handleSbSflChange(c.p)}>{text}</button>
             </div>
 
           </div>

@@ -8,7 +8,7 @@ function ShoppingBag({items,handleSbSflChange}) {
 
   return (
     <>
-    <div className='bg-p1 px-[4%] phone:w-[67%] phone:inline-block'>
+    <div className='bg-p1 px-[4%] phone:w-[67%] phone:float-left phone:mb-[5%] phone:inline-block'>
        <div className=' py-[5%] phone:py-[3%] border-b-[.1px] border-b-gray2 flex flex-row'>
             <div className='w-[10%] phone:w-[5%] '>
               <img className='w-[80%]' src={truck2} alt="" />
@@ -24,19 +24,7 @@ function ShoppingBag({items,handleSbSflChange}) {
 
     </div>
     <OrderSum items={items}/>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    
 
     </>
   )
