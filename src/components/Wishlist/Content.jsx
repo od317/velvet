@@ -66,10 +66,10 @@ const Card = ({c,text})=>{
                 </div>
             </div>
             <div className='flex flex-row items-center justify-start phone:my-[3%] my-[5%]'>
-                 <div className=' w-[30%]  phone:w-[15%] text-blue text-start' >
+                 <div className=' w-[30%]  phone:w-auto phone:mr-[5%] text-blue text-start' >
                    <button onClick={()=>handleSbChange(c.p)}>Remove</button>
                  </div>
-                 <div className=' w-[40%] phone:w-[20%]  text-blue text-start' onClick={()=>handleSbSflChange(c.p)}>
+                 <div className=' w-[40%] phone:w-auto  text-blue text-start' onClick={()=>handleSbSflChange(c.p)}>
                     <button onClick={()=>handleSbChange(c.p)}>{text}</button>
                  </div>
             </div>

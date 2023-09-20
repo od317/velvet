@@ -6,6 +6,7 @@ export default {
   ],  theme: {
     screens: {
       'phone': '450px',
+      'mid':'800px',
     },
     fontFamily: {
       

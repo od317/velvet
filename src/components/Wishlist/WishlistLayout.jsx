@@ -42,14 +42,14 @@ function WishlistLayout() {
   return (
     <>   
         <div className='   flex flex-col h-full items-center justify-center phone:py-[2%] w-full mt-[5%] bg-p1'>
-          <div className='flex flex-row w-full phone:w-[40%]  px-[4%]'>
+          <div className='flex flex-row w-full mid:w-[50%]  px-[4%]'>
                 <button className={`w-[50%] text-center ${ curPage==='bag' ? 'border-b-[2px]  border-b-black font-semibold phone:bg-gray4':'border-b-[1px] border-gray'} phone:border-[1px] phone:border-gray3 py-[5%] phone:py-[3%] text-[105%]`} onClick={()=>setCurPage('bag')}>
                   Shoping Bag {shopingBagContent.length?(<>({shopingBagContent.length})</>):''}</button>
                 <button className={`w-[50%] text-center ${ curPage==='sfl' ? 'border-b-[2px]  border-black font-semibold phone:bg-gray4 ':' border-b-[1px] border-gray '} phone:border-[1px] phone:border-gray3  py-[5%] phone:py-[3%] text-[105%]`} onClick={()=> setCurPage('sfl')}>
                   Saved For Later {savedForLaterContent.length?(<>({savedForLaterContent.length})</>):''}
                 </button>
           </div>
-          <p className=' px-[4%] py-[3%] phone:py-[1%] w-full phone:w-[50%] phone:text-[90%] phone:text-center'>
+          <p className=' px-[4%] py-[3%] phone:py-[1%] w-full mid:w-[50%] phone:text-[90%] phone:text-center'>
             Items in your bag are not on hold. <br />
             <ion-icon name="gift-outline"></ion-icon> Choose gift options when you check out.
           </p>
@@ -58,13 +58,13 @@ function WishlistLayout() {
         <br />
         {curPage ==='bag'?
         <ShoppingBag handleSbSflChange={handleSbSflChange} items={shopingBagContent} handlePageChange={setCurPage}>
-        {windowWidth >= 450 &&<BottomContent sim={sim}/>}
+        {windowWidth >= 800 &&<BottomContent sim={sim}/>}
         </ShoppingBag>:
         <SavedForLater handleSbSflChange={handleSbSflChange} items={savedForLaterContent} handlePageChange={setCurPage}>
-        {windowWidth >= 450 &&<BottomContent sim={sim}/>}
+        {windowWidth >= 800 &&<BottomContent sim={sim}/>}
         </SavedForLater>
         }
-        <div className='px-[1.5%] hidden phone:flex flex-row phone:float-right phone:w-[32%] py-[1.5%]  bg-p1'>
+        <div className='px-[1.5%] hidden mid:flex flex-row mid:float-right mid:w-[32%] py-[1.5%]  bg-p1'>
              <div className='mr-[5%]'>
              <svg width="30" height="40" focusable="false" className="nui-icon nui-icon-large-card-nordstrom-visa " role="img" title="Nordstrom Credit Card Icon" viewBox="0 0 30 40"><path d="M25.37.5c.63.005 1.136.52 1.13 1.15v36.7a1.14 1.14 0 0 1-1.13 1.15H1.63A1.14 1.14 0 0 1 .5 38.35V1.65A1.14 1.14 0 0 1 1.63.5z" fill="#898989" stroke="#898989" strokeMiterlimit="10"></path><path d="M19.993 4.507c0-.55.45-1 1-1h1.5c.55 0 1 .45 1 1v2.5c0 .55-.45 1-1 1h-1.5c-.55 0-1-.45-1-1z" fill="#e0e0e0"></path><path d="M19.972 4.507c0-.55.45-1 1-1h1.5c.55 0 1 .45 1 1v2.5c0 .55-.45 1-1 1h-1.5c-.55 0-1-.45-1-1z" fill="none" stroke="#e0e0e0" strokeMiterlimit="10"></path><path d="M19.223 29.906v-15.68h-2.331v9.739L7.735 13.906v15.612h2.324v-9.593l.084.089z" fill="#fff"></path></svg>
              </div>
@@ -72,7 +72,7 @@ function WishlistLayout() {
                <span className=' font-semibold text-[110%]'>Get a $60 Bonus Note</span> when you use a new Nordstrom credit card. See Restrictions & Apply
              </div>
         </div>
-        <div className='px-[4%] phone:float-right phone:px-[1.5%] phone:w-[32%] py-[5%] phone:py-[1.5%] mb-[5%] flex flex-col'>
+        <div className='px-[4%] mid:float-right mid:px-[1.5%] mid:w-[32%] py-[5%] mid:py-[1.5%] mb-[5%] flex flex-col'>
               <label className='text-[90%]' htmlFor="">Have a question? Call ####### ir chat with us</label>
                <label className='text-[80%] text-gray' htmlFor="">Accepted payment methods</label> 
                <div className='flex flex-row w-full'>
@@ -83,7 +83,7 @@ function WishlistLayout() {
                <svg width="24px" height="24px" focusable="false" className="mr-[1%]" role="img" title="Paypal Icon"><path d="M0 0h24v24H0z" fill="none"></path><image height="127" overflow="visible" transform="matrix(.12 0 0 .12 0 4.38)" width="200" href="data:image/jpeg;base64,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 hERKPGY2itPQVrZIUXmEe99R/9k="></image></svg>
                </div>
         </div>
-        {windowWidth < 450 &&<BottomContent sim={sim}/>}
+        {windowWidth < 800 &&<BottomContent sim={sim}/>}
     </>
   )
 }

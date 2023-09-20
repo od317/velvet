@@ -6,7 +6,7 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons'
 const Card = ({product})=>{
     const [mainImgIndex,setMainImgIndex] = useState(0)
     return (<>
-            <div className='w-[100%]'>
+            <div className='w-[100%] transition-all duration-500'>
                   <div className=' relative'>
 
                   <Link className=' ' to={`/product/${product.id}?color=${mainImgIndex}`}>
