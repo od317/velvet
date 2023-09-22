@@ -10,8 +10,8 @@ function Sort({handleSortChange,sort,numShow}) {
   return (
     <div className='p-[2%] relative  flex phone:flex  flex-row  justify-between items-center'>
           <div className=' hidden phone:block'>showing {numShow} of 100 items</div>
-             <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}} className='phone:relative z-[6] w-[30%] phone:w-[12%] text-start'>
-                    <div  className=' phone:border-black phone:border-[1px]  flex flex-row justify-between items-center  px-[5%] cursor-pointer '>
+             <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}} className='phone:relative z-[6] w-[30%] phone:w-auto phone:min-w-[12%] phone:max-w-[50%] text-start'>
+                    <div  className=' phone:border-black phone:border-[1px] phone:px-[2%] w-full flex flex-row justify-between items-center  px-[5%] cursor-pointer '>
                       <label className='cursor-pointer hidden phone:block' htmlFor="">{sort}</label>
                       <label className='cursor-pointer phone:hidden' htmlFor="">Show</label>
                       <label className={`${showSort ? ' rotate-180 ':''} flex items-center justify-center text-center transition-all duration-200`} htmlFor=""><ion-icon name="chevron-down-outline"></ion-icon></label>
