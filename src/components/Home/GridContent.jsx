@@ -6,6 +6,7 @@ import { useSwiper } from 'swiper/react'
 
 import 'swiper/css'
 import 'swiper/css/effect-creative'
+import Small from '../Sliders/Small';
 
 const cards = [
     {
@@ -41,9 +42,10 @@ const cards = [
         text:'sweater'
     },
 ]
-
+const ids = ['t1','t2','t3','t4','t5','t1','t2','t3','t4','t5','t1','t2','t3','t4','t5']
 function GridContent() {
-  return (
+  return (<>
+    <Small text={'Great Deals on What You Love'} items={ids} />
     <div className='mt-[20%] phone:mb-[20%] mb-[50%] phone:mt-[10%]'>
      
       <div className=' grid phone:grid-cols-2 phone:gap-[3%] gap-[1%]  phone:px-[10%] '>
@@ -59,6 +61,7 @@ function GridContent() {
       </div>
 
     </div>
+    </>
   );
 }
 

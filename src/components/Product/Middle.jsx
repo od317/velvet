@@ -40,7 +40,7 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
                     color:<span className=' ml-[1%] font-bold'>{product.img[color].name}</span>
                 </div>
 
-                <div className='flex flex-row justify-between'>
+                <div className='  flex flex-row justify-between'>
                     <div className='w-[80%] flex '> 
                         { product.img.map((i,index)=>{
                                 return (

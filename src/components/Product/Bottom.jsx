@@ -11,22 +11,13 @@ function Bottom({product}) {
 
 
   return (
-    <div className='flex flex-col mb-[5%]'>
-        <label className=' font-bold text-[140%] mt-[5%] mb-[3%] text-dark2'>
+    <div className='flex flex-col  mb-[5%]'>
+        <label className=' font-bold text-[140%] px-[4%] mt-[5%] mb-[0%] text-dark2'>
             Discover More Items
         </label>
         
         <ProductsSlider products={product.simList}/>
 
-
-        <div className='phone:hidden grid grid-cols-2 gap-x-[2%] gap-y-[1%]'>
-             {product.simList.map((id,i)=>{
-              const pro = m[id]
-              return (
-                              <Card key={i} product={pro}></Card>
-              )
-            })}
-        </div>
     </div>
   );
 }

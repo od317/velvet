@@ -1,6 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart,faStar } from '@fortawesome/free-regular-svg-icons'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/free-mode'
+import { FreeMode } from 'swiper/modules'
 function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
   return (
     <>
@@ -13,10 +17,29 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
                          <FontAwesomeIcon icon={faStar} style={{color: "#000000",}} />
                          <FontAwesomeIcon icon={faStar} style={{color: "#000000",}} />
                     </div>
-                    <label className='flex flex-row justify-center items-center text-[180%]' htmlFor="">{product.price}$</label>
+                    <label className='flex flex-row justify-center items-center text-[150%]' htmlFor="">{product.price}$</label>
          </div>
+        <div className='phone:hidden mt-[5%]'>
+               <Swiper
+                    slidesPerView={1.6}
+                    spaceBetween={2}
+                    freeMode={true}
 
-         <div className='flex flex-row phone:hidden  py-[5%] phone:py-[2%] phone:w-[50%]'>
+                    modules={[FreeMode]}
+                    className="mySwiper"
+                    >
+                    {product.img[color].imgs.map((i,index)=>{
+                    return(<div key={i}>
+                              <SwiperSlide key={i}>
+                                <div
+                                style={{backgroundImage:`url(${i})`}} 
+                                className='h-full imgBack pb-[200%]'></div>
+                              </SwiperSlide>
+                    </div>)
+                    })}
+                    </Swiper>
+          </div>
+         {/* <div className='flex flex-row phone:hidden  py-[5%] phone:py-[2%] phone:w-[50%]'>
               <div className='flex flex-row w-full h-full phone:w-auto phone:h-auto'>
                     <div 
                     style={{backgroundImage:`url(${product.img[color].imgs[curHeaderImg]})`}}
@@ -29,7 +52,7 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
                     })}
                     </div>
              </div>
-        </div>
+        </div> */}
 
 
         <div className='hidden phone:grid mr-[2%] gap-x-[.5%] gap-y-[.5%] grid-cols-2 w-[55%]'>

@@ -12,8 +12,8 @@ import Bottom from './Bottom';
 function ProductLayout({product,color,setSearchParams}) {
   const [curHeaderImg,setCurHeaderImg] = useState(0)
   return (
-    <div className='px-[3%] phone:px-[2%]'>
-            <div className='text-black mb-[1%] phone:py-[2%]  phone:flex phone:flex-row  '>
+    <div className='bg-p1'>
+            <div className='text-black mb-[1%] px-[3%] phone:px-[2%] phone:py-[2%]  phone:flex phone:flex-row  '>
 
                 <LeftSide product={product} color={color} curHeaderImg={curHeaderImg} setCurHeaderImg={setCurHeaderImg}/>
 
