@@ -70,13 +70,13 @@ function NavBar() {
 
            <div className='w-full px-[1.2%] relative pt-[2%]'>
                 <div className='w-full flex flex-row phone:border-b-[1px]  border-gray3 pb-[1%]'>
-                     <div className='flex flex-col px-[2%] phone:px-[0%] phone:flex-row w-full'>
+                     <div className='flex flex-col px-[4%] phone:px-[0%] phone:flex-row w-full'>
                              <div className='flex phone:w-[20%] flex-row mb-[2%] phone:mb-[0%] phone:block'>
-                                    <div className='phone:hidden w-[5%]' onClick={()=>handleSideShowChange(!showSide)}>
+                                    <div className='phone:hidden flex items-center justify-center w-[7%]' onClick={()=>handleSideShowChange(!showSide)}>
                                         <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
                                     </div>
                                     <div  className='flex-grow'>
-                                        <NavLink className='  phone:w-full font-semibold mb-[2%] phone:text-[200%]' to={'/'}>NORDSTROM</NavLink>
+                                        <NavLink className='  phone:w-full font-semibold mb-[2%] text-[120%] phone:text-[200%]' to={'/'}>NORDSTROM</NavLink>
                                     </div>
                                     <NavLink to='/shoping-bag' className='text-black ml-[10%] relative phone:hidden  w-[20%]'>
                                                         <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
@@ -85,8 +85,8 @@ function NavBar() {
                                     </NavLink>
                              </div>
                               
-                              <div className='phone:w-[48%] flex items-center border-[1px] border-gray3 py-[1%]'>
-                                  <form className='w-full' action="">
+                              <div className='phone:w-[48%] flex items-center border-[1px] px-[2%] phone:px-[0%] border-gray3 py-[1%]'>
+                                  <form className='w-full text-[120%] phone:text-[100%]' action="">
                                     <button className='w-[8%] mr-[2%]' type='submit'>
                                       <FontAwesomeIcon icon={faMagnifyingGlass} />
                                     </button>
