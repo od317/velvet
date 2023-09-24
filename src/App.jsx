@@ -89,7 +89,7 @@ function App() {
 
   return (
      <>
-     <div className=' bg-light2 flex justify-between flex-col min-h-screen'>
+     <div className=' bg-p1 flex justify-between flex-col min-h-screen'>
       <SbContext.Provider value={sb}>
             <setSbContext.Provider value={setSb}>
                                     <handleSbChangeContext.Provider value={handleSbEdit}>

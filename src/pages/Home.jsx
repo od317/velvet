@@ -12,7 +12,7 @@ function Home() {
   }, [])
   return (
      <>
-     <div className='bg-light2'>
+     <div className='bg-p1'>
       <Header></Header>
       <Grid></Grid>
       <Bottom></Bottom>

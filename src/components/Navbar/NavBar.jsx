@@ -6,6 +6,8 @@ import TopNav from './TopNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import './styles/navbar.css'
 function NavBar() {
     const sbList = useContext(SbContext)
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
@@ -49,27 +51,6 @@ function NavBar() {
         }
     })
 
-    window.addEventListener('scroll',(e)=>{
-        
-        if (navRef.current === null)
-            return 
-        let t = navRef.current
-        
-        if(window.scrollY > 30){
-            t.style.boxShadow = '0px 4px 16px rgba(17,17,26,0.1), 0px 8px 24px rgba(17,17,26,0.1), 0px 16px 56px rgba(17,17,26,0.1)'
-        }
-        else{
-            t.style.boxShadow = 'none'
-        }
-        
-        if (window.scrollY > curScroll){
-        }
-        else{
-            setShow(true)
-        }
-        setCurScroll(window.scrollY)
-    }) 
-
    const handleSideShowChange = (value)=>{
     setShowSide(value)
     if(value)
@@ -79,7 +60,92 @@ function NavBar() {
    }
     
     return (<>
-        <div ref={navRef} className={`   hidden phone:block bg-p1 text-black  transition-all duration-[500ms]  ${true ? '':'sticky '} top-0  z-[10] py-[.7%] `}>
+    
+        <div className='flex flex-col'>
+ 
+            <div className='text-center text-[110%] py-[2%]  phone:text-[100%] text-white bg-black phone:py-[.6%]'>
+                 <span className=' font-semibold mr-[.1%]'>Earn 5X the points on beauty!</span> 
+                 A Nordy Club exclusive
+            </div>
+
+           <div className='w-full px-[1.2%] relative pt-[2%]'>
+                <div className='w-full flex flex-row phone:border-b-[1px]  border-gray3 pb-[1%]'>
+                     <div className='flex flex-col px-[2%] phone:px-[0%] phone:flex-row w-full'>
+                             <div className='flex phone:w-[20%] flex-row mb-[2%] phone:mb-[0%] phone:block'>
+                                    <div className='phone:hidden w-[5%]' onClick={()=>handleSideShowChange(!showSide)}>
+                                        <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
+                                    </div>
+                                    <div  className='flex-grow'>
+                                        <NavLink className='  phone:w-full font-semibold mb-[2%] phone:text-[200%]' to={'/'}>NORDSTROM</NavLink>
+                                    </div>
+                                    <NavLink to='/shoping-bag' className='text-black ml-[10%] relative phone:hidden  w-[20%]'>
+                                                        <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
+                                                        {sbList.size}
+                                                        </div>
+                                    </NavLink>
+                             </div>
+                              
+                              <div className='phone:w-[48%] flex items-center border-[1px] border-gray3 py-[1%]'>
+                                  <form className='w-full' action="">
+                                    <button className='w-[8%] mr-[2%]' type='submit'>
+                                      <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                    </button>
+                                        <input placeholder='search for product or brand' className='w-[90%]' type="text" name="" id="" />
+                                  </form>
+                              </div>
+ 
+                              <div className='w-[32%] hidden phone:flex items-center justify-end'>
+                                            
+                                            <NavLink className='ml-[10%]' to={'/'}>Home</NavLink>
+                                            <NavLink className='ml-[10%]'  to={'/store'}>Store</NavLink>
+                                            <NavLink  className=' ml-[10%] flex items-center justify-center h-full' onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} to={'/store/new'}>New</NavLink>
+                                            <NavLink to='/shoping-bag' className='text-black ml-[10%] relative  w-[20%]'>
+                                                <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
+                                                {sbList.size}
+                                                </div>
+                                            </NavLink>
+                              </div>
+
+                     </div>
+                </div>
+                
+                
+                {/* 
+                new hover
+                <div onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} className={`${showMore ? '  inline-block':'hidden'}  w-full absolute bg-p1 z-10 flex flex-row `} >
+                                                <div className='flex flex-row w-[50%] p-[5%]'>
+                                                      <div onClick={()=> setShowMore(false)} className=" flex flex-col ">
+                                                        <label className=' font-bold text-[110%] ' htmlFor="">osama</label>
+                                                        <NavLink to={'/store'}>
+                                                            <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">T-shirt</label>
+                                                        </NavLink>
+                                                        <NavLink to={'/store'}>
+                                                            <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(2)} htmlFor="">shirt</label>
+                                                        </NavLink>
+                                                      </div>
+                                                </div>
+
+                                                <div className='flex flex-row w-[50%] h-full relative pb-[30%] '>
+                                    
+                                                     <div className={` ${dropDownImgNum == 1 ? '':'hidden'} flex absolute w-full h-full justify-center items-center`}>
+                                                        <img className="w-[50%]" src="https://media.istockphoto.com/id/1286538907/photo/stylish-blonde-girl-wearing-black-t-shirt-and-glasses-posing-against-street-urban-clothing.jpg?s=612x612&w=0&k=20&c=4F9OrXj8iZa7V_7cmgQO3v3qYu_Ms8UiPayZXAin8z8=" alt="" />
+                                                     </div>
+
+                                                     <div className={` ${dropDownImgNum == 2 ? '':'hidden'} flex absolute w-full h-full justify-center items-center`}>
+                                                        <img className="w-[50%]" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_23/1445782/white-t-shirts-today-main-190607-001.jpg" alt="" />
+                                                     </div>
+
+                                                </div>
+                </div> */}
+          
+           </div>
+
+        </div>
+    
+        {
+        /*
+         old design
+         <div ref={navRef} className={`   hidden phone:block bg-p1 text-black  transition-all duration-[500ms]   top-0  z-[10] py-[.7%] `}>
             <div className=' relative px-[2%] flex flex-row w-full items-center justify-center '>
                         <div className=' w-[20%] flex justify-end items-center'>
                             <label htmlFor="" className=' font-bold text-[110%] px-[5%] p-[1%]'>
@@ -108,38 +174,14 @@ function NavBar() {
                                     </NavLink>
                          </div>
             </div>
-            <div onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} className={`${showMore ? '  inline-block':'hidden'}  w-full absolute bg-p1 flex flex-row `} >
-                                                <div className='flex flex-row w-[50%] p-[5%]'>
-                                                      <div onClick={()=> setShowMore(false)} className=" flex flex-col ">
-                                                        <label className=' font-bold text-[110%] ' htmlFor="">osama</label>
-                                                        <NavLink to={'/store'}>
-                                                            <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">T-shirt</label>
-                                                        </NavLink>
-                                                        <NavLink to={'/store'}>
-                                                            <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(2)} htmlFor="">shirt</label>
-                                                        </NavLink>
-                                                      </div>
-                                                </div>
 
-                                                <div className='flex flex-row w-[50%] h-full relative pb-[30%] '>
-                                    
-                                                     <div className={` ${dropDownImgNum == 1 ? '':'hidden'} flex absolute w-full h-full justify-center items-center`}>
-                                                        <img className="w-[50%]" src="https://media.istockphoto.com/id/1286538907/photo/stylish-blonde-girl-wearing-black-t-shirt-and-glasses-posing-against-street-urban-clothing.jpg?s=612x612&w=0&k=20&c=4F9OrXj8iZa7V_7cmgQO3v3qYu_Ms8UiPayZXAin8z8=" alt="" />
-                                                     </div>
-
-                                                     <div className={` ${dropDownImgNum == 2 ? '':'hidden'} flex absolute w-full h-full justify-center items-center`}>
-                                                        <img className="w-[50%]" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_23/1445782/white-t-shirts-today-main-190607-001.jpg" alt="" />
-                                                     </div>
-
-                                                </div>
-            </div>
-        </div>
+        </div> */}
 
  
 
 
 
-        <div className=' sticky top-0 bg-light2 text-[150%] z-[20] w-full phone:hidden'>
+        {/* <div className=' sticky top-0 bg-light2 text-[150%] z-[20] w-full phone:hidden'>
                  <div className='flex flex-row justify-between px-[5%] py-[5%] w-full '>
                        <div onClick={()=>handleSideShowChange(!showSide)}>
                             <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
@@ -150,7 +192,7 @@ function NavBar() {
                           </NavLink>
                        </div>
                  </div>
-        </div>
+        </div> */}
 
      
         <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all duration-100 phone:hidden fixed h-full w-[100%] flex flex-row z-20`}>

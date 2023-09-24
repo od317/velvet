@@ -1,12 +1,15 @@
 import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/free-mode'
+import { FreeMode } from 'swiper/modules'
 
 function SFilters() {
+  const s = ['1','2','3','4','5','6']
   return (
-        <div className='ms:hidden flex-grow  whitespace-nowrap overflow-scroll'>
-                <div className='bg-light1 w-[15%] inline-block h-full mr-[5%]'>
-                sss
-                </div>
-        </div>
+    <>
+
+    </>
   )
 }
 

@@ -115,7 +115,7 @@ function StoreLayout({sortP,filterP}) {
           }))
     }
   return (<>
-    <div className=' hidden phone:block'>
+    <div className=' hidden phone:block '>
           <Sort sort={sort} numShow={items_show.length} handleSortChange={handleSortChange} />
     </div>
     <div className=' flex flex-col relative phone:flex-row'>
@@ -125,7 +125,7 @@ function StoreLayout({sortP,filterP}) {
                      src="https://s3-media0.fl.yelpcdn.com/bphoto/s3J5l1SCn7p1fRY8zdU2cg/348s.jpg" alt="" />
          </div>
       
-         <div className='phone:hidden bg-light2 z-[2] pl-[2%] flex flex-row justify-between rounded-tl-3xl w-[70%]'>
+         <div className='phone:hidden bg-p1 z-[2] pl-[2%] flex flex-row justify-between rounded-tl-3xl w-[70%]'>
              <Sort sort={sort} handleSortChange={handleSortChange} />
              <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
@@ -134,7 +134,7 @@ function StoreLayout({sortP,filterP}) {
               <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
       
-         <div className=' phone:w-[100%] ms:w-[85%]  z-[1] bg-light2 px-[2%] pb-[100%]'>
+         <div className=' phone:w-[100%] ms:w-[85%]  z-[1] bg-p1 px-[2%] pb-[100%]'>
               <StoreGrid items={items_show} />
          </div>
 

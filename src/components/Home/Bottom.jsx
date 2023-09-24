@@ -6,7 +6,7 @@ import  './styles/bottom.css'
 function Bottom() {
   return (
     <>
-      <div className='mt-[5%] hidden phone:block'>
+      {/* <div className='mt-[5%] hidden phone:block'>
         <div className='flex flex-col font-bold capitalize px-[10%] text-center text-[200%]'>
                   <span>unleash your style</span>
                   <span>Embrace your fashion</span>
@@ -64,7 +64,7 @@ function Bottom() {
             
            </div>
 
-    </div>
+    </div> */}
     </>
   )
 }
