@@ -79,14 +79,14 @@ function NavBar() {
    }
     
     return (<>
-        <div ref={navRef} className={`   hidden phone:block bg-p1 text-black  transition-all duration-[500ms]   sticky top-0 z-[10] py-[.7%] `}>
-            <div className=' relative flex flex-row justify-center '>
-                        <div className='w-[25%] flex justify-end items-center'>
-                            <label htmlFor="" className='border-[1px] border-black px-[5%] p-[1%]'>
-                                       VELVET WOMAN'S WEARS 
+        <div ref={navRef} className={`   hidden phone:block bg-p1 text-black  transition-all duration-[500ms]  ${true ? '':'sticky '} top-0  z-[10] py-[.7%] `}>
+            <div className=' relative px-[2%] flex flex-row w-full items-center justify-center '>
+                        <div className=' w-[20%] flex justify-end items-center'>
+                            <label htmlFor="" className=' font-bold text-[110%] px-[5%] p-[1%]'>
+                                       NordStorm
                             </label>
-                            </div>
-                        <div className='w-[50%]'>        
+                        </div>
+                        <div className='w-[60%]'>        
                                         <nav className='flex flex-row justify-evenly h-full items-center'>
                                     
                                             <NavLink to={'/'}>Home</NavLink>
@@ -97,18 +97,12 @@ function NavBar() {
 
 
                         </div>
-                         <div className='w-[25%] flex flex-row justify-start items-center'>
-                                    <form onMouseOver={()=> setSearchBar(true)} onMouseLeave={()=> setSearchBar(false)} action="" className=' text-black flex flex-row items-center justify-center w-[50%]'>
-                                        <input onChange={(e)=>setSearchq(e.target.value)} className={` text-[100%] py-[.5%] outline-none border-b-[1px] border-black text-black bg-p1  ${(searchBar || searchq.length > 0) ? 'w-[80%]' :'w-[0]'} transition-all duration-200`}></input>
-                                        <button >
-                                        <ion-icon name="search"></ion-icon>
-                                        </button>
-                                    </form>
-                                    <NavLink to='/shoping-bag' className='text-black relative pb-[10%] w-[10%]'>
-                                         <div className=' absolute w-full h-full flex items-center justify-center text-[200%]'>
-                                            <ion-icon name="bag-outline"></ion-icon>
-                                         </div>
-                                         <div className=' absolute w-full h-full text-[100%]  flex items-end justify-center'>
+                         <div className='w-[20%] flex flex-row justify-center items-center'>
+                                    <NavLink to='/shoping-bag' className='text-black mr-[5%] relative '>
+                                          <FontAwesomeIcon size="lg" icon={faHeart} />
+                                    </NavLink>
+                                    <NavLink to='/shoping-bag' className='text-black  relative  w-[20%]'>
+                                         <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
                                           {sbList.size}
                                          </div>
                                     </NavLink>

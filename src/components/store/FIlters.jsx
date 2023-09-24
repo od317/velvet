@@ -1,30 +1,18 @@
-import React from 'react';
-
-const filters = [{
-  name:'sm'
-  },
-  {name:'medium'},
-  {name:'lg'},
-  { name:'xl'},
-  {name:'2xl'},
-  {name:'3xl'}
-]
+import React, { useState } from 'react'
+import { filters } from '../../Data/FIlters';
+import './styles.css/scrollBar.css'
 
 function FIlters({handlefilterChange,filter}) {
   return (<>
-            <div className=' phone:block hidden border-r-[1px] border-gray'>
+            <div className=' ms:block hidden pr-[0%] overflow-y-scroll sc max-h-screen '>
               
-              <div className=' font-bold border-b-[1px] border-gray w-full pb-[1%]' htmlFor="">Filters</div>
-              <div className=" flex flex-col">
-                  {filters.map(f=>{
-                    return(<div key={f.name}>
-                        <div className='flex flex-row gap-[1%] items-center my-[.5%] '>
-                            <div className={` ${f.name === filter ? 'bg-black':''} w-[4.5%] pb-[4.5%] rounded-full border-[1px]`}></div>
-                            <button onClick={()=> handlefilterChange(f.name)} className='flex flex-row items-center justify-center'>{f.name}</button>
-                        </div>
-                    </div>)
-                  })}
-
+              <div className=" flex flex-col   pb-[15%] transition-all duration-200 ">
+                 {filters.map((filters,i)=>{
+                  return(
+                 <div key={i}>
+                   <Filter  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
+                 </div>)
+                 })}
               </div>
 
 
@@ -43,4 +31,26 @@ function FIlters({handlefilterChange,filter}) {
   );
 }
 
-export default FIlters;
+
+const Filter = ({filters,handlefilterChange,filter})=>{
+  const [show,setShow] = useState(false)
+  return(<>
+                  <div className='flex flex-col overflow-hidden mb-[2%]'>
+                        <div onClick={()=>{
+                          setShow(s=> !s)}} className='border-t-[1px] text-[105%] border-gray3 py-[7%]'>{filters.name}</div>
+                        <div className={` ${ show ? 'max-h-[30rem]':'max-h-0'} tmaxh duration-[300ms]`}>
+                          {filters.content.map(f=>{
+                            return(<div key={f.name+Math.random()}>
+                                <div className='flex flex-row gap-[1%] items-center my-[.5%] '>
+                                    <div className={` ${f.name === filter ? 'bg-black':''} w-[4.5%] pb-[4.5%] rounded-[50%] border-[1px] br`}></div>
+                                    <button onClick={()=> handlefilterChange(f.name)} className='flex flex-row items-center justify-center'>{f.name}</button>
+                                </div>
+                            </div>)
+                          })}
+                        </div>
+                    </div>
+  </>)
+}
+
+
+export default FIlters

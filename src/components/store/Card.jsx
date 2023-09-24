@@ -21,7 +21,7 @@ const Card = ({product})=>{
                             <button key={bindex}  onClick={()=>{
                               setMainImgIndex(bindex)
                               }}   
-                              className={`mr-[2%] items-center relative ${ mainImgIndex === bindex ? '':'border-gray3'} border-[1px] justify-center pb-[15%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]`}>
+                              className={`mr-[2%] items-center relative ${ mainImgIndex === bindex ? '':'border-gray3'} border-[1px] br justify-center pb-[15%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]`}>
                                         <div
                                          style={{backgroundColor:b.color}} 
                                          className=' absolute rounded-full top-[5%] left-[5%] w-[90%] h-[90%]'></div>

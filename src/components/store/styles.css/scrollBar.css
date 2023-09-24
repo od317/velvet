@@ -1,0 +1,32 @@
+ ::-webkit-scrollbar {
+    width: 10px;
+    transition: all .3s ease;
+    -webkit-transition: all .5s ease;
+
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: #EEEEEE;
+    transition: all .3s ease;
+    -webkit-transition: all .5s ease;
+
+}
+
+
+ ::-webkit-scrollbar-thumb {
+    background-color:#bdbdbd;
+    border-radius: 100vw;
+    transition: all .3s ease;
+    -webkit-transition: all .5s ease;
+}
+.sc::-webkit-scrollbar {
+    width: 6px;
+}
+.sc{
+   scrollbar-gutter: stable;
+}
+
+.br{
+    border-radius: 50%;
+    box-sizing: content-box;
+}

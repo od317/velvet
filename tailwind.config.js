@@ -7,6 +7,7 @@ export default {
     screens: {
       'phone': '450px',
       'mid':'800px',
+      'ms':'720px'
     },
     fontFamily: {
       

@@ -1,19 +1,30 @@
 import React, { useState } from 'react'
+import SFilters from './SFilters';
 function Sort({handleSortChange,sort,numShow}) {
-  const [showSort,setShowSort] = useState(false)
 
+
+
+  return (
+    <div className='p-[2%] relative  flex phone:flex  flex-row  justify-between items-center'>
+          <div className=' hidden ms:block w-[40%]'>showing {numShow} of 100 items</div>
+          <SFilters/>
+          <LargeSort handleSortChange={handleSortChange} sort={sort}></LargeSort>
+    </div>
+  );
+}
+
+
+const LargeSort = ({handleSortChange,sort})=>{
+  const [showSort,setShowSort] = useState(false)
   const handleClick = (value)=>{
     handleSortChange(value)
     setShowSort(false)
   }
-
-  return (
-    <div className='p-[2%] relative  flex phone:flex  flex-row  justify-between items-center'>
-          <div className=' hidden phone:block'>showing {numShow} of 100 items</div>
-             <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}} className='phone:relative z-[6] w-[30%] phone:w-auto phone:min-w-[12%] phone:max-w-[50%] text-start'>
-                    <div  className=' phone:border-black phone:border-[1px] phone:px-[2%] w-full flex flex-row justify-between items-center  px-[5%] cursor-pointer '>
-                      <label className='cursor-pointer hidden phone:block' htmlFor="">{sort}</label>
-                      <label className='cursor-pointer phone:hidden' htmlFor="">Show</label>
+  return (<>
+               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}} className='phone:relative z-[6] phone:w-[36%] ms:w-[22%]    text-start'>
+                    <div  className=' phone:border-black  phone:border-[1px] phone:p-[2%] phone:px-[4%]  whitespace-nowrap flex flex-row justify-between items-center  px-[5%] cursor-pointer '>
+                      <label className='cursor-pointer hidden phone:block ' htmlFor="">{sort}</label>
+                      <label className='cursor-pointer phone:hidden ' htmlFor="">Show</label>
                       <label className={`${showSort ? ' rotate-180 ':''} flex items-center justify-center text-center transition-all duration-200`} htmlFor=""><ion-icon name="chevron-down-outline"></ion-icon></label>
                     </div>
                     <div className={`flex ${showSort ? '':'hidden'} bg-light2 flex-col text-start phone:border-t-0 phone:border-black phone:border-[1px]  w-full absolute`}>
@@ -23,8 +34,7 @@ function Sort({handleSortChange,sort,numShow}) {
                           <button onClick={()=>handleClick('date')} className='w-full cursor-pointer text-start px-[5%]'>date</button>
                     </div>
              </div>
-    </div>
-  );
+  </>)
 }
 
-export default Sort;
+export default Sort

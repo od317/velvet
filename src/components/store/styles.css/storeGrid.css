@@ -9,3 +9,8 @@
     background-size: contain;
     background-color: #616161;
 }
+
+.br{
+    border-radius: 50%;
+    box-sizing: content-box;
+}

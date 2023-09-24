@@ -18,7 +18,7 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
     '3xl',
   ]
   return (
-    <div className='flex flex-col phone:px-[1%]  phone:w-[34%] '>
+    <div className='flex flex-col phone:px-[1%] phone:w-[50%]  ms:w-[34%] '>
                         
                 <div className='phone:flex flex-col pt-[1%] hidden justify-center items-start space-y-[2%] '>
                     <div className='flex flex-row'>

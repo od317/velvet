@@ -55,11 +55,10 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
         </div> */}
 
 
-        <div className='hidden phone:grid mr-[2%] gap-x-[.5%] gap-y-[.5%] grid-cols-2 w-[55%]'>
+        <div className='hidden phone:grid mr-[2%] gap-x-[.5%] gap-y-[.5%] grid-cols-2 phone:w-[50%] ms:w-[55%]'>
                     {  product.img[color].imgs.map((image,index)=>{
                             return(<div  style={{backgroundImage:`url(${image})`}}
-                                         className={` pb-[150%] w-full  imgBack relative `} key={index}>
-                                                   
+                                         className={`  pb-[150%] w-full  imgBack relative `} key={index}>          
                                   </div>)
                     })}
         </div>

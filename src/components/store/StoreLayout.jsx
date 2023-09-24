@@ -130,11 +130,11 @@ function StoreLayout({sortP,filterP}) {
              <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
    
-         <div className=' hidden phone:block phone:w-[20%]  phone:px-[2%] z-[2]  top-[0%] phone:h-fit phone:sticky phone:top-[10%] '>
+         <div className=' hidden ms:block phone:w-[20%] ms:w-[18%]  phone:pl-[2%] z-[2]  top-[0%] phone:h-fit phone:sticky phone:top-[0%] pt-[1%] '>
               <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
       
-         <div className=' phone:w-[80%]  z-[1] bg-light2 px-[2%] pb-[100%]'>
+         <div className=' phone:w-[100%] ms:w-[85%]  z-[1] bg-light2 px-[2%] pb-[100%]'>
               <StoreGrid items={items_show} />
          </div>
 

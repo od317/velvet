@@ -52,10 +52,10 @@ const items = [
     {
      name:'Reefer Wool Blend Coat',
      size:new Set(['sm','xl']),
-     price:'250.00',
+     price:'25.00',
      desc:'Saunter in sophisticated style with this single-breasted coat fashioned from a rich wool blend.',
      brand:'Lauren Ralph Lauren',
-     date:'15',
+     date:'16',
      id:'t2',
      img:[
       {
@@ -483,6 +483,8 @@ let m = new Map()
 for(let i of items){
      m[i.id] = i
      i.rating = parseInt(Math.random()* (5 - 1) + 1 )
+     i.price =  parseInt(Math.random()* (250 - 150) + 150 )
+     i.date =  parseInt(Math.random()* (105 - 1) + 1 )
 }
 export {m}
 export default items
