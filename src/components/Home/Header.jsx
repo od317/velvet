@@ -3,12 +3,14 @@ import HeaderBottom from './HeaderBottom'
 import './styles/main.css'
 import SimDiv from './SimDiv'
 import MainSlider from './MainSlider'
+import SecSlider from './SecSlider'
 function Header() {
   return (
     <>
             <div className=' pt-[5%] phone:pt-[0%] phone:px-[1.2%] ms:px-[2%]'>
             <SimDiv/>
             <MainSlider/>
+            <SecSlider/>
             </div>
             {/* 
             old design
