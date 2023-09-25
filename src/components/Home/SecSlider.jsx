@@ -15,16 +15,17 @@ function SecSlider() {
     'https://n.nordstrommedia.com/it/3d00d615-705a-4bb4-b9e3-3853ebd4a55c.jpeg?h=750&w=750'
   ]
   return (<>
-    <div className=' flex flex-col mt-[10%]'>
+    <div className=' flex flex-col mt-[10%] mb-[5%]'>
         <div className='flex flex-col px-[5%]'>
              <label className=' font-semibold text-[110%]' htmlFor="">Need Right Now</label>
-             <label htmlFor="">Your curated roundup of this season's essentials.</label>
+             <label className='text-[90%]' htmlFor="">Your curated roundup of this season's essentials.</label>
         </div>
     </div>
             <Swiper
             freeMode={true}
             modules={[FreeMode]}
             slidesPerView={1.2}
+            spaceBetween={10}
             className="mySwiper"
             >
             {imgs.map(i=>{
