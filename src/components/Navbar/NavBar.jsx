@@ -8,6 +8,7 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import './styles/navbar.css'
+
 function NavBar() {
     const sbList = useContext(SbContext)
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
@@ -58,7 +59,6 @@ function NavBar() {
     else 
       document.querySelector('body').style.overflowY='auto'
    }
-    
     return (<>
     
         <div className='flex flex-col'>
@@ -69,14 +69,16 @@ function NavBar() {
             </div>
 
            <div className='w-full px-[1.2%] relative pt-[2%]'>
-                <div className='w-full flex flex-row phone:border-b-[1px]  border-gray3 pb-[1%]'>
-                     <div className='flex flex-col px-[4%] phone:px-[0%] phone:flex-row w-full'>
-                             <div className='flex phone:w-[20%] flex-row mb-[2%] phone:mb-[0%] phone:block'>
-                                    <div className='phone:hidden flex items-center justify-center w-[7%]' onClick={()=>handleSideShowChange(!showSide)}>
+                <div className='w-full flex flex-col phone:border-b-[1px]  border-gray3 pb-[1.2%]'>
+                     <div className='flex flex-col px-[4%] phone:px-[0%] phone:flex-row phone:justify-between w-full'>
+                             <div className='flex phone:w-[20%] flex-row mb-[2%] phone:mb-[0%] phone:flex'>
+                                    <div className='phone:hidden flex items-center justify-start w-[8%]' onClick={()=>handleSideShowChange(!showSide)}>
                                         <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
                                     </div>
-                                    <div  className='flex-grow'>
-                                        <NavLink className='  phone:w-full font-semibold mb-[2%] text-[120%] phone:text-[200%]' to={'/'}>NORDSTROM</NavLink>
+                                    <div  className='flex-grow flex'>
+                                        <NavLink style={{backgroundImage:'url()'}} className='   phone:w-full  flex items-center justify-start h-full font-semibold  text-[120%] phone:text-[180%]' to={'/'}>
+                                            <img className='navmid:w-[75%]' src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg" alt="" />
+                                        </NavLink>
                                     </div>
                                     <NavLink to='/shoping-bag' className='text-black ml-[10%] relative phone:hidden  w-[20%]'>
                                                         <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
@@ -85,8 +87,8 @@ function NavBar() {
                                     </NavLink>
                              </div>
                               
-                              <div className='phone:w-[48%] flex items-center border-[1px] px-[2%] phone:px-[0%] border-gray3 py-[1%]'>
-                                  <form className='w-full text-[120%] phone:text-[100%]' action="">
+                              <div className='phone:w-[46%] phone:ml-[2%] flex items-center border-[1px] px-[2%] phone:px-[0%] py-[2%] border-gray3 phone:py-[.5%]'>
+                                  <form className='w-full text-[125%] px-[2%] ms:px-[0%] phone:text-[100%]' action="">
                                     <button className='w-[8%] mr-[2%]' type='submit'>
                                       <FontAwesomeIcon icon={faMagnifyingGlass} />
                                     </button>
@@ -94,7 +96,7 @@ function NavBar() {
                                   </form>
                               </div>
  
-                              <div className='w-[32%] hidden phone:flex items-center justify-end'>
+                              <div className='w-[32%] navmid:flex hidden  items-center justify-end'>
                                             
                                             <NavLink className='ml-[10%]' to={'/'}>Home</NavLink>
                                             <NavLink className='ml-[10%]'  to={'/store'}>Store</NavLink>
@@ -107,6 +109,17 @@ function NavBar() {
                               </div>
 
                      </div>
+                     <div className='navmid:hidden hidden phone:flex my-[2%] items-center justify-start'>
+                                            
+                                            <NavLink className=' mr-[5%] ' to={'/'}>Home</NavLink>
+                                            <NavLink className=' mr-[5%] '  to={'/store'}>Store</NavLink>
+                                            <NavLink  className=' mr-[5%]   flex items-center justify-center h-full' onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} to={'/store/new'}>New</NavLink>
+                                            <NavLink to='/shoping-bag' className=' mr-[10%] text-black relative  w-[20%]'>
+                                                <div className=' mr-[5%]   w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
+                                                {sbList.size}
+                                                </div>
+                                            </NavLink>
+                    </div>
                 </div>
                 
                 
@@ -138,6 +151,10 @@ function NavBar() {
                                                 </div>
                 </div> */}
           
+           </div>
+
+           <div>
+
            </div>
 
         </div>

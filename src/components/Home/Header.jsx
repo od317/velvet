@@ -1,11 +1,15 @@
-import React from 'react';
-import HeaderBottom from './HeaderBottom';
-
+import React from 'react'
+import HeaderBottom from './HeaderBottom'
+import './styles/main.css'
+import SimDiv from './SimDiv'
+import MainSlider from './MainSlider'
 function Header() {
   return (
     <>
-            
-            
+            <div className=' pt-[5%] phone:pt-[0%] phone:px-[1.2%] ms:px-[2%]'>
+            <SimDiv/>
+            <MainSlider/>
+            </div>
             {/* 
             old design
             <div
@@ -36,4 +40,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header

@@ -1,0 +1,9 @@
+.imgBack{
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.box{
+    box-sizing: content-box;
+}

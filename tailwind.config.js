@@ -6,6 +6,7 @@ export default {
   ],  theme: {
     screens: {
       'phone': '450px',
+      'navmid':'860px',
       'mid':'800px',
       'ms':'720px'
     },
