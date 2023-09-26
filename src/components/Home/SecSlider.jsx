@@ -15,8 +15,10 @@ function SecSlider() {
     'https://n.nordstrommedia.com/it/13060a26-e52c-4a65-852c-9de859a06311.jpeg?h=750&w=750'
   ]
   return (<>
+          <div className=' border-b-[1px] pb-[10%] border-dark2'>
             <Large imgs={imgs}></Large>
             <Small imgs={imgs}></Small>
+          </div>
         </>
   )
 }
@@ -54,7 +56,7 @@ const Small = ({imgs})=>{
   return(<>
   <div className='navmid:hidden'>
       <div className=' flex flex-col mt-[10%] mb-[5%] '>
-        <div className='flex flex-col px-[5%]'>
+        <div className='flex flex-col px-[3%]'>
              <label className=' font-semibold text-[110%]' htmlFor="">Need Right Now</label>
              <label className='text-[90%]' htmlFor="">Your curated roundup of this season's essentials.</label>
         </div>

@@ -98,7 +98,7 @@ const SwiperCards = ({image})=>{
 
                </NavLink>
           </div>
-          <div className='flex flex-col px-[5%]'>
+          <div className='flex flex-col px-[3%]'>
                     <label className='text-[140%] ' htmlFor="">Fall Escape</label>
                     <p htmlFor="">Get lost in a lush new season with picture-perfect outerwear, cozy knits and more</p>
                  

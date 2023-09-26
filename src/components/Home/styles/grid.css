@@ -4,7 +4,11 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.imgback{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .g2ImgBack{
     background-image: url('https://img.freepik.com/premium-photo/girl-holding-shopping-bags-shopping-store-style-light-red-amber-exquisite-cloth_780838-6807.jpg');
     background-position: center;

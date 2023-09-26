@@ -40,7 +40,7 @@ const Small = ()=>{
     
             { show &&
             <div className=' navmid:hidden z-20 w-[35%] left-[31.5%] fixed top-[10%]'>
-                 <button className=' px-[8%] py-[5%] text-[105%] border-[1px] w-full bg-p1 border-gray shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-full' onClick={()=>scroll()}>Back to Top</button>
+                 <button className=' px-[8%] py-[5%] text-[105%]  w-full bg-p1  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] rounded-full' onClick={()=>scroll()}>Back to Top</button>
             </div>}
     
       </>)
