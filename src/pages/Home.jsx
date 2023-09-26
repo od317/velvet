@@ -5,6 +5,7 @@ import Grid from '../components/Home/Grid'
 import GridContent from '../components/Home/GridContent'
 import Header from '../components/Home/Header'
 import {Routes,Route,Link, BrowserRouter, useLocation} from 'react-router-dom'
+import Bttb from '../components/Home/Bttb'
 
 function Home() {
   useEffect(() => {
@@ -13,6 +14,7 @@ function Home() {
   return (
      <>
      <div className='bg-p1'>
+      <Bttb></Bttb>
       <Header></Header>
       <Grid></Grid>
       <Bottom></Bottom>

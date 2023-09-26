@@ -9,12 +9,12 @@ import { EffectFade, Navigation, Pagination } from 'swiper/modules'
 function MainSlider() {
     const imgsl = [
         'https://n.nordstrommedia.com/it/eebd2371-223e-440e-9964-20fb7fc6c04f.jpeg?h=700&w=1608',
-        'https://n.nordstrommedia.com/it/e5d46602-8d9b-4406-89e0-e2150299c03e.jpeg?h=700&w=1608',
+        'https://n.nordstrommedia.com/it/4485a854-4462-433d-98d6-2437a1c7c448.jpeg?h=700&w=1608',
         'https://n.nordstrommedia.com/it/30b9fb57-05b7-45f2-a7a0-824c102a7c9e.jpeg?h=700&w=1608'
     ]
     const imgss = [
       'https://n.nordstrommedia.com/it/aa4c4aeb-bf1b-432d-8077-38a14c46a614.jpeg?h=750&w=750',
-      'https://n.nordstrommedia.com/it/f90ef97f-811b-4ed0-bbc8-03190c428d38.jpeg?h=750&w=750',
+      'https://n.nordstrommedia.com/it/3b4bb0b4-3003-40eb-80de-a771e0968c1d.jpeg?h=750&w=750',
       'https://n.nordstrommedia.com/it/79500d38-d305-4599-93a6-bc16d6355b93.jpeg?h=750&w=750'
     ]
   return (<>
@@ -26,7 +26,7 @@ function MainSlider() {
 
 const Lg = ({imgs})=>{
   return(
-    <div className='hidden phone:block'>
+    <div className='hidden navmid:block'>
         <Swiper
         effect={'fade'}
         modules={[EffectFade]}
@@ -47,10 +47,8 @@ const Lg = ({imgs})=>{
 
 const Sm = ({imgs})=>{
   return(
-    <div className='phone:hidden'>
+    <div className='navmid:hidden'>
         <Swiper
-        effect={'fade'}
-        modules={[EffectFade]}
         loop={true}
         className="mySwiper"
       >

@@ -63,32 +63,32 @@ function NavBar() {
     
         <div className='flex flex-col'>
  
-            <div className='text-center text-[110%] py-[2%]  phone:text-[100%] text-white bg-black phone:py-[.6%]'>
+            <div className='text-center text-[110%] py-[2%]  navmid:text-[100%] text-white bg-black navmid:py-[.6%]'>
                  <span className=' font-semibold mr-[.1%]'>Earn 5X the points on beauty!</span> 
                  A Nordy Club exclusive
             </div>
 
            <div className='w-full px-[1.2%] relative pt-[2%]'>
-                <div className='w-full flex flex-col phone:border-b-[1px]  border-gray3 pb-[1.2%]'>
-                     <div className='flex flex-col px-[4%] phone:px-[0%] phone:flex-row phone:justify-between w-full'>
-                             <div className='flex phone:w-[20%] flex-row mb-[2%] phone:mb-[0%] phone:flex'>
-                                    <div className='phone:hidden flex items-center justify-start w-[8%]' onClick={()=>handleSideShowChange(!showSide)}>
+                <div className='w-full flex flex-col navmid:border-b-[1px]  border-gray3 pb-[1.2%]'>
+                     <div className='flex flex-col px-[4%] navmid:px-[0%] navmid:flex-row navmid:justify-between w-full'>
+                             <div className='flex navmid:w-[20%] flex-row mb-[2%] navmid:mb-[0%] navmid:flex'>
+                                    <div className='navmid:hidden flex items-center justify-start w-[8%]' onClick={()=>handleSideShowChange(!showSide)}>
                                         <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
                                     </div>
                                     <div  className='flex-grow flex'>
-                                        <NavLink style={{backgroundImage:'url()'}} className='   phone:w-full  flex items-center justify-start h-full font-semibold  text-[120%] phone:text-[180%]' to={'/'}>
+                                        <NavLink style={{backgroundImage:'url()'}} className='   navmid:w-full  flex items-center justify-start h-full font-semibold  text-[120%] navmid:text-[180%]' to={'/'}>
                                             <img className='navmid:w-[75%]' src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg" alt="" />
                                         </NavLink>
                                     </div>
-                                    <NavLink to='/shoping-bag' className='text-black ml-[10%] relative phone:hidden  w-[20%]'>
+                                    <NavLink to='/shoping-bag' className='text-black ml-[10%] relative navmid:hidden  w-[20%]'>
                                                         <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
                                                         {sbList.size}
                                                         </div>
                                     </NavLink>
                              </div>
                               
-                              <div className='phone:w-[46%] phone:ml-[2%] flex items-center border-[1px] px-[2%] phone:px-[0%] py-[2%] border-gray3 phone:py-[.5%]'>
-                                  <form className='w-full text-[125%] px-[2%] ms:px-[0%] phone:text-[100%]' action="">
+                              <div className='navmid:w-[46%] navmid:ml-[2%] flex items-center border-[1px] px-[2%] navmid:px-[0%] py-[2%] border-gray3 navmid:py-[.5%]'>
+                                  <form className='w-full text-[125%] px-[2%] ms:px-[0%] navmid:text-[100%]' action="">
                                     <button className='w-[8%] mr-[2%]' type='submit'>
                                       <FontAwesomeIcon icon={faMagnifyingGlass} />
                                     </button>
@@ -109,7 +109,7 @@ function NavBar() {
                               </div>
 
                      </div>
-                     <div className='navmid:hidden hidden phone:flex my-[2%] items-center justify-start'>
+                     <div className='navmid:hidden hidden  my-[2%] items-center justify-start'>
                                             
                                             <NavLink className=' mr-[5%] ' to={'/'}>Home</NavLink>
                                             <NavLink className=' mr-[5%] '  to={'/store'}>Store</NavLink>
