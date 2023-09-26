@@ -40,11 +40,11 @@ const Large = ({items,text,num})=>{
     }
     return(<>
     
-          <div className=' hidden phone:flex  flex-col w-full  py-[2%] bg-p1'>
+          <div className=' hidden navmid:flex  flex-col w-full  py-[2%] bg-p1'>
                 
-                {text?(<div className='text-[120%] font-semibold px-[4%]' htmlFor="">{text}</div>):null}
+                {text?(<div className='text-[120%] font-semibold ' htmlFor="">{text}</div>):null}
 
-                <div className={`flex justify-between px-[4%] ${text?'mt-[4%]':''}`}>
+                <div className={`flex justify-between  ${text?'mt-[2%]':''}`}>
                     
                     <div className='flex  items-center w-[3%]  justify-center'>
                          <button ref={PrevButton} disabled={len===sim.length-(num-1)} onClick={()=>{slidePrev()}} className={` ${len===sim.length-(num-1) ? ' cursor-default text-gray3':' hover:bg-dark2 hover:text-white cursor-pointer disabled:cursor-pointer'}  text-black tra bg-p1  flex items-center justify-center  transition-all duration-200 py-[50%] w-full `}>

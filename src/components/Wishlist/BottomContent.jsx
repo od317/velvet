@@ -22,14 +22,14 @@ function BottomContent({sim}) {
   })
   return (
     <>
-        <div className=' mt-[1%]  w-full mb-[5%]   phone:inline-block'>
-              {windowWidth < 420 && <Small text={'people also viewed'} items={sim} />}
-              {windowWidth < 420 && <Small text={'people also viewed'} items={sim} />}
-              <div className='mb-[1%]'>
-                 {windowWidth >= 420 && <Large text={'people also viewed'} num={4} items={sim} />}
+        <div className=' mt-[1%]  w-full mb-[5%]    phone:inline-block'>
+              {windowWidth > 0 && <Small text={'people also viewed'} items={sim} />}
+              {windowWidth > 0 && <Small text={'people also viewed'} items={sim} />}
+              <div className='mb-[1%] bg-p1 px-[4%]'>
+                 {windowWidth >= 0 && <Large text={'people also viewed'} num={4} items={sim} />}
               </div>
-              <div className='mb-[1%]'>
-                 {windowWidth >= 420 && <Large text={'people also viewed'} num={4} items={sim} />}
+              <div className='mb-[1%] bg-p1 px-[4%]'>
+                 {windowWidth >= 0 && <Large text={'people also viewed'} num={4} items={sim} />}
               </div>
         </div>
     </>

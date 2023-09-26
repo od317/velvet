@@ -6,7 +6,7 @@ function WishList() {
     window.scrollTo(0, 0)
      })
   return (
-    <div className='phone:px-[2%]'>
+    <div className='phone:px-[2%] bg-light2'>
         <WishlistLayout/>
     </div>
   )

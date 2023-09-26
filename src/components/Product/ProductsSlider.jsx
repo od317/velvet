@@ -13,7 +13,6 @@ function ProductsSlider({products}) {
  return (<>
        <Small items={products}></Small>
        <Large num={5} items={products}></Large>
-
     </>
    );
 }

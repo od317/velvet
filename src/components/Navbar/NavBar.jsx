@@ -61,7 +61,7 @@ function NavBar() {
    }
     return (<>
     
-        <div className='flex flex-col'>
+        <div className='flex flex-col pb-[1%]'>
  
             <div className='text-center text-[110%] py-[2%]  navmid:text-[100%] text-white bg-black navmid:py-[.6%]'>
                  <span className=' font-semibold mr-[.1%]'>Earn 5X the points on beauty!</span> 

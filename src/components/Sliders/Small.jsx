@@ -15,7 +15,7 @@ const Small = ({items,text})=>{
         return m[i]
       })
     return(<>
-      <div className=' phone:hidden py-[3%] mt-[5%] px-[4%] bg-p1'>
+      <div className=' navmid:hidden py-[3%] mt-[5%] px-[4%] bg-p1'>
             {text?(<div className=' mb-[5%] capitalize font-semibold text-[110%]' htmlFor="">{text}</div>):null}
           <Swiper
           slidesPerView={2.5}
