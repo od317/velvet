@@ -1,5 +1,4 @@
 import React from 'react'
-import HeaderBottom from './HeaderBottom'
 import './styles/main.css'
 import SimDiv from './SimDiv'
 import MainSlider from './MainSlider'

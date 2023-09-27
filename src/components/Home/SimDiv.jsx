@@ -15,5 +15,4 @@ function SimDiv() {
 </div>
   )
 }
-
 export default SimDiv
