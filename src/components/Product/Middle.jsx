@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart,faStar } from '@fortawesome/free-regular-svg-icons'
 import './styles/middle.css'
 import Stars from './Stars'
+import PriceDisplay from './PriceDisplay';
 function Middle({product,color,setSearchParams,setCurHeaderImg}) {
   const handleSbChange = useContext(handleSbChangeContext)
   const sb = useContext(SbContext)
@@ -12,6 +13,10 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
   const [showsize,setShowsize] = useState(false)
   const pSize = Array.from(product.size)
   const [curSize,setCurSize] = useState(pSize[0])
+  let curPrice = product.price
+  if(product.dis){
+    curPrice -= (product.price * product.dis /100)
+  }
   const sizes = [
     'sm',
     'medium',
@@ -26,8 +31,8 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
                 <div className='phone:flex flex-col pt-[1%] hidden justify-center items-start  '>
                         <Stars rate={product.rate}></Stars>
                     <label className='text-[140%] font-bold' htmlFor="">{product.name}</label>
-                    <label className=' capitalize border-b-[1px] border-b-gray' htmlFor="">{product.brand}</label>
-                    <label className='flex flex-row justify-center font-semibold items-center text-[120%]' htmlFor="">${product.price}</label>
+                    <label className=' capitalize border-b-[1px] mb-[2%] border-b-gray' htmlFor="">{product.brand}</label>
+                    <PriceDisplay price={product.price} dis={product.dis}></PriceDisplay>
                     <label className='' htmlFor="">{product.desc}</label>
                 </div>
 

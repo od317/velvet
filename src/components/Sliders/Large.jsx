@@ -4,19 +4,28 @@ import { m } from '../../Data/items'
 import Card from '../store/Card'
 const Large = ({items,text,num})=>{
     let sim = []
-    items.forEach(s=>{
-        if(m[s].simList)
-        sim = [...sim,...m[s].simList]
-      })
-      sim = sim.map(i=>{
+    let flexes = []
+    let tmp = []
+    sim = items.map(i=>{
+        tmp.push(m[i])
+        if(tmp.length === num){
+          flexes.push([...tmp])
+          tmp = []
+        }
         return m[i]
       })
+    
+    if(tmp.length){
+      flexes.push([...tmp])
+      tmp = []
+    }
     const [len,setLen] = useState(sim.length-(num-1))
     const [slidePer,setSlidePer] = useState(0)
     const nextButton = useRef(null)
     const PrevButton = useRef(null)
     const perc = (100/num)*(num-1)
-    console.log(num," ",perc)
+
+
     const slideNext = ()=>{
       if(len<=0)
          return
@@ -53,11 +62,19 @@ const Large = ({items,text,num})=>{
                     </div>
                     <div className='w-[94%] overflow-hidden'>
                         <div style={{transform:`translateX(-${slidePer}%)`}} className=' whitespace-nowrap transition-all  duration-[500ms]'>
-                            {sim.map((i,index)=>{
-                            return(
-                                   <div className={` w-[${100/num}%] px-[1.5%]  transition-all duration-300 inline-block   text-[100%] `} key={index}>
-                                     <Card product={i}></Card>
-                                    </div>)
+                            {flexes.map((f,i)=>{
+                            return(<div className='inline-block w-full' key={i}>
+                                     <div className='flex flex-row'>
+                                          {f.map((i,index)=>{
+                                            return(
+                                            <div key={index} className={` w-[${100/num}%] px-[1.5%] top-0 sticky transition-all duration-300 inline-block   text-[100%] `} >
+                                              <Card product={i}></Card>
+                                            </div>
+                                                  )
+                                            })
+                                          }
+                                     </div>
+                                </div>)
                                   })}
                         </div>
                     </div>

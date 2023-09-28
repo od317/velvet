@@ -24,13 +24,13 @@ const Stars = ({rate})=>{
         resDivs.push(<div className={` bg-gray2  star w-[19.7%] pb-[19.7%] mr-[.3%]  inline-block`}></div>)
      }  
     return(<>
-                <div className=' w-full flex'>                
+                <div className=' w-full flex phone:justify-start justify-center '>                
                     <div className=' w-[50%] max-w-[5rem] float-left'>
                     {fullDivs}
                     {halfDiv}
                     {resDivs}
                     </div>
-                    <div className=' text-[90%]   float-right' htmlFor="">({numrate})</div>
+                    <div className=' text-[90%] text-gray  float-right' htmlFor="">({numrate})</div>
                 </div>
     </>)
 }

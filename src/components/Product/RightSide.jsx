@@ -1,4 +1,5 @@
 import React from 'react';
+import RightCard from './RightCard';
 
 function RightSide({product}) {
   return (
@@ -6,17 +7,10 @@ function RightSide({product}) {
                 <div className=' font-semibold mb-[10%] text-center'>
                 You Might Also Like
                 </div>
-                {product.img[0].imgs.map((image,index)=>{
-                    return(<div key={image} className=' w-full h-fit mb-[35%]'>
-                                <div 
-                                style={{backgroundImage:`url(${image})`}}
-                                className='w-full pb-[150%] imgBack'>
-                                </div>
-                                <div className='grid grid-cols-1 text-center text-[90%]'>
-                                    <label htmlFor="">{product.brand}</label>
-                                    <label className=' font-semibold' htmlFor="">${product.price}</label>
-                                </div>
-                        </div>)
+                {product.simList.map((p,index)=>{
+                    return(
+                      <RightCard id={p}></RightCard>
+                    )
                 })}
     </div>
   );

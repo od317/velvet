@@ -4,6 +4,7 @@ import {handleSbSflChangeContext,handleSbChangeContext} from '../../contexts/car
 import { NavLink } from 'react-router-dom'
 import './styles/wishlist.css'
 import { useContext } from 'react'
+import PriceDisplay from '../Product/PriceDisplay'
 function Content({items,text}) {
     let content = []
     items.forEach(i=>{
@@ -18,7 +19,8 @@ function Content({items,text}) {
           img:pro.img[cur[1]].imgs[0],
           price:pro.price,
           colorName:pro.img[cur[1]].name,
-          p:i
+          p:i,
+          dis:pro.dis
         }]
     })
   return (
@@ -56,21 +58,25 @@ const Card = ({c,text})=>{
                 </div>
 
                 <div>
-
                   <div className='flex flex-col phone:items-end mb-[2%]'>
-                      <label className='mb-[3%] phone:mb-[10%] text-priceColor' htmlFor="">${c.price}</label>
-                      <label className='' htmlFor="">Now:${c.price}</label>
-                      <label className=' line-through' htmlFor="">Was:${c.price}</label>
+                      {c.dis ? (<>                      
+                      <label className='mb-[3%] phone:mb-[10%] font-semibold text-priceColor' htmlFor="">${c.price - (c.price*c.dis/100)}</label>
+                      <label className='' htmlFor="">Now:${c.price - (c.price*c.dis/100)}</label>
+                      <label className=' line-through' htmlFor="">Was:${c.price}</label></>):
+                      (<>
+                      <label className='' htmlFor="">${c.price - (c.price*c.dis/100)}</label>
+                      </>)}
+                      
                   </div>
 
                 </div>
             </div>
             <div className='flex flex-row items-center justify-start phone:my-[3%] my-[5%]'>
                  <div className=' w-[30%]  phone:w-auto phone:mr-[5%] text-blue text-start' >
-                   <button onClick={()=>handleSbChange(c.p)}>Remove</button>
+                   <button onClick={()=>handleSbChange(`${c.id}-${c.color}-${c.size}`)}>Remove</button>
                  </div>
-                 <div className=' w-[40%] phone:w-auto  text-blue text-start' onClick={()=>handleSbSflChange(c.p)}>
-                    <button onClick={()=>handleSbChange(c.p)}>{text}</button>
+                 <div className=' w-[40%] phone:w-auto  text-blue text-start' >
+                    <button onClick={()=>handleSbSflChange(c.p)}>{text}</button>
                  </div>
             </div>
 

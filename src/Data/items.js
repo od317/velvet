@@ -23,7 +23,8 @@ const items = [
           rate:9,
           numrate:5412,
          },
-         price:'250.00',
+         price:250.00,
+         dis:28,
          desc:'Saunter in sophisticated style with this single-breasted coat fashioned from a rich wool blend.',
          brand:'Lauren Ralph Lauren',
          date:'15',
@@ -52,7 +53,7 @@ const items = [
                'https://n.nordstrommedia.com/id/sr3/1faa2162-9e19-417d-9836-1ca71ad71114.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2']
           }
          ],
-         simList:['t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13']
+         simList:['t1','t2','t1','t1','t1','t1','t1','t1','t1','t1','t1','t1']
      },
     {
      name:'Belted Cotton Blend Gabardine Trench Coat',
@@ -110,7 +111,6 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -143,7 +143,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -176,7 +176,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -209,7 +209,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -242,7 +242,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -275,7 +275,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -308,7 +308,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -341,7 +341,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -374,7 +374,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -407,7 +407,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -440,7 +440,7 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
+     
     },
     {
      name:'Reefer Wool Blend Coat',
@@ -473,7 +473,6 @@ const items = [
            'https://n.nordstrommedia.com/id/sr3/c36e9714-a7f2-4b92-841c-79f931e35f84.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
       }
      ],
-     dis:[]
     },
 ]
 let m = new Map()
@@ -484,6 +483,9 @@ for(let i of items){
                rate:5,
                numrate:215,
           }
+     }
+     if(!i.dis){
+          i.dis = null
      }
 }
 export {m}

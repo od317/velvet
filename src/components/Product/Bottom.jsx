@@ -15,9 +15,9 @@ function Bottom({product}) {
         <label className=' font-bold text-[140%] px-[4%] mt-[5%] mb-[0%] text-dark2'>
             Discover More Items
         </label>
-        
+        <div className='px-[4%]'>
         <ProductsSlider products={product.simList}/>
-
+        </div>
     </div>
   );
 }

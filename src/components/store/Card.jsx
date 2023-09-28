@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import './styles.css/storeGrid.css'
 import Stars from '../Product/Stars'
+import PriceDisplay from '../Product/PriceDisplay'
 const Card = ({product})=>{
     const [mainImgIndex,setMainImgIndex] = useState(0)
     return (<>
@@ -31,8 +32,8 @@ const Card = ({product})=>{
                     }
                       <div className='flex flex-col whitespace-normal text-center phone:flex-col items-center phone:text-start phone:items-start justify-between'>
                           <label className=' font-semibold' htmlFor="">{product.brand}</label>
-                          <label className='text-[90%] phone:mb-[2%]' htmlFor="">{product.name}</label>
-                          <label className='phone:mb-[2%] font-semibold' htmlFor="">${product.price}</label>
+                          <label className='text-[90%] phone:my-[2%]' htmlFor="">{product.name}</label>
+                          <PriceDisplay price={product.price} dis={product.dis}></PriceDisplay>
                           <Stars rate={product.rate}></Stars>
                       </div>
                 </div>

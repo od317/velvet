@@ -6,13 +6,14 @@ import 'swiper/css'
 import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
 import Stars from './Stars'
+import PriceDisplay from './PriceDisplay'
 function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
   return (
     <>
                <div className='flex flex-col phone:hidden items-start justify-start '>
                     <label className='text-[150%] font-bold mb-[1%]' htmlFor="">{product.name}</label>
                          <Stars rate={product.rate}></Stars>
-                    <label className='flex flex-row justify-center items-center text-[150%]' htmlFor="">{product.price}$</label>
+                         <PriceDisplay price={product.price} dis={product.dis}></PriceDisplay>
          </div>
         <div className='phone:hidden mt-[5%]'>
                <Swiper
