@@ -5,18 +5,13 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
+import Stars from './Stars'
 function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
   return (
     <>
                <div className='flex flex-col phone:hidden items-start justify-start '>
                     <label className='text-[150%] font-bold mb-[1%]' htmlFor="">{product.name}</label>
-                    <div className='flex flex-row'>
-                         <FontAwesomeIcon className='' icon={faStar} style={{color: "#000000",}} />
-                         <FontAwesomeIcon icon={faStar} style={{color: "#000000",}} />
-                         <FontAwesomeIcon icon={faStar} style={{color: "#000000",}} />
-                         <FontAwesomeIcon icon={faStar} style={{color: "#000000",}} />
-                         <FontAwesomeIcon icon={faStar} style={{color: "#000000",}} />
-                    </div>
+                         <Stars rate={product.rate}></Stars>
                     <label className='flex flex-row justify-center items-center text-[150%]' htmlFor="">{product.price}$</label>
          </div>
         <div className='phone:hidden mt-[5%]'>
@@ -55,7 +50,7 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
         </div> */}
 
 
-        <div className='hidden phone:grid mr-[2%] gap-x-[.5%] gap-y-[.5%] grid-cols-2 phone:w-[50%] ms:w-[55%]'>
+        <div className='hidden phone:grid mr-[2%] gap-x-[.5%] gap-y-[.5%] h-fit grid-cols-2 phone:w-[50%] ms:w-[55%]'>
                     {  product.img[color].imgs.map((image,index)=>{
                             return(<div  style={{backgroundImage:`url(${image})`}}
                                          className={`  pb-[150%] w-full  imgBack relative `} key={index}>          

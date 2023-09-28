@@ -52,12 +52,13 @@ const Large = ({items,text,num})=>{
                          </button>
                     </div>
                     <div className='w-[94%] overflow-hidden'>
-                        <div style={{transform:`translateX(-${slidePer}%)`}} className=' whitespace-nowrap  transition-all duration-[500ms]'>
+                        <div style={{transform:`translateX(-${slidePer}%)`}} className=' whitespace-nowrap transition-all  duration-[500ms]'>
                             {sim.map((i,index)=>{
-                            return(<div className={` w-[${100/num}%] px-[1.5%] transition-all duration-300   text-[80%] inline-block`} key={index+Math.random()}>
-                                    <Card product={i}></Card>
-                                  </div>)
-                            })}
+                            return(
+                                   <div className={` w-[${100/num}%] px-[1.5%]  transition-all duration-300 inline-block   text-[100%] `} key={index}>
+                                     <Card product={i}></Card>
+                                    </div>)
+                                  })}
                         </div>
                     </div>
                     <div className='flex  items-center w-[3%]  justify-center'>

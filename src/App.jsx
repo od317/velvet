@@ -51,15 +51,16 @@ function App() {
   )
 
 
-  const handleSbEdit = (pro)=>{     
-      if(sb.has(pro)){
-             let nextSb = new Set(Array.from(sb).filter(i => i!== pro))
+  const handleSbEdit = (pro)=>{ 
+        
+        if(sb.has(`${pro}-sb`)||sb.has(`${pro}-sfl`)){
+             let nextSb = new Set(Array.from(sb).filter(i => i!== `${pro}-sb`).filter(i=>i!== `${pro}-sfl`))
              setSb(nextSb)
              localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))
              return 
             }
       let nextSb = new Set(sb)
-      nextSb.add(pro)
+      nextSb.add(`${pro}-sb`)
       setSb(nextSb)
       localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))        
   }
