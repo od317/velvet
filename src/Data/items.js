@@ -11,25 +11,16 @@ const colors = [
      '#FFFDD0'
 ]
 
-let Indexes = ["asdoasjd",1,2,3,4,5,6,7]
+let Indexes = [1,2,3,4,5,6,7]
 
 
 
 const items = [
     {
          name:'Reefer Wool Blend Coat',
-         size:new Set(['sm','large','xl','2xl']),
-         rate:{
-          rate:9,
-          numrate:5412,
-         },
          price:250.00,
          dis:28,
-         frees:true,
          desc:'Saunter in sophisticated style with this single-breasted coat fashioned from a rich wool blend.',
-         brand:'Lauren Ralph Lauren',
-         date:'15',
-         id:'t1',
          type:'coat',
          img:[
           {
@@ -55,21 +46,11 @@ const items = [
                'https://n.nordstrommedia.com/id/sr3/1faa2162-9e19-417d-9836-1ca71ad71114.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2']
           }
          ],
-         simList:['t1','t2','t3','t1','t1','t1','t1','t1','t1','t1','t1','t1']
     },
     {
      name:'Fall Away Tie Belt Coat',
-     size:new Set(['sm','medium','large','xl','2xl']),
-     rate:{
-      rate:8,
-      numrate:4518,
-     },
      price:180.00,
-     frees:true,
      desc:`Smooth goldtone buttons line the asymmetric placket of a stately tie-belt coat that'll keep you chic and cozy when temperatures dip.`,
-     brand:'Lauren Ralph Lauren',
-     date:'11',
-     id:'t10',
      type:'coat',
      img:[
       {
@@ -101,17 +82,12 @@ const items = [
     },
     {
      name:'Belted Cotton Blend Gabardine Trench Coat',
-     size:new Set(['sm','medium','large','xl']),
      rate:{
           rate:8.8,
           numrate:3125,
      },
      price:250.00,
-     frees:false,
      desc:'Water-resistant gabardine enhances the functional fashion of a double-breasted trench coat detailed with epaulets and cinched with a matching belt.',
-     brand:'Lauren Ralph Lauren',
-     date:'16',
-     id:'t2',
      type:'coat',
      img:[
       {
@@ -127,17 +103,8 @@ const items = [
     },
     {
      name:'Wool Blend Notch Collar Coat',
-     size:new Set(['medium','lg','2xl']),
-     rate:{
-      rate:9,
-      numrate:4213,
-     },
      price:220.00,
-     frees:true,
      desc:`Opt for a sophisticated look on your urban excursions in this wool-blend coat made with an insulated lining for extra comfort.`,
-     brand:'Lauren Ralph Lauren',
-     date:'70',
-     id:'t9',
      type:'coat',
      img:[
       {
@@ -162,17 +129,8 @@ const items = [
     },
     {
      name:'Double Breasted Wool Blend Coat',
-     size:new Set(['sm','xl','2xl']),
-     rate:{
-      rate:9,
-      numrate:5113,
-     },
      price:350.00,
-     frees:true,
      desc:`This refined coat fashioned from a soft wool blend falls to a classic knee length.`,
-     brand:'Lauren Ralph Lauren',
-     date:'11',
-     id:'t11',
      type:'coat',
      img:[
       {
@@ -188,18 +146,9 @@ const items = [
     },
     {
      name:'Water Repellent Cotton Blend Belted Trench Coat',
-     size:new Set(['sm','medium','large','2xl']),
-     rate:{
-      rate:8,
-      numrate:3681,
-     },
      price:240.00,
-     frees:true,
      dis:37,
      desc:`Belted cuffs, tonal piping and logo buttons add winning style points to an endlessly wearable coat designed with a water-repellent finish.`,
-     brand:'Lauren Ralph Lauren',
-     date:'80',
-     id:'t12',
      type:'coat',
      img:[
       {
@@ -224,51 +173,57 @@ const items = [
     },
     {
      name:`Women's Rossclair Water Resistant 625 Fill Power Down Parka`,
-     size:new Set(['sm','large','2xl']),
-     rate:{
-      rate:9.8,
-      numrate:4332,
-     },
      price:1395.00,
-     frees:true,
      desc:'This water-resistant parka with down insulation will get you through harsh cold and winds with extended coverage on the hood, ribbed cuffs and a drawcord waist.',
-     brand:'Canada Goose',
-     date:'8',
-     id:'t14',
      type:'coat',
      img:[
       {
            color:'#060405',    
-           name:'navy',
-           imgs:['https://n.nordstrommedia.com/id/sr3/043f9d9e-30ab-43d5-ab4a-fa7fdcd57d77.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
-           'https://n.nordstrommedia.com/id/sr3/ad577eae-aa8c-4eec-8eda-35a756da1210.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
-           'https://n.nordstrommedia.com/id/sr3/ae6fb9c9-bdf4-40b4-8abf-f47b1162ee3c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2']
-      },
-      {
-           color:'#1b1b1b',   
-           name:'black', 
-           imgs:['https://n.nordstrommedia.com/id/sr3/e54be0d8-958f-460c-9eb2-6f9e855eb779.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
-           ]
+           name:'white',
+           imgs:['https://n.nordstrommedia.com/id/sr3/c683f0be-b71c-4a01-8a0d-546d9ad7292e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/6138e2d2-01fc-49c1-bef6-2cc4bb083c3a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/121c0275-47b9-4ef8-9191-ec36a7d13c65.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2']
       },
      ],
      simList:['t1','t2','t3','t1','t1','t1','t1','t1','t1','t1','t1','t1']
-},
-
-
+    },
+    {
+     name:'Alliston Packable Down Jacket',
+     price:995.00,
+     desc:'Packable into its own pocket, this lightweight yet durable and toasty-warm jacket is perfect for travel.',
+     type:'coat',
+     img:[
+      {
+           color:'#faf9f7',    
+           name:'white',
+           imgs:['https://n.nordstrommedia.com/id/sr3/f6473c6f-f1f2-4593-acf9-8aad224f49ea.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/7b7fc910-e2ea-41e0-8a0f-ca7c037c2be7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/88540f8a-10b1-43f6-b308-b0f8fbd2e77f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2']
+      },
+     ],
+     simList:['t1','t2','t3','t1','t1','t1','t1','t1','t1','t1','t1','t1']
+    },
+    {
+         name:'Shelburne Water Resistant 625 Fill Power Down Parka',
+         price:1395.00,
+         desc:'Navigate fluctuations in weather in this water-resistant parka with powerful down insulation, removable hood-extending trim and a back vent with snap closures.',
+         type:'coat',
+         img:[
+          {
+               color:'#060405',    
+               name:'black',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/5959557b-34b9-4bcd-ad61-40a148b9e101.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/3c2cb4f2-8ae9-4cfc-90a5-6b0de5949069.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',]
+          },
+         ],
+         simList:['t1','t2','t3','t1','t1','t1','t1','t1','t1','t1','t1','t1']
+    },
     {
      name:'Double Breasted Wool Blend Coat',
-     size:new Set(['medium','large','2xl','xl']),
-     rate:{
-          rate:9,
-          numrate:5783,
-     },
      price:350.00,
-     frees:true,
      dis:55,
      desc:'This refined coat fashioned from a soft wool blend falls to a classic knee length.',
-     brand:'Lauren Ralph Lauren',
-     date:'25',
-     id:'t3',
      type:'coat',
      img:[
       {
@@ -289,21 +244,12 @@ const items = [
      }, 
      ],
      simList:['t1','t2','t3','t2','t2','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13','t14']
-    },   
+    },  
     {
      name:'Houndstooth Single Breasted Insulated Coat',
-     size:new Set(['sm','medium','2xl']),
-     rate:{
-          rate:7,
-          numrate:4321,
-     },
      price:310.00,
-     frees:true,
      dis:25,
      desc:'Sleek faux-leather trim on the pockets and collar elevates a sophisticated houndstooth coat made with a back vent for easy movement.',
-     brand:'Lauren Ralph Lauren',
-     date:'54',
-     id:'t4',
      type:'coat',
      img:[
       {
@@ -320,18 +266,9 @@ const items = [
     },
     {
      name:'Glen Plaid Belted Wool Blend Coat',
-     size:new Set(['medium','large','2xl']),
-     rate:{
-      rate:8,
-      numrate:1412,
-     },
      price:320.00,
      dis:34,
-     frees:true,
      desc:'Crisp notched lapels and a zoomed-in glen plaid define the look of a modern coat that takes after blazer and trench styles.',
-     brand:'Lauren Ralph Lauren',
-     date:'20',
-     id:'t5',
      type:'coat',
      img:[
       {
@@ -345,17 +282,8 @@ const items = [
     },  
     {
      name:'Crest Wool Blend Coat',
-     size:new Set(['sm','large','xl','2xl']),
-     rate:{
-      rate:8.5,
-      numrate:2312,
-     },
      price:300.00,
-     frees:true,
      desc:`A crest patch and matching statement buttons distinguish a classic wool-blend coat you'll wear forever.`,
-     brand:'Lauren Ralph Lauren',
-     date:'48',
-     id:'t6',
      type:'coat',
      img:[
       {
@@ -370,17 +298,8 @@ const items = [
     },    
     {
      name:'Faux Leather Trim Wool Blend Longline Coat',
-     size:new Set(['sm','medium','2xl']),
-     rate:{
-      rate:8.8,
-      numrate:3591,
-     },
      price:300.00,
-     frees:true,
      desc:`Buttery faux-leather accents polish this wool-blend coat that's perfectly suited to workdays and weekend jaunts.`,
-     brand:'Lauren Ralph Lauren',
-     date:'60',
-     id:'t7',
      type:'coat',
      img:[
       {
@@ -388,7 +307,7 @@ const items = [
            name:'black',
            imgs:['https://n.nordstrommedia.com/id/sr3/c5b450c9-2bab-421e-b641-bdc25aac0ae0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
            'https://n.nordstrommedia.com/id/sr3/abb43a53-ba23-492b-8a6f-173a9f8b30a5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
-           'https://n.nordstrommedia.com/id/sr3/1ff675c8-3f7e-4f8d-8939-e43ef0b09dc8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
+          ]
       },
    
      ],
@@ -396,17 +315,8 @@ const items = [
     },    
     {
      name:'Tailored Wool Blend Coat',
-     size:new Set(['sm','medium','lg']),
-     rate:{
-      rate:8.8,
-      numrate:2352,
-     },
      price:240.00,
-     frees:true,
      desc:`Look classy while staying comfortably covered up in this handsome longline coat crafted from a warm wool blend.`,
-     brand:'Lauren Ralph Lauren',
-     date:'31',
-     id:'t8',
      type:'coat',
      img:[
       {
@@ -422,18 +332,9 @@ const items = [
     },
     {
      name:'Faux Leather Trim Longline Quilted Jacket',
-     size:new Set(['large','xl','2xl']),
-     rate:{
-      rate:9.6,
-      numrate:5122,
-     },
      price:210.00,
      dis:33,
-     frees:true,
      desc:'Semiglossy faux-leather trim traces the edges of a longline quilted coat finished with tonal buttons and a monogram plaque on the sleeve.',
-     brand:'Lauren Ralph Lauren',
-     date:'61',
-     id:'t13',
      type:'coat',
      img:[
       {
@@ -444,31 +345,250 @@ const items = [
             ]
       },
      ],
-     simList:['t1','t2','t3','t1','t1','t1','t1','t1','t1','t1','t1','t1']
     },
+    {
+     name:'Alliston Packable Down Jacket',
+     price:1050.00,
+     desc:'Packable into its own pocket, this lightweight yet durable and toasty-warm jacket is perfect for travel.',
+     type:'coat',
+     img:[
+      {
+           color:'#faf9f7',    
+           name:'white',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/6b55a67f-d2a8-46be-9d9d-f199d99b0b6a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/27cff166-b1a1-4c62-9a0f-84e7b085c448.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/cc3b2fef-f7d7-4953-992c-e45b81fbe31b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2']
+      },
+     ],
+    },
+    {
+     name:'Rosalind Quilted Belted Trench Coat',
+     price:430.00,
+     desc:'Saunter through the seasons in soft sophistication with this lovely trench coat blanketed in cozy box quilting and finished with classic epaulets.',
+     type:'coat',
+     img:[
+      {
+           color:'#beb4b3',    
+           name:'Earl Gray',
+           imgs:['https://n.nordstrommedia.com/id/sr3/894b8faa-596a-4056-a97f-562ba6eaf69b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+           'https://n.nordstrommedia.com/id/sr3/c3abb1e4-2baf-4892-a409-83feea2ad9fb.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/8ed28338-241a-4ff8-b44c-0872be6cd9e9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2']
+      },
+      {
+           color:'#3b3947',   
+           name:'navy', 
+           imgs:['https://n.nordstrommedia.com/id/sr3/4f7d8e0a-3e71-469f-96a8-7206355fa2c2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/80311d78-c747-4a79-847d-9b82d8de3aaf.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+      },
 
+     ],
+    },   
+    {
+     name:'Longline Coat',
+     price:239.00,
+     dis:37,
+     desc:'A contrast lining adds an extra flash of contemporary style to a blazer-inspired coat featuring shoulder pads, peaked lapels and classic flap pockets.',
+     type:'coat',
+     img:[
+      {
+           color:'#dc5486',    
+           name:'Fuschia',
+           imgs:['https://n.nordstrommedia.com/id/sr3/255ddcb4-7a55-47df-884d-db24cbdea642.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/f2169da4-a43f-4aab-a461-2065ba4caa5d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/f2169da4-a43f-4aab-a461-2065ba4caa5d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196']
+      },
+      {
+           color:'#a54c31',   
+           name:'Cinnamon', 
+           imgs:['https://n.nordstrommedia.com/id/sr3/f82e6d51-1471-457a-bc8f-022a3a965449.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/33e5ae30-0296-4dc8-b490-ca5b7c5ad8ce.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+      },
 
+     ],
+    },   
+    {
+     name:'Drape Trench Coat',
+     price:179.00,
+     desc:'A wide notched collar accentuates the draped effect of an open-front trench coat tied with a matching belt.',
+     type:'coat',
+     img:[
+      {
+           color:'#272532',    
+           name:'black',
+           imgs:['https://n.nordstrommedia.com/id/sr3/278e331b-496c-4afa-941f-f9acc7be7706.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/278e331b-496c-4afa-941f-f9acc7be7706.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/10b7f30b-ce7a-4f98-ac34-20cf288f4db4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990']
+      },
+      {
+           color:'#5e513e',   
+           name:'Mushroom', 
+           imgs:['https://n.nordstrommedia.com/id/sr3/720c06d8-80e5-4a0e-b020-90cd2cd28171.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+           'https://n.nordstrommedia.com/id/sr3/809be536-2332-4bd5-8f1d-5ff8803a7899.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/1cf4fdd8-5358-41c8-9d98-135d176c7c80.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+      },
 
-
-
-  
+     ],
+    },
 
 
  
 
 ]
+items.sort((a,b)=>{
+     return 0.5 - Math.random
+})
+
+const rates = [
+     "3.0",
+     "3.1",
+     "3.2",
+     "3.3",
+     "3.4",
+     "3.5",
+     "3.6",
+     "3.7",
+     "3.8",
+     "3.9",
+     "4.0",
+     "4.1",
+     "4.2",
+     "4.3",
+     "4.4",
+     "4.5",
+     "4.6",
+     "4.7",
+     "4.8",
+     "4.9",
+     "5.0",
+     "5.1",
+     "5.2",
+     "5.3",
+     "5.4",
+     "5.5",
+     "5.6",
+     "5.7",
+     "5.8",
+     "5.9",,
+     "6.1",
+     "6.2",
+     "6.3",
+     "6.4",
+     "6.5",
+     "6.6",
+     "6.7",
+     "6.8",
+     "6.9",
+     "7.0",
+     "7.1",
+     "7.2",
+     "7.3",
+     "7.4",
+     "7.5",
+     "7.6",
+     "7.7",
+     "7.8",
+     "7.9",
+     "8.0",
+     "8.1",
+     "8.2",
+     "8.3",
+     "8.4",
+     "8.5",
+     "8.6",
+     "8.7",
+     "8.8",
+     "8.9",
+     "9.0",
+     "9.1",
+     "9.2",
+     "9.3",
+     "9.4",
+     "9.5",
+     "9.6",
+     "9.7",
+     "9.8",
+     "9.9",
+     "6.0",
+     "6.1",
+     "6.2",
+     "6.3",
+     "6.4",
+     "6.5",
+     "6.6",
+     "6.7",
+     "6.8",
+     "6.9",
+     "7.0",
+     "7.1",
+     "7.2",
+     "7.3",
+     "7.4",
+     "7.5",
+     "7.6",
+     "7.7",
+     "7.8",
+     "7.9",
+     "8.0",
+     "8.1",
+     "8.2",
+     "8.3",
+     "8.4",
+     "8.5",
+     "8.6",
+     "8.7",
+     "8.8",
+     "8.9",
+     "9.0",
+     "9.1",
+     "9.2",
+     "9.3",
+     "9.4",
+     "9.5",
+     "9.6",
+     "9.7",
+     "9.8",
+     "9.9"
+]
+
+const brands = ['Lauren Ralph Lauren','Canada Goose']
+let lrl = 0
+let cgs = 0
 let m = new Map()
+let l = 0 
 for(let i of items){
-     m[i.id] = i
-     if(!i.rate){
-          i.rate = {
-               rate:5,
-               numrate:215,
+     i.id = `t${++l}`
+     i.rate = {
+               rate:parseFloat(rates[Math.floor(Math.random()*rates.length)]),
+               numrate:Math.ceil(Math.random()*((6000-1000)+1000)),
           }
+     i.brand = brands[Math.floor(Math.random()*brands.length)]    
+     i.date = Math.floor(Math.random()*(1000))
+     i.size = new Set(['sm','large','medium','xl','2xl'])
+     i.simList = ['t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13','t14','t15','t16','t17']
+     i.frees = true
+     if(i.brand === brands[0]){
+          lrl+=1
      }
-     if(!i.dis){
-          i.dis = null
-     }
+     else
+        cgs+=1
+     m[i.id] = i
 }
+
+// console.log(lrl,cgs)
+// console.log(items)
+
 export {m}
 export default items
+
+
+
+// frees:true,
+// simlist
+
+
+
+

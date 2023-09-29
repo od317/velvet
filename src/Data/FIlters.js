@@ -4,7 +4,7 @@ const filters = [
         content:[
             {name:'sm'},
             {name:'medium'},
-            {name:'lg'},
+            {name:'large'},
             {name:'xl'},
             {name:'2xl'},
             {name:'3xl'},   

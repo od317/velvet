@@ -31,6 +31,7 @@ const LargeSort = ({handleSortChange,sort})=>{
                           <button onClick={()=>handleClick('recomended')} className='w-full hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[5%]'>recomended</button>
                           <button onClick={()=>handleClick('price low to high')} className='w-full hover:bg-light2 transition-all duration-100 cursor-pointer  text-start px-[5%]'>price low to high</button>
                           <button onClick={()=>handleClick('price high to low')} className='w-full hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[5%]'>price high to low</button>
+                          <button onClick={()=>handleClick('rate')} className='w-full hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[5%]'>rating</button>
                           <button onClick={()=>handleClick('date')} className='w-full hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[5%]'>date</button>
                     </div>
              </div>

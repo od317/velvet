@@ -64,11 +64,22 @@ function StoreLayout({sortP,filterP}) {
                     return i.size.has('medium')
                })
                     break  
-          case 'lg':
+          case 'large':
                nextItems = nextItems.filter(i=>{
-                         return i.size.has('lg')
+                         return i.size.has('large')
                     })
-                    break               
+                    break  
+          case 'xl':
+               nextItems = nextItems.filter(i=>{
+                         return i.size.has('xl')
+                    })
+                    break  
+          case '2xl':
+               nextItems = nextItems.filter(i=>{
+                         return i.size.has('2xl')
+                    })
+                    break  
+
           default :
                break     
       }
@@ -97,7 +108,12 @@ function StoreLayout({sortP,filterP}) {
                     nextItems.sort((a,b)=>{
                          return b.date - a.date
                     })
-                    break          
+                    break  
+               case 'rate':
+                    nextItems.sort((a,b)=>{
+                         return b.rate.rate - a.rate.rate
+                    })
+                    break                       
                default :
                break
           }
@@ -114,6 +130,7 @@ function StoreLayout({sortP,filterP}) {
              return p
           }))
     }
+
   return (<>
     <div className=' hidden phone:block '>
           <Sort sort={sort} numShow={items_show.length} handleSortChange={handleSortChange} />
