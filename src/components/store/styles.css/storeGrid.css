@@ -6,8 +6,12 @@
 .imgS{
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #616161;
+    background-size: cover;
+}
+.imgBack{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .br{

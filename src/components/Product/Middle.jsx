@@ -17,14 +17,18 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
   if(product.dis){
     curPrice -= (product.price * product.dis /100)
   }
-  const sizes = [
+  const sizes =[
     'sm',
     'medium',
-    'lg',
+    'large',
     'xl',
     '2xl',
     '3xl',
   ]
+  useEffect(()=>{
+     setShowsize(false)
+     setCurSize(pSize[0])
+  },[product])
   return (
     <div className='flex flex-col phone:px-[1%] phone:w-[50%]  ms:w-[34%] '>
                         
@@ -69,7 +73,7 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
                                             return (
                                                 <button  key={i} onClick={()=>{
                                                     setShowsize(s=> false)
-                                                    setCurSize(i)}} className={`${curSize == i ? 'bg-black text-white':' bg-ligth2 text-black hover:bg-light2'}   pb-[20%] phone:pb-[12%] transition-all duration-200 w-[100%]   relative`}>
+                                                    setCurSize(i)}} className={`${curSize == i ? 'bg-dark2 text-white':' bg-ligth2 text-black hover:bg-light2'}   pb-[20%] phone:pb-[12%] transition-all duration-200 w-[100%]   relative`}>
                                                     <div className=' absolute w-full h-full flex text-[110%]  items-center justify-center'>
                                                         {i}
                                                     </div>   
@@ -130,7 +134,7 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
 
                     <div className={` w-[100%] cursor-pointer phone:w-[100%] bg-dark2 
                     ${(sb.has(`${product.id}-${color}-${curSize}-sb`) || sb.has(`${product.id}-${color}-${curSize}-sfl`)) ? 'bg-light1':'bg-dark2'}
-                     flex flex-col rounded-sm text-white relative mt-[5%]  box-border text-[90%] py-[2%] phone:mb-[3%]`}>
+                     flex flex-col rounded-sm text-white relative mt-[5%] transition-all duration-200  box-border text-[90%] py-[2%] phone:mb-[3%]`}>
                             <button onClick={()=>handleSbChange(`${product.id}-${color}-${curSize}`)} className={` relative w-full h-full  py-[2%]  cursor-pointer    ${ showsize ? 'phone:border-b-0':''} flex flex-row phone:justify-between phone:px-[5%] items-center justify-center   text-center`}>
                                     <label className='mr-[2%] text-[110%] cursor-pointer flex items-center justify-center text-center w-full font-semibold' htmlFor="">
                                         <div className='flex flex-row justify-center items-center text-[120%] mr-[3%]'>

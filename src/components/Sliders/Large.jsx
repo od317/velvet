@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { useState,useRef } from 'react'
 import { m } from '../../Data/items'
 import Card from '../store/Card'
@@ -47,6 +48,10 @@ const Large = ({items,text,num})=>{
       setLen(l=>l+(num-1))
       setSlidePer(s=>s-perc)
     }
+    useEffect(()=>{
+         setSlidePer(0)
+         setLen(sim.length-(num-1))
+    },items)
     return(<>
     
           <div className=' hidden navmid:flex  flex-col w-full  py-[2%] bg-p1'>

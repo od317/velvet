@@ -4,7 +4,7 @@ const Stars = ({rate})=>{
     const rate1 = rate.rate
     const numrate = rate.numrate
     const full = Math.floor(rate1/2)
-    const half  = (1-(Math.ceil(rate1/2) - (rate1/2)))
+    const half  = rate1%2 === 0 ? 0 : (1-(Math.ceil(rate1/2) - (rate1/2)))
     const rest =  (5) - (Math.ceil(half) + full)
     let fullDivs = []
     let halfDiv = []
