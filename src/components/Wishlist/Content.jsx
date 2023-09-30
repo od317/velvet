@@ -64,7 +64,7 @@ const Card = ({c,text})=>{
                       <label className='' htmlFor="">Now:${c.price - (c.price*c.dis/100)}</label>
                       <label className=' line-through' htmlFor="">Was:${c.price}</label></>):
                       (<>
-                      <label className='' htmlFor="">${c.price - (c.price*c.dis/100)}</label>
+                      <label className='' htmlFor="">${c.price}</label>
                       </>)}
                       
                   </div>

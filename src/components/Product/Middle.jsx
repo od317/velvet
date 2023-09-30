@@ -134,7 +134,7 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
 
                     <div className={` w-[100%] cursor-pointer phone:w-[100%] bg-dark2 
                     ${(sb.has(`${product.id}-${color}-${curSize}-sb`) || sb.has(`${product.id}-${color}-${curSize}-sfl`)) ? 'bg-light1':'bg-dark2'}
-                     flex flex-col rounded-sm text-white relative mt-[5%] transition-all duration-200  box-border text-[90%] py-[2%] phone:mb-[3%]`}>
+                     flex flex-col rounded-sm text-white relative mt-[5%] transition-all duration-[400ms]  box-border text-[90%] py-[2%] phone:mb-[3%]`}>
                             <button onClick={()=>handleSbChange(`${product.id}-${color}-${curSize}`)} className={` relative w-full h-full  py-[2%]  cursor-pointer    ${ showsize ? 'phone:border-b-0':''} flex flex-row phone:justify-between phone:px-[5%] items-center justify-center   text-center`}>
                                     <label className='mr-[2%] text-[110%] cursor-pointer flex items-center justify-center text-center w-full font-semibold' htmlFor="">
                                         <div className='flex flex-row justify-center items-center text-[120%] mr-[3%]'>
