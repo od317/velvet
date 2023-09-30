@@ -571,6 +571,23 @@ let items = [
      ],
     },
     {
+     name:'Milton Cowl Neck Sweatshirt',
+     price:158.00,
+     dis:10,
+     desc:`Raised mini ribs texture a boxy, oversize sweatshirt with an exaggerated cowl neck and zipped sides to adjust the volume.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#746152',    
+           name:'stone olive',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/7fbf6ccd-fd6b-4fb6-bed7-88eec0cdccec.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/b9072b7e-7694-4bc0-8370-e26b9abf4b4d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+            ]
+      },
+     ],
+    },
+    {
      name:'Wool & Cashmere Knit Hoodie',
      price:159.00,
      desc:`Layering gets a little dreamy in this hoodie knit from luxuriously warm wool and decadent cashmere for cool-weather coziness.`,
@@ -594,6 +611,193 @@ let items = [
       },
      ],
     },
+    {
+     name:'Harmonise Luxe Sweatshirt',
+     price:130.00,
+     dis:35,
+     desc:`A slouchy funnel neck tops this soft and cuddly sweatshirt framed by easy dropped-shoulder sleeves.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#02834b',    
+           name:'green',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/63f0d7fa-c340-4f21-8ab4-4760398df074.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/2a24a8c8-3f62-4ae2-bcfc-bc4d4298af86.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/4d36e2cf-ceb9-406c-903d-6ae6246c95f6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2']
+      },
+      {
+           color:'#dde0d5',   
+           name:'Glacier Green', 
+           imgs:[
+            'https://n.nordstrommedia.com/id/sr3/fc4aadd9-d96d-4a07-aa46-0a5bc9575e9a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+            'https://n.nordstrommedia.com/id/sr3/baaceb54-bc22-4025-8f52-91ce7a2b3cbe.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+      },
+     ],
+    },
+    {
+     name:'Mae Oversize Sweatshirt',
+     price:148.00,
+     desc:`A textured Ottoman knit brings rich depth, elevating this gym-class staple made with dropped shoulders that emphasize its roomy, layer-ready fit.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#cac5bf',    
+           name:'Egret',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/07d6639b-ae14-4036-9cb8-bd0812da02d9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/68f681bc-7da8-4e2b-a5af-0126bc16cf0f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           ]
+          },
+      {
+           color:'#291b1b',   
+           name:'Coffee Bean', 
+           imgs:[
+            'https://n.nordstrommedia.com/id/sr3/598c5e2b-e4c5-40b3-8a8c-8b6a91b844ed.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+            'https://n.nordstrommedia.com/id/sr3/0859cf3a-e3b0-4635-84bd-e7158f94ebed.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+      },
+     ],
+    },
+    {
+     name:'Anya Ottoman Rib Hoodie',
+     price:79.00,
+     desc:`Ottoman ribbing textures a raglan-sleeve hoodie cut from a lightweight and stretchy cotton blend you'll love wearing whether you're working out or hanging out.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#e5e6e8',    
+           name:'Blue Dawn',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/6bd52249-9fcb-4f06-8099-f66b740ee7ad.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/49b1e5f2-63cc-433a-aa02-046106b7fdc1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           ]
+          },
+      {
+           color:'#9a493e',   
+           name:'Red Jelly', 
+           imgs:[
+            'https://n.nordstrommedia.com/id/sr3/d33984e3-b854-4401-9255-7980f1518020.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+            'https://n.nordstrommedia.com/id/sr3/10d90178-1cd9-4473-b526-23b24c15a8f7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+      },
+     ],
+    },
+    {
+     name:'Shelbe Fleece Lined Full Zip Hoodie',
+     price:150.00,
+     desc:`A durable water-repellent finish on a highly wind-resistant WindWall® shell provides powerful protection in this slim full-zip hoodie warmed with fleece lining.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#2b2b2b',    
+           name:'Tnf Black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/b977205e-bcb3-4fdd-adbf-00c7afed48c3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/2ca43acf-2024-43b3-a7c3-3ae099c5bf51.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/d960efc2-cbf8-4750-a40b-b407a834eef3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+          {
+               color:'#e9f3f4',    
+               name:'Skylight Blue',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/8ec5535a-f573-490d-af7f-dd131c988309.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/9c0a3cd4-592a-4027-92d5-b07a10f48a98.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               ]
+          },
+     ],
+    },
+    {
+     name:'Crop Cotton Blend Zip-Up Hoodie',
+     price:40.00,
+     desc:`A soft cotton-blend keeps you feeling cozy as you go about your day in this cropped hoodie with handy pockets.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#f1ede1',    
+           name:'Beige Angora',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/6e4fb51b-f3cf-4864-b1eb-f528883faa77.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           ]
+          },
+          {
+               color:'#222023',    
+               name:'black',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/c8c891d0-a66d-4f83-90f6-4972430f06f4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               ]
+          },
+     ],
+    },
+    {
+     name:'Quarter Zip Sweatshirt',
+     price:39.50,
+     desc:`A neck-warming stand collar tops this quarter-zip sweatshirt made from a comfy cotton blend.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#f4eee2',    
+           name:'Beige Angora',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/c24ca88c-7268-462f-b399-e10c89eecd9d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           ]
+          },
+          {
+               color:'#5f8383',    
+               name:'Green Pine',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/18804a0c-5686-4580-8c4a-5c6f689b1e98.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+               ]
+          },
+          {
+               color:'#d59f8e',    
+               name:'Brown Topaz',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/050c16d1-6e1f-4549-b2ad-9868328f92dc.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+               ]
+          },
+     ],
+    },
+   
+
+//     {
+//      name:'',
+//      price:,
+//      desc:``,
+//      type:'sweatshirt',
+//      img:[
+//           {
+//            color:'',    
+//            name:'',
+//            imgs:[
+//            '',
+//            '',
+//            ''
+//            ]
+//           },
+//           {
+//                color:'',    
+//                name:'',
+//                imgs:[
+//                '',
+//                '',
+//                ''
+//                ]
+//           },
+//           {
+//                color:'',    
+//                name:'',
+//                imgs:[
+//                '',
+//                '',
+//                ''
+//                ]
+//           },
+//      ],
+//     },
+
 ]
 
 
