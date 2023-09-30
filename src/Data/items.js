@@ -15,7 +15,7 @@ let Indexes = [1,2,3,4,5,6,7]
 
 
 
-const items = [
+let items = [
     {
          name:'Reefer Wool Blend Coat',
          price:250.00,
@@ -432,13 +432,172 @@ const items = [
       },
 
      ],
+    },   
+    {
+     name:'Phoenix Fleece Crewneck Sweatshirt',
+     price:70.00,
+     desc:'Dropped shoulders and an oversized fit bring throwback charm to a cozy fleece sweatshirt with an embroidered Swoosh on the chest.',
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#f1f1e9',    
+           name:'white',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/688e70b0-8231-4f65-a22c-25b93f2554bf.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/4defdd4a-0554-4981-b8a1-eeb91133e149.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+            ]
+      },
+      {
+           color:'#008095',   
+           name:'teal', 
+           imgs:['https://n.nordstrommedia.com/id/sr3/5ca14b82-020d-4fd1-a1b1-db52975e0fdd.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/d3219485-4e5b-4761-8ff3-2715fad273a1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/c7b755bf-a064-4bec-830a-5d2622ce3a5f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+      },
+      {
+          color:'#262628',
+          name:'black',
+          imgs:[
+               'https://n.nordstrommedia.com/id/sr3/95a9d029-e7fc-4a6e-9593-8c9bff60bd1d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+               'https://n.nordstrommedia.com/id/sr3/d7765f97-dfb2-4e83-8f27-b1b64c850909.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+          ]
+      }
+
+     ],
+    },   
+    {
+     name:'Drew Crewneck Sweatshirt',
+     price:49.00,
+     desc:`Do your casual lineup a solid with this supersoft and cozy, classic crewneck sweatshirt because it's essential for the gym, coffee runs or couch lounging.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#f5f4f2',    
+           name:'white',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/8e6746ce-8f7b-474e-9fbf-faf89342979f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/32779fb3-5d06-4dfe-b304-b5039c0a38f3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+            ]
+      },
+      {
+           color:'#49494b',   
+           name:'gray', 
+           imgs:[
+            'https://n.nordstrommedia.com/id/sr3/98fb3fbf-f69e-4f38-b10c-ebff3b288f88.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/c5544bbd-ea49-490b-9d39-969f12495918.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/d45213bd-f390-460c-ad5f-1d4df6d20547.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2'
+           ]
+      },
+      {
+          color:'#28293e',
+          name:'navy',
+          imgs:[
+               'https://n.nordstrommedia.com/id/sr3/423787cf-c57b-4e47-a2c8-73f934474896.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/1b220f72-35ba-403f-b484-88972ab6dfac.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+          ]
+      }
+
+     ],
+    },  
+    {
+     name:'Sportswear Tech Fleece Zip Hoodie',
+     price:135.00,
+     desc:`Celebrate the 10-year anniversary of Nike Tech Fleece in an elevated zip hoodie inspired by the colors and textures of natural minerals.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#262628',    
+           name:'black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/0981bbc2-efef-43db-969d-1ac200f2d0af.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/39a6a9cb-6388-48bc-8788-b314fbe0aaf9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+            ]
+      },
+      {
+           color:'#cabc95',   
+           name:'olive', 
+           imgs:[
+            'https://n.nordstrommedia.com/id/sr3/688b509f-8c60-492d-99f8-1dcd03697308.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/0492e366-7b7f-4c21-b429-cf6aeba3ebd8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/066b943a-be1e-40c8-b5b0-db57284281d0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+      },
+     ],
     },
-
-
- 
-
+    {
+     name:'Oversize Cotton Blend Zip-Up Hoodie',
+     price:49.50,
+     desc:`This lightweight zip-up hoodie cut from a supersoft cotton-blend in an oversized fit makes the perfect layering piece.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#628a89',    
+           name:'green pine',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/b3c9a796-08b9-4299-90f1-93200581b047.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+            ]
+      },
+      {
+           color:'#2a292e',   
+           name:'black', 
+           imgs:[
+            'https://n.nordstrommedia.com/id/sr3/c2070be8-1e39-492d-941e-98e94d017f94.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+      },
+     ],
+    },
+    {
+     name:'Freya Funnel Neck Sweatshirt',
+     price:148.00,
+     dis:'30',
+     desc:`A supremely soft knit provides endless comfort in a contemporary sweatshirt with a funnel neck, slit hem and adjustable drawcord-toggle at the waist.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#ccc7c3',    
+           name:'white',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/9d90698b-2937-4249-a754-7c64c0a5c5b5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+            ]
+      },
+      {
+           color:'#1d2238',   
+           name:'blue', 
+           imgs:[
+            'https://n.nordstrommedia.com/id/sr3/66472d46-8aca-4a04-8942-a46c9dc05d73.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+      },
+     ],
+    },
+    {
+     name:'Wool & Cashmere Knit Hoodie',
+     price:159.00,
+     desc:`Layering gets a little dreamy in this hoodie knit from luxuriously warm wool and decadent cashmere for cool-weather coziness.`,
+     type:'sweatshirt',
+     img:[
+      {
+           color:'#b9866b',    
+           name:'tan smoke',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/073f8e13-5ecf-4e7a-b173-1c1de9e352f0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/3434ab7f-eba8-4817-b82e-45e0c2b52cab.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+            ]
+      },
+      {
+           color:'#8f323f',   
+           name:'red tibetan', 
+           imgs:[
+            'https://n.nordstrommedia.com/id/sr3/908a864a-9a75-4268-b4fe-741308755076.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+            'https://n.nordstrommedia.com/id/sr3/556ca17a-7e2e-4e60-92a9-914e11ced0f7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+      },
+     ],
+    },
 ]
-items.sort((a,b)=>{
+
+
+items = items.sort((a,b)=>{
      return 0.5 - Math.random
 })
 
@@ -577,6 +736,9 @@ for(let i of items){
         cgs+=1
      m[i.id] = i
 }
+
+
+
 
 // console.log(lrl,cgs)
 // console.log(items)
