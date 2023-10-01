@@ -735,6 +735,7 @@ let items = [
      name:'Quarter Zip Sweatshirt',
      price:39.50,
      desc:`A neck-warming stand collar tops this quarter-zip sweatshirt made from a comfy cotton blend.`,
+     dis:50,
      type:'sweatshirt',
      img:[
           {
@@ -760,13 +761,621 @@ let items = [
           },
      ],
     },
-   
+    {
+     name:'Sportswear Tech Fleece Windrunner Zip Hoodie',
+     price:145.00,
+     desc:`Stay cozy and warm without the extra bulk in a full-zip hoodie made from lightweight tech fleece and finished with convenient zippered pockets.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#29292b',    
+           name:'black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/7a6f9dfd-0917-4e3d-b3c3-706aa85379f2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/08ea0695-9142-476d-813c-20103b5897f3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           ]
+          },
+          {
+               color:'#b5a583',    
+               name:'Neutral Olive',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/00aa8d4d-2b1e-489f-af6b-7a6c4561f0ac.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/6a03f1cf-0ce6-4be7-8690-e4914df57369.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               ]
+          },
+     ],
+    }, 
+    {
+     name:'Recycled Polyester Blend Hoodie',
+     price:150.00,
+     dis:30,
+     desc:`This wardrobe-staple hoodie made with a recycled-polyester blend keeps you comfortable pre- and post-workout.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#431f21',    
+           name:'Mulberry',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/01fbe9e1-60dc-4f28-b7db-5dfc841c3e06.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/0f814feb-d5da-4c26-abb8-960868b9360d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           ]
+          },
+          {
+               color:'#29292b',    
+               name:'Black',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/4b44a4c0-bfe8-4606-8f63-6297fec8918a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/a3e0b0fa-7176-475c-9fd6-e68680b1fca6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/1c4566b4-5bd5-42bd-bdc1-5efc623235da.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+               ]
+          },
+     ],
+    },
+    {
+     name:'Watering My Own Grass Embroidered Graphic Sweatshirt',
+     price:97,
+     desc:`Whatever the goal, make it happen for you in this oversized sweatshirt finished with rich and colorful embroidery.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#f3eee7',    
+           name:'Ecru',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/ba5bee31-7cf1-475f-887f-5c7010e38f85.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/c94f7fe2-b03c-438c-ad93-db5f939e763e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/9e33e980-17c5-411e-bce1-659ec32b7608.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+     ],
+    },
+    {
+     name:'Z.N.E. Zip Hoodie',
+     price:110,
+     desc:`Moisture-wicking tech lends distraction-free comfort to a playfully cropped full-zip hoodie cut from cozy, four-way stretch fabrics.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#fdbbc5',    
+           name:'Pink Fusion',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/55be3d6a-9d51-4a5f-aba9-824db62bbc3f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           ]
+          },
+     ],
+    },
+    {
+     name:'Quilted Patchwork Hoodie',
+     price:119.00,
+     dis:20,
+     desc:`Perfect for pre- and post yoga, this loose-fitting hoodie is designed with dropped shoulders and vented panels so you stay cool while on-the-go.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#706569',    
+           name:'Raven Multi',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/344082e8-5905-4f4a-9fd6-68a5ca9cddb0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           ]
+          },
+     ],
+    },
+    {
+     name:'Yoga Dri-FIT Hoodie',
+     price:75,
+     dis:45,
+     desc:`Perfect for pre- and post yoga, this loose-fitting hoodie is designed with dropped shoulders and vented panels so you stay cool while on-the-go.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#2a2a2a',    
+           name:'black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/f1879224-13bc-46c7-8a08-a2025ffbb655.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/2d1812ee-2350-4fc7-bc9b-4e8ba7513a31.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/76093258-9e6d-4840-9ff1-54fb98b24dd1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+          {
+               color:'#3c6da5',    
+               name:'Dark Marina Blue',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/6ed2b202-8e56-44fb-9914-b3ac7e1ca416.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/401de0aa-6a91-43ff-8758-ca71e525cb44.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               ]
+          },
+          {
+               color:'#b0397b',    
+               name:'Dynamic Berry',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/8fbc5af4-4e71-4054-b7a2-9b54f321e1d2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/7cd86f90-0347-45b6-9740-270d24cb9fdb.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               ]
+          },
+     ],
+    },
+    {
+     name:'The Drop Square Tunic Sweatshirt',
+     price:168,
+     desc:`This slouchy oversized sweatshirt is crafted in a bold graphic with dropped shoulders.`,
+     type:'sweatshirt',
+     img:[
+          {
+           color:'#44434b',    
+           name:'Mother Cares ',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/fb92bcff-ec85-4c3d-8184-db684f47b5ae.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/fb92bcff-ec85-4c3d-8184-db684f47b5ae.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           ]
+          },
+     ],
+    },
+    {
+     name:'Ultra Mini Classic Boot',
+     price:150,
+     desc:`An ultra-short shaft adds a twist to this abbreviated version of a classic UGG boot.`,
+     type:'boot',
+     img:[
+          {
+           color:'#6b493f',    
+           name:'Burnt Cedar',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/8e101e1c-9579-4e78-95c1-f92f6bd1b0c8.jpeg?h=365&w=240&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/8e101e1c-9579-4e78-95c1-f92f6bd1b0c8.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/0067a2bd-3b98-4ac7-bd7a-cf0f1fb9d9f2.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2'
+           ]
+          },
+          {
+               color:'#ec3750',    
+               name:'Samba Red Tonal',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/c6d15fed-f2e2-454e-ba40-cd1df1841bf9.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/30631fcc-154a-4bdf-adbc-a0ca3aeb3bc8.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/6d4d3200-630c-43dd-8b70-c98ca1b8e9bb.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2'
+               ]
+          },
+          {
+               color:'#1e1a19',    
+               name:'Black Suede',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/14fc68f8-e46f-4b27-8466-af29652b031a.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/d76ec802-2e91-4349-85b4-480c283cf26f.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/087550b4-2ecb-4712-8652-f8246810c569.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2'
+               ]
+          },
+     ],
+    },
+    {
+     name:'Classic Ultra Mini Platform Boot',
+     price:160,
+     desc:`Overlock-stitch detailing on the seams elevates the look of a cozy boot set atop a head-turning platform for sky-high style.`,
+     type:'boot',
+     img:[
+          {
+           color:'#232323',    
+           name:'black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/78833124-20b3-49f6-962a-687a11ee682c.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=1950&h=2095&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/571b15ac-007c-461a-b96e-6da9e9d41bd1.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+           ]
+          },
+          {
+               color:'#936648',    
+               name:'Chestnut',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/674a5d67-d7a5-4735-a1c3-4b114e0dea68.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838',
+               'https://n.nordstrommedia.com/id/sr3/eb58797f-514f-4259-b755-820c9bed7a4e.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838',
+               ]
+          },
+     ],
+    },
+    {
+     name:'Flin Knee High Boot',
+     price:260,
+     dis:55,
+     desc:`A block heel adds just the right amount of lift to this suave and streamlined knee-high boot.`,
+     type:'boot',
+     img:[
+          {
+           color:'#1d1d1d',    
+           name:'black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/d86e8927-b881-4457-afc5-38f578072dbd.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/a3eb151b-fabf-4c31-8199-c89691caf200.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/4d3583f7-8177-4cb5-a671-097ca6a6b976.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838'
+           ]
+          },
+     ],
+    },
+    {
+     name:'Flexa Fabiene Bootie',
+     price:200,
+     desc:`A square toe and block heel ground this burnished leather bootie in contemporary-chic style, while lightweight and flexible cushioning adds everyday comfort.`,
+     type:'boot',
+     img:[
+          {
+           color:'#50231c',    
+           name:'Brown',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/2d89c34f-e2a0-46f3-9dc9-6c3622f47989.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838',
+           'https://n.nordstrommedia.com/id/sr3/42008aeb-c440-4f84-aec7-d332d407f7aa.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+           ''
+           ]
+          },
+          {
+               color:'#282924',    
+               name:'black',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/81eff3be-aa2c-47bc-96f5-5e7829468c2c.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838',
+               'https://n.nordstrommedia.com/id/sr3/bed0d8d6-94b7-4917-b4d9-531df6445a87.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/81db41ce-b40c-454c-b2d0-8fbdfeb42125.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2'
+               ]
+          },
+          {
+               color:'',    
+               name:'',
+               imgs:[
+               '',
+               '',
+               ''
+               ]
+          },
+     ],
+    },
+
+
+
+    {
+     name:'Kelsey Knit Trousers',
+     price:98,
+     dis:40,
+     desc:`Polished enough for work and comfortable enough for anything, these slim-cut pants are cut for a smooth fit in a ponte knit with plenty of stretch.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/cbfba3c0-1776-4e73-88b9-bfc0ee958971.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/164e8c76-f806-4343-bffc-fa9cc720bf9c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/88960806-16f1-4e1e-be2f-4caad0e3a9ba.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+          {
+               color:'',    
+               name:'Cadet Blue',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/06f32479-a02e-48b5-9cdc-58102d9be37d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/24bba5b7-32db-4bf6-a5cd-ab233dcaf77c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/a2e71c3c-7782-41a7-b760-62d387dacc0c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+               ]
+          },
+          {
+               color:'',    
+               name:'Pink Perfection',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/3dcaf4b2-6045-4fdf-b3d6-bcf1937c887f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/d790094f-3d42-429a-98f4-561a5a43d1e6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/e256d2e2-d750-4484-80af-ee22d0d2dccc.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+               ]
+          },
+     ],
+    },
+    {
+     name:'The Favorite Pant Pleat Pants',
+     price:218,
+     desc:`Carefully tucked pleats accent these polished workday pants punctuated with elongating front seams and wide legs.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Beige',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/7d8a4914-5a9b-475c-88b1-0a312fff1500.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/de7ece5f-2901-472f-9f75-8a03ea8a4ddc.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/8843189d-77c3-4bd2-846b-7a8a2d5a2d30.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+          {
+               color:'',    
+               name:'black',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/93034f6b-ad8f-445c-bd15-f816a1c3873d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+               'https://n.nordstrommedia.com/id/sr3/ee4f05ed-c1e0-4ab3-bead-28335340b039.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               ]
+          },
+     ],
+    },
+    {
+     name:'https://n.nordstrommedia.com/id/sr3/e256d2e2-d750-4484-80af-ee22d0d2dccc.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+     price:99,
+     dis:30,
+     desc:`Achieve desk-to-dinner perfection in these sophisticated stretch-kissed pants designed with a high waist and flowy wide legs.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/db38452c-28f2-4109-992c-ee51cbce3562.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+           'https://n.nordstrommedia.com/id/sr3/db38452c-28f2-4109-992c-ee51cbce3562.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+           'https://n.nordstrommedia.com/id/sr3/8b6f00ad-c2ab-4be0-8cd7-ac7244e0535e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+          {
+               color:'',    
+               name:'Tan Cobblestone',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/b94efa1b-5ae4-4de7-b28d-3344a7cbb15f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+               'https://n.nordstrommedia.com/id/sr3/0d23cd3e-457e-410e-bf40-0c32b99ec8af.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/bbdd7a03-edf7-45b7-b539-c8d60a18de2e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+               ]
+          },
+          {
+               color:'',    
+               name:'Navy Midnight',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/8f3fdf7c-36a8-43f9-814c-f57adae8f93d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/5b3a1878-daab-4cee-81d2-7593fd23e1df.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/fbd96d54-d9bd-4448-89ca-ee6a5d57a2ca.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+               ]
+          },
+     ],
+    },
+    {
+     name:'Ricki Plaid Blazer',
+     price:188,
+     dis:25,
+     desc:`Bold plaid covers this boxy coat-like blazer framed by notched lapels.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'navy plaid',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/ed2e00bf-b0fa-4703-b8e8-0211c7834e44.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/38478f1e-ff06-4a7c-9193-2ea0f1a4c364.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+          },
+     ],
+    },
+    {
+     name:'Mixed Plaid Double Breasted Blazer',
+     price:200,
+     desc:`This preppy and polished blazer is updated in a double-breasted silhouette with a mix of a woolly plaid and herringbone pattern.     `,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Black Navy Plaid',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/cde4757e-7532-4da1-a607-6aec67e20b91.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/0879b88d-dc05-4fc6-aab4-0693af942139.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           ]
+          },
+     ],
+    },
+    {
+     name:'Berkshire Houndstooth Dickey Jacket',
+     price:689.00,
+     desc:`A classic check delivers zippy zigs and zags to a wear-everywhere jacket.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'White/ Blue Multi',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/1298ffd5-53ac-4881-b500-723278539c8e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           ]
+          },
+     ],
+    },
+    {
+     name:'Stretch Bootcut Pants',
+     price:345,
+     dis:25,
+     desc:`Expand your desk-to-dinner wardrobe with trouser-inspired pants designed in a bootcut silhouette and made from a stretchy cotton blend.     `,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/3cab48af-fc64-4b9e-b721-62ec74013111.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+           'https://n.nordstrommedia.com/id/sr3/e7b62395-27c9-4737-b61b-579d158fa02c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           ]
+          },
+          {
+               color:'',    
+               name:'Sesame',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/21e45727-b6f0-4d8a-bd82-762511a5f172.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/46f0b726-830a-483e-bc42-c4e11a8bc141.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               ]
+          },
+     ],
+    },
+    {
+     name:'Collarless Knit Wrap Jacket',
+     price:428.00,
+     dis:25,
+     desc:`A textured knit in a mélange of neutral hues gives a tweedy look to a surplice wrap jacket that ties neatly at one side.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/7d8f63ca-7215-4ce5-ac7d-d3ab5663bc38.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/29a10208-ccae-4d6b-8d25-30001e05bf62.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+          },
+     ],
+    },
+    {
+     name:'Wide Leg Plaid Trousers',
+     price:109,
+     dis:35,
+     desc:`Kissed with stretch and covered in plaid, these wide-leg trousers promise to keep you polished and comfortable from desk to dinner.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Rich Black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/f62c43bc-7393-4c66-a9e2-91413a7cece4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990',
+           'https://n.nordstrommedia.com/id/sr3/c997f8db-e452-4774-93d0-8a8e503f78f0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/c8d8b196-6b50-479e-97ab-cffb06d57e5e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+     ],
+    },
+    {
+     name:'The Shortie Favorite Pants',
+     price:218,
+     desc:`These wide-leg trousers are fashioned from smooth woven fabric and gently pleated at the waist to further the flowy fit.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'beige',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/b9b3e0fb-b743-4095-8318-23c741f2c557.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/b8f44459-cce7-4983-9f96-d437d954735e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/1cc02a6b-1556-4d39-9364-49f6c78d877a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+          {
+               color:'',    
+               name:'black',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/eeea51bd-e2dd-4994-8f05-5aff4b17ba67.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/7c18ea4d-e28a-4588-b929-4d84ec582d7c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/5d6f7a53-6201-4d94-bad3-861da981ce1d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+               ]
+          },
+     ],
+    },
+    {
+     name:'Elastic Back Wide Leg Trousers',
+     price:89.00,
+     dis:50,
+     desc:`Wide legs lend graceful movement to crisp trousers made with an elasticized back waist for added comfort.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Navy',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/52f16ccc-d794-484a-bba3-2ca4b128934f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/d9933cca-6ed9-4aac-b052-b6b28b349db9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/f54fecc3-366d-4d7a-bc84-9c33fa9fbd8d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+          {
+               color:'',    
+               name:'black',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/05ec2c3e-5ef1-41c6-9b82-ec779122fcdc.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/a1988aeb-ea77-40db-b78c-8d9c2fb5ec25.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/1516ca28-70f0-45ee-bcac-8f5160727c51.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+               ]
+          },
+     ],
+    },
+    {
+     name:'Metallic Pinstripe Jacket',
+     price:1590,
+     desc:`Suiting that sizzles is the design directive behind a pinstriped power jacket that's shot through with shine.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Black-Metallic',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/43160d91-077d-4efc-b763-4e28572c1a0c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/e06f8317-c7c2-457f-b8e6-7abad8e5524d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/95e87084-1dc1-484c-818e-1728d91ded86.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+     ],
+    },
+    {
+     name:'Pleated Straight Leg Trousers',
+     price:149,
+     desc:`A widened waistband adds a modern mood to staple trousers done in a straight-leg silhouette.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Light Olive',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/8d3d138b-0ace-44a4-b15a-64be21191960.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/31304b34-2d24-4020-8952-8c177196eaac.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/e5d66803-dcb4-4649-88b6-830acfe10bf8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+          {
+               color:'',    
+               name:'Chocolate Trot',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/ebe0373c-ba6a-4191-abbf-91cd970d1da4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/90b6e081-1aee-4a67-951f-4e254df2cc00.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               ''
+               ]
+          },
+          {
+               color:'',    
+               name:'Fall Camel',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/6cd8ee63-ebd7-4e62-85e7-41d278ccbbab.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/e87c83e3-48c2-42c9-8410-a459bb2b6b36.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               ]
+          },
+     ],
+    },
+    {
+     name:'Janorda Double Breasted Blazer',
+     price:545,
+     dis:40,
+     desc:`Make power moves in this polished double-breasted blazer fashioned in a modern fit with strong shoulders and flap pockets.     `,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'curt green',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/be053d21-df3f-4db4-92d1-cf2cc547e7d4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/58577495-6b1b-43ce-8721-b88610faa1b4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/4a7197ba-e8a3-4cce-a96b-6d8c1de35d47.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+     ],
+    },
+    {
+     name:'Houndstooth Virgin Wool Crop Jacket',
+     price:3990,
+     desc:`A houndstooth check polishes this expertly tailored jacket crafted in Italy from pure virgin wool.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Greige-Black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/6f3b3b82-1b31-401b-801b-334d2d8c0cda.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/a81f03d5-6fa2-4923-9b3a-b480cfa2f1e6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/ccb31394-6d6d-4680-acf8-53661b8d5723.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+     ],
+    },
+    
 
 //     {
 //      name:'',
 //      price:,
+//      dis:,
 //      desc:``,
-//      type:'sweatshirt',
+//      type:'suit',
 //      img:[
 //           {
 //            color:'',    
@@ -797,9 +1406,18 @@ let items = [
 //           },
 //      ],
 //     },
-
 ]
 
+
+
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error("er"+error);
+}
 
 items = items.sort((a,b)=>{
      return 0.5 - Math.random
