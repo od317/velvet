@@ -13,8 +13,9 @@ const Card = ({product})=>{
                   <div className=' relative '>
 
                   <Link className=' outline-none ' to={`/product/${product.id}?color=${mainImgIndex}`}>
-                         <div style={{backgroundImage: `url(${product.img[mainImgIndex].imgs[0]})`}} className='imgBack relative bg-gray2 w-full pb-[150%] phone:pb-[150%]'>
+                         <div   style={{backgroundImage: `url(${product.img[mainImgIndex].imgs[0]})`}} className='imgBack relative bg-gray2 w-full pb-[150%] phone:pb-[150%]'>
                          </div>
+
                   </Link>
                   </div>
                   <div className='flex flex-col  px-[3%]   border-t-0 p-[2%] '>

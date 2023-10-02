@@ -1368,14 +1368,249 @@ let items = [
           },
      ],
     },
-    
+    {
+     name:'Abbot Herringbone Blazer',
+     price:495,
+     dis:25,
+     desc:`A timeless herringbone pattern defines this wool-and-linen–blend blazer with handy pockets and notched lapels.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Black Multi',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/f72649f1-2918-4671-a650-5bdfe1f80b08.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/5fc6aeb9-107d-44aa-9734-19e00f428cba.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/1ce19a04-8199-472b-bb5a-af2e228fddb9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+     ],
+    },
+    {
+     name:'Gabi Blazer',
+     price:330,
+     desc:`A rich hue and expert tailoring define a power jacket you'll wear everywhere.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Berry',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/9dddaaae-17f4-4d9f-8532-24e64de28851.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/a9532e26-eb7e-40f5-85f0-b4058d91bee8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/36b04a45-dcd4-4fc8-ac02-9e5375e1cb5b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+     ],
+    },
+    {
+     name:'Naomi Wool Blend Blazer',
+     price:475,
+     dis:40,
+     desc:`An expertly tailored blazer is cut from a wool blend and ready to work for desk days and drinks dates.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Green',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/aa8a03fd-fc8a-44d9-9adf-3e6628318aef.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/f35a96b2-d0be-4c5a-9216-a62096cae6e5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/a53d1229-3620-4c27-a512-bd94f1e1b2f1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+     ],
+    },
+    {
+     name:'Warren Double Breasted Wool Blend Blazer',
+     price:625,
+     desc:`A double-breasted silhouette puts the final polish on this wool-blend blazer framed with classic notched lapels.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Hthrgry',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/fb193d37-03c1-4a6f-8337-dbde6541fa39.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/4e25277d-8da7-46ae-bb9a-cf4a99681dff.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+          },
+     ],
+    },
+    {
+     name:`'Ab'Solution Skyrise Wide Leg Pants'`,
+     price:88,
+     desc:`Crisp front pleats accentuate the wide-leg silhouette of these office-ready pants.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Black',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/ebb064ee-b14c-49f8-9803-199177f1742a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/b78537e6-eb44-4720-89e2-9778f146c721.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/b78537e6-eb44-4720-89e2-9778f146c721.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+           ]
+          },
+          {
+               color:'',    
+               name:'Duffel Green',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/8f020c8c-a166-4125-9f04-e962173368ca.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/3b592c54-a2f8-4dc3-923e-7355ca6cf3bf.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+               'https://n.nordstrommedia.com/id/sr3/8f020c8c-a166-4125-9f04-e962173368ca.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+               ]
+          },
+          {
+               color:'',    
+               name:'Ultra Navy',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/b6f67e96-74df-4d5a-a514-452ab12e7719.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/760108aa-4b69-42d2-8d99-d509c170ef32.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/daa41131-fb0d-4078-9af0-fa8732db85a6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+               ]
+          },
+     ],
+    },
+    {
+     name:'Le High Waist Slit Front Flare Trousers',
+     price:348,
+     desc:`A groovy mix of vintage and modern, these high-waist flare pants streamline your look with front seams that fall to slit hems.`,
+     type:'suit',
+     img:[
+          {
+           color:'',    
+           name:'Navy',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/e7b82023-737f-4398-b574-0aa282346057.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/584a874c-218c-46df-bdfc-aceab833903e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/cdf8e165-b158-4164-af90-71d72848a10e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+           ]
+          },
+          {
+               color:'',    
+               name:'Espresso',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/38c42211-007b-41bc-b811-9bc08c8ca3f0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/d7aca06a-8675-4a77-abfc-6f1d577a4b11.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/61de9636-f0db-4aab-85ba-914c6371ce80.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2'
+               ]
+          },
+          {
+               color:'',    
+               name:'Noir',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/a4a41a30-3f0d-44b6-a50a-92936da6879c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/a4a41a30-3f0d-44b6-a50a-92936da6879c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/e95b4964-d423-4e33-bfba-78c69ac5a68c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196'
+               ]
+          },
+     ],
+    },
+    {
+     name:'One-Button Knit Blazer',
+     price:69,
+     dis:45,
+     desc:`Sharp lines and a one-button silhouette make this all-cotton blazer a smart and comfortable standby.`,
+     type:'jacket',
+     img:[
+          {
+           color:'',    
+           name:'Olive Sarma',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/847019fa-79f0-4558-b56d-08f4abc37c22.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2',
+           'https://n.nordstrommedia.com/id/sr3/299098e5-fcf1-4785-9125-8b7b73650e17.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/a0793b94-98b5-4498-966a-5508190798df.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2'
+           ]
+          },
+          {
+               color:'',    
+               name:'Black',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/9b235d82-c4c1-44c9-bf0d-db45b3f1a25a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/2ade10f9-d258-4481-abb4-06f23f1f5de8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/dfade0b2-2cd2-4771-a918-fa46cd77b981.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990'
+               ]
+          },
+          {
+               color:'',    
+               name:'Navy Night',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/bae8a366-5fe9-4df7-9250-a65c3cfba77c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/690b075a-d1e6-473b-88b0-637a4a6a7b7c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/212bde2d-7042-4883-afc1-4d315696a356.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990'
+               ]
+          },
+     ],
+    },
+    {
+     name:'Mighty High Waist Wide Leg Jeans',
+     price:69,
+     desc:`Baggy but not sloppy, these relaxed jeans have a high waist and floor-grazing hems for an elongated look, plus sustainably sourced fibers for a modern update.`,
+     type:'jeans',
+     img:[
+          {
+           color:'',    
+           name:'Dark Retro',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/dc9d360d-e5c7-4383-86ba-e47f0e35ebd1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/079a0ba8-8536-4a0e-8073-129b5c9242df.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ''
+           ]
+          },
+          {
+               color:'',    
+               name:'Light Retro',
+               imgs:[
+               'https://n.nordstrommedia.com/id/sr3/eaa5fa93-dba6-4e07-8527-54cbd8ecde58.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               'https://n.nordstrommedia.com/id/sr3/eb50e620-4db4-4034-a044-b49462400ab9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+               ]
+          },
+     ],
+    },
+    {
+     name:'Meg Fab Ab High Waist Raw Hem Ankle Wide Leg Jeans',
+     price:99,
+     desc:`A casual classic, these wide-leg jeans complement your figure with soft, low-stretch denim and Fab Ab front pockets that comfortably shape.`,
+     type:'jeans',
+     img:[
+          {
+           color:'',    
+           name:'Exhibited',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/c89f1510-d422-4e21-a67a-f06c11f0a701.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/d1b59d1d-1f85-4189-9621-e3ffe28ca042.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+          },
+     ],
+    },
+    {
+     name:'Ribcage Ripped High Waist Ankle Straight Leg Jeans',
+     price:100,
+     dis:50,
+     desc:`Take your casual look up a notch with sky-high, nonstretch jeans that define your waist and relax into a true straight-leg profile.`,
+     type:'jeans',
+     img:[
+          {
+           color:'',    
+           name:'Hang Up',
+           imgs:[
+           'https://n.nordstrommedia.com/id/sr3/39728721-8730-4b88-96c0-7f77e790ccd2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           'https://n.nordstrommedia.com/id/sr3/e089cf2a-c6b5-4df0-98c0-ad7394970e92.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196',
+           ]
+          },
+     ],
+    },
+
+
+
 
 //     {
 //      name:'',
 //      price:,
 //      dis:,
 //      desc:``,
-//      type:'suit',
+//      type:'jeans',
 //      img:[
 //           {
 //            color:'',    
@@ -1406,6 +1641,9 @@ let items = [
 //           },
 //      ],
 //     },
+
+
+
 ]
 
 

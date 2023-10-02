@@ -4,6 +4,10 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],  theme: {
+    backgroundSize: {
+      '100%': '100%',
+      '200%': '200%',
+    },
     screens: {
       'phone': '450px',
       'navmid':'860px',

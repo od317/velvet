@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart,faStar } from '@fortawesome/free-regular-svg-icons'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -8,6 +9,19 @@ import { FreeMode } from 'swiper/modules'
 import Stars from './Stars'
 import PriceDisplay from './PriceDisplay'
 function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
+  useEffect(() => {
+      const imgcur = document.querySelector('.imgcur')
+      const windowWidth = window.innerWidth / 2
+      const windowHeight = window.innerHeight / 2
+      imgcur.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX / windowWidth;
+        const mouseY = e.clientY / windowHeight;
+        imgcur.style.transform = `scale(2) translate3d(-${mouseX*10}%, -${mouseY*10}%, 0)`
+      })
+      imgcur.addEventListener('mouseleave',(e)=>{
+        imgcur.style.transform = `translate3d(-${0}%, -${0}%, 0)`
+      })
+  },)
   return (
     <>
                <div className='flex flex-col phone:hidden items-start justify-start '>
@@ -53,8 +67,11 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
 
         <div className='hidden phone:grid mr-[2%] gap-x-[.5%] gap-y-[.5%] h-fit grid-cols-2 phone:w-[50%] ms:w-[55%]'>
                     {  product.img[color].imgs.map((image,index)=>{
-                            return(<div  style={{backgroundImage:`url(${image})`}}
-                                         className={`  pb-[150%] bg-gray2 w-full  imgBack relative `} key={index}>          
+                            return(
+                                  <div className=' pb-[150%] overflow-hidden relative'>
+                                      <div  style={{backgroundImage:`url(${image})`}}
+                                            className={` absolute  h-full  imgcur transition-all duration-0 hover:duration-200 bg-gray2 w-full  imgBack  `} key={index}>          
+                                      </div>
                                   </div>)
                     })}
         </div>
