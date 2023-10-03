@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import FIlters from './FIlters'
 import Sort from './Sort'
 import StoreGrid from './StoreGrid'
-import items from '../../Data/items'
+import it from '../../Data/items'
 
 function StoreLayout({sortP,filterP}) {
-
+     const items = it.filter(i=>{
+          return true
+     })
      const [sort,setSort] = useState(sortP||'recomended')
      const [filter,setFilter] = useState(filterP||'')
      const [items_show,setItemsShow] = useState(
@@ -151,7 +153,7 @@ function StoreLayout({sortP,filterP}) {
               <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
       
-         <div className=' phone:w-[100%] ms:w-[85%]  z-[1] bg-p1 px-[2%] pb-[100%]'>
+         <div className=' phone:w-[100%] ms:w-[85%] mb-[30%] z-[1] bg-p1 px-[2%] h-fit'>
               <StoreGrid items={items_show} />
          </div>
 

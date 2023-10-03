@@ -16,7 +16,7 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
       imgcur.addEventListener("mousemove", (e) => {
         const mouseX = e.clientX / windowWidth;
         const mouseY = e.clientY / windowHeight;
-        imgcur.style.transform = `scale(2) translate3d(-${mouseX*10}%, -${mouseY*10}%, 0)`
+        imgcur.style.transform = `scale(2) translate3d(-${mouseX*50}%, -${mouseY*20}%, 0)`
       })
       imgcur.addEventListener('mouseleave',(e)=>{
         imgcur.style.transform = `translate3d(-${0}%, -${0}%, 0)`
@@ -65,12 +65,13 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
         </div> */}
 
 
-        <div className='hidden phone:grid mr-[2%] gap-x-[.5%] gap-y-[.5%] h-fit grid-cols-2 phone:w-[50%] ms:w-[55%]'>
+        <div className='hidden phone:grid mr-[2%]  gap-x-[.5%] gap-y-[1%] h-fit grid-cols-2 phone:w-[50%] ms:w-[55%]'>
                     {  product.img[color].imgs.map((image,index)=>{
                             return(
-                                  <div className=' pb-[150%] overflow-hidden relative'>
+                                  <div className='  overflow-hidden h-fit  relative'>
                                       <div  style={{backgroundImage:`url(${image})`}}
-                                            className={` absolute  h-full  imgcur transition-all duration-0 hover:duration-200 bg-gray2 w-full  imgBack  `} key={index}>          
+                                            className={`   h-fit  imgcur transition-all duration-0 hover:duration-[10ms] bg-gray2 w-full  imgBack  `} key={index}>          
+                                            <img className='w-full opacity-0' src={image} alt="" />
                                       </div>
                                   </div>)
                     })}
