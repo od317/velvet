@@ -5,9 +5,7 @@ import StoreGrid from './StoreGrid'
 import it from '../../Data/items'
 
 function StoreLayout({sortP,filterP}) {
-     const items = it.filter(i=>{
-          return true
-     })
+     const items = it.slice(70)
      const [sort,setSort] = useState(sortP||'recomended')
      const [filter,setFilter] = useState(filterP||'')
      const [items_show,setItemsShow] = useState(

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart,faStar } from '@fortawesome/free-regular-svg-icons'
@@ -10,6 +10,7 @@ import Stars from './Stars'
 import PriceDisplay from './PriceDisplay'
 import ImageLoader from './ImageLoader'
 function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
+  const [allshow,setAllShow] = useState(false)
   useEffect(() => {
       const imgcur = document.querySelector('.imgcur')
       const windowWidth = window.innerWidth / 2
@@ -35,14 +36,13 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
                     slidesPerView={1.6}
                     spaceBetween={2}
                     freeMode={true}
-
                     modules={[FreeMode]}
                     className="mySwiper"
                     >
                     {product.img[color].imgs.map((i,index)=>{
                     return(<div key={i}>
                               <SwiperSlide key={i}>
-                                     <ImageLoader img={i} />
+                                     <ImageLoader allshow={allshow}  handleAllShow={setAllShow} img={i} />
                               </SwiperSlide>
                     </div>)
                     })}
