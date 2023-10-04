@@ -1,5 +1,5 @@
-import React from 'react';
-import RightCard from './RightCard';
+import React from 'react'
+import RightCard from './RightCard'
 
 function RightSide({product}) {
   const content = product.simList.slice(0,3)
@@ -10,11 +10,13 @@ function RightSide({product}) {
                 </div>
                 {content.map((p,index)=>{
                     return(
-                      <RightCard id={p}></RightCard>
+                      <div key={p}>
+                         <RightCard id={p}></RightCard>
+                      </div>
                     )
                 })}
     </div>
-  );
+  )
 }
 
-export default RightSide;
+export default RightSide

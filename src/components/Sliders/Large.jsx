@@ -51,7 +51,7 @@ const Large = ({items,text,num})=>{
     useEffect(()=>{
          setSlidePer(0)
          setLen(sim.length-(num-1))
-    },items)
+    },[items])
     return(<>
     
           <div className=' hidden navmid:flex  flex-col w-full  py-[2%] bg-p1'>

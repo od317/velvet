@@ -3433,18 +3433,26 @@ let items =
 
 
 
-const shuffleArray = array => {
-     for (let i = array.length - 1; i > 0; i--) {
-       const j = Math.floor(Math.random() * (i + 1))
-       const temp = array[i]
-       array[i] = array[j]
-       array[j] = temp
-     }
-     return array
-}
+ function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex > 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
 
 
-// shuffleArray(items)
+// shuffle(items)
 
 const rates = [
      "3.0",
@@ -3638,7 +3646,25 @@ let ids = [
      "t77",
      "t78",
      "t79",
-     "t80"
+     "t80",
+     "t81",
+     "t82",
+     "t83",
+     "t84",
+     "t85",
+     "t86",
+     "t87",
+     "t88",
+     "t89",
+     "t90",
+     "t91",
+     "t92",
+     "t93",
+     "t94",
+     "t95",
+     "t96",
+     "t97",
+     "t98",
 ]
 
 const brands = ['Lauren Ralph Lauren','Canada Goose']
@@ -3648,7 +3674,6 @@ let cgs = 0
 let m = new Map()
 let l = 0 
 for(let i of items){
-     ids=[...ids,i.id] 
      let tmp = sisses(sizes)
      i.size = new Set(tmp)
      i.simList = maylikelist(ids)
@@ -3662,6 +3687,10 @@ for(let i of items){
      i.brand = brands[Math.floor(Math.random()*brands.length)]    
      i.date = Math.floor(Math.random()*(1000))
      i.frees = true
+     let ck = l
+     for(let c of i.img){
+        c.key = ck++
+     }
      if(i.brand === brands[0]){
           lrl+=1
      }
@@ -3685,11 +3714,11 @@ function sisses(sizes){
 
 function maylikelist(ids){
      let tmpids = [...ids]
-     let num = Math.floor(Math.random()* (40-25)+25)
+     let num = Math.floor(Math.random()* (48-25)+25)
      let start = Math.floor(Math.random()* num)
      let end = start + num
+     shuffle(tmpids)
      let val = tmpids.slice(start,end+1)    
-     shuffleArray(val)
      console.log(val)
      return val
 }

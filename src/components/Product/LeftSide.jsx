@@ -8,6 +8,7 @@ import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
 import Stars from './Stars'
 import PriceDisplay from './PriceDisplay'
+import ImageLoader from './ImageLoader'
 function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
   useEffect(() => {
       const imgcur = document.querySelector('.imgcur')
@@ -41,9 +42,7 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
                     {product.img[color].imgs.map((i,index)=>{
                     return(<div key={i}>
                               <SwiperSlide key={i}>
-                                <div
-                                style={{backgroundImage:`url(${i})`}} 
-                                className='h-full imgBack pb-[200%]'></div>
+                                     <ImageLoader img={i} />
                               </SwiperSlide>
                     </div>)
                     })}
@@ -68,7 +67,7 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
         <div className='hidden phone:grid mr-[2%]  gap-x-[.5%] gap-y-[1%] h-fit grid-cols-2 phone:w-[50%] ms:w-[55%]'>
                     {  product.img[color].imgs.map((image,index)=>{
                             return(
-                                  <div className='  overflow-hidden h-fit  relative'>
+                                  <div key={image} className='  overflow-hidden h-fit  relative'>
                                       <div  style={{backgroundImage:`url(${image})`}}
                                             className={`   h-fit  imgcur transition-all duration-0 hover:duration-[10ms] bg-gray2 w-full  imgBack  `} key={index}>          
                                             <img className='w-full opacity-0' src={image} alt="" />
