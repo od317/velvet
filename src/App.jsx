@@ -99,6 +99,7 @@ function App() {
                                                 <Routes>
                                                 <Route path='/' element={<Home/>}></Route>
                                                 <Route path='/store' element={<Store />}></Route>
+                                                <Route path='/store/:id' element={<Store />}></Route>
                                                 <Route path='/product/:id' element={<Product/>}></Route>
                                                 <Route path='/shoping-bag' element={<WishList/>}></Route>
                                                 </Routes>

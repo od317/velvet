@@ -13,7 +13,7 @@ const Card = ({product})=>{
 
                   <div className=' relative '>
 
-                  <Link className=' outline-none ' to={`/product/${product.id}?color=${mainImgIndex}`}>
+                  <Link className='  outline-none ' to={`/product/${product.id}?color=${mainImgIndex}`}>
                          {
                           product.img[mainImgIndex].sm ? 
                           (<>

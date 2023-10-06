@@ -3,121 +3,71 @@ import FIlters from './FIlters'
 import Sort from './Sort'
 import StoreGrid from './StoreGrid'
 import it from '../../Data/items'
+import { changeFilterList, handleItemsChangeSwitch, handleSortItemsChangeSwitch } from '../../Data/handlers'
+import { useEffect } from 'react'
+function StoreLayout({id,sortP,filterP}) {
+     const [items,setItems] = useState( id ? filterMain(id) : it)
+     const [filter,setFilter] = useState(filterP)
+     const [curItems,setCurItems] = useState(StartFilter(items))
+     const [sort,setSort] = useState(sortP||'featured')
+     const [items_show,setItemsShow] = useState(curItems.slice(0,20))
+     const [curPage,setCurPage] = useState(1)
 
-function StoreLayout({sortP,filterP}) {
-     const items = it.slice(70)
-     const [sort,setSort] = useState(sortP||'recomended')
-     const [filter,setFilter] = useState(filterP||'')
-     const [items_show,setItemsShow] = useState(
-          sortP ? StartSort() : items
-     )
-     
-     function StartFilter(){
-
+     function filterMain(id){
+              let tmp = [...it]
+              tmp = tmp.filter(t=>{
+               return t.type == id
+              })
+              return tmp             
      }
 
-     function StartSort(){
-          let nextItems = items
-          switch(sort){
-               case 'price low to high':
-                         nextItems.sort((a,b)=>{
-                             return a.price - b.price
-                         })
-                    break
-               case 'price high to low':
-                         nextItems.sort((a,b)=>{
-                              return b.price - a.price
-                         })
-                    break
-               case 'date':
-                    nextItems.sort((a,b)=>{
-                         return b.date - a.date
-                    })
-                    break          
-               default :
-               break
+    function StartFilter(items1){
+     let nextItems = [...items1]  
+     nextItems = handleItemsChangeSwitch(nextItems,filterP)
+     return StartSort(nextItems)
+    } 
+
+    function StartSort(nextItems){
+          handleSortItemsChangeSwitch(nextItems,sortP ? sortP : 'featured')
+          return nextItems
+    }
+    const handlefilterChange = (name,value)=>{
+     let newFilter = [...filter]
+     newFilter = newFilter.map(f=>{
+          if(f.name == name){
+             return {
+               name:name,
+               val:changeFilterList(f.val,value)
+          }  
           }
-           return nextItems
-     }
-     
-
-    const handlefilterChange = (value)=>{
-         if(filter === value){
-          setFilter('')
-          handleItemsChange('')
-          return
-         }
-         setFilter(value)
-         handleItemsChange(value)
+          return f
+     })
+     setFilter(newFilter)
+     handleItemsChange(newFilter)
+     // if(filter === value){
+     //      setFilter('')
+     //      handleItemsChange('')
+     //      return
+     //     }
+     //     setFilter(value)
+     //     handleItemsChange(value)
     }
 
-    const handleItemsChange = (value)=>{
-      let nextItems = items
-      switch(value){
-          case 'sm':
-               nextItems = nextItems.filter(i=>{
-                    return i.size.has('sm')
-               })
-               break
-          case 'medium':
-               nextItems = nextItems.filter(i=>{
-                    return i.size.has('medium')
-               })
-                    break  
-          case 'large':
-               nextItems = nextItems.filter(i=>{
-                         return i.size.has('large')
-                    })
-                    break  
-          case 'xl':
-               nextItems = nextItems.filter(i=>{
-                         return i.size.has('xl')
-                    })
-                    break  
-          case '2xl':
-               nextItems = nextItems.filter(i=>{
-                         return i.size.has('2xl')
-                    })
-                    break  
-
-          default :
-               break     
-      }
+    const handleItemsChange = (newFilter)=>{
+      let nextItems = [...items]
+      nextItems = handleItemsChangeSwitch(nextItems,newFilter)
       handleSortItemsChange(sort,nextItems)
     }
-
 
     const handleSortChange = (value)=>{
      setSort(value)
      handleSortItemsChange(value)
     } 
     
-    const handleSortItemsChange = (value,nextItems = items_show)=>{
-          switch(value){
-               case 'price low to high':
-                         nextItems.sort((a,b)=>{
-                             return a.price - b.price
-                         })
-                    break
-               case 'price high to low':
-                         nextItems.sort((a,b)=>{
-                              return b.price - a.price
-                         })
-                    break
-               case 'date':
-                    nextItems.sort((a,b)=>{
-                         return b.date - a.date
-                    })
-                    break  
-               case 'rate':
-                    nextItems.sort((a,b)=>{
-                         return b.rate.rate - a.rate.rate
-                    })
-                    break                       
-               default :
-               break
-          }
-          setItemsShow(nextItems)
+    const handleSortItemsChange = (value,nextItems = curItems)=>{
+          handleSortItemsChangeSwitch(nextItems,value)
+          setCurItems(nextItems)
+          setItemsShow(nextItems.slice(0,20))
     }
 
     const handleItemsHover = (id,index)=>{
@@ -130,10 +80,18 @@ function StoreLayout({sortP,filterP}) {
              return p
           }))
     }
-
+    useEffect(()=>{
+     let curItems = id ? filterMain(id) : it
+     setItems(curItems)
+     curItems = StartFilter(curItems)
+     setFilter(filterP)
+     setCurItems(curItems)
+     setSort(sortP||'featured')
+     setItemsShow(curItems.slice(0,20))
+    },[id])
   return (<>
     <div className=' hidden phone:block '>
-          <Sort sort={sort} numShow={items_show.length} handleSortChange={handleSortChange} />
+          <Sort sort={sort} numShow={items_show.length} totalNumShow={curItems.length} handleSortChange={handleSortChange} />
     </div>
     <div className=' flex flex-col relative phone:flex-row'>
       
