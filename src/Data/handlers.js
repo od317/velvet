@@ -1,6 +1,5 @@
 
 const handleItemsChangeSwitch = (nextItems1,filters)=>{
-    console.log(filters)
     let ans = []
     for(let i =0;i<filters.length;i++){ 
                if(!filters[i].val || filters[i].val.length==0){
@@ -9,7 +8,6 @@ const handleItemsChangeSwitch = (nextItems1,filters)=>{
                ans = []
                let list = filters[i].val
                let nextItems = [...nextItems1]
-               console.log(filters[i].name,nextItems)
                for(let value of list){
                switch(value){
                     case 'sm':
@@ -52,7 +50,97 @@ const handleItemsChangeSwitch = (nextItems1,filters)=>{
                               return i.brand === 'Canada Goose'
                          })]
                               break  
-
+                    case '20':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.dis >= 20
+                         })]
+                              break  
+                    case '30':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.dis >= 30
+                         })]
+                              break  
+                    case '40':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.dis >= 40
+                         })]
+                              break  
+                    case '50':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.dis >= 50
+                         })]
+                              break  
+                    case '60':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.dis >= 60
+                         })]
+                              break  
+                    case '100':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 100 && i.price >=0
+                         })]
+                              break  
+                    case '200':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 200 && i.price >=100
+                         })]
+                              break  
+                    case '300':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 300 && i.price >=200
+                         })]
+                              break  
+                    case '400':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 400 && i.price >=300
+                         })]
+                              break  
+                    case '500':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 500 && i.price >=400
+                         })]
+                              break  
+                    case '600':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 600 && i.price >=500
+                         })]
+                              break  
+                    case '700':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 700 && i.price >=600
+                         })]
+                              break  
+                    case '800':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 800 && i.price >=700
+                         })]
+                              break  
+                    case '900':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 900 && i.price >=800
+                         })]
+                              break  
+                    case '1000':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 1000 && i.price >=900
+                         })]
+                              break  
+                    case '2000':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.price <= 2000 && i.price >=1000
+                         })]
+                              break  
+                    case 'sale':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return i.dis
+                         })]
+                              break  
+                    case 'regular':
+                         ans = [...ans,...nextItems.filter(i=>{
+                              return !i.dis
+                         })]
+                              break
+                              
                     default :
                          break     
                }

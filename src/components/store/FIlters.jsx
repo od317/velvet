@@ -1,11 +1,26 @@
 import React, { useState } from 'react'
-import { filters } from '../../Data/FIlters';
+import { filters } from '../../Data/FIlters'
 import './styles.css/scrollBar.css'
+import close from '../../assets/close.png'
 
 function FIlters({handlefilterChange,filter}) {
+  let nfilter = filter.map(i=>{
+    return i.val
+  })
+  nfilter = [].concat(...nfilter)
+  const filtersSet = new Set(nfilter.map(f=>{
+    return f
+  }))
   return (<>
             <div className=' ms:block hidden  pr-[5%] overflow-y-scroll sc max-h-screen '>
-              <div></div>
+              {nfilter.length >0 && <div className=''> <span className='font-bold'>Filtered by:</span> {nfilter.length}</div>}
+              <div className='flex flex-wrap  w-[100%]'>
+                  {filters.map((filters,i)=>{
+                              return(
+                              <FilterTop  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
+                            )
+                  })}
+              </div>
               <div className=" flex flex-col   pb-[15%] transition-all duration-200 ">
                  {filters.map((filters,i)=>{
                   return(
@@ -49,7 +64,7 @@ const Filter = ({filters,handlefilterChange,filter})=>{
                           {filters.content.map(f=>{
                             return(<div key={f.name+Math.random()}>
                                 <div className='flex flex-row gap-[1%] items-center my-[.5%] '>
-                                    <div className={` ${filtersSet.has(f.name) ? 'bg-black':''} w-[4.5%] pb-[4.5%] rounded-[50%] border-[1px] br`}></div>
+                                    <div className={` ${filtersSet.has(f.val) ? 'bg-black':''} w-[4.5%] pb-[4.5%] rounded-[50%] border-[1px] br`}></div>
                                     <button onClick={()=> handlefilterChange(filters.name,f.val)} className='flex flex-row items-center justify-center'>{f.name}</button>
                                 </div>
                             </div>)
@@ -59,5 +74,29 @@ const Filter = ({filters,handlefilterChange,filter})=>{
   </>)
 }
 
+const FilterTop = ({filters,handlefilterChange,filter})=>{
+        let nfilter = filter.map(i=>{
+          return i.val
+        })
+        nfilter = [].concat(...nfilter)
+        const filtersSet = new Set(nfilter.map(f=>{
+          return f
+        }))
+        return(<>
+                                {filters.content.map(f=>{
+                                  return(<>
+                                  {filtersSet.has(f.val)&&
+                                    (<div className=' min-w-[40%] mr-[2%] my-[1%] flex text-[100%] items-center cursor-pointer ' key={f.name+Math.random()}>
+                                        <div onClick={()=> handlefilterChange(filters.name,f.val)} className=' items-center hover:bg-gray2 transition-all duration-200 flex'>
+                                          <button  className='w-full  text-start'>{f.name}</button>
+                                          <img src={close} className={'inline-block h-[1rem] w-[1rem] translate-y-[10%] '} alt="" />
+                                        </div>
+                                     </div>
+                                    )}
+                                        </>
+                                )
+                                  })}
+        </>)
+}
 
 export default FIlters

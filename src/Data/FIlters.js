@@ -74,9 +74,9 @@ const filters = [
         name:'sale',
         content:[
             {name:'sale',
-            val:''},
+            val:'sale'},
             {name:'regular',
-            val:''},
+            val:'regular'},
         ]
     },
 ]
