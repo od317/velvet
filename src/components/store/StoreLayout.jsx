@@ -90,22 +90,14 @@ function StoreLayout({id,sortP,filterP}) {
      setItemsShow(curItems.slice(0,20))
     },[id])
   return (<>
-    <div className=' hidden phone:block '>
+    <div className='px-[5%] phone:px-[0]'>
           <Sort sort={sort} numShow={items_show.length} totalNumShow={curItems.length} handleSortChange={handleSortChange} />
     </div>
-    <div className=' flex flex-col relative phone:flex-row'>
+    <div className=' flex flex-col relative ms:flex-row'>
       
-         <div className=' pb-[70%] relative phone:hidden  '>
-                     <img className=' absolute w-full ' 
-                     src="https://s3-media0.fl.yelpcdn.com/bphoto/s3J5l1SCn7p1fRY8zdU2cg/348s.jpg" alt="" />
-         </div>
-      
-         <div className='phone:hidden bg-p1 z-[2] pl-[2%] flex flex-row justify-between rounded-tl-3xl w-[70%]'>
-             <Sort sort={sort} handleSortChange={handleSortChange} />
-             <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
-         </div>
+
    
-         <div className=' hidden ms:block phone:w-[20%] ms:w-[18%]  phone:pl-[2%] z-[2]  top-[0%] phone:h-fit phone:sticky phone:top-[0%] pt-[1%] '>
+         <div className='   ms:w-[18%]  ms:pl-[2%] z-[2]  top-[0%] ms:h-fit ms:sticky ms:top-[0%] pt-[1%] '>
               <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
       
