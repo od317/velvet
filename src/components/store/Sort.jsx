@@ -23,7 +23,7 @@ const LargeSort = ({handleSortChange,sort})=>{
     setShowSort(false)
   }
   return (<>
-               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' hidden phone:block px-[5%] phone:px-[0] relative z-[6] phone:w-[33%] ms:w-[22%]    text-start'>
+               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' hidden phone:block bco px-[5%] phone:px-[0] relative z-[6] phone:w-[33%] ms:w-[22%]    text-start'>
                     <div  className=' border-black   border-[1px] phone:p-[2%] phone:px-[4%]  whitespace-nowrap flex flex-row justify-between items-center   cursor-pointer '>
                       <label className='cursor-pointer  ' htmlFor="">Sort by: {sort}</label>
                       <label className='cursor-pointer phone:hidden ' htmlFor="">Show</label>
@@ -48,12 +48,12 @@ const LargeSort = ({handleSortChange,sort})=>{
                     </div>
                </div>
 
-               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' phone:hiddne w-[40%] border-black   border-[1px] phone:px-[0] relative z-[6] phone:w-[33%] ms:w-[22%]    text-start'>
-                    <div  className='  phone:p-[2%] phone:px-[4%]  whitespace-nowrap mx-[2%] flex flex-row justify-between items-center   cursor-pointer '>
+               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' phone:hidden w-fit   text-[120%] phone:px-[0] relative z-[6] phone:w-[33%] ms:w-[22%]    text-start'>
+                    <div  className='  phone:p-[2%] phone:px-[4%]  px-[5%] whitespace-nowrap w-full flex flex-row justify-between items-center border-black   border-[1px] bco  cursor-pointer '>
                       <label className='cursor-pointer  ' htmlFor="">Sort by: {sort}</label>
                       <label className={`${showSort ? ' rotate-180 ':''} flex items-center justify-center text-center transition-all duration-200`} htmlFor=""><ion-icon name="chevron-down-outline"></ion-icon></label>
                     </div>
-                    <div className={`flex ${showSort ? 'max-h-screen  phone:border-black border-t-0':'max-h-[0rem]  phone:border-p1 '} box-content transition-all duration-300 tmaxh bg-p1 flex-col text-start border-t-0 border-[1px]  w-full absolute`}>
+                    <div className={`flex px-[5%] ${showSort ? 'max-h-screen  border-black border-t-0':'max-h-[0rem]  border-p1 '} bco transition-all duration-300  bg-p1 flex-col text-start border-t-0 border-[1px]  w-full absolute`}>
                           <div className='h-full overflow-hidden'>
                               <button onClick={()=>handleClick('featured')} className='w-full  my-[1%] hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[2%]'>featured</button>
                           </div>
