@@ -7,7 +7,7 @@ import 'swiper/css'
 import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
 
-function FIlters({handlefilterChange,filter}) {
+function FIlters({sFilter,handlefilterChange,filter}) {
   let nfilter = filter.map(i=>{
     return i.val
   })
@@ -16,7 +16,7 @@ function FIlters({handlefilterChange,filter}) {
     return f
   }))
   return (<>
-            <div className=' ms:block hidden w-full pr-[5%] overflow-y-scroll sc max-h-screen '>
+            <div className=' block  w-full ms:pr-[5%] overflow-y-scroll sco sc max-h-screen '>
               {nfilter.length >0 && <div className=''> <span className='font-bold'>Filtered by:</span> {nfilter.length}</div>}
               <div className='flex flex-wrap  w-[100%]'>
                   {filters.map((filters,i)=>{
@@ -29,7 +29,7 @@ function FIlters({handlefilterChange,filter}) {
                  {filters.map((filters,i)=>{
                   return(
                  <div key={filters.name}>
-                   <Filter  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
+                   <Filter sFilter={sFilter} handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
                  </div>)
                  })}
               </div>
@@ -37,38 +37,7 @@ function FIlters({handlefilterChange,filter}) {
 
             </div>
 
-            <div className=' ms:hidden w-[100%]  inline-block  '>
-              {/* <div className='flex flex-wrap  w-[100%]'>
-                  {filters.map((filters,i)=>{
-                              return(
-                              <FilterTop  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
-                            )
-                  })}
-              </div> */}
-              <div className="  w-[100%] mt-[5%] transition-all duration-200 ">
-                    <Swiper
-                    slidesPerView={3.5}
-                    spaceBetween={4}
-                    freeMode={true}
-                    modules={[FreeMode]}
-                    className=""
-                    
-                  >
-                    {filters.map((filters,i)=>{
-                    return(
-                      <SwiperSlide key={filters.name}>
-                          <Filter  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
-                      </SwiperSlide>
 
-                     )
-                    })}
-
-                  </Swiper>
-
-              </div>
-
-
-            </div>
 
 
 
@@ -77,8 +46,8 @@ function FIlters({handlefilterChange,filter}) {
 }
 
 
-const Filter = ({filters,handlefilterChange,filter})=>{
-  const [show,setShow] = useState(false)
+const Filter = ({sFilter,filters,handlefilterChange,filter})=>{
+  const [show,setShow] = useState(sFilter === filters.name ? true : false)
   let nfilter = filter.map(i=>{
     return i.val
   })
@@ -87,13 +56,13 @@ const Filter = ({filters,handlefilterChange,filter})=>{
     return f
   }))
   return(<>
-                  <div className='hidden ms:flex flex-col overflow-hidden mb-[2%]'>
+                  <div className=' flex flex-col overflow-hidden mb-[2%]'>
                         <div onClick={()=>{
-                          setShow(s=> !s)}} className='border-t-[1px] text-[105%] cursor-pointer border-gray3 py-[8%]'>{filters.name}</div>
+                          setShow(s=> !s)}} className='border-t-[1px] text-[105%] ms:px-[0%] px-[4%] cursor-pointer border-gray3 py-[8%]'>{filters.name}</div>
                         <div className={` ${ show ? 'max-h-[30rem]':'max-h-0'} tmaxh duration-[300ms]`}>
                           {filters.content.map(f=>{
                             return(<div key={f.val}>
-                                <div className='flex flex-row gap-[1%] items-center my-[.5%] '>
+                                <div className='flex ms:px-[0%] px-[4%] flex-row gap-[1%] items-center my-[.5%] '>
                                     <div className={` ${filtersSet.has(f.val) ? 'bg-black':''} w-[5%] pb-[5%]  border-[1px]`}></div>
                                     <button onClick={()=> handlefilterChange(filters.name,f.val)} className='flex  flex-row items-center justify-start text-start'>{f.name}</button>
                                 </div>
@@ -105,9 +74,7 @@ const Filter = ({filters,handlefilterChange,filter})=>{
 
 
 
-                    <div className=' ms:hidden whitespace-normal relative  text-black border-black border-[1px] mb-[6%] rounded-sm  py-[3%] px-[4%]  '>
-                        <div className=' text-[105%] cursor-pointer  '>{filters.name}</div>
-                    </div>
+                 
                   
                  
 

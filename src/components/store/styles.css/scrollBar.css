@@ -34,3 +34,8 @@
 .bco{
    box-sizing: content-box;
 }
+
+
+.sc::-webkit-scrollbar {
+    display: none;
+  }

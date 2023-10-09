@@ -5,6 +5,7 @@ import StoreGrid from './StoreGrid'
 import it from '../../Data/items'
 import { changeFilterList, handleItemsChangeSwitch, handleSortItemsChangeSwitch } from '../../Data/handlers'
 import { useEffect } from 'react'
+import SFilters from './SFilters'
 function StoreLayout({id,sortP,filterP}) {
      const [items,setItems] = useState( id ? filterMain(id) : it)
      const [filter,setFilter] = useState(filterP)
@@ -12,7 +13,9 @@ function StoreLayout({id,sortP,filterP}) {
      const [sort,setSort] = useState(sortP||'featured')
      const [items_show,setItemsShow] = useState(curItems.slice(0,20))
      const [curPage,setCurPage] = useState(1)
-
+     const [showSfilters,setShowSfilters] = useState(false)
+     const [sFilter,setSFilter] = useState('')
+    
      function filterMain(id){
               let tmp = [...it]
               tmp = tmp.filter(t=>{
@@ -80,6 +83,12 @@ function StoreLayout({id,sortP,filterP}) {
              return p
           }))
     }
+
+    const handelSfiltersChange = ()=>{
+          setShowSfilters(s=> !s)
+          setSFilter('')
+    }
+
     useEffect(()=>{
      let curItems = id ? filterMain(id) : it
      setItems(curItems)
@@ -90,10 +99,21 @@ function StoreLayout({id,sortP,filterP}) {
      setItemsShow(curItems.slice(0,20))
     },[id])
   return (<>
-    <div className='px-[5%] flex flex-col w-full   whitespace-nowrap ms:block ms:px-[0%]  phone:px-[5%]'>
+
+      <div className={` ${showSfilters ? 'translate-x-0':'translate-x-[100%]' } flex flex-row transition-all duration-200 h-screen absolute top-0 w-[100%]  z-[100] ms:hidden`}>
+              <div className='w-[35%] h-screen bg-dark2 opacity-50'></div>
+              <div className='bg-p1 w-[65%] flex flex-col items-center py-[5%]'>
+               <button onClick={()=>handelSfiltersChange()} className='py-[5%] border-black border-[1px] mb-[5%] w-[95%] text-center '>
+                  done
+               </button>
+              <FIlters sFilter={sFilter} filter={filter}  handlefilterChange={handelSfiltersChange}></FIlters>
+              </div>
+      </div>
+      
+     <div className='px-[5%] flex flex-col w-full   whitespace-nowrap ms:block ms:px-[0%]  phone:px-[5%]'>
           <Sort sort={sort} numShow={items_show.length} totalNumShow={curItems.length} handleSortChange={handleSortChange} />
           <div className='ms:hidden'>
-          <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
+          <SFilters handleClick={setSFilter} handleShowChange={setShowSfilters}/>
           </div>
     </div>
     

@@ -22,7 +22,7 @@ function Store() {
   }, [])
 
   return (
-    <div className=''>
+    <div className=' overflow-x-hidden'>
       {/* <div className=' hidden phone:block  bg-p1 px-[2%] mt-[2%]'>
             <div className='flex py-[1.5%] px-[2%] flex-col text-white w-full font-Lato bg-dark2'>
                 <label className=' text-[110%] font-bold'>Ladies Tops</label>
