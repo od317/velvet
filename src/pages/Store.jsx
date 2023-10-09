@@ -23,12 +23,12 @@ function Store() {
 
   return (
     <div className=''>
-      <div className=' hidden phone:block  bg-p1 px-[2%] mt-[2%]'>
+      {/* <div className=' hidden phone:block  bg-p1 px-[2%] mt-[2%]'>
             <div className='flex py-[1.5%] px-[2%] flex-col text-white w-full font-Lato bg-dark2'>
                 <label className=' text-[110%] font-bold'>Ladies Tops</label>
                 <label htmlFor="">70% on shirts and tops</label>
             </div>
-      </div>
+      </div> */}
       <StoreLayout id={id} filterP={filterP} sortP={searchParams.get('sort')}/>    
       {/* {wishlist}
       <br />
@@ -37,6 +37,19 @@ function Store() {
         localStorage.setItem('wishlist',JSON.stringify([...wishlist,'1']))
         }}>click</button> */}
     
+    <div className='ms:hidden w-full relative'>
+                         <div className=''>
+                            s
+                         </div>
+                         <div className=' bg-red h-[10rem] absolute w-full transition-all duration-200  items-start'>
+                           <div>
+                             <button>1</button>
+                             <button>1</button>
+                             <button>1</button>
+                             <button>1</button>
+                            </div>
+                         </div>
+                    </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ function Sort({handleSortChange,sort,numShow,totalNumShow}) {
 
 
   return (
-    <div className='phone:p-[2%] relative  flex phone:flex  flex-row  justify-between items-center'>
+    <div className='ms:p-[2%] relative inline-block   ms:flex  flex-row  justify-between items-center'>
           <div className=' hidden ms:block w-[40%]'>showing {numShow} of {totalNumShow} items</div>
           <SFilters/>
           <LargeSort handleSortChange={handleSortChange} sort={sort}></LargeSort>
@@ -23,7 +23,7 @@ const LargeSort = ({handleSortChange,sort})=>{
     setShowSort(false)
   }
   return (<>
-               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' hidden phone:block bco px-[5%] phone:px-[0] relative z-[6] phone:w-[33%] ms:w-[22%]    text-start'>
+               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' hidden ms:block bco px-[5%] phone:px-[0] relative z-[6] phone:w-[33%] ms:w-[22%]    text-start'>
                     <div  className=' border-black   border-[1px] phone:p-[2%] phone:px-[4%]  whitespace-nowrap flex flex-row justify-between items-center   cursor-pointer '>
                       <label className='cursor-pointer  ' htmlFor="">Sort by: {sort}</label>
                       <label className='cursor-pointer phone:hidden ' htmlFor="">Show</label>
@@ -48,8 +48,8 @@ const LargeSort = ({handleSortChange,sort})=>{
                     </div>
                </div>
 
-               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' phone:hidden w-fit   text-[120%] phone:px-[0] relative z-[6] phone:w-[33%] ms:w-[22%]    text-start'>
-                    <div  className='  phone:p-[2%] phone:px-[4%]  px-[5%] whitespace-nowrap w-full flex flex-row justify-between items-center border-black   border-[1px] bco  cursor-pointer '>
+               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' ms:hidden w-fit z-50 inline-block  text-[120%] phone:px-[0] relative  ms:w-[22%]    text-start'>
+                    <div  className='   px-[5%] whitespace-nowrap w-full flex flex-row justify-between items-center border-black   border-[1px] bco  cursor-pointer '>
                       <label className='cursor-pointer  ' htmlFor="">Sort by: {sort}</label>
                       <label className={`${showSort ? ' rotate-180 ':''} flex items-center justify-center text-center transition-all duration-200`} htmlFor=""><ion-icon name="chevron-down-outline"></ion-icon></label>
                     </div>

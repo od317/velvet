@@ -68,7 +68,7 @@ function NavBar() {
                  A Nordy Club exclusive
             </div>
 
-           <div className='w-full px-[5%] relative pt-[2%]'>
+           <div className='w-full px-[5%] ms:px-[2%] relative pt-[2%]'>
                 <div className='w-full flex flex-col navmid:border-b-[1px]  border-gray3 pb-[1.2%]'>
                      <div className='flex flex-col  navmid:px-[0%] navmid:flex-row navmid:justify-between w-full'>
                              <div className='flex navmid:w-[20%] flex-row mb-[2%] navmid:mb-[0%] navmid:flex'>
