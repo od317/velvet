@@ -16,9 +16,9 @@ function FIlters({sFilter,handlefilterChange,filter}) {
     return f
   }))
   return (<>
-            <div className=' block  w-full ms:pr-[5%] overflow-y-scroll sco sc max-h-screen '>
-              {nfilter.length >0 && <div className=''> <span className='font-bold'>Filtered by:</span> {nfilter.length}</div>}
-              <div className='flex flex-wrap  w-[100%]'>
+            <div className=' block  w-full  ms:pr-[5%] overflow-y-scroll sco sc max-h-screen '>
+              {nfilter.length >0 && <div className='ms:pl-[0%] pl-[5%]'> <span className='font-bold'>Filtered by:</span> {nfilter.length}</div>}
+              <div className='flex flex-wrap ms:pl-[0%] pl-[5%]  w-[100%]'>
                   {filters.map((filters,i)=>{
                               return(
                               <FilterTop  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
@@ -91,9 +91,9 @@ const FilterTop = ({filters,handlefilterChange,filter})=>{
         }))
         return(<>
                                 {filters.content.map((f,i)=>{
-                                  return(<div key={f.name}>
+                                  return(<div className='min-w-[40%]' key={f.name}>
                                   {filtersSet.has(f.val)&&
-                                    (<div   className=' min-w-[40%] mr-[2%] my-[1%] flex text-[100%] items-center cursor-pointer ' key={f.name+Math.random()}>
+                                    (<div   className=' w-full  mr-[2%] my-[1%] flex text-[100%] items-center cursor-pointer ' key={f.name+Math.random()}>
                                         <div onClick={()=> handlefilterChange(filters.name,f.val)} className=' items-center hover:bg-gray2 transition-all duration-200 flex'>
                                           <button  className='w-full  text-start'>{f.name}</button>
                                           <img src={close} className={'inline-block h-[1rem] w-[1rem] translate-y-[10%] '} alt="" />

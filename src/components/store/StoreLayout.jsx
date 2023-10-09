@@ -111,7 +111,7 @@ function StoreLayout({id,sortP,filterP}) {
                <button onClick={()=>handelSfiltersChange('')} className='py-[5%] border-black border-[1px] mb-[5%] w-[95%] text-center '>
                   done
                </button>
-              <FIlters sFilter={sFilter} filter={filter}  handlefilterChange={handelSfiltersChange}></FIlters>
+              <FIlters sFilter={sFilter} filter={filter}  handlefilterChange={handlefilterChange}></FIlters>
               </div>
       </div>
       
