@@ -90,7 +90,7 @@ function StoreLayout({id,sortP,filterP}) {
      setItemsShow(curItems.slice(0,20))
     },[id])
   return (<>
-    <div className='px-[5%] flex flex-col w-full z-[100]  whitespace-nowrap ms:block ms:px-[0%]  phone:px-[5%]'>
+    <div className='px-[5%] flex flex-col w-full   whitespace-nowrap ms:block ms:px-[0%]  phone:px-[5%]'>
           <Sort sort={sort} numShow={items_show.length} totalNumShow={curItems.length} handleSortChange={handleSortChange} />
           <div className='ms:hidden'>
           <FIlters filter={filter}  handlefilterChange={handlefilterChange} />

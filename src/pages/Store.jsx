@@ -37,19 +37,7 @@ function Store() {
         localStorage.setItem('wishlist',JSON.stringify([...wishlist,'1']))
         }}>click</button> */}
     
-    <div className='ms:hidden w-full relative'>
-                         <div className=''>
-                            s
-                         </div>
-                         <div className=' bg-red h-[10rem] absolute w-full transition-all duration-200  items-start'>
-                           <div>
-                             <button>1</button>
-                             <button>1</button>
-                             <button>1</button>
-                             <button>1</button>
-                            </div>
-                         </div>
-                    </div>
+
     </div>
   );
 }

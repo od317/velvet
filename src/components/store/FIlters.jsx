@@ -37,13 +37,22 @@ function FIlters({handlefilterChange,filter}) {
 
             </div>
 
-            <div className=' w-full ms:hidden'>
+            <div className=' ms:hidden w-[100%]  inline-block  '>
+              {/* <div className='flex flex-wrap  w-[100%]'>
+                  {filters.map((filters,i)=>{
+                              return(
+                              <FilterTop  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
+                            )
+                  })}
+              </div> */}
+              <div className="  w-[100%] mt-[5%] transition-all duration-200 ">
                     <Swiper
-                    slidesPerView={2.5}
+                    slidesPerView={3.5}
                     spaceBetween={4}
                     freeMode={true}
                     modules={[FreeMode]}
-                    className="mySwiper "
+                    className=""
+                    
                   >
                     {filters.map((filters,i)=>{
                     return(
@@ -55,6 +64,10 @@ function FIlters({handlefilterChange,filter}) {
                     })}
 
                   </Swiper>
+
+              </div>
+
+
             </div>
 
 
@@ -89,34 +102,14 @@ const Filter = ({filters,handlefilterChange,filter})=>{
                         </div>
                     </div>
 
-                    <div className='ms:hidden w-full relative'>
-                         <div className=''>
-                              {filters.name}
-                         </div>
-                         <div className='flex flex-col bg-red absolute  w-full  transition-all duration-200  items-start'>
-                             <button className='w-full  my-[1%] hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[2%]'>1</button>
-                             <button className='w-full  my-[1%] hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[2%]'>1</button>
-                             <button className='w-full  my-[1%] hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[2%]'>1</button>
-                             <button className='w-full  my-[1%] hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[2%]'>1</button>
-                         </div>
+
+
+
+                    <div className=' ms:hidden whitespace-normal relative  text-black border-black border-[1px] mb-[6%] rounded-sm  py-[3%] px-[4%]  '>
+                        <div className=' text-[105%] cursor-pointer  '>{filters.name}</div>
                     </div>
-
-
-                    {/* <div className='ms:hidden overflow-y-visible mb-[2%]'>
-                        <div onClick={()=>{
-                          setShow(s=> !s)}} className=' text-[105%] cursor-pointer  py-[8%]'>{filters.name}</div>
-                        <div className=' relative w-full z-[10] h-[1rem]'>
-                            <div className={` ${ show ? 'max-h-[30rem] ':'max-h-0 '} w-full bg-red-500 absolute tmaxh duration-[300ms]`}>
-                              {filters.content.map(f=>{
-                                return(<div key={f.val}>
-                                    <div className='flex flex-row gap-[1%] items-center my-[.5%] '>
-                                        <button onClick={()=> handlefilterChange(filters.name,f.val)} className='flex  flex-row items-center justify-start text-start'>{f.name}</button>
-                                    </div>
-                                </div>)
-                              })}
-                            </div>
-                        </div>
-                    </div> */}
+                  
+                 
 
   </>)
 }

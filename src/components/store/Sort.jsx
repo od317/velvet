@@ -48,7 +48,7 @@ const LargeSort = ({handleSortChange,sort})=>{
                     </div>
                </div>
 
-               <div onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' ms:hidden w-fit z-50 inline-block  text-[120%] phone:px-[0] relative  ms:w-[22%]    text-start'>
+               <button onMouseLeave={()=>{setShowSort(false)}} onMouseOver={()=>{setShowSort(true)}}  className=' ms:hidden w-fit z-[11] inline-block  text-[120%] phone:px-[0] relative  ms:w-[22%]    text-start'>
                     <div  className='   px-[5%] whitespace-nowrap w-full flex flex-row justify-between items-center border-black   border-[1px] bco  cursor-pointer '>
                       <label className='cursor-pointer  ' htmlFor="">Sort by: {sort}</label>
                       <label className={`${showSort ? ' rotate-180 ':''} flex items-center justify-center text-center transition-all duration-200`} htmlFor=""><ion-icon name="chevron-down-outline"></ion-icon></label>
@@ -70,7 +70,7 @@ const LargeSort = ({handleSortChange,sort})=>{
                             <button onClick={()=>handleClick('date')} className='w-full  my-[1%] hover:bg-light2 transition-all duration-100 cursor-pointer text-start px-[2%]'>date</button>
                           </div>
                     </div>
-               </div>
+               </button>
 
 
   </>)
