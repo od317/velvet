@@ -5,7 +5,7 @@ import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
 import { filters } from '../../Data/FIlters'
 
-function SFilters({handleShowChange,handleClick}) {
+function SFilters({handleClick}) {
   return (
     <>
                 <div className="  w-[100%] mt-[2.5%] transition-all duration-200 ">
@@ -22,7 +22,7 @@ function SFilters({handleShowChange,handleClick}) {
                       <SwiperSlide key={filters.name}>
                           <button onClick={()=>{
                             handleClick(filters.name)
-                            handleShowChange(true)}} className=' ms:hidden whitespace-normal relative w-full text-start text-black border-black border-[1px] mb-[6%]  py-[3%] px-[4%]  '>
+                            }} className=' ms:hidden whitespace-normal relative w-full text-start text-black border-black border-[1px] mb-[6%]  py-[3%] px-[4%]  '>
                               <div className=' text-[105%] cursor-pointer  '>{filters.name}</div>
                           </button>
                       </SwiperSlide>

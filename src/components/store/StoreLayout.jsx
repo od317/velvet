@@ -84,9 +84,14 @@ function StoreLayout({id,sortP,filterP}) {
           }))
     }
 
-    const handelSfiltersChange = ()=>{
+    const handelSfiltersChange = (value)=>{
           setShowSfilters(s=> !s)
-          setSFilter('')
+          setSFilter(value)
+          if(!showSfilters){
+               console.log('ok')
+               document.querySelector('body').style.overflowY='hidden'
+           }else 
+             document.querySelector('body').style.overflowY='visible'
     }
 
     useEffect(()=>{
@@ -100,10 +105,10 @@ function StoreLayout({id,sortP,filterP}) {
     },[id])
   return (<>
 
-      <div className={` ${showSfilters ? 'translate-x-0':'translate-x-[100%]' } flex flex-row transition-all duration-200 h-screen absolute top-0 w-[100%]  z-[100] ms:hidden`}>
+      <div className={` ${showSfilters ? 'translate-x-0':'translate-x-[100%]' } flex flex-row transition-all duration-200 h-screen fixed top-0 w-[100%]  z-[100] ms:hidden`}>
               <div className='w-[35%] h-screen bg-dark2 opacity-50'></div>
               <div className='bg-p1 w-[65%] flex flex-col items-center py-[5%]'>
-               <button onClick={()=>handelSfiltersChange()} className='py-[5%] border-black border-[1px] mb-[5%] w-[95%] text-center '>
+               <button onClick={()=>handelSfiltersChange('')} className='py-[5%] border-black border-[1px] mb-[5%] w-[95%] text-center '>
                   done
                </button>
               <FIlters sFilter={sFilter} filter={filter}  handlefilterChange={handelSfiltersChange}></FIlters>
@@ -113,7 +118,7 @@ function StoreLayout({id,sortP,filterP}) {
      <div className='px-[5%] flex flex-col w-full   whitespace-nowrap ms:block ms:px-[0%]  phone:px-[5%]'>
           <Sort sort={sort} numShow={items_show.length} totalNumShow={curItems.length} handleSortChange={handleSortChange} />
           <div className='ms:hidden'>
-          <SFilters handleClick={setSFilter} handleShowChange={setShowSfilters}/>
+          <SFilters handleClick={handelSfiltersChange}/>
           </div>
     </div>
     

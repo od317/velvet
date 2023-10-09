@@ -54,10 +54,11 @@ function NavBar() {
 
    const handleSideShowChange = (value)=>{
     setShowSide(value)
-    if(value)
-      document.querySelector('body').style.overflowY='hidden'
-    else 
-      document.querySelector('body').style.overflowY='auto'
+    if(value){
+        console.log('ok')
+        document.querySelector('body').style.overflowY='hidden'
+    }else 
+      document.querySelector('body').style.overflowY='visible'
    }
     return (<>
     
