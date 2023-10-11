@@ -14,9 +14,14 @@ function Store() {
     filters.map(f=>{
       return{
         name:f.name,
-        val: searchParams.get(f.name) ? [searchParams.get(f.name)] : []
+        val: searchParams.get(f.name) ? pa(searchParams.get(f.name)) : []
       } 
     })
+
+    function pa(s){
+             return  s.split(',')
+    }
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -29,7 +34,7 @@ function Store() {
                 <label htmlFor="">70% on shirts and tops</label>
             </div>
       </div> */}
-      <StoreLayout id={id} filterP={filterP} sortP={searchParams.get('sort')}/>    
+      <StoreLayout page={searchParams.get('page')} id={id} filterP={filterP} sortP={searchParams.get('sort')}/>    
       {/* {wishlist}
       <br />
       <button onClick={()=>{

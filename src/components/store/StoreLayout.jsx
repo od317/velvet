@@ -5,17 +5,19 @@ import StoreGrid from './StoreGrid'
 import it from '../../Data/items'
 import { changeFilterList, handleItemsChangeSwitch, handleSortItemsChangeSwitch } from '../../Data/handlers'
 import { useEffect } from 'react'
+import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
 import SFilters from './SFilters'
-function StoreLayout({id,sortP,filterP}) {
+import Pages from './Pages'
+function StoreLayout({id,sortP,filterP,page}) {
      const [items,setItems] = useState( id ? filterMain(id) : it)
      const [filter,setFilter] = useState(filterP)
      const [curItems,setCurItems] = useState(StartFilter(items))
      const [sort,setSort] = useState(sortP||'featured')
      const [items_show,setItemsShow] = useState(curItems.slice(0,20))
-     const [curPage,setCurPage] = useState(1)
+     const [curPage,setCurPage] = useState(page||1)
      const [showSfilters,setShowSfilters] = useState(false)
      const [sFilter,setSFilter] = useState('')
-    
+     const [searchParams, setSearchParams] = useSearchParams() 
      function filterMain(id){
               let tmp = [...it]
               tmp = tmp.filter(t=>{
@@ -34,26 +36,24 @@ function StoreLayout({id,sortP,filterP}) {
           handleSortItemsChangeSwitch(nextItems,sortP ? sortP : 'featured')
           return nextItems
     }
-    const handlefilterChange = (name,value)=>{
+
+    const handlefilterChange = (curFilters)=>{
      let newFilter = [...filter]
-     newFilter = newFilter.map(f=>{
-          if(f.name == name){
-             return {
-               name:name,
-               val:changeFilterList(f.val,value)
-          }  
-          }
-          return f
+     curFilters.map(c=>{
+           let name = c[0]
+           let value = c[1]
+           newFilter = newFilter.map(f=>{
+               if(f.name == name){
+                  return {
+                    name:name,
+                    val:changeFilterList(f.val,value)
+               }  
+               }
+               return f
+          })
      })
      setFilter(newFilter)
      handleItemsChange(newFilter)
-     // if(filter === value){
-     //      setFilter('')
-     //      handleItemsChange('')
-     //      return
-     //     }
-     //     setFilter(value)
-     //     handleItemsChange(value)
     }
 
     const handleItemsChange = (newFilter)=>{
@@ -71,6 +71,7 @@ function StoreLayout({id,sortP,filterP}) {
           handleSortItemsChangeSwitch(nextItems,value)
           setCurItems(nextItems)
           setItemsShow(nextItems.slice(0,20))
+          setCurPage(1)
     }
 
     const handleItemsHover = (id,index)=>{
@@ -94,6 +95,13 @@ function StoreLayout({id,sortP,filterP}) {
              document.querySelector('body').style.overflowY='visible'
     }
 
+    const handlePageChange = (value)=>{
+          setCurPage(value)
+          let start = (value-1)*20 
+          setItemsShow(curItems.slice(start,start+20))
+          window.scrollTo(0, 0)
+     }
+
     useEffect(()=>{
      let curItems = id ? filterMain(id) : it
      setItems(curItems)
@@ -103,6 +111,10 @@ function StoreLayout({id,sortP,filterP}) {
      setSort(sortP||'featured')
      setItemsShow(curItems.slice(0,20))
     },[id])
+    useEffect(()=>{
+     searchParams.set('page',curPage)
+     setSearchParams(searchParams)
+    },[curPage])
   return (<>
 
       <div className={` ${showSfilters ? 'translate-x-0':'translate-x-[100%]' } flex flex-row transition-all duration-200 h-screen fixed top-0 w-[100%]  z-[100] ms:hidden`}>
@@ -120,7 +132,7 @@ function StoreLayout({id,sortP,filterP}) {
           <div className='ms:hidden'>
           <SFilters handleClick={handelSfiltersChange}/>
           </div>
-    </div>
+     </div>
     
     <div className=' flex flex-col relative ms:flex-row'>
       
@@ -130,8 +142,9 @@ function StoreLayout({id,sortP,filterP}) {
               <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
          </div>
       
-         <div className=' phone:w-[100%] ms:w-[85%] mb-[30%] z-[1] bg-p1 px-[2%] h-fit'>
+         <div className=' phone:w-[100%] ms:w-[85%]  z-[1] bg-p1 px-[2%] h-auto '>
               <StoreGrid items={items_show} />
+              <Pages page={curPage} length={curItems.length} handlePageChange={handlePageChange}></Pages>
          </div>
 
     </div>

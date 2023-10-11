@@ -101,7 +101,7 @@ function NavBar() {
                                             
                                             <NavLink className='ml-[10%]' to={'/'}>Home</NavLink>
                                             <NavLink className='ml-[10%]'  to={'/store'}>Store</NavLink>
-                                            <NavLink  className=' ml-[10%] flex items-center justify-center h-full' onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} to={'/store/new'}>New</NavLink>
+                                            <label  className=' ml-[10%] flex items-center justify-center h-full'>sign in</label>
                                             <NavLink to='/shoping-bag' className='text-black ml-[10%] relative  w-[20%]'>
                                                 <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
                                                 {sbList.size}
@@ -114,7 +114,7 @@ function NavBar() {
                                             
                                             <NavLink className=' mr-[5%] ' to={'/'}>Home</NavLink>
                                             <NavLink className=' mr-[5%] '  to={'/store'}>Store</NavLink>
-                                            <NavLink  className=' mr-[5%]   flex items-center justify-center h-full' onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} to={'/store/new'}>New</NavLink>
+                                            <label  className=' mr-[5%]   flex items-center justify-center h-full'>sign in</label>
                                             <NavLink to='/shoping-bag' className=' mr-[10%] text-black relative  w-[20%]'>
                                                 <div className=' mr-[5%]   w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
                                                 {sbList.size}
@@ -214,13 +214,13 @@ function NavBar() {
 
      
         <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all duration-100 navmid:hidden absolute h-full w-[100%] flex flex-row z-20`}>
-            <div className=' w-[60%] bg-light1 text-white p-[2%] h-full flex flex-col'>
+            <div className=' w-[40%] bg-light1 text-white p-[2%] h-full flex flex-col'>
                 
                  <div className=' flex justify-between flex-row mt-[2%]'>
                     <div className='w-[60%] border-white border-[1px] p-[1%] text-white text-center'>Velevet</div>
-                    <div className='flex p-[1%] items-center justify-center text-[180%] text-white'>
+                    <button onClick={()=>handleSideShowChange(false)} className='flex p-[1%] items-center justify-center text-[180%] text-white'>
                         <ion-icon name="close-outline"></ion-icon>
-                    </div>
+                    </button>
                  </div>
 
                  <div className="grid grid-cols-1 gap-y-[10%] mt-[10%] pb-[20%] border-b-[1px] border-white text-[130%]">
@@ -230,7 +230,7 @@ function NavBar() {
                  </div>
 
             </div>
-            <div onClick={()=>handleSideShowChange(false)} className=' w-[40%] h-full'></div>
+            <div onClick={()=>handleSideShowChange(false)} className=' w-[60%] h-full'></div>
         </div>
 
     </>
