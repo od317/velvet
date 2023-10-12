@@ -113,8 +113,26 @@ function StoreLayout({id,sortP,filterP,page}) {
     },[id])
     useEffect(()=>{
      searchParams.set('page',curPage)
+     let f = ''
+     filter.map(f=>{
+          let tmp = '' 
+          if(f.val.length > 0){
+             tmp = tmp.concat(f.val.reduce((p,c)=>{
+               return p.concat(',').concat(c)
+             }))
+          }
+          if(tmp != ''){
+              searchParams.set(f.name,tmp) 
+          }
+          else{
+               searchParams.delete(f.name)
+          }
+     })
+     if(sort){
+          searchParams.set('sort',sort) 
+     }
      setSearchParams(searchParams)
-    },[curPage])
+    },[curPage,filter,sort])
   return (<>
 
       <div className={` ${showSfilters ? 'translate-x-0':'translate-x-[100%]' } flex flex-row transition-all duration-200 h-screen fixed top-0 w-[100%]  z-[100] ms:hidden`}>
