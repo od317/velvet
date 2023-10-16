@@ -25,8 +25,6 @@ const Card = ({product})=>{
                          </div>
                           </>)
                          }
-
-
                   </Link>
                   </div>
                   <div className='flex flex-col  px-[3%]   border-t-0 p-[2%] '>

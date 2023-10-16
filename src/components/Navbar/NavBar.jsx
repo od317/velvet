@@ -81,10 +81,11 @@ function NavBar() {
                                             <img className='navmid:w-[75%]' src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg" alt="" />
                                         </NavLink>
                                     </div>
-                                    <NavLink to='/shoping-bag' className='text-black ml-[10%] relative navmid:hidden  w-[20%]'>
-                                                        <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
-                                                        {sbList.size}
-                                                        </div>
+                                    <NavLink to='/shoping-bag' className='text-black ml-[10%] flex items-center justify-center relative navmid:hidden  w-[10%]'>
+                                    <ion-icon  class="text-[200%]" name="bag-outline"></ion-icon>
+                                                <div className=' text-[90%] w-full h-full flex items-center pt-[15%] phone:pt-[10%] justify-center absolute'>
+                                                {sbList.size}
+                                                </div>
                                     </NavLink>
                              </div>
                               
@@ -102,8 +103,9 @@ function NavBar() {
                                             <NavLink className='ml-[10%]' to={'/'}>Home</NavLink>
                                             <NavLink className='ml-[10%]'  to={'/store'}>Store</NavLink>
                                             <label  className=' ml-[10%] flex items-center justify-center h-full'>sign in</label>
-                                            <NavLink to='/shoping-bag' className='text-black ml-[10%] relative  w-[20%]'>
-                                                <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
+                                            <NavLink to='/shoping-bag' className='text-black ml-[10%] relative flex flex-col items-center justify-center w-[10%]'>
+                                            <ion-icon  class="text-[200%]" name="bag-outline"></ion-icon>
+                                                <div className=' text-[90%] w-full h-full flex items-center pt-[20%] justify-center absolute'>
                                                 {sbList.size}
                                                 </div>
                                             </NavLink>
@@ -214,16 +216,16 @@ function NavBar() {
 
      
         <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all duration-100 navmid:hidden absolute h-full w-[100%] flex flex-row z-20`}>
-            <div className=' w-[40%] bg-light1 text-white p-[2%] h-full flex flex-col'>
+            <div className=' w-[45%] bg-p1 text-black p-[2%] h-full flex flex-col'>
                 
                  <div className=' flex justify-between flex-row mt-[2%]'>
-                    <div className='w-[60%] border-white border-[1px] p-[1%] text-white text-center'>Velevet</div>
-                    <button onClick={()=>handleSideShowChange(false)} className='flex p-[1%] items-center justify-center text-[180%] text-white'>
+                    <div className=' border-black border-[1px] p-[1%] text-black text-center'>NORDSTROM</div>
+                    <button onClick={()=>handleSideShowChange(false)} className='flex p-[1%] items-center justify-center text-[180%] text-black'>
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
                  </div>
 
-                 <div className="grid grid-cols-1 gap-y-[10%] mt-[10%] pb-[20%] border-b-[1px] border-white text-[130%]">
+                 <div className="grid grid-cols-1 gap-y-[10%] mt-[10%] pb-[20%] border-b-[1px] border-black text-[130%]">
                       {sideBarLinks.map(l=>
                         <SideBarLink key={l.dist}  handleSideShowChange={handleSideShowChange} l={l} />
                       )}                        
@@ -240,7 +242,7 @@ function NavBar() {
 
 const SideBarLink = ({handleSideShowChange,l})=>{
     return(<>
-                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-light1':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to={`/${l.dist}`}>
+                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-black':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to={`/${l.dist}`}>
                             <ion-icon name={l.icon}></ion-icon>
                             <span className="ml-[5%] capitalize">{l.name}</span>
                         </NavLink>   
