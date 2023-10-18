@@ -17,13 +17,8 @@ function SearchBar() {
     const form = useRef(null)
 
    const searchItems = ()=>{
+        setItemsShow(['t1','t2','t3','t1','t2','t3','t1','t2','t3','t1','t2','t3'])
         setLoading(false)  
-        let newItems = items.map(i=>{
-            i.type == searchq
-            return i.id
-        }).slice(0,15)
-        console.log(newItems)
-        setItemsShow(newItems)
     }
     useEffect(()=>{
         let s
@@ -56,16 +51,17 @@ function SearchBar() {
                     </button>
                     <input value={searchq} onChange={(e)=>{setSearchq(e.target.value)}} placeholder='search for product or brand' className='w-[90%]' type="text" name="" id="" />
                 </form>
-                <div  className={`w-full absolute px-[2%] overflow-hidden flex flex-col h-fit ${ show  ?'max-h-[100rem] ':'max-h-[0rem] opacity-0'} transition-all duration-[400ms] bg-p1 z-10 border-gray3 border-t-0 border-[1px]`}>
+                <div  className={`w-full absolute px-[2%] overflow-hidden flex flex-col h-fit ${ show  ?'max-h-[100rem] ':'max-h-[0rem] opacity-0'} transition-all duration-[300ms] bg-p1 z-10 border-gray3 border-t-0 border-[1px]`}>
                     
-                    { loading && <div className='w-full flex items-center justify-center py-[5%] text-[200%]'>
+                    { loading && <div className='w-full  flex items-center justify-center py-[5%] text-[200%]'>
                         <div className=' animate-spin'>
                             <ion-icon name="bag-outline"></ion-icon>
                         </div>
                     </div>}
-                    <div className='  '>
-                         {itemsShow.length>0 &&<Bslide num={2}  items={itemsShow}></Bslide>}
+                    <div className={`${ show  ?' ':' opacity-0 '} transition-all duration-[500ms]`}>
+                         {itemsShow.length>0 &&<Bslide num={3}  items={itemsShow}></Bslide>}
                     </div>
+                    {true &&
                      <div className='flex flex-row px-[5%]'>
                         <div className='flex flex-col w-[50%]'>
                             <label htmlFor="">suggested</label>
@@ -81,6 +77,7 @@ function SearchBar() {
                             <NavLink to={'/store'}>store</NavLink>
                         </div>
                      </div>
+                    }
                 </div>
      </div>
     </> 

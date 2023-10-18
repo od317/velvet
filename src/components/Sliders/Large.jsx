@@ -69,7 +69,7 @@ const Large = ({items,text,num})=>{
                                      
                                           {f.map((i,index)=>{
                                             return(
-                                            <div key={index} className={` w-[${100/num}%] px-[1.5%] top-0 sticky transition-all duration-300 inline-block   text-[100%] `} >
+                                            <div key={index} style={{width:`${100/num}%`}} className={`  px-[1.5%] top-0 sticky transition-all duration-300 inline-block   text-[100%] `} >
                                               <Card product={i}></Card>
                                             </div>
                                                   )
