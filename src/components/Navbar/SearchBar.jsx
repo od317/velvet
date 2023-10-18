@@ -5,7 +5,7 @@ import './styles/navbar.css'
 import Small from './SearchSlide'
 import Bslide from '../Sliders/Bslide'
 import { useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink,useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
 import items from '../../Data/items'
 import getSearchedItems from '../../Data/getSearchedItems'
@@ -16,11 +16,18 @@ function SearchBar() {
     const [show2,setShow2] = useState(false)
     const [itemsShow,setItemsShow] = useState([])
     const form = useRef(null)
-
+    const navigate = useNavigate()
    const searchItems = ()=>{
          setItemsShow(getSearchedItems(searchq))
          setLoading(false)  
     }
+
+    const handleFormSubmit = (e)=>{
+        e.preventDefault()
+        navigate(`/store?searchq=${searchq}&page=1&sort=featured`,{replace:true})
+
+    }
+
     useEffect(()=>{
         let s
         setLoading(searchq.length>0)
@@ -43,10 +50,13 @@ function SearchBar() {
             window.removeEventListener('click',click)
         }
     })
+
+
+
     return (
     <>
     <div  onClick={()=>{setShow(true)}} onMouseOver={()=>{setShow2(true)}} onMouseLeave={()=>{setShow2(false)}}  className='navmid:w-[46%] relative navmid:ml-[2%] bc box-content items-center  pl-[2%] navmid:px-[0%] '>
-                <form ref={form}  className='w-full text-[125%] px-[2%] ms:px-[0%] py-[3%]  navmid:py-[1%] border-[1px] border-gray3 navmid:text-[100%]' action="">
+                <form  onSubmit={(e)=>handleFormSubmit(e)} ref={form}  className='w-full text-[125%] px-[2%] ms:px-[0%] py-[3%]  navmid:py-[1%] border-[1px] border-gray3 navmid:text-[100%]' action="">
                     <button className='w-[5%] ml-[2%]' type='submit'>
                        <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
@@ -62,7 +72,7 @@ function SearchBar() {
                     <div className={`${ show  ?' ':' opacity-0 '} transition-all duration-[500ms]`}>
                          {itemsShow.length>0 &&<Bslide num={3}  items={itemsShow}></Bslide>}
                     </div>
-                    {true &&
+                    {itemsShow.length==0 &&
                      <div className='flex flex-row px-[5%]'>
                         <div className='flex flex-col w-[50%]'>
                             <label htmlFor="">suggested</label>

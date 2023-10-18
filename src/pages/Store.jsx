@@ -34,7 +34,7 @@ function Store() {
                 <label htmlFor="">70% on shirts and tops</label>
             </div>
       </div> */}
-      <StoreLayout page={searchParams.get('page')} id={id} filterP={filterP} sortP={searchParams.get('sort')}/>    
+      <StoreLayout page={searchParams.get('page')} searchq={searchParams.get('searchq')}  id={id} filterP={filterP} sortP={searchParams.get('sort')}/>    
       {/* {wishlist}
       <br />
       <button onClick={()=>{

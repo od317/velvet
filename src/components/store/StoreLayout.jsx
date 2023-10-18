@@ -8,7 +8,8 @@ import { useEffect } from 'react'
 import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
 import SFilters from './SFilters'
 import Pages from './Pages'
-function StoreLayout({id,sortP,filterP,page}) {
+import getSearchedItems from '../../Data/getSearchedItems'
+function StoreLayout({id,sortP,filterP,page,searchq}) {
      const [items,setItems] = useState( id ? filterMain(id) : it)
      const [filter,setFilter] = useState(filterP)
      const [curItems,setCurItems] = useState(StartFilter(items))
@@ -19,6 +20,11 @@ function StoreLayout({id,sortP,filterP,page}) {
      const [sFilter,setSFilter] = useState('')
      const [searchParams, setSearchParams] = useSearchParams() 
      function filterMain(id){
+              if(searchq){
+               let tmp = getSearchedItems(searchq)
+               return tmp 
+              }
+
               let tmp = [...it]
               tmp = tmp.filter(t=>{
                return t.type == id
