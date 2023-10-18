@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useRef } from 'react'
 import items from '../../Data/items'
+import getSearchedItems from '../../Data/getSearchedItems'
 function SearchBar() {
     const [searchq,setSearchq] = useState('')  
     const [loading,setLoading] = useState(false)
@@ -17,8 +18,8 @@ function SearchBar() {
     const form = useRef(null)
 
    const searchItems = ()=>{
-        setItemsShow(['t1','t2','t3','t1','t2','t3','t1','t2','t3','t1','t2','t3'])
-        setLoading(false)  
+         setItemsShow(getSearchedItems(searchq))
+         setLoading(false)  
     }
     useEffect(()=>{
         let s
