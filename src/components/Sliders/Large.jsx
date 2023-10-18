@@ -48,10 +48,7 @@ const Large = ({items,text,num})=>{
       setLen(l=>l+(num-1))
       setSlidePer(s=>s-perc)
     }
-    useEffect(()=>{
-         setSlidePer(0)
-         setLen(sim.length-(num-1))
-    },[items])
+
     return(<>
     
           <div className=' hidden navmid:flex  flex-col w-full  py-[2%] bg-p1'>
@@ -66,10 +63,10 @@ const Large = ({items,text,num})=>{
                          </button>
                     </div>
                     <div className='w-[94%] overflow-hidden'>
-                        <div style={{transform:`translateX(-${slidePer}%)`}} className=' whitespace-nowrap transition-all  duration-[500ms]'>
+                        <div style={{transform:`translateX(-${slidePer}%)`}} className=' top-0 whitespace-nowrap transition-all  duration-[500ms]'>
                             {flexes.map((f,i)=>{
-                            return(<div className='inline-block w-full' key={i}>
-                                     <div className='flex flex-row'>
+                            return(<>
+                                     
                                           {f.map((i,index)=>{
                                             return(
                                             <div key={index} className={` w-[${100/num}%] px-[1.5%] top-0 sticky transition-all duration-300 inline-block   text-[100%] `} >
@@ -78,8 +75,8 @@ const Large = ({items,text,num})=>{
                                                   )
                                             })
                                           }
-                                     </div>
-                                </div>)
+                                      </>
+                                 )
                                   })}
                         </div>
                     </div>

@@ -8,6 +8,7 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import './styles/navbar.css'
+import SearchBar from './SearchBar'
 
 function NavBar() {
     const sbList = useContext(SbContext)
@@ -44,22 +45,24 @@ function NavBar() {
                  document.querySelector('body').style.overflowY='auto'
                  setShow(false)
             }
-               
+            if(window.innerWidth < 860){
+                setShowMore(false)
+           }  
         }
         window.addEventListener('resize', handleWindowResize)
         return ()=>{
             window.removeEventListener('resize',handleWindowResize)
         }
     })
-
-   const handleSideShowChange = (value)=>{
+    
+    const handleSideShowChange = (value)=>{
     setShowSide(value)
     if(value){
         console.log('ok')
         document.querySelector('body').style.overflowY='hidden'
     }else 
       document.querySelector('body').style.overflowY='visible'
-   }
+    }
     return (<>
     
         <div className='flex flex-col pb-[1%]'>
@@ -83,27 +86,19 @@ function NavBar() {
                                     </div>
                                     <NavLink to='/shoping-bag' className='text-black ml-[10%] flex items-center justify-center relative navmid:hidden  w-[10%]'>
                                     <ion-icon  class="text-[200%]" name="bag-outline"></ion-icon>
-                                                <div className=' text-[90%] w-full h-full flex items-center pt-[15%] phone:pt-[10%] justify-center absolute'>
+                                                <div className=' text-[90%] w-full h-full flex  items-center pt-[15%] phone:pt-[10%] justify-center absolute'>
                                                 {sbList.size}
                                                 </div>
                                     </NavLink>
                              </div>
                               
-                              <div className='navmid:w-[46%] navmid:ml-[2%] flex items-center border-[1px] px-[2%] navmid:px-[0%] py-[2%] border-gray3 navmid:py-[.5%]'>
-                                  <form className='w-full text-[125%] px-[2%] ms:px-[0%] navmid:text-[100%]' action="">
-                                    <button className='w-[8%] mr-[2%]' type='submit'>
-                                      <FontAwesomeIcon icon={faMagnifyingGlass} />
-                                    </button>
-                                        <input placeholder='search for product or brand' className='w-[90%]' type="text" name="" id="" />
-                                  </form>
-                              </div>
+                              <SearchBar></SearchBar>
  
-                              <div className='w-[32%] navmid:flex hidden  items-center justify-end'>
-                                            
-                                            <NavLink className='ml-[10%]' to={'/'}>Home</NavLink>
-                                            <NavLink className='ml-[10%]'  to={'/store'}>Store</NavLink>
-                                            <label  className=' ml-[10%] flex items-center justify-center h-full'>sign in</label>
-                                            <NavLink to='/shoping-bag' className='text-black ml-[10%] relative flex flex-col items-center justify-center w-[10%]'>
+                              <div className='w-[32%] navmid:flex hidden  items-center justify-center'>
+                                            <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+' ml-[5%]'} to={'/'}>Home</NavLink>     
+                                            <button onBlur={()=>{setShowMore(false)}} onFocus={()=>{setShowMore(true)}} className='ml-[8%]'>Discover</button>
+                                            <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+'  ml-[8%]'}  to={'/store'}>Store</NavLink>
+                                            <NavLink to='/shoping-bag' className='text-black ml-[5%] relative flex flex-col items-center justify-center w-[10%]'>
                                             <ion-icon  class="text-[200%]" name="bag-outline"></ion-icon>
                                                 <div className=' text-[90%] w-full h-full flex items-center pt-[20%] justify-center absolute'>
                                                 {sbList.size}
@@ -116,7 +111,6 @@ function NavBar() {
                                             
                                             <NavLink className=' mr-[5%] ' to={'/'}>Home</NavLink>
                                             <NavLink className=' mr-[5%] '  to={'/store'}>Store</NavLink>
-                                            <label  className=' mr-[5%]   flex items-center justify-center h-full'>sign in</label>
                                             <NavLink to='/shoping-bag' className=' mr-[10%] text-black relative  w-[20%]'>
                                                 <div className=' mr-[5%]   w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
                                                 {sbList.size}
@@ -126,9 +120,8 @@ function NavBar() {
                 </div>
                 
                 
-                {/* 
-                new hover
-                <div onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} className={`${showMore ? '  inline-block':'hidden'}  w-full absolute bg-p1 z-10 flex flex-row `} >
+                
+                <div  className={`${showMore ? '  navmid:flex':'hidden'}  hidden  left-0 w-full absolute bg-p1 z-10  flex-row `} >
                                                 <div className='flex flex-row w-[50%] p-[5%]'>
                                                       <div onClick={()=> setShowMore(false)} className=" flex flex-col ">
                                                         <label className=' font-bold text-[110%] ' htmlFor="">osama</label>
@@ -152,7 +145,7 @@ function NavBar() {
                                                      </div>
 
                                                 </div>
-                </div> */}
+                </div>
           
            </div>
 
@@ -215,17 +208,17 @@ function NavBar() {
         </div> */}
 
      
-        <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all duration-100 navmid:hidden absolute h-full w-[100%] flex flex-row z-20`}>
-            <div className=' w-[45%] bg-p1 text-black p-[2%] h-full flex flex-col'>
+        <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all sc overflow-y-scroll duration-100 navmid:hidden absolute h-full w-[100%] flex flex-row z-20`}>
+            <div className=' w-[45%] bg-p1 text-black  min-h-full flex flex-col'>
                 
-                 <div className=' flex justify-between flex-row mt-[2%]'>
+                 <div className=' flex justify-between flex-row p-[2%] mt-[2%]'>
                     <div className=' border-black border-[1px] p-[1%] text-black text-center'>NORDSTROM</div>
                     <button onClick={()=>handleSideShowChange(false)} className='flex p-[1%] items-center justify-center text-[180%] text-black'>
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
                  </div>
 
-                 <div className="grid grid-cols-1 gap-y-[10%] mt-[10%] pb-[20%] border-b-[1px] border-black text-[130%]">
+                 <div className="flex flex-col mt-[10%] bg-p1 p-[2%] pb-[20%]  border-b-[1px] border-black text-[130%]">
                       {sideBarLinks.map(l=>
                         <SideBarLink key={l.dist}  handleSideShowChange={handleSideShowChange} l={l} />
                       )}                        

@@ -10,7 +10,7 @@ function Header() {
             <div className=' pt-[5%] phone:pt-[0%]   ms:px-[2%]'>
             <SimDiv/>
             <MainSlider/>
-            <Bslide text={'fall picks for you'} items={['t1','t2','t3','t4','t5','t6','t7']} num={5}></Bslide>
+            <Bslide text={'fall picks for you'} items={['t1','t2','t3','t4','t5','t6','t7','t1','t2','t3','t4','t5','t6','t7']} num={5}></Bslide>
             <SecSlider/>
             </div>
             {/* 

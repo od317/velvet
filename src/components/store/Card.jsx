@@ -17,35 +17,37 @@ const Card = ({product})=>{
                          {
                           product.img[mainImgIndex].sm ? 
                           (<>
-                         <div   style={{backgroundImage: `url(${product.img[mainImgIndex].sm})`}} className='imgBack relative bg-gray2 w-full pb-[150%] phone:pb-[150%]'>
+                         <div   style={{backgroundImage: `url(${product.img[mainImgIndex].sm})`}} className='imgBack  relative bg-gray2 w-full border-[1px] border-gray2 pb-[150%] phone:pb-[150%]'>
                          </div>
                           </>):
                           (<>
-                         <div   style={{backgroundImage: `url(${product.img[mainImgIndex].imgs[0]})`}} className='imgBack relative bg-gray2 w-full pb-[150%] phone:pb-[150%]'>
+                         <div   style={{backgroundImage: `url(${product.img[mainImgIndex].imgs[0]})`}} className='imgBack relative  bg-gray2 w-full border-[1px] border-gray2 pb-[150%] phone:pb-[150%]'>
                          </div>
                           </>)
                          }
                   </Link>
                   </div>
-                  <div className='flex flex-col  px-[3%]   border-t-0 p-[2%] '>
-                     { product.img.length>1 && <div  className='  mt-[2%] mb-[2%] flex justify-center phone:justify-start phone:mb-[4%] phone:mt-[0%] '>
+                  <div className='flex flex-col  px-[3%]   border-t-0  '>
+                     { product.img.length>1 && <div  className='   mb-[2%]   '>
                             {product.img.map((b,bindex)=>
-                            <button key={bindex}  onClick={()=>{
+                             <button key={bindex}  onClick={()=>{
                               setMainImgIndex(bindex)
                               }}   
-                              className={`mr-[2%] items-center relative ${ mainImgIndex === bindex ? '':'border-gray3'} border-[1px] br justify-center pb-[15%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]`}>
+                              className={`mr-[2%] items-center relative ${ mainImgIndex === bindex ? ' border-gray ':'border-gray3'} border-[1px] br justify-center pb-[10%] w-[15%] phone:pb-[10%] rounded-full phone:w-[10%]`}>
                                         <div
                                          style={{backgroundColor:b.color}} 
                                          className=' absolute rounded-full  w-[100%] h-[100%]'></div>
                              </button>)}
                       </div>
                     }
+
                       <div className='flex flex-col whitespace-normal text-center phone:flex-col items-center phone:text-start phone:items-start justify-between'>
                           <label className=' font-semibold' htmlFor="">{product.brand}</label>
                           <label className='text-[90%] phone:my-[2%]' htmlFor="">{product.name}</label>
                           <PriceDisplay price={product.price} dis={product.dis}></PriceDisplay>
                           <Stars rate={product.rate}></Stars>
                       </div>
+                      
                 </div>
 
             </div>

@@ -1,3 +1,11 @@
 *{
     outline: none;
 }
+
+.sc::-webkit-scrollbar {
+    display: none;
+}
+
+.bc{
+    box-sizing:border-box
+}

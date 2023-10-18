@@ -38,10 +38,9 @@ const Small = ()=>{
 
       return(<>
     
-            { show &&
-            <div className=' navmid:hidden z-20 w-[35%] left-[31.5%] fixed top-[10%]'>
-                 <button className=' px-[8%] py-[5%] text-[105%]  w-full bg-p1  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] rounded-full' onClick={()=>scroll()}>Back to Top</button>
-            </div>}
+            <div className={` ${show? '':' translate-y-[-500%] '} transition-all duration-[300ms] navmid:hidden z-20 w-[35%] left-[31.5%] fixed top-[10%]`}>
+                 <button  className={`  px-[8%] py-[5%] text-[105%]  w-full bg-p1  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] rounded-full`} onClick={()=>scroll()}>Back to Top</button>
+            </div>
     
       </>)
 }

@@ -12569,11 +12569,13 @@ let ids = [
 
 const brands = ['Lauren Ralph Lauren','Canada Goose']
 const sizes = ['sm','large','medium','xl','2xl','3xl']
+const types = new Set()
 let lrl = 0
 let cgs = 0
 let m = new Map()
 let l = 0 
 for(let i of items){
+     types.add(i.type)
      let tmp = sisses(sizes)
      i.size = new Set(tmp)
      i.simList = maylikelist(ids)
@@ -12600,6 +12602,7 @@ for(let i of items){
     m[i.id] = i
 }
 
+console.log(types)
 
 function sisses(sizes){
      let tmp = [...sizes]
