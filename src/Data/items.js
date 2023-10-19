@@ -12328,7 +12328,6 @@ let items =
         "frees": true
     }
 ]
-console.log(items)
 
 
 
@@ -12602,7 +12601,6 @@ for(let i of items){
     m[i.id] = i
 }
 
-console.log(types)
 
 function sisses(sizes){
      let tmp = [...sizes]
@@ -12626,7 +12624,6 @@ function maylikelist(ids){
      return val
 }
 
-console.log(lrl," ",cgs)
 // console.log(items)
 
 

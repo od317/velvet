@@ -6,8 +6,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
+import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
 
-function FIlters({sFilter,handlefilterChange,filter}) {
+function FIlters({sFilter,handlefilterChange,filter,searchq}) {
+  const [searchParams, setSearchParams] = useSearchParams() 
   let nfilter = filter.map(i=>{
     return i.val
   })
@@ -24,11 +26,13 @@ function FIlters({sFilter,handlefilterChange,filter}) {
       })
     })
     handlefilterChange(fs)
+    searchParams.delete('searchq')
+    setSearchParams(searchParams)
   }
 
   return (<>
             <div className=' block  w-full  ms:pr-[5%] overflow-y-scroll sco sc max-h-screen '>
-              {nfilter.length >0 && (
+              {nfilter.length >0&& (
               <>
               <div className='ms:pl-[0%] pl-[5%]'> <span className='font-bold'>Filtered by:</span> {nfilter.length}</div>
               <button onClick={()=>clearAllF()} className=' ms:pl-[0%] flex items-center justify-center pl-[5%] '>
@@ -36,7 +40,7 @@ function FIlters({sFilter,handlefilterChange,filter}) {
                 <img src={close} className={'inline-block h-[1rem] w-[1rem] translate-y-[10%] '} alt="" />
                 
                 </button>
-              <div className='grid grid-cols-2 ms:pl-[0%] pl-[5%]  w-[100%]'>
+              <div className='grid grid-cols-2 ms:pl-[0%] pl-[5%] mb-[2%] w-[100%]'>
                   {filters.map((filters,i)=>{
                               return(
                               <FilterTop  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />

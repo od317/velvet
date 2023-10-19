@@ -5,25 +5,39 @@ import './styles/navbar.css'
 import Small from './SearchSlide'
 import Bslide from '../Sliders/Bslide'
 import { useEffect } from 'react'
-import { NavLink,useNavigate } from 'react-router-dom'
+import { NavLink,useNavigate,useParams,useSearchParams} from 'react-router-dom'
 import { useRef } from 'react'
 import items from '../../Data/items'
 import getSearchedItems from '../../Data/getSearchedItems'
+import { useLocation } from 'react-router-dom'
+
 function SearchBar() {
     const [searchq,setSearchq] = useState('')  
+    const [searchParams,setSearchParams] = useSearchParams()
     const [loading,setLoading] = useState(false)
     const [show,setShow] = useState(false)
     const [show2,setShow2] = useState(false)
     const [itemsShow,setItemsShow] = useState([])
     const form = useRef(null)
+    const location = useLocation()
+    const params = useParams()
     const navigate = useNavigate()
-   const searchItems = ()=>{
+    const searchItems = ()=>{
          setItemsShow(getSearchedItems(searchq))
          setLoading(false)  
     }
 
+
     const handleFormSubmit = (e)=>{
+        setShow(false)
+        setShow2(false)
         e.preventDefault()
+        console.log(location.pathname.split('/'))
+        if(location.pathname.split('/')[1]==='store'){
+            searchParams.set('searchq',searchq)
+            setSearchParams(searchParams)
+        }
+        else
         navigate(`/store?searchq=${searchq}&page=1&sort=featured`,{replace:true})
 
     }

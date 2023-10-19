@@ -5,21 +5,32 @@ import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
 import {useEffect} from 'react'
 import StoreLayout from '../components/store/StoreLayout'
 import {filters} from '../Data/FIlters'
+import {mfilters} from '../Data/FIlters'
 function Store() {
   const wishlist = useContext(WishlistContext)
   const setWishlist = useContext(setWishlistContext)
   const [searchParams, setSearchParams] = useSearchParams()
   const id = useParams().id
+  const searchq = !id ?  searchParams.get('searchq') : null
   const filterP = 
     filters.map(f=>{
       return{
         name:f.name,
-        val: searchParams.get(f.name) ? pa(searchParams.get(f.name)) : []
+        val: searchParams.get(f.name) ? (pa(f.name,searchParams.get(f.name))) : []
       } 
     })
 
-    function pa(s){
-             return  s.split(',')
+    function pa(name,s){
+             s = s.split(',')
+             let vals = mfilters.get(name)
+             s = s.filter(ss=>{
+                for(let v of vals){
+                  if (v.name == ss)
+                  return true
+                }
+                return false
+             })
+             return  s
     }
 
   useEffect(() => {
@@ -34,7 +45,7 @@ function Store() {
                 <label htmlFor="">70% on shirts and tops</label>
             </div>
       </div> */}
-      <StoreLayout page={searchParams.get('page')} searchq={searchParams.get('searchq')}  id={id} filterP={filterP} sortP={searchParams.get('sort')}/>    
+      <StoreLayout page={searchParams.get('page')} searchq={searchq}  id={id} filterP={filterP} sortP={searchParams.get('sort')}/>    
       {/* {wishlist}
       <br />
       <button onClick={()=>{

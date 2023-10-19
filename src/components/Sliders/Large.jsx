@@ -48,7 +48,6 @@ const Large = ({items,text,num})=>{
       setLen(l=>l+(num-1))
       setSlidePer(s=>{return s-perc >=0 ? s-perc:0})
     }
-    console.log(slidePer)
     return(<>
     
           <div className=' hidden navmid:flex  flex-col w-full  py-[2%] bg-p1'>

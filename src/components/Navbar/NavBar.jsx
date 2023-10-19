@@ -209,7 +209,7 @@ function NavBar() {
 
      
         <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all sc overflow-y-scroll duration-100 navmid:hidden absolute h-full w-[100%] flex flex-row z-20`}>
-            <div className=' w-[45%] bg-p1 text-black  min-h-full flex flex-col'>
+            <div className=' w-[50%] bg-p1 text-black  min-h-full flex flex-col'>
                 
                  <div className=' flex justify-between flex-row p-[2%] mt-[2%]'>
                     <div className=' border-black border-[1px] p-[1%] text-black text-center'>NORDSTROM</div>

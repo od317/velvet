@@ -3,6 +3,7 @@ import FIlters from './FIlters'
 import Sort from './Sort'
 import StoreGrid from './StoreGrid'
 import it from '../../Data/items'
+import {m} from '../../Data/items'
 import { changeFilterList, handleItemsChangeSwitch, handleSortItemsChangeSwitch } from '../../Data/handlers'
 import { useEffect } from 'react'
 import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
@@ -10,7 +11,7 @@ import SFilters from './SFilters'
 import Pages from './Pages'
 import getSearchedItems from '../../Data/getSearchedItems'
 function StoreLayout({id,sortP,filterP,page,searchq}) {
-     const [items,setItems] = useState( id ? filterMain(id) : it)
+     const [items,setItems] = useState( id ? filterMain(id) : (searchq ? filterSearchq(): it))
      const [filter,setFilter] = useState(filterP)
      const [curItems,setCurItems] = useState(StartFilter(items))
      const [sort,setSort] = useState(sortP||'featured')
@@ -20,11 +21,6 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
      const [sFilter,setSFilter] = useState('')
      const [searchParams, setSearchParams] = useSearchParams() 
      function filterMain(id){
-              if(searchq){
-               let tmp = getSearchedItems(searchq)
-               return tmp 
-              }
-
               let tmp = [...it]
               tmp = tmp.filter(t=>{
                return t.type == id
@@ -32,8 +28,16 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
               return tmp             
      }
 
+     function filterSearchq(){
+          let tmp = getSearchedItems(searchq)
+          tmp = tmp.map(t=>{
+               return m[t]
+          })
+          return tmp 
+     }
+
     function StartFilter(items1){
-     let nextItems = [...items1]  
+     let nextItems = [...items1] 
      nextItems = handleItemsChangeSwitch(nextItems,filterP)
      return StartSort(nextItems)
     } 
@@ -82,7 +86,6 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
 
     const handleItemsHover = (id,index)=>{
           setItemsShow(prev=>prev.map(p=>{
-             console.log(p.id)
                if(p.id === id){
                return {...p,
                        index:index}
@@ -95,7 +98,6 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
           setShowSfilters(s=> !s)
           setSFilter(value)
           if(!showSfilters){
-               console.log('ok')
                document.querySelector('body').style.overflowY='hidden'
            }else 
              document.querySelector('body').style.overflowY='visible'
@@ -109,14 +111,14 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
      }
 
     useEffect(()=>{
-     let curItems = id ? filterMain(id) : it
+     let curItems = id ? filterMain(id) : searchq ? filterSearchq(): it
      setItems(curItems)
      curItems = StartFilter(curItems)
      setFilter(filterP)
      setCurItems(curItems)
      setSort(sortP||'featured')
      setItemsShow(curItems.slice(0,20))
-    },[id])
+    },[id,searchq])
     useEffect(()=>{
      searchParams.set('page',curPage)
      let f = ''
@@ -136,6 +138,9 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
      })
      if(sort){
           searchParams.set('sort',sort) 
+     }
+     if(id){
+          searchParams.delete('searchq')
      }
      setSearchParams(searchParams)
     },[curPage,filter,sort])
@@ -162,8 +167,8 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
       
 
    
-         <div className='  hidden ms:block ms:w-[18%]  ms:pl-[2%] z-[2]  top-[0%] ms:h-fit ms:sticky ms:top-[0%] pt-[1%] '>
-              <FIlters filter={filter}  handlefilterChange={handlefilterChange} />
+         <div className='  hidden ms:block ms:w-[18%]  ms:pl-[2%] z-[2]  top-[0%] ms:h-fit ms:sticky ms:top-[0%]  '>
+              <FIlters filter={filter} searchq={searchq} handlefilterChange={handlefilterChange} />
          </div>
       
          <div className=' phone:w-[100%] ms:w-[85%]  z-[1] bg-p1 px-[2%] h-auto '>

@@ -81,4 +81,10 @@ const filters = [
     },
 ]
 
+const mfilters = new Map()
+for(let f of filters){
+    mfilters.set(f.name,f.content)
+}
+
 export {filters}
+export {mfilters}

@@ -15,7 +15,6 @@ const matchWords = (s1,s2)=>{
         return false
     }
 const fun = (searchq)=>{
-  console.log('ok')
   let res = items.filter(i=>{
     return findMatch(searchq,i)
   }).map(i=>{
