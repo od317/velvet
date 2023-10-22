@@ -32,10 +32,8 @@ function SmallSearchPage({show,setShow}) {
 
 
   const handleFormSubmit = (e)=>{
-      setShow(false)
-      setShow2(false)
       e.preventDefault()
-      console.log(location.pathname.split('/'))
+      setShow(false)
       if(location.pathname.split('/')[1]==='store'){
           searchParams.set('searchq',searchq)
           searchParams.set('page',1)
@@ -67,7 +65,7 @@ function SmallSearchPage({show,setShow}) {
                           </button>
                           <input value={searchq} onChange={(e)=>{setSearchq(e.target.value)}} placeholder='search for product or brand' className='w-[70%] ml-[2%]' type="text" name="" id="" />
                           <button className='flex flex-grow  flex-row items-center relative  justify-end'>
-                          <div className="h-fit inline-block text-[110%]">
+                          <div onClick={()=>{setShow(false)}} className="h-fit inline-block text-[110%]">
                                 <ion-icon name="close-outline"></ion-icon>
                           </div>
                           </button>
@@ -79,7 +77,7 @@ function SmallSearchPage({show,setShow}) {
                                   <ion-icon name="bag-outline"></ion-icon>
                               </div>
                           </div>}
-                          <div className={`${ show  ?' ':' opacity-0 '} transition-all duration-[500ms]`}>
+                          <div className={` transition-all duration-[500ms]`}>
                               {itemsShow.length>0 &&<Bslide num={2}  items={itemsShow}></Bslide>}
                           </div>
                           <div className='flex flex-row py-[10%] px-[5%]'>
@@ -100,7 +98,7 @@ function SmallSearchPage({show,setShow}) {
                       </div>
                 </div>
             </div>
-            <div className='flex-grow w-full  bg-black bg-opacity-50 min-h-screen'>
+            <div onClick={()=>{ setShow(false) }} className='flex-grow w-full  bg-black bg-opacity-50 min-h-screen'>
 
             </div>
       </div>

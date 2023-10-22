@@ -228,7 +228,7 @@ function NavBar() {
         </div> */}
 
      
-        <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all sc overflow-y-scroll duration-100 navmid:hidden absolute h-full w-[100%] flex flex-row z-20`}>
+        <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all sc overflow-y-scroll duration-100 navmid:hidden fixed h-full w-[100%] flex flex-row z-20`}>
             <div className=' w-[60%] bg-p1 text-black  min-h-full flex flex-col'>
                 
                  <div className=' flex justify-between flex-row p-[2%] mt-[2%]'>
