@@ -35,6 +35,7 @@ function SearchBar() {
         console.log(location.pathname.split('/'))
         if(location.pathname.split('/')[1]==='store'){
             searchParams.set('searchq',searchq)
+            searchParams.set('page',1)
             setSearchParams(searchParams)
         }
         else
@@ -69,12 +70,12 @@ function SearchBar() {
 
     return (
     <>
-    <div  onClick={()=>{setShow(true)}} onMouseOver={()=>{setShow2(true)}} onMouseLeave={()=>{setShow2(false)}}  className='navmid:w-[46%] relative navmid:ml-[2%] bc box-content items-center  pl-[2%] navmid:px-[0%] '>
+    <div  onClick={()=>{setShow(true)}} onMouseOver={()=>{setShow2(true)}} onMouseLeave={()=>{setShow2(false)}}  className='navmid:w-[100%] relative navmid:ml-[2%] bc box-content items-center   navmid:px-[0%] '>
                 <form  onSubmit={(e)=>handleFormSubmit(e)} ref={form}  className='w-full text-[125%] px-[2%] ms:px-[0%] py-[3%]  navmid:py-[1%] border-[1px] border-gray3 navmid:text-[100%]' action="">
                     <button className='w-[5%] ml-[2%]' type='submit'>
                        <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
-                    <input value={searchq} onChange={(e)=>{setSearchq(e.target.value)}} placeholder='search for product or brand' className='w-[90%]' type="text" name="" id="" />
+                    <input value={searchq} onChange={(e)=>{setSearchq(e.target.value)}} placeholder='search for product or brand' className='w-[90%] ml-[2%]' type="text" name="" id="" />
                 </form>
                 <div  className={`w-full absolute px-[2%] overflow-hidden flex flex-col h-fit ${ show  ?'max-h-[100rem] ':'max-h-[0rem] opacity-0'} transition-all duration-[300ms] bg-p1 z-10 border-gray3 border-t-0 border-[1px]`}>
                     

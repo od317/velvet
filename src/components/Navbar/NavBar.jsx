@@ -9,6 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import './styles/navbar.css'
 import SearchBar from './SearchBar'
+import SmallSearchPage from './SmallSearchPage'
 
 function NavBar() {
     const sbList = useContext(SbContext)
@@ -38,6 +39,24 @@ function NavBar() {
             icon:'planet-outline'
         },
     ]
+    const [showSearchPage,setShowSearchPage] = useState(false)
+    const handleSideShowChange = (value)=>{
+        setShowSide(value)
+        if(value){
+            document.querySelector('body').style.overflowY='hidden'
+        }else 
+          document.querySelector('body').style.overflowY='visible'
+        }
+
+    const handleShowSearchPageChange = (value)=>{
+        setShowSearchPage(value)
+        if(value){
+            document.querySelector('body').style.overflowY='hidden'
+        }else 
+          document.querySelector('body').style.overflowY='visible'
+        }
+    
+
     useEffect(()=>{
         const handleWindowResize = ()=>{
             setWindowWidth(window.innerWidth)
@@ -47,7 +66,10 @@ function NavBar() {
             }
             if(window.innerWidth < 860){
                 setShowMore(false)
-           }  
+             }
+            if(windowWidth.innerWidth>=860){
+                handleShowSearchPageChange(false)
+            }   
         }
         window.addEventListener('resize', handleWindowResize)
         return ()=>{
@@ -55,46 +77,44 @@ function NavBar() {
         }
     })
     
-    const handleSideShowChange = (value)=>{
-    setShowSide(value)
-    if(value){
-        console.log('ok')
-        document.querySelector('body').style.overflowY='hidden'
-    }else 
-      document.querySelector('body').style.overflowY='visible'
-    }
+
     return (<>
-    
+         
+        { windowWidth < 860 && showSearchPage && <SmallSearchPage show={showSearchPage} setShow={handleShowSearchPageChange}></SmallSearchPage>}        
+
         <div className='flex flex-col pb-[1%]'>
  
-            <div className='text-center text-[110%] py-[2%] px-[5%] phone:px-[0%] navmid:text-[100%] text-white bg-black navmid:py-[.6%]'>
+            <div className='text-center text-[110%] py-[2%]  phone:px-[0%] navmid:text-[100%] text-white bg-black navmid:py-[.6%]'>
                  <span className=' font-semibold mr-[.1%]'>Earn 5X the points on beauty!</span> 
                  A Nordy Club exclusive
             </div>
 
-           <div className='w-full px-[5%] ms:px-[2%] relative pt-[2%]'>
+           <div className='w-full  ms:px-[2%] relative px-[2%] pt-[2%]'>
                 <div className='w-full flex flex-col navmid:border-b-[1px]  border-gray3 pb-[1.2%]'>
-                     <div className='flex flex-col  navmid:px-[0%] navmid:flex-row navmid:justify-between w-full'>
-                             <div className='flex navmid:w-[20%] flex-row mb-[2%] navmid:mb-[0%] navmid:flex'>
+                     <div className='flex flex-col pr-[2%]  navmid:px-[0%] navmid:flex-row navmid:justify-between w-full'>
+                             <div className='flex navmid:w-[20%]  flex-row mb-[2%] navmid:mb-[0%] navmid:flex'>
                                     <div className='navmid:hidden flex items-center justify-start w-[8%]' onClick={()=>handleSideShowChange(!showSide)}>
                                         <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
                                     </div>
-                                    <div  className='flex-grow flex'>
+                                    <div  className='flex-grow  flex'>
                                         <NavLink style={{backgroundImage:'url()'}} className='   navmid:w-full  flex items-center justify-start h-full font-semibold  text-[120%] navmid:text-[180%]' to={'/'}>
                                             <img className='navmid:w-[75%]' src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg" alt="" />
                                         </NavLink>
                                     </div>
-                                    <NavLink to='/shoping-bag' className='text-black ml-[10%] flex items-center justify-center relative navmid:hidden  w-[10%]'>
+                                    <button className={'navmid:hidden'} onClick={()=>{handleShowSearchPageChange(true)}}>
+                                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                    </button>
+                                    <NavLink to='/shoping-bag' className='text-black ml-[2%] flex items-center justify-center relative navmid:hidden '>
                                     <ion-icon  class="text-[200%]" name="bag-outline"></ion-icon>
                                                 <div className=' text-[90%] w-full h-full flex  items-center pt-[15%] phone:pt-[10%] justify-center absolute'>
                                                 {sbList.size}
                                                 </div>
                                     </NavLink>
                              </div>
-                              
+                              <div className='hidden w-[50%] navmid:block'>
                               <SearchBar></SearchBar>
- 
-                              <div className='w-[32%] navmid:flex hidden  items-center justify-center'>
+                              </div>
+                              <div className='w-[32%]  navmid:flex hidden  items-center justify-center'>
                                             <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+' ml-[5%]'} to={'/'}>Home</NavLink>     
                                             <button onBlur={()=>{setShowMore(false)}} onFocus={()=>{setShowMore(true)}} className='ml-[8%]'>Discover</button>
                                             <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+'  ml-[8%]'}  to={'/store'}>Store</NavLink>
@@ -209,7 +229,7 @@ function NavBar() {
 
      
         <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all sc overflow-y-scroll duration-100 navmid:hidden absolute h-full w-[100%] flex flex-row z-20`}>
-            <div className=' w-[50%] bg-p1 text-black  min-h-full flex flex-col'>
+            <div className=' w-[60%] bg-p1 text-black  min-h-full flex flex-col'>
                 
                  <div className=' flex justify-between flex-row p-[2%] mt-[2%]'>
                     <div className=' border-black border-[1px] p-[1%] text-black text-center'>NORDSTROM</div>

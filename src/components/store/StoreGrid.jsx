@@ -19,17 +19,19 @@ function StoreGrid({items}) {
         <label className=' cursor-pointer w-full mr-[.5%]' htmlFor="">result for <span>{searchq}</span></label>
         <ion-icon name="close-outline"></ion-icon>
       </button>}
-      <div className=' grid grid-cols-2 phone:grid-cols-3 gap-x-[2%] mb-[5%] mid:grid-cols-4 mt-[2%] phone:mt-[0%]  w-full  '>
+      { items.length>0 && <div className=' grid grid-cols-2 phone:grid-cols-3 gap-x-[2%] mb-[5%] navmid:grid-cols-4 mt-[2%] phone:mt-[0%]  w-full  '>
             {items.map((v,i)=>{
               return(<div className='  mb-[8%] border-gray2 border-[1px]' key={v.id}>
                <Card product={v}></Card>
               </div>)
             })}
-            
       </div>
-  
-
-
+      }
+      {
+        items.length<=0 && <div className=' flex flex-row text-[130%] items-center justify-center w-full pt-[10%]'>
+          no products found
+        </div>
+      }
   </>
   );
 }

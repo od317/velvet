@@ -12347,7 +12347,7 @@ let items =
         array[randomIndex], array[currentIndex]];
     }
   
-    return array;
+    return array
   }
 
 
@@ -12626,7 +12626,7 @@ function maylikelist(ids){
 
 // console.log(items)
 
-
+console.log(types)
 
 
 // console.log(lrl,cgs)

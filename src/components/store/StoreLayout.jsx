@@ -118,6 +118,8 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
      setCurItems(curItems)
      setSort(sortP||'featured')
      setItemsShow(curItems.slice(0,20))
+     setCurPage(1)
+     window.scrollTo({top:0})
     },[id,searchq])
     useEffect(()=>{
      searchParams.set('page',curPage)
@@ -146,19 +148,11 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
     },[curPage,filter,sort])
   return (<>
 
-      <div className={` ${showSfilters ? 'translate-x-0':'translate-x-[100%]' } flex flex-row transition-all duration-200 h-screen fixed top-0 w-[100%]  z-[100] ms:hidden`}>
-              <div className='w-[35%] h-screen bg-dark2 opacity-50'></div>
-              <div className='bg-p1 w-[65%] flex flex-col items-center py-[5%]'>
-               <button onClick={()=>handelSfiltersChange('')} className='py-[5%] border-black border-[1px] mb-[5%] w-[95%] text-center '>
-                  done
-               </button>
-              <FIlters sFilter={sFilter} filter={filter}  handlefilterChange={handlefilterChange}></FIlters>
-              </div>
-      </div>
+
       
-     <div className='px-[5%] flex flex-col w-full   whitespace-nowrap ms:block ms:px-[0%]  phone:px-[5%]'>
+     <div className=' flex flex-col w-full   whitespace-nowrap ms:block navmid:px-[0%] px-[2%]'>
           <Sort sort={sort} numShow={items_show.length} totalNumShow={curItems.length} handleSortChange={handleSortChange} />
-          <div className='ms:hidden'>
+          <div className='navmid:hidden'>
           <SFilters handleClick={handelSfiltersChange}/>
           </div>
      </div>
@@ -167,11 +161,11 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
       
 
    
-         <div className='  hidden ms:block ms:w-[18%]  ms:pl-[2%] z-[2]  top-[0%] ms:h-fit ms:sticky ms:top-[0%]  '>
+         <div className='  hidden navmid:block ms:w-[18%]  ms:pl-[2%] z-[2]  top-[0%] ms:h-fit ms:sticky ms:top-[0%]  '>
               <FIlters filter={filter} searchq={searchq} handlefilterChange={handlefilterChange} />
          </div>
       
-         <div className=' phone:w-[100%] ms:w-[85%]  z-[1] bg-p1 px-[2%] h-auto '>
+         <div className=' phone:w-[100%] navmid:w-[85%]  z-[1] bg-p1 px-[2%] h-auto '>
               <StoreGrid items={items_show} />
               <Pages page={curPage} length={curItems.length} handlePageChange={handlePageChange}></Pages>
          </div>

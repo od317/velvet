@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function Pages({page,handlePageChange,length}) {
   const pages = Math.ceil(length / 20)
-  if(page > pages){
+  if( length>0 && page > pages && pages>0){
     handlePageChange(1)
   } 
   const lastpage = length%20
@@ -23,7 +23,7 @@ function Pages({page,handlePageChange,length}) {
   }
   return (
     <>
-      {      pages >1 &&    
+      {pages >1 &&    
       <div className='flex flex-row items-center mb-[5%] justify-between'>
         <button className=' disabled:text-gray3 flex flex-row justify-center items-center ' disabled={page<=1} onClick={()=>handleClick(page-2)}>
           <ion-icon class="flex items-center justify-center" name="chevron-back-outline"></ion-icon>
