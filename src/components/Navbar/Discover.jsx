@@ -1,20 +1,23 @@
 import React from 'react'
 import { useState,useRef,useContext,useEffect } from 'react'
-import {Routes,Route,NavLink, BrowserRouter, useLocation} from 'react-router-dom'
+import {Routes,Route,NavLink, BrowserRouter,useNavigate,useLocation} from 'react-router-dom'
 
 function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
+    const navigate = useNavigate()
+    const handleLinkClick =(link)=>{
+      setShowMore(false)
+      setShowMoreMouseOver(false)
+      navigate(`/store/${link}?page=1&sort=featured`,{replace:true})
+
+  }
   return (
     <div onMouseOver={()=>setShowMoreMouseOver(true)} onMouseLeave={()=>setShowMoreMouseOver(false)} className={`${showMore ? '  navmid:flex':'hidden'}  hidden  left-0 w-full absolute bg-p1 z-10  flex-row `} >
     <div className='flex flex-row w-[50%] p-[5%]'>
           <div onClick={()=> setShowMore(false)} className=" flex flex-col ">
             <label className=' font-bold text-[110%] ' htmlFor="">osama</label>
-            <NavLink to={'/store'}>
-                <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">T-shirt</label>
-            </NavLink>
-            <NavLink to={'/store'}>
-                <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(2)} htmlFor="">shirt</label>
-            </NavLink>
+                <label onClick={()=>handleLinkClick('boot')} className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">T-shirt</label>
+                <label onClick={()=>handleLinkClick('coat')} className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(2)} htmlFor="">shirt</label>
           </div>
     </div>
 

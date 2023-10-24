@@ -32,14 +32,7 @@ function SearchBar() {
         setShow(false)
         setShow2(false)
         e.preventDefault()
-        if(location.pathname.split('/')[1]==='store'){
-            searchParams.set('searchq',searchq)
-            searchParams.set('page',1)
-            setSearchParams(searchParams)
-        }
-        else
         navigate(`/store?searchq=${searchq}&page=1&sort=featured`,{replace:true})
-
     }
 
     useEffect(()=>{
