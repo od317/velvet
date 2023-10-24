@@ -14,7 +14,7 @@ import { useLocation } from 'react-router-dom'
 function SearchBar() {
     const [searchq,setSearchq] = useState('')  
     const [searchParams,setSearchParams] = useSearchParams()
-    const [loading,setLoading] = useState(false)
+    const [loading,setLoading] = useState(true)
     const [show,setShow] = useState(false)
     const [show2,setShow2] = useState(false)
     const [itemsShow,setItemsShow] = useState([])
@@ -32,7 +32,6 @@ function SearchBar() {
         setShow(false)
         setShow2(false)
         e.preventDefault()
-        console.log(location.pathname.split('/'))
         if(location.pathname.split('/')[1]==='store'){
             searchParams.set('searchq',searchq)
             searchParams.set('page',1)
@@ -45,7 +44,7 @@ function SearchBar() {
 
     useEffect(()=>{
         let s
-        setLoading(searchq.length>0)
+        setLoading(true)
         if(searchq.length>0){
         s = setTimeout(searchItems,1000)
         } 
@@ -79,7 +78,7 @@ function SearchBar() {
                 </form>
                 <div  className={`w-full absolute px-[2%] overflow-hidden flex flex-col h-fit ${ show  ?'max-h-[100rem] ':'max-h-[0rem] opacity-0'} transition-all duration-[300ms] bg-p1 z-10 border-gray3 border-t-0 border-[1px]`}>
                     
-                    { loading && <div className='w-full  flex items-center justify-center py-[5%] text-[200%]'>
+                    { loading && itemsShow.length == 0 && searchq.length>0 && <div className='w-full  flex items-center justify-center py-[5%] text-[200%]'>
                         <div className=' animate-spin'>
                             <ion-icon name="bag-outline"></ion-icon>
                         </div>
@@ -87,6 +86,11 @@ function SearchBar() {
                     <div className={`${ show  ?' ':' opacity-0 '} transition-all duration-[500ms]`}>
                          {itemsShow.length>0 &&<Bslide num={3}  items={itemsShow}></Bslide>}
                     </div>
+                    { !loading && searchq.length>0 && <div className='w-full  flex items-center  py-[5%] text-[110%]'>
+                        <div className=''>
+                             no results found
+                        </div>
+                    </div>}
                     {itemsShow.length==0 &&
                      <div className='flex flex-row px-[5%]'>
                         <div className='flex flex-col w-[50%]'>

@@ -2,11 +2,10 @@ import React from 'react'
 import { useState,useRef,useContext,useEffect } from 'react'
 import {Routes,Route,NavLink, BrowserRouter, useLocation} from 'react-router-dom'
 
-function Discover({showMore,setShowMore}) {
+function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
-    const [mouseOver,setMouseOver] = useState(false)
   return (
-    <div  className={`${showMore ? '  navmid:flex':'hidden'}  hidden  left-0 w-full absolute bg-p1 z-10  flex-row `} >
+    <div onMouseOver={()=>setShowMoreMouseOver(true)} onMouseLeave={()=>setShowMoreMouseOver(false)} className={`${showMore ? '  navmid:flex':'hidden'}  hidden  left-0 w-full absolute bg-p1 z-10  flex-row `} >
     <div className='flex flex-row w-[50%] p-[5%]'>
           <div onClick={()=> setShowMore(false)} className=" flex flex-col ">
             <label className=' font-bold text-[110%] ' htmlFor="">osama</label>

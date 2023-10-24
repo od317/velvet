@@ -18,6 +18,7 @@ function NavBar() {
     const [curScroll,setCurScroll] = useState(0)
     const [show,setShow] = useState(true)
     const [showMore,setShowMore] = useState(false)
+    const [showMoreMouseOver,setShowMoreMouseOver] = useState(false)
     const [showSide,setShowSide] = useState(false)
     const navRef = useRef(null)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -70,12 +71,18 @@ function NavBar() {
                 handleShowSearchPageChange(false)
             }   
         }
+        const handlePageClick = ()=>{
+              if(showMoreMouseOver)
+                 return
+              setShowMore(false)                 
+        }
         window.addEventListener('resize', handleWindowResize)
+        window.addEventListener('click', handlePageClick) 
         return ()=>{
             window.removeEventListener('resize',handleWindowResize)
+            window.removeEventListener('click', handlePageClick)
         }
     })
-    
 
     return (<>
          
@@ -117,7 +124,7 @@ function NavBar() {
                               </div>
                               <div className='w-[32%]  navmid:flex hidden  items-center justify-center'>
                                             <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+' ml-[5%]'} to={'/'}>Home</NavLink>     
-                                            <button onClick={()=>{setShowMore(p=>!p)}}  className='ml-[8%]'>Discover</button>
+                                            <button onMouseOver={()=>setShowMoreMouseOver(true)} onMouseLeave={()=>setShowMoreMouseOver(false)} onClick={()=>{setShowMore(p=>!p)}}  className='ml-[8%]'>Discover</button>
                                             <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+'  ml-[8%]'}  to={'/store'}>Store</NavLink>
                                             <NavLink to='/shoping-bag' className='text-black ml-[5%] relative flex flex-col items-center justify-center w-[10%]'>
                                             <ion-icon  class="text-[200%]" name="bag-outline"></ion-icon>
@@ -139,7 +146,7 @@ function NavBar() {
                                             </NavLink>
                     </div>
                 </div>
-                <Discover showMore={showMore} setShowMore={setShowMore}></Discover>
+                <Discover setShowMoreMouseOver={setShowMoreMouseOver}  showMore={showMore} setShowMore={setShowMore}></Discover>
           
            </div>
 
