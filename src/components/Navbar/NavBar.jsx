@@ -2,7 +2,6 @@ import React from 'react'
 import { useState,useRef,useContext,useEffect } from 'react'
 import { SbContext} from '../../contexts/cartContext'
 import {Routes,Route,NavLink, BrowserRouter, useLocation} from 'react-router-dom'
-import TopNav from './TopNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -10,10 +9,10 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import './styles/navbar.css'
 import SearchBar from './SearchBar'
 import SmallSearchPage from './SmallSearchPage'
+import Discover from './Discover'
 
 function NavBar() {
     const sbList = useContext(SbContext)
-    const [dropDownImgNum,setDropDownImgNum] = useState(0)
     const [searchBar,setSearchBar] = useState(false)
     const [searchq,setSearchq] = useState('')
     const [curScroll,setCurScroll] = useState(0)
@@ -87,6 +86,8 @@ function NavBar() {
             <div className='text-center text-[110%] py-[2%]  phone:px-[0%] navmid:text-[100%] text-white bg-black navmid:py-[.6%]'>
                  <span className=' font-semibold mr-[.1%]'>Earn 5X the points on beauty!</span> 
                  A Nordy Club exclusive
+                {showMore}
+
             </div>
 
            <div className='w-full  ms:px-[2%] relative px-[2%] pt-[2%]'>
@@ -116,7 +117,7 @@ function NavBar() {
                               </div>
                               <div className='w-[32%]  navmid:flex hidden  items-center justify-center'>
                                             <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+' ml-[5%]'} to={'/'}>Home</NavLink>     
-                                            <button onBlur={()=>{setShowMore(false)}} onFocus={()=>{setShowMore(true)}} className='ml-[8%]'>Discover</button>
+                                            <button onClick={()=>{setShowMore(p=>!p)}}  className='ml-[8%]'>Discover</button>
                                             <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+'  ml-[8%]'}  to={'/store'}>Store</NavLink>
                                             <NavLink to='/shoping-bag' className='text-black ml-[5%] relative flex flex-col items-center justify-center w-[10%]'>
                                             <ion-icon  class="text-[200%]" name="bag-outline"></ion-icon>
@@ -138,34 +139,7 @@ function NavBar() {
                                             </NavLink>
                     </div>
                 </div>
-                
-                
-                
-                <div  className={`${showMore ? '  navmid:flex':'hidden'}  hidden  left-0 w-full absolute bg-p1 z-10  flex-row `} >
-                                                <div className='flex flex-row w-[50%] p-[5%]'>
-                                                      <div onClick={()=> setShowMore(false)} className=" flex flex-col ">
-                                                        <label className=' font-bold text-[110%] ' htmlFor="">osama</label>
-                                                        <NavLink to={'/store'}>
-                                                            <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">T-shirt</label>
-                                                        </NavLink>
-                                                        <NavLink to={'/store'}>
-                                                            <label className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(2)} htmlFor="">shirt</label>
-                                                        </NavLink>
-                                                      </div>
-                                                </div>
-
-                                                <div className='flex flex-row w-[50%] h-full relative pb-[30%] '>
-                                    
-                                                     <div className={` ${dropDownImgNum == 1 ? '':'hidden'} flex absolute w-full h-full justify-center items-center`}>
-                                                        <img className="w-[50%]" src="https://media.istockphoto.com/id/1286538907/photo/stylish-blonde-girl-wearing-black-t-shirt-and-glasses-posing-against-street-urban-clothing.jpg?s=612x612&w=0&k=20&c=4F9OrXj8iZa7V_7cmgQO3v3qYu_Ms8UiPayZXAin8z8=" alt="" />
-                                                     </div>
-
-                                                     <div className={` ${dropDownImgNum == 2 ? '':'hidden'} flex absolute w-full h-full justify-center items-center`}>
-                                                        <img className="w-[50%]" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_23/1445782/white-t-shirts-today-main-190607-001.jpg" alt="" />
-                                                     </div>
-
-                                                </div>
-                </div>
+                <Discover showMore={showMore} setShowMore={setShowMore}></Discover>
           
            </div>
 

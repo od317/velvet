@@ -30,6 +30,10 @@ function Content({items,text}) {
               <Card text={text} key={`${c.id}-${c.color}-${c.size}`} c={c}></Card>
             )
         })}
+        { content.length == 0 &&
+          <div className='w-full flex flex-row items-center justify-center text-[110%] font-semibold'>
+                {text == 'Move to bag' ? 'no items saved':'no items in shoping bag' }
+          </div>}
     </div>
   )
 }
