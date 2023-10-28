@@ -15,7 +15,8 @@ function StoreGrid({items}) {
   }
   return (
    <>
-      {searchq &&<button onClick={()=>{handleSearchqRemove()}} className='font-semibold flex flex-row items-center hover:bg-gray2   py-[.5%] mb-[.5%] text-[110%]'>
+      <div className='navmid:hidden' htmlFor="">{items.length} items</div>
+      {searchq &&<button onClick={()=>{handleSearchqRemove()}} className='font-semibold text-start flex flex-row items-center hover:bg-gray2   py-[.5%] mb-[.5%] text-[110%]'>
         <label className=' cursor-pointer w-full mr-[.5%]' htmlFor="">result for <span>{searchq}</span></label>
         <ion-icon name="close-outline"></ion-icon>
       </button>}

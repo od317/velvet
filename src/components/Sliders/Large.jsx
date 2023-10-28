@@ -20,6 +20,7 @@ const Large = ({items,text,num})=>{
       flexes.push([...tmp])
       tmp = []
     }
+
     const [len,setLen] = useState(sim.length-(num-1))
     const [slidePer,setSlidePer] = useState(0)
     const nextButton = useRef(null)
@@ -68,7 +69,7 @@ const Large = ({items,text,num})=>{
                                      
                                           {f.map((i,index)=>{
                                             return(
-                                            <div key={index} style={{width:`${100/num}%`}} className={`  px-[1.5%] top-0 sticky transition-all duration-300 inline-block   text-[100%] `} >
+                                            <div key={i.id} style={{width:`${100/num}%`}} className={`  px-[1.5%] top-0 sticky transition-all duration-300 inline-block   text-[100%] `} >
                                               <Card product={i}></Card>
                                             </div>
                                                   )

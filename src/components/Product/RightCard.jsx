@@ -8,7 +8,7 @@ function RightCard({id}) {
   const dis = product.dis
   const price = product.price
   return (
-    <div className='w-[100%] mb-[20%] transition-all duration-500'>
+    <div className='w-[100%] mb-[20%] overflow-x-hidden transition-all duration-500'>
     <div className=' relative imgS'>
 
     <Link className=' outline-none ' to={`/product/${product.id}?color=${0}`}>
@@ -29,16 +29,9 @@ function RightCard({id}) {
 
         <div className='flex flex-col whitespace-normal text-center phone:flex-col items-center phone:text-center phone:items-start justify-between'>
             <label className=' ' htmlFor="">{product.brand}</label>
-            {dis ? 
-                (<>
-                <div className='  text-[100%] w-full text-center text-priceColor'>
-                    <span className='  font-semibold'>${price - (price*dis/100)}</span>
-                </div>
-                <label className=' text-[100%] w-full line-through' htmlFor="">${price}</label>
-                </>) 
-                : 
-                (<label className='flex flex-row justify-center  items-center text-[100%] w-full' htmlFor="">${price}</label>)
-           }
+            <div className='  text-[90%] w-full text-center '>
+              <PriceDisplay price={product.price} dis={product.dis}></PriceDisplay>
+            </div>
         </div>
   </div>
 

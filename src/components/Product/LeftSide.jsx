@@ -26,12 +26,12 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
   },)
   return (
     <>
-               <div className='flex flex-col phone:hidden items-start justify-start '>
+               <div className='flex flex-col navmid:hidden items-start justify-start '>
                     <label className='text-[150%] font-bold mb-[1%]' htmlFor="">{product.name}</label>
                          <Stars rate={product.rate}></Stars>
                          <PriceDisplay price={product.price} dis={product.dis}></PriceDisplay>
          </div>
-        <div className='phone:hidden mt-[5%]'>
+        <div className='navmid:hidden mt-[5%]'>
                <Swiper
                     slidesPerView={1.6}
                     spaceBetween={2}
@@ -64,7 +64,7 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
         </div> */}
 
 
-        <div className='hidden phone:grid mr-[2%]  gap-x-[.5%] gap-y-[1%] h-fit grid-cols-2 phone:w-[50%] ms:w-[55%]'>
+        <div className='hidden navmid:grid mr-[2%]  gap-x-[.5%] gap-y-[1%] h-fit grid-cols-2 phone:w-[55%] navmid:w-[55%]'>
                     {  product.img[color].imgs.map((image,index)=>{
                             return(
                                   <div key={image} className='  overflow-hidden h-fit  relative'>

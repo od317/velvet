@@ -11,13 +11,44 @@ import items from '../../Data/items'
 import getSearchedItems from '../../Data/getSearchedItems'
 import { useLocation } from 'react-router-dom'
 
+const psLinks = [
+    {
+        name:'boots',
+        dist:'boot'
+    },
+    {
+        name:'jacket',
+        dist:'jacket'
+    },
+    {
+        name:'coats',
+        dist:'coat'
+    },
+    
+    {
+        name:'jeans',
+        dist:'jeans'
+    },
+]
+
+const sLinks = [
+    {
+        name:'Canada Goose',
+        dist:'Canada Goose'
+    },
+    {
+        name:'Lauren Ralph Lauren',
+        dist:'Lauren Ralph Lauren'
+    },
+]
+
 
 function SmallSearchPage({show,setShow}) {
  
  
   const [searchq,setSearchq] = useState('')  
   const [searchParams,setSearchParams] = useSearchParams()
-  const [loading,setLoading] = useState(false)
+  const [loading,setLoading] = useState(true)
   const [itemsShow,setItemsShow] = useState([])
   const form = useRef(null)
   const location = useLocation()
@@ -46,7 +77,7 @@ function SmallSearchPage({show,setShow}) {
 
   useEffect(()=>{
       let s
-      setLoading(searchq.length>0)
+      setLoading(true)
       if(searchq.length>0){
       s = setTimeout(searchItems,1000)
       } 
@@ -64,37 +95,58 @@ function SmallSearchPage({show,setShow}) {
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                           </button>
                           <input value={searchq} onChange={(e)=>{setSearchq(e.target.value)}} placeholder='search for product or brand' className='w-[70%] ml-[2%]' type="text" name="" id="" />
-                          <button className='flex flex-grow  flex-row items-center relative  justify-end'>
-                          <div onClick={()=>{setShow(false)}} className="h-fit inline-block text-[110%]">
+                          <div className='flex flex-grow  flex-row items-center relative  justify-end'>
+                          <button onClick={()=>{setShow(false)}} className="h-fit  inline-block text-[110%]">
                                 <ion-icon name="close-outline"></ion-icon>
-                          </div>
                           </button>
+                          </div>
                       </form>
                       <div  className={`w-full  px-[2%] overflow-hidden flex flex-col h-fit  transition-all duration-[300ms] bg-p1 z-10 border-gray3  border-b-[1px]`}>
                           
-                          { loading && <div className='w-full  flex items-center justify-center py-[5%] text-[200%]'>
-                              <div className=' animate-spin'>
-                                  <ion-icon name="bag-outline"></ion-icon>
-                              </div>
+                           { loading && itemsShow.length == 0 && searchq.length>0 && <div className='w-full  flex items-center justify-center py-[5%] text-[200%]'>
+                                    <div className=' animate-spin'>
+                                        <ion-icon name="bag-outline"></ion-icon>
+                                    </div>
+                             </div>}
+                                <div className={`${ show  ?' ':' opacity-0 '} transition-all fle flex-col duration-[500ms]`}>
+                                    {itemsShow.length>0 &&
+                                    <>
+                                    <Bslide num={3}  items={itemsShow}></Bslide>
+                                    <button onClick={()=>{
+                                       setShow(false)
+                                       navigate(`/store?searchq=${searchq}&page=1&sort=featured`,{replace:true})
+                                    }} className='mb-[2%]'>show all</button>
+                                    </>}
+                                </div>
+                            { !loading && searchq.length>0 && itemsShow.length==0 &&<div className='w-full pl-[5%]  flex items-center  py-[5%] text-[110%]'>
+                                <div className=''>
+                                    no results found
+                                </div>
+                            </div>}
+                    
+                            { itemsShow.length==0 &&                          
+                            <div className='flex flex-row py-[10%] px-[5%]'>
+                                <div className='flex flex-col w-[50%]'>
+                                    <label className='font-semibold mb-[.5%] text-[110%]' htmlFor="">Popular Searches</label>
+                                    {psLinks.map(p=>{
+                                        return(<>
+                                            <NavLink onClick={()=>{
+                                        setShow(false)
+                                     }} key={p.name} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
+                                        </>)
+                                    })}
+                                </div>
+                                <div className='flex flex-col w-[50%]'>
+                                    <label className='font-semibold mb-[.5%] text-[110%]' htmlFor="">suggested</label>
+                                    {sLinks.map(p=>{
+                                        return(<>
+                                            <NavLink onClick={()=>{
+                                        setShow(false)
+                                     }} key={p.name} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
+                                        </>)
+                                    })}
+                                </div>
                           </div>}
-                          <div className={` transition-all duration-[500ms]`}>
-                              {itemsShow.length>0 &&<Bslide num={2}  items={itemsShow}></Bslide>}
-                          </div>
-                          <div className='flex flex-row py-[10%] px-[5%]'>
-                              <div className='flex flex-col w-[50%]'>
-                                  <label htmlFor="">suggested</label>
-                                  <NavLink to={'/store'}>store</NavLink>
-                                  <NavLink to={'/store'}>store</NavLink>
-                                  <NavLink to={'/store'}>store</NavLink>
-                                  <NavLink to={'/store'}>store</NavLink>
-                              </div>
-                              <div className='flex flex-col w-[50%]'>
-                                  <NavLink to={'/store'}>store</NavLink>
-                                  <NavLink to={'/store'}>store</NavLink>
-                                  <NavLink to={'/store'}>store</NavLink>
-                                  <NavLink to={'/store'}>store</NavLink>
-                              </div>
-                          </div>
                       </div>
                 </div>
             </div>

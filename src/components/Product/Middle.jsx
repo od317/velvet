@@ -30,9 +30,9 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
      setCurSize(pSize[0])
   },[product])
   return (
-    <div className='flex flex-col phone:px-[1%] phone:w-[50%]  ms:w-[34%] '>
+    <div className='flex flex-col navmid:px-[1%] m:w-[50%]  navmid:w-[34%] '>
                         
-                <div className='phone:flex flex-col pt-[1%] hidden justify-center items-start  '>
+                <div className='navmid:flex flex-col pt-[1%] hidden justify-center items-start  '>
                         <Stars rate={product.rate}></Stars>
                     <label className='text-[140%] font-bold' htmlFor="">{product.name}</label>
                     <label className=' capitalize border-b-[1px] mb-[2%] border-b-gray' htmlFor="">{product.brand}</label>
@@ -133,7 +133,7 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
                             </div>
                     </div>
 
-                    <div className={` w-[100%] cursor-pointer phone:w-[100%] bg-dark2 
+                    <div className={` w-[100%] cursor-pointer navmid:w-[100%] bg-dark2 
                     ${(sb.has(`${product.id}-${color}-${curSize}-sb`) || sb.has(`${product.id}-${color}-${curSize}-sfl`)) ? 'bg-light1':'bg-dark2'}
                      flex flex-col rounded-sm text-white relative mt-[5%] transition-all duration-[400ms]  box-border text-[90%] py-[2%] phone:mb-[3%]`}>
                             <button onClick={()=>handleSbChange(`${product.id}-${color}-${curSize}`)} className={` relative w-full h-full  py-[2%]  cursor-pointer    ${ showsize ? 'phone:border-b-0':''} flex flex-row phone:justify-between phone:px-[5%] items-center justify-center   text-center`}>

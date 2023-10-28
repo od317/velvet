@@ -31,7 +31,7 @@ function FIlters({sFilter,handlefilterChange,filter,searchq}) {
   }
 
   return (<>
-            <div className=' block  w-full  ms:pr-[5%] overflow-y-scroll sco sc max-h-screen '>
+            <div className=' block  w-full pt-[1%]  ms:pr-[5%] overflow-y-scroll sco sc max-h-screen '>
               {nfilter.length >0&& (
               <>
               <div className='ms:pl-[0%] pl-[5%]'> <span className='font-bold'>Filtered by:</span> {nfilter.length}</div>
@@ -86,10 +86,10 @@ const Filter = ({sFilter,filters,handlefilterChange,filter})=>{
                         <div className={` ${ show ? 'max-h-[30rem]':'max-h-0'} tmaxh duration-[300ms]`}>
                           {filters.content.map(f=>{
                             return(<div key={f.val}>
-                                <div className='flex ms:px-[0%] px-[4%] flex-row gap-[1%] items-center my-[.5%] '>
-                                    <div className={` ${filtersSet.has(f.val) ? 'bg-black':''} w-[5%] pb-[5%]  border-[1px]`}></div>
-                                    <button onClick={()=> handlefilterChange([[filters.name,f.val]])} className='flex  flex-row items-center justify-start text-start'>{f.name}</button>
-                                </div>
+                                <button onClick={()=> handlefilterChange([[filters.name,f.val]])} className='flex w-full  ms:px-[0%] px-[4%] flex-row  items-center my-[.5%] '>
+                                    <div className={` ${filtersSet.has(f.val) ? 'bg-black':''} w-[5%] pb-[5%] mr-[1%] cursor-pointer border-[1px]`}></div>
+                                    <label  className='flex  flex-row items-center justify-start cursor-pointer text-start'>{f.name}</label>
+                                </button>
                             </div>)
                           })}
                         </div>

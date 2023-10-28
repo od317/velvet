@@ -4341,7 +4341,6 @@ let items =
                 "name": "Mother Cares ",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/fb92bcff-ec85-4c3d-8184-db684f47b5ae.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
-                    "https://n.nordstrommedia.com/id/sr3/fb92bcff-ec85-4c3d-8184-db684f47b5ae.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2"
                 ],
                 "key": 40
             }

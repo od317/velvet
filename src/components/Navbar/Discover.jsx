@@ -2,9 +2,103 @@ import React from 'react'
 import { useState,useRef,useContext,useEffect } from 'react'
 import {Routes,Route,NavLink, BrowserRouter,useNavigate,useLocation} from 'react-router-dom'
 
+const links = [
+   {
+    name:'clothing',
+    bold:true,
+    links:[
+      {
+        name:'coats',
+        dist:'coat'
+      },
+      {
+        name:'jackets',
+        dist:'jacket'
+      },
+      {
+        name:'jeans',
+        dist:'jeans'
+      },
+    ]
+   },
+   {
+    name:'clothing',
+    bold:false,
+    links:[
+      {
+        name:'coats',
+        dist:'coat'
+      },
+      {
+        name:'jackets',
+        dist:'jacket'
+      },
+      {
+        name:'jeans',
+        dist:'jeans'
+      },
+    ]
+   },
+   {
+    name:'clothing',
+    bold:false,
+    links:[
+      {
+        name:'coats',
+        dist:'coat'
+      },
+      {
+        name:'jackets',
+        dist:'jacket'
+      },
+      {
+        name:'jeans',
+        dist:'jeans'
+      },
+    ]
+   },
+   {
+    name:'clothing',
+    bold:false,
+    links:[
+      {
+        name:'coats',
+        dist:'coat'
+      },
+      {
+        name:'jackets',
+        dist:'jacket'
+      },
+      {
+        name:'jeans',
+        dist:'jeans'
+      },
+    ]
+   },
+   {
+    name:'clothing',
+    bold:false,
+    links:[
+      {
+        name:'coats',
+        dist:'coat'
+      },
+      {
+        name:'jackets',
+        dist:'jacket'
+      },
+      {
+        name:'jeans',
+        dist:'jeans'
+      },
+    ]
+   },
+]
+
 function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
     const [dropDownImgNum,setDropDownImgNum] = useState(0)
     const navigate = useNavigate()
+    const linksv = links
     const handleLinkClick =(link)=>{
       setShowMore(false)
       setShowMoreMouseOver(false)
@@ -12,28 +106,42 @@ function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
 
   }
   return (
-    <div onMouseOver={()=>setShowMoreMouseOver(true)} onMouseLeave={()=>setShowMoreMouseOver(false)} className={`${showMore ? '  navmid:flex':'hidden'}  hidden  left-0 w-full absolute bg-p1 z-10  flex-row `} >
-    <div className='flex flex-row w-[50%] p-[5%]'>
-          <div onClick={()=> setShowMore(false)} className=" flex flex-col ">
-            <label className=' font-bold text-[110%] ' htmlFor="">osama</label>
-                <label onClick={()=>handleLinkClick('boot')} className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">T-shirt</label>
-                <label onClick={()=>handleLinkClick('coat')} className=' cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(2)} htmlFor="">shirt</label>
-          </div>
+    <div onMouseOver={()=>setShowMoreMouseOver(true)} onMouseLeave={()=>setShowMoreMouseOver(false)} className={`${showMore ? 'max-h-screen':'max-h-[0rem]'}  flex flex-col overflow-hidden transition-all duration-200 shadow-[0_8px_30px_rgb(0,0,0,0.12)]   left-0 w-full absolute bg-p1 z-10  `} >
+    <div className='flex flex-row w-full px-[2.5%] text-[120%] justify-end'>
+        <button className={`${showMore?'':'opacity-0'} transition-all duration-150`} onClick={()=>{
+                                setShowMore(false)
+                                setShowMoreMouseOver(false)
+        }} ><ion-icon name="close-outline"></ion-icon></button>
     </div>
+    <div className={` ${showMore ? '':'opacity-0'} transition-all duration-150  flex flex-row justify-center  px-[2.5%] w-full mt-[1%] pb-[4%]`}>
+          
+          {linksv.map(l=>{
+            return(
+          <div key={l.name}  className=" w-[17%]   flex flex-col">
+               <List handleLinkClick={handleLinkClick} name={l.name} bold={l.bold} links={l.links} ></List>
+          </div>
+            )
+          })}
 
-    <div className='flex flex-row w-[50%] h-full relative pb-[30%] '>
-
-         <div className={` ${dropDownImgNum == 1 ? '':'hidden'} flex absolute w-full h-full justify-center items-center`}>
-            <img className="w-[50%]" src="https://media.istockphoto.com/id/1286538907/photo/stylish-blonde-girl-wearing-black-t-shirt-and-glasses-posing-against-street-urban-clothing.jpg?s=612x612&w=0&k=20&c=4F9OrXj8iZa7V_7cmgQO3v3qYu_Ms8UiPayZXAin8z8=" alt="" />
-         </div>
-
-         <div className={` ${dropDownImgNum == 2 ? '':'hidden'} flex absolute w-full h-full justify-center items-center`}>
-            <img className="w-[50%]" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_23/1445782/white-t-shirts-today-main-190607-001.jpg" alt="" />
-         </div>
-
+          <div className=" w-[17%]   flex flex-col justify-start items-end">
+                   <img className='w-[90%]' src="https://n.nordstrommedia.com/id/1c046571-0eb0-4cdd-aba6-ff4f3b68ba51.jpeg" alt="" />
+          </div>
     </div>
 </div>
   )
 }
 
-export default Discover;
+const List = ({name,links,bold,handleLinkClick})=>{
+      return(<>
+      
+            <label className=' font-bold text-[110%] ' htmlFor="">{name}</label>
+                {links.map(l=>{
+                  return(<>
+                      <label key={name} onClick={()=>handleLinkClick(l.dist)} className=' inline-block mb-[2%] w-fit cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">{l.name}</label>     
+                  </>)
+                })}
+
+      </>)
+}
+
+export default Discover

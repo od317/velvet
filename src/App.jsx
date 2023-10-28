@@ -90,11 +90,12 @@ function App() {
 
   return (
      <>
-     <div className=' bg-p1 flex justify-between flex-col min-h-screen'>
+     <div className=' bg-p1 flex justify-start  flex-col min-h-screen'>
       <SbContext.Provider value={sb}>
             <setSbContext.Provider value={setSb}>
                                     <handleSbChangeContext.Provider value={handleSbEdit}>
                                         <handleSbSflChangeContext.Provider value={handleSbSflChange}>
+                                            <div className='flex-grow'>
                                                 <NavBar></NavBar>
                                                 <Routes>
                                                 <Route path='/' element={<Home/>}></Route>
@@ -103,6 +104,7 @@ function App() {
                                                 <Route path='/product/:id' element={<Product/>}></Route>
                                                 <Route path='/shoping-bag' element={<WishList/>}></Route>
                                                 </Routes>
+                                            </div>    
                                                 <Footer></Footer>
                                         </handleSbSflChangeContext.Provider>
                                     </handleSbChangeContext.Provider>

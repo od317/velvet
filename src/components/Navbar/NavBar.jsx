@@ -33,11 +33,37 @@ function NavBar() {
             dist:'store',
             icon:'bag-outline'
         },
+    ]
+    const sideBarBottomLinks = [
         {
-            name:'new',
-            dist:'new',
-            icon:'planet-outline'
+            name:'coats',
+            dist:'store/coat'
         },
+        {
+            name:'boots',
+            dist:'store/boot'
+        },
+        {
+            name:'jeans',
+            dist:'store/jeans'
+        },
+        {
+            name:'suit',
+            dist:'store/suit'
+        },
+        {
+            name:'sweatshirt',
+            dist:'store/sweatshirt'
+        },
+        {
+            name:'jacket',
+            dist:'store/jacket'
+        },
+        {
+            name:'sneakers',
+            dist:'store/sneakers'
+        },
+        
     ]
     const [showSearchPage,setShowSearchPage] = useState(false)
     const handleSideShowChange = (value)=>{
@@ -90,12 +116,12 @@ function NavBar() {
 
         <div className='flex flex-col pb-[1%]'>
  
-            <div className='text-center text-[110%] py-[2%]  phone:px-[0%] navmid:text-[100%] text-white bg-black navmid:py-[.6%]'>
+            {/* <div className='text-center text-[110%] py-[2%]  phone:px-[0%] navmid:text-[100%] text-white bg-black navmid:py-[.7%]'>
                  <span className=' font-semibold mr-[.1%]'>Earn 5X the points on beauty!</span> 
                  A Nordy Club exclusive
                 {showMore}
 
-            </div>
+            </div> */}
 
            <div className='w-full  ms:px-[2%] relative px-[2%] pt-[2%]'>
                 <div className='w-full flex flex-col navmid:border-b-[1px]  border-gray3 pb-[1.2%]'>
@@ -213,20 +239,26 @@ function NavBar() {
             <div className=' w-[60%] bg-p1 text-black  min-h-full flex flex-col'>
                 
                  <div className=' flex justify-between flex-row p-[2%] mt-[2%]'>
-                    <div className=' border-black border-[1px] p-[1%] text-black text-center'>NORDSTROM</div>
+                    <div className=' border-black border-[1px] w-full p-[1%] text-black text-center'>NORDSTROM</div>
                     <button onClick={()=>handleSideShowChange(false)} className='flex p-[1%] items-center justify-center text-[180%] text-black'>
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
                  </div>
 
-                 <div className="flex flex-col mt-[10%] bg-p1 p-[2%] pb-[20%]  border-b-[1px] border-black text-[130%]">
+                 <div className="flex flex-col mt-[10%] bg-p1 p-[2%] pb-[10%]  border-b-[1px] border-black text-[130%]">
                       {sideBarLinks.map(l=>
                         <SideBarLink key={l.dist}  handleSideShowChange={handleSideShowChange} l={l} />
                       )}                        
                  </div>
 
+                 <div className="flex flex-col mt-[10%] bg-p1 p-[2%] pb-[20%]   text-[130%]">
+                      {sideBarBottomLinks.map(l=>
+                        <SideBarLink key={l.dist}  handleSideShowChange={handleSideShowChange} l={l} />
+                      )}                        
+                 </div>
+
             </div>
-            <div onClick={()=>handleSideShowChange(false)} className=' w-[60%] h-full'></div>
+            <div onClick={()=>handleSideShowChange(false)} className=' w-[60%] bg-black opacity-40 h-full'></div>
         </div>
 
     </>
@@ -234,11 +266,12 @@ function NavBar() {
 }
 
 
-const SideBarLink = ({handleSideShowChange,l})=>{
+const SideBarLink = ({handleSideShowChange,l=null})=>{
     return(<>
-                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-black':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} to={`/${l.dist}`}>
-                            <ion-icon name={l.icon}></ion-icon>
-                            <span className="ml-[5%] capitalize">{l.name}</span>
+                        <NavLink onClick={()=>handleSideShowChange(false)} className={({isActive})=>( isActive ? 'bg-light2 text-black':'' )+` transition-all p-[1%] rounded-sm duration-200 flex flex-row items-center`} 
+                         to={`/${l.dist}`}>
+                            {l.icon&&<ion-icon name={l.icon}></ion-icon>}
+                            <span className={` ${ !l.icon ? 'ml-[2%]':'ml-[5%]'} capitalize`}>{l.name}</span>
                         </NavLink>   
           </>)
 }

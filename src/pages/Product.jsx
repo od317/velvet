@@ -7,11 +7,15 @@ function Product() {
     const {id} = useParams()
     const [searchParams, setSearchParams] = useSearchParams()
     const product = m[id]
+    let color = searchParams.get('color') ? searchParams.get('color') : 0 
+    if(color>= product.img.length){
+       color = 0
+    }
     useEffect(() => {
       window.scrollTo(0, 0)
        }, [id])
     return (
-       <ProductLayout color={searchParams.get('color') ? searchParams.get('color') : 0 } setSearchParams={setSearchParams} product={product}></ProductLayout>
+       <ProductLayout color={color} setSearchParams={setSearchParams} product={product}></ProductLayout>
       )
 }
 
