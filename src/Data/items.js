@@ -4697,7 +4697,7 @@ let items =
                 "key": 44
             },
             {
-                "color": "",
+                "color": "#36465f",
                 "name": "Navy Midnight",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/8f3fdf7c-36a8-43f9-814c-f57adae8f93d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2",
@@ -4819,7 +4819,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#233247",
                 "name": "navy plaid",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/ed2e00bf-b0fa-4703-b8e8-0211c7834e44.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -4937,7 +4937,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#131b26",
                 "name": "Black Navy Plaid",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/cde4757e-7532-4da1-a607-6aec67e20b91.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -5045,7 +5045,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#d3cfc8",
                 "name": "White/ Blue Multi",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/1298ffd5-53ac-4881-b500-723278539c8e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2"
@@ -12333,7 +12333,7 @@ let items =
         "name": "Kånken Water Resistant Backpack",
         "price":90,
         "desc": "Scandinavian design has long been known for offering practical, functional pieces that are beautiful to behold but that are meant to be used.",
-        "type": "bag",
+        "type": "backpacks",
         "img": [
             {
                 "color": "#dbb9de",

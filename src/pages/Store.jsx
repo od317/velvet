@@ -6,6 +6,8 @@ import {useEffect} from 'react'
 import StoreLayout from '../components/store/StoreLayout'
 import {filters} from '../Data/FIlters'
 import {mfilters} from '../Data/FIlters'
+import {Helmet} from "react-helmet"
+
 function Store() {
   const wishlist = useContext(WishlistContext)
   const setWishlist = useContext(setWishlistContext)
@@ -38,6 +40,10 @@ function Store() {
   }, [])
 
   return (
+    <>
+      <Helmet>
+            <title>NordeStrom store</title>
+      </Helmet>
     <div className=''>
       {/* <div className=' hidden phone:block  bg-p1 px-[2%] mt-[2%]'>
             <div className='flex py-[1.5%] px-[2%] flex-col text-white w-full font-Lato bg-dark2'>
@@ -55,6 +61,7 @@ function Store() {
     
 
     </div>
+    </>
   );
 }
 

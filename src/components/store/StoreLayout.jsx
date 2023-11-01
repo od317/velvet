@@ -20,10 +20,11 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
      const [showSfilters,setShowSfilters] = useState(false)
      const [sFilter,setSFilter] = useState('')
      const [searchParams, setSearchParams] = useSearchParams() 
+
      function filterMain(id){
               let tmp = [...it]
               tmp = tmp.filter(t=>{
-               return t.type == id
+               return t.type == id || t.brand == id
               })
               return tmp             
      }
@@ -101,7 +102,8 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
           window.scrollTo(0, 0)
      }
 
-    useEffect(()=>{
+    
+     useEffect(()=>{
      let curItems = id ? filterMain(id) : searchq ? filterSearchq(): it
      setItems(curItems)
      curItems = StartFilter(curItems)
@@ -138,6 +140,7 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
      }
      setSearchParams(searchParams,{replace:true})
     },[curPage,filter,sort])
+
   return (<>
 
      <div className={` ${showSfilters ? 'translate-x-0':'translate-x-[100%]' } flex flex-row transition-all duration-200 h-screen fixed top-0 w-[100%]  z-[100] navmid:hidden`}>
