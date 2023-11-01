@@ -30,24 +30,19 @@
 //     </>)
 // }
 
-import React, { useState } from 'react'
+import React, { useState,useEffect} from 'react'
 import {Routes,Route,Link, BrowserRouter, useLocation} from 'react-router-dom'
 import NavBar from './components/Navbar/NavBar'
 import Footer from './components/Fotter/Fotter'
 import Home from './pages/Home'
 import Store from './pages/Store'
 import WishList from './pages/Wishlist'
-import { SbContext,setSbContext,setWishlistContext,handleSbSflChangeContext,handleSbChangeContext } from './contexts/cartContext'
+import { SbContext,setSbContext,setWishlistContext,WindowWidth,handleSbSflChangeContext,handleSbChangeContext } from './contexts/cartContext'
 import Product from './pages/Product'
 function App() {
-  const [wishlist,setWishlist] = useState(
-   new Set(JSON.parse(localStorage.getItem("wishlist")) || [])
-  )
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [sb,setSb] = useState(
       new Set(JSON.parse(localStorage.getItem("sb")) || [])
-  )
-  const [sfl,setSfl] = useState(
-      new Set(JSON.parse(localStorage.getItem("sfl")) || [])
   )
 
 
@@ -86,7 +81,17 @@ function App() {
            setSb(nextSb)
            localStorage.setItem('sb',JSON.stringify(Array.from(nextSb)))
            return 
-}
+  }
+
+  useEffect(()=>{
+    const handleWindowResize = ()=>{
+        setWindowWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', handleWindowResize)
+    return ()=>{
+        window.removeEventListener('resize',handleWindowResize)
+    }
+  },[window.innerWidth])
 
   return (
      <>
@@ -95,17 +100,19 @@ function App() {
             <setSbContext.Provider value={setSb}>
                                     <handleSbChangeContext.Provider value={handleSbEdit}>
                                         <handleSbSflChangeContext.Provider value={handleSbSflChange}>
-                                            <div className='flex-grow'>
-                                                <NavBar></NavBar>
-                                                <Routes>
-                                                <Route path='/' element={<Home/>}></Route>
-                                                <Route path='/store' element={<Store />}></Route>
-                                                <Route path='/store/:id' element={<Store />}></Route>
-                                                <Route path='/product/:id' element={<Product/>}></Route>
-                                                <Route path='/shoping-bag' element={<WishList/>}></Route>
-                                                </Routes>
-                                            </div>    
+                                            <WindowWidth.Provider value={windowWidth}>
+                                                <div className='flex-grow'>
+                                                    <NavBar></NavBar>
+                                                    <Routes>
+                                                    <Route path='/' element={<Home/>}></Route>
+                                                    <Route path='/store' element={<Store />}></Route>
+                                                    <Route path='/store/:id' element={<Store />}></Route>
+                                                    <Route path='/product/:id' element={<Product/>}></Route>
+                                                    <Route path='/shoping-bag' element={<WishList/>}></Route>
+                                                    </Routes>
+                                                </div>    
                                                 <Footer></Footer>
+                                            </WindowWidth.Provider>
                                         </handleSbSflChangeContext.Provider>
                                     </handleSbChangeContext.Provider>
             </setSbContext.Provider>

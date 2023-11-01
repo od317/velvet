@@ -146,7 +146,7 @@ function SearchBar() {
                                      <NavLink onClick={()=>{
                                         setShow(false)
                                         setShow2(false)
-                                     }} key={p.name} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
+                                     }} key={p.dist} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
                                 </>)
                             })}
                         </div>

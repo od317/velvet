@@ -24,7 +24,7 @@ function Home() {
       <SecSlider2></SecSlider2>
       <Sbc></Sbc>
       <div className='phone:px-[2%]'>
-         <Bslide text={'fall picks for you'} items={['t1','t2','t3','t4','t5','t6','t7','t1','t2','t3','t4','t5','t6','t7']} num={5}></Bslide>
+         <Bslide text={'fall picks for you'} items={['t20']} num={5}></Bslide>
       </div>
      </div>
      </>

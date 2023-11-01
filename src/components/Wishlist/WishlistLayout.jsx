@@ -1,5 +1,5 @@
 import React, { useContext,useEffect } from 'react'
-import { SbContext,handleSbSflChangeContext,handleSbChangeContext} from '../../contexts/cartContext'
+import { SbContext,WindowWidth,handleSbSflChangeContext,handleSbChangeContext} from '../../contexts/cartContext'
 import items from '../../Data/items'
 import {Routes,Route,Link, BrowserRouter, useLocation} from 'react-router-dom'
 import Card from '../store/Card'
@@ -10,10 +10,10 @@ import BottomContent from './BottomContent'
 function WishlistLayout() {
   const [curPage,setCurPage] = useState('bag')
   const sb = useContext(SbContext)
+  const windowWidth = useContext(WindowWidth)
   const handleSbSflChange = useContext(handleSbSflChangeContext)
   let items = Array.from(sb)
   let sim = []
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   let shopingBagContent = items.filter(i=>{
       let cur = i.split('-') 
       sim = [...sim,cur[0]]
@@ -27,15 +27,6 @@ function WishlistLayout() {
       return i  
   })
 
-  useEffect(()=>{
-    const handleWindowResize = ()=>{
-        setWindowWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handleWindowResize)
-    return ()=>{
-        window.removeEventListener('resize',handleWindowResize)
-    }
-  })
 
 
 

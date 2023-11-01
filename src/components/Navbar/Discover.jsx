@@ -21,78 +21,7 @@ const links = [
       },
     ]
    },
-   {
-    name:'clothing',
-    bold:false,
-    links:[
-      {
-        name:'coats',
-        dist:'coat'
-      },
-      {
-        name:'jackets',
-        dist:'jacket'
-      },
-      {
-        name:'jeans',
-        dist:'jeans'
-      },
-    ]
-   },
-   {
-    name:'clothing',
-    bold:false,
-    links:[
-      {
-        name:'coats',
-        dist:'coat'
-      },
-      {
-        name:'jackets',
-        dist:'jacket'
-      },
-      {
-        name:'jeans',
-        dist:'jeans'
-      },
-    ]
-   },
-   {
-    name:'clothing',
-    bold:false,
-    links:[
-      {
-        name:'coats',
-        dist:'coat'
-      },
-      {
-        name:'jackets',
-        dist:'jacket'
-      },
-      {
-        name:'jeans',
-        dist:'jeans'
-      },
-    ]
-   },
-   {
-    name:'clothing',
-    bold:false,
-    links:[
-      {
-        name:'coats',
-        dist:'coat'
-      },
-      {
-        name:'jackets',
-        dist:'jacket'
-      },
-      {
-        name:'jeans',
-        dist:'jeans'
-      },
-    ]
-   },
+
 ]
 
 function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
@@ -118,7 +47,7 @@ function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
           {linksv.map(l=>{
             return(
           <div key={l.name}  className=" w-[17%]   flex flex-col">
-               <List handleLinkClick={handleLinkClick} name={l.name} bold={l.bold} links={l.links} ></List>
+               <List key={l.name} handleLinkClick={handleLinkClick} name={l.name} bold={l.bold} links={l.links} ></List>
           </div>
             )
           })}
@@ -140,7 +69,7 @@ const List = ({name,links,bold,handleLinkClick})=>{
             <label className=' font-bold text-[110%] ' htmlFor="">{name}</label>
                 {links.map(l=>{
                   return(<>
-                      <label key={name} onClick={()=>handleLinkClick(l.dist)} className=' inline-block mb-[2%] w-fit cursor-pointer' onMouseLeave={()=> setDropDownImgNum(0)} onMouseOver={()=> setDropDownImgNum(1)} htmlFor="">{l.name}</label>     
+                      <label key={l.name} onClick={()=>handleLinkClick(l.dist)} className=' inline-block mb-[2%] w-fit cursor-pointer'  htmlFor="">{l.name}</label>     
                   </>)
                 })}
 

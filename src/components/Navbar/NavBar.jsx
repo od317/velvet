@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState,useRef,useContext,useEffect } from 'react'
 import { SbContext} from '../../contexts/cartContext'
+import { WindowWidth } from '../../contexts/cartContext'
 import {Routes,Route,NavLink, BrowserRouter, useLocation} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
@@ -21,7 +22,7 @@ function NavBar() {
     const [showMoreMouseOver,setShowMoreMouseOver] = useState(false)
     const [showSide,setShowSide] = useState(false)
     const navRef = useRef(null)
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const windowWidth = useContext(WindowWidth)
     const sideBarLinks = [
         {
             name:'home',
@@ -85,22 +86,20 @@ function NavBar() {
 
     useEffect(()=>{
         const handleWindowResize = ()=>{
-            setWindowWidth(window.innerWidth)
-            if(window.innerWidth >= 450){
-                 document.querySelector('body').style.overflowY='auto'
-                 setShow(false)
-            }
-            if(window.innerWidth < 860){
+            if(windowWidth < 860){
                 setShowMore(false)
+                setShowMoreMouseOver(false)
              }
-            if(windowWidth.innerWidth>=860){
+            if(windowWidth>=860){
                 handleShowSearchPageChange(false)
+                setShowSide(false)
+                document.querySelector('body').style.overflowY='auto'
             }   
         }
         const handlePageClick = ()=>{
               if(showMoreMouseOver)
                  return
-              setShowMore(false)                 
+            //   setShowMore(false)                 
         }
         window.addEventListener('resize', handleWindowResize)
         window.addEventListener('click', handlePageClick) 
@@ -108,7 +107,7 @@ function NavBar() {
             window.removeEventListener('resize',handleWindowResize)
             window.removeEventListener('click', handlePageClick)
         }
-    })
+    },[windowWidth])
 
     return (<>
          
@@ -150,7 +149,8 @@ function NavBar() {
                               </div>
                               <div className='w-[32%]  navmid:flex hidden  items-center justify-center'>
                                             <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+' ml-[5%]'} to={'/'}>Home</NavLink>     
-                                            <button onMouseOver={()=>setShowMoreMouseOver(true)} onMouseLeave={()=>setShowMoreMouseOver(false)} onClick={()=>{setShowMore(p=>!p)}}  className='ml-[8%]'>Discover</button>
+                                            <button onMouseOver={()=>{
+                                                setShowMoreMouseOver(true)}} onMouseLeave={()=>setShowMoreMouseOver(false)} onClick={()=>{setShowMore(p=>!p)}}  className='ml-[8%]'>Discover</button>
                                             <NavLink className={({isActive})=>( isActive ? ' font-semibold':'' )+'  ml-[8%]'}  to={'/store'}>Store</NavLink>
                                             <NavLink to='/shoping-bag' className='text-black ml-[5%] relative flex flex-col items-center justify-center w-[10%]'>
                                             <ion-icon  class="text-[200%]" name="bag-outline"></ion-icon>
@@ -181,60 +181,8 @@ function NavBar() {
            </div>
 
         </div>
-    
-        {
-        /*
-         old design
-         <div ref={navRef} className={`   hidden phone:block bg-p1 text-black  transition-all duration-[500ms]   top-0  z-[10] py-[.7%] `}>
-            <div className=' relative px-[2%] flex flex-row w-full items-center justify-center '>
-                        <div className=' w-[20%] flex justify-end items-center'>
-                            <label htmlFor="" className=' font-bold text-[110%] px-[5%] p-[1%]'>
-                                       NordStorm
-                            </label>
-                        </div>
-                        <div className='w-[60%]'>        
-                                        <nav className='flex flex-row justify-evenly h-full items-center'>
-                                    
-                                            <NavLink to={'/'}>Home</NavLink>
-                                            <NavLink  to={'/store'}>Store</NavLink>
-                                            <NavLink className='  flex items-center justify-center h-full' onMouseLeave={()=>setShowMore(false)} onMouseOver={()=>setShowMore(true)} to={'/store/new'}>New</NavLink>
-                                    
-                                        </nav>
 
-
-                        </div>
-                         <div className='w-[20%] flex flex-row justify-center items-center'>
-                                    <NavLink to='/shoping-bag' className='text-black mr-[5%] relative '>
-                                          <FontAwesomeIcon size="lg" icon={faHeart} />
-                                    </NavLink>
-                                    <NavLink to='/shoping-bag' className='text-black  relative  w-[20%]'>
-                                         <div className='  w-full h-full text-[80%] border-black border-[1px] px-[2%] flex items-center justify-center'>
-                                          {sbList.size}
-                                         </div>
-                                    </NavLink>
-                         </div>
-            </div>
-
-        </div> */}
-
- 
-
-
-
-        {/* <div className=' sticky top-0 bg-light2 text-[150%] z-[20] w-full phone:hidden'>
-                 <div className='flex flex-row justify-between px-[5%] py-[5%] w-full '>
-                       <div onClick={()=>handleSideShowChange(!showSide)}>
-                            <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
-                       </div>
-                       <div className=' w-[20%] flex justify-evenly'>                 
-                          <NavLink className='flex items-center justify-center' to='/shoping-bag'>
-                                <FontAwesomeIcon size="sm" icon={faHeart} />
-                          </NavLink>
-                       </div>
-                 </div>
-        </div> */}
-
-     
+        
         <div className={` ${showSide ? '':' translate-x-[-100%]'} transition-all sc overflow-y-scroll duration-100 navmid:hidden top-0 fixed h-full w-[100%] flex flex-row z-20`}>
             <div className=' w-[60%] bg-p1 text-black  min-h-full flex flex-col'>
                 
@@ -264,6 +212,8 @@ function NavBar() {
     </>
   )
 }
+
+
 
 
 const SideBarLink = ({handleSideShowChange,l=null})=>{
