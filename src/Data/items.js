@@ -12325,7 +12325,124 @@ let items =
         "brand": "Lauren Ralph Lauren",
         "date": 426,
         "frees": true
-    }
+    },
+
+
+
+    {
+        "name": "Kånken Water Resistant Backpack",
+        "price":90,
+        "desc": "Scandinavian design has long been known for offering practical, functional pieces that are beautiful to behold but that are meant to be used.",
+        "type": "bag",
+        "img": [
+            {
+                "color": "#dbb9de",
+                "name": "Orchid",
+                "sm": "https://n.nordstrommedia.com/id/sr3/b85379e3-5c64-457d-a7d2-702964d971ca.jpeg?h=365&w=240&dpr=2",
+                "imgs": [
+                    "https://n.nordstrommedia.com/id/sr3/b85379e3-5c64-457d-a7d2-702964d971ca.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+                    "https://n.nordstrommedia.com/id/sr3/034baafd-cb6d-49f0-a2a0-597ba8d47885.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+                    "https://n.nordstrommedia.com/id/sr3/9e118ca7-46b6-4fd0-b1f9-4711868d41aa.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+                ],
+                "key": 95
+            },
+            {
+                "color": "#fab1b8",
+                "name": "Pink",
+                "sm": "https://n.nordstrommedia.com/id/sr3/cc372d80-a801-4ddf-89ab-c528cb58128c.jpeg?h=365&w=240&dpr=2",
+                "imgs": [
+                    "https://n.nordstrommedia.com/id/sr3/cc372d80-a801-4ddf-89ab-c528cb58128c.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+                    "https://n.nordstrommedia.com/id/sr3/78a06564-1118-4da4-90ed-6528b97fedd7.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&dpr=2"
+                ],
+                "key": 96
+            }
+        ],
+        "size": {},
+        "simList": [
+            "t25",
+            "t80",
+            "t33",
+            "t2",
+            "t78",
+            "t65",
+            "t64",
+            "t43",
+            "t21",
+            "t48",
+            "t73",
+            "t44",
+            "t23",
+            "t60",
+            "t63",
+            "t97",
+            "t74",
+            "t83",
+            "t95",
+            "t5",
+            "t15",
+            "t53",
+            "t50",
+            "t28",
+            "t72",
+            "t18",
+            "t93",
+            "t1"
+        ],
+        "maylike": [
+            "t66",
+            "t46",
+            "t12",
+            "t16",
+            "t73",
+            "t86",
+            "t10",
+            "t17",
+            "t56",
+            "t14",
+            "t79",
+            "t25",
+            "t59",
+            "t78",
+            "t47",
+            "t92",
+            "t37",
+            "t76",
+            "t28",
+            "t91",
+            "t32",
+            "t82",
+            "t8",
+            "t11",
+            "t44",
+            "t5",
+            "t33",
+            "t50",
+            "t31",
+            "t68",
+            "t65",
+            "t22",
+            "t61",
+            "t45",
+            "t80",
+            "t4",
+            "t83",
+            "t35",
+            "t97",
+            "t19",
+            "t96",
+            "t75"
+        ],
+        "featured": 5157,
+        "id": "t95",
+        "rate": {
+            "rate": 6.5,
+            "numrate": 1001
+        },
+        "brand": "Lauren Ralph Lauren",
+        "date": 83,
+        "frees": true
+    },
+
 ]
 
 
@@ -12623,9 +12740,8 @@ function maylikelist(ids){
      return val
 }
 
-// console.log(items)
 
-console.log(types)
+// console.log(types)
 
 
 // console.log(lrl,cgs)

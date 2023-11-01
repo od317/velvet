@@ -21,7 +21,7 @@ function SFilters({handleClick}) {
                     return(
                       <SwiperSlide key={filters.name}>
                           <button onClick={()=>{
-                            handleClick(filters.name)
+                            handleClick(filters.name,true)
                             }} className=' navmid:hidden whitespace-normal relative w-full text-start text-black border-black border-[1px] mb-[6%]  py-[3%] px-[4%]  '>
                               <div className=' text-[105%] cursor-pointer  '>{filters.name}</div>
                           </button>

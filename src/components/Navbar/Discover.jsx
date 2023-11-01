@@ -123,9 +123,12 @@ function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
             )
           })}
 
-          <div className=" w-[17%]   flex flex-col justify-start items-end">
+          <NavLink onClick={()=>{
+                                setShowMore(false)
+                                setShowMoreMouseOver(false)
+          }} to={`/store?sale=sale`} className=" w-[17%]   flex flex-col justify-start items-end">
                    <img className='w-[90%]' src="https://n.nordstrommedia.com/id/1c046571-0eb0-4cdd-aba6-ff4f3b68ba51.jpeg" alt="" />
-          </div>
+          </NavLink>
     </div>
 </div>
   )

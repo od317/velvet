@@ -52,7 +52,9 @@ function Middle({product,color,setSearchParams,setCurHeaderImg}) {
                                 return (
                                     <button onClick={()=>{
                                     setCurHeaderImg(0)
-                                    setSearchParams({color:index})}} key={i.key} style={{backgroundImage:`url(${i.imgs[0]})`,backgroundColor:i.color}} className={` bx pb-[15%] phone:pb-[12%] phone:w-[12%] transition-all imgBack duration-200 w-[15%] rounded-md mr-[2%] ${ color==index ?'border-black':'border-gray3'} relative border-[1px]`}>
+                                    setSearchParams({color:index},{replace:true})
+                                    }
+                                    } key={i.key} style={{backgroundImage:`url(${i.imgs[0]})`,backgroundColor:i.color}} className={` bx pb-[15%] phone:pb-[12%] phone:w-[12%] transition-all imgBack duration-200 w-[15%] rounded-md mr-[2%] ${ color==index ?'border-black':'border-gray3'} relative border-[1px]`}>
                                        {  color!=index ? <></>:(<ion-icon class=' z-10 hidden navmid:inline-block absolute rounded-full p-[2%] translate-x-[50%] translate-y-[-45%] bg-light1 text-white' name="checkmark-outline"></ion-icon>)}
                                     </button>)
                         })}

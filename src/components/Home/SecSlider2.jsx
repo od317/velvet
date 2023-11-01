@@ -12,11 +12,14 @@ function MainSlider() {
         'https://n.nordstrommedia.com/it/9522ad57-48bc-4d87-a899-39c0449dacb3.jpeg?h=400&w=1608',
         'https://n.nordstrommedia.com/it/4460af7b-33ab-40a7-9fe6-c06f8d4f90e2.jpeg?h=400&w=1608'
     ]
-
+    const imgss = [
+      'https://n.nordstrommedia.com/it/1d856b37-f245-4ab2-8186-1c1d1ef1fa5e.jpeg?h=750&w=750',
+      'https://n.nordstrommedia.com/id/0d95b3f1-2dbd-41cd-a504-6417aecc3308.jpeg?h=752&w=752',
+    ]
   return (<>
     <div className='mb-[2%]'>
         <Lg imgs={imgsl}></Lg>
-        <Sm imgs={imgsl}></Sm>
+        <Sm imgs={imgss}></Sm>
     </div>
     </>
   )
@@ -105,9 +108,6 @@ const SwiperCards = ({image})=>{
   <> 
       <div className='flex flex-col'>
           <div className='pb-[100%] imgBack relative flex group' style={{backgroundImage: `url(${image})`}}>
-               <button onClick={() => swiper.slideNext()} className='  absolute top-[45%] left-[2%] z-10 text-[150%] hover:bg-dark2 hover:text-white flex items-center justify-center transition-all duration-200 h-[10%]'><ion-icon name="chevron-back-outline"></ion-icon></button>
-               <button onClick={() => swiper.slideNext()} className='  absolute top-[45%] left-[92%] z-10 text-[150%] hover:bg-dark2 hover:text-white flex items-center justify-center transition-all duration-200 h-[10%]'><ion-icon name="chevron-forward-outline"></ion-icon></button>
-
                <NavLink to="/store" className="w-full h-full  absolute">
 
                </NavLink>

@@ -1,18 +1,16 @@
 import React from 'react'
-
+import './styles/simdiv.css'
+import { NavLink } from 'react-router-dom'
 function SimDiv() {
   return (
-    <div className='flex flex-row   mt-[2%] mb-[5%]'>
-    <div style={{backgroundImage:'url(https://tpc.googlesyndication.com/simgad/15721634154017957185)'}} className=' w-[60%] phone:w-[50%] imgBack flex flex-row'>
+    <NavLink to={'/store?sale=sale'}  className='navmid:flex flex-row my-[4%] bg-no-repeat hidden bgs items-center  justify-end w-full   mt-[2%] mb-[5%]'>
+      <div className=' my-[1.5%]  w-[40%] cursor-pointer text-center phone:py-[2.7%] py-[3%]  text-black flex flex-row items-center justify-center '>
+            <label className='  hidden ms:block cursor-pointer text-[90%]' htmlFor="">Save big on your favorite brands.</label>
+            <label className=' box text-[95%]  cursor-pointer  ml-[1%] borderhover ' htmlFor="">Explore Sale</label>
 
-    </div>
-    <div className='  w-[40%] px-[.7%] phone:px-[0%] phone:w-[50%] text-center phoen:py-[2.7%] py-[3%] bg-dark2 text-white flex flex-col items-center justify-center '>
-          <label className=' font-semibold text-[90%] phone:text-[110%]' htmlFor="">  English Pear & Sweet Pea </label>
-          <label className='hidden ms:block' htmlFor=""> A Brand-New Cologne from Jo Malone London</label>
-          <label className='border-b-[1px] box border-white text-[85%] mt-[1%]' htmlFor="">Shop Now</label>
+      </div>
+   </NavLink>
 
-    </div>
-</div>
   )
 }
 export default SimDiv

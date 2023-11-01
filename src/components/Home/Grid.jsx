@@ -109,8 +109,8 @@ function Grid() {
 const Large = ()=>{
   const imgs = [
     'https://n.nordstrommedia.com/it/d3e253bb-291d-4e9a-854c-f6fd1cb5d486.jpeg?h=516&w=536',
-    'https://n.nordstrommedia.com/it/d3e253bb-291d-4e9a-854c-f6fd1cb5d486.jpeg?h=516&w=536',
-    'https://n.nordstrommedia.com/it/d3e253bb-291d-4e9a-854c-f6fd1cb5d486.jpeg?h=516&w=536',
+    'https://clothedup.com/wp-content/uploads/2023/03/4881dff4-aa66-4942-b452-957be6ce7137-832x1024.jpeg',
+    'https://n.nordstrommedia.com/id/0bf18794-a902-4510-ad8b-b128288d4cf2.jpeg?h=500&w=500',
   ]
   return(<>
   
@@ -118,7 +118,7 @@ const Large = ()=>{
              {imgs.map((i,index)=>{
                 return(<>
                      <div className='flex flex-col'>
-                          <div style={{backgroundImage:`url(${i})`}} className=' relative pb-[100%] imgback w-full bg-black'>
+                          <div style={{backgroundImage:`url(${i})`}} className=' relative pb-[100%] imgback w-full bg-light2'>
                                 <NavLink to='/store' className={'absolute w-full h-full'}></NavLink>
                           </div>
                           <label className='text-dark2 text-[120%] mb-[1%] font-semibold' htmlFor="">The Edit: Fall Accessories to Add to Your Wardrobe Now</label>
@@ -135,7 +135,7 @@ const Large = ()=>{
 const Small = ()=>{
     const imgs = [
     'https://n.nordstrommedia.com/it/d3e253bb-291d-4e9a-854c-f6fd1cb5d486.jpeg?h=516&w=536',
-    'https://n.nordstrommedia.com/it/d3e253bb-291d-4e9a-854c-f6fd1cb5d486.jpeg?h=516&w=536',
+    'https://clothedup.com/wp-content/uploads/2023/03/4881dff4-aa66-4942-b452-957be6ce7137-832x1024.jpeg',
     'https://n.nordstrommedia.com/it/d3e253bb-291d-4e9a-854c-f6fd1cb5d486.jpeg?h=516&w=536',
   ]
   return(<>

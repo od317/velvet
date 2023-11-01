@@ -41,9 +41,9 @@ function WishlistLayout() {
 
   return (
     <>   
-        <div className='   flex flex-col h-full items-center justify-center phone:py-[2%] w-full mt-[5%] bg-p1'>
+        <div className='   flex flex-col h-full items-center justify-center phone:py-[2%] w-full pt-[5%] bg-p1'>
           <div className='flex flex-row w-full mid:w-[50%]  px-[4%]'>
-                <button className={`w-[50%] text-center ${ curPage==='bag' ? 'border-b-[2px]  border-b-black font-semibold phone:bg-gray4':'border-b-[1px] border-gray'} phone:border-[1px] phone:border-gray3 py-[5%] phone:py-[3%] text-[105%]`} onClick={()=>setCurPage('bag')}>
+                <button className={`w-[50%] text-center ${ curPage==='bag' ? 'border-b-[2px]  border-b-black font-semibold phone:bg-gray4':'border-b-[1px] border-gray'}  phone:border-[1px] phone:border-gray3 py-[5%] phone:py-[3%] text-[105%]`} onClick={()=>setCurPage('bag')}>
                   Shoping Bag {shopingBagContent.length?(<>({shopingBagContent.length})</>):''}</button>
                 <button className={`w-[50%] text-center ${ curPage==='sfl' ? 'border-b-[2px]  border-black font-semibold phone:bg-gray4 ':' border-b-[1px] border-gray '} phone:border-[1px] phone:border-gray3  py-[5%] phone:py-[3%] text-[105%]`} onClick={()=> setCurPage('sfl')}>
                   Saved For Later {savedForLaterContent.length?(<>({savedForLaterContent.length})</>):''}
@@ -56,14 +56,16 @@ function WishlistLayout() {
         </div>
         
         <br />
-        {curPage ==='bag'?
-        <ShoppingBag handleSbSflChange={handleSbSflChange} items={shopingBagContent} handlePageChange={setCurPage}>
-        {windowWidth >= 800 &&<BottomContent sim={sim}/>}
-        </ShoppingBag>:
-        <SavedForLater handleSbSflChange={handleSbSflChange} items={savedForLaterContent} handlePageChange={setCurPage}>
-        {windowWidth >= 800 &&<BottomContent sim={sim}/>}
-        </SavedForLater>
-        }
+        <div className=''>
+            {curPage ==='bag'?
+            <ShoppingBag handleSbSflChange={handleSbSflChange} items={shopingBagContent} handlePageChange={setCurPage}>
+            {windowWidth >= 800 &&<BottomContent sim={sim}/>}
+            </ShoppingBag>:
+            <SavedForLater handleSbSflChange={handleSbSflChange} items={savedForLaterContent} handlePageChange={setCurPage}>
+            {windowWidth >= 800 &&<BottomContent sim={sim}/>}
+            </SavedForLater>
+            }
+        </div>
         <div className='px-[1.5%] hidden mid:flex flex-row mid:float-right mid:w-[32%] py-[1.5%]  bg-p1'>
              <div className='mr-[5%]'>
              <svg width="30" height="40" focusable="false" className="nui-icon nui-icon-large-card-nordstrom-visa " role="img" title="Nordstrom Credit Card Icon" viewBox="0 0 30 40"><path d="M25.37.5c.63.005 1.136.52 1.13 1.15v36.7a1.14 1.14 0 0 1-1.13 1.15H1.63A1.14 1.14 0 0 1 .5 38.35V1.65A1.14 1.14 0 0 1 1.63.5z" fill="#898989" stroke="#898989" strokeMiterlimit="10"></path><path d="M19.993 4.507c0-.55.45-1 1-1h1.5c.55 0 1 .45 1 1v2.5c0 .55-.45 1-1 1h-1.5c-.55 0-1-.45-1-1z" fill="#e0e0e0"></path><path d="M19.972 4.507c0-.55.45-1 1-1h1.5c.55 0 1 .45 1 1v2.5c0 .55-.45 1-1 1h-1.5c-.55 0-1-.45-1-1z" fill="none" stroke="#e0e0e0" strokeMiterlimit="10"></path><path d="M19.223 29.906v-15.68h-2.331v9.739L7.735 13.906v15.612h2.324v-9.593l.084.089z" fill="#fff"></path></svg>

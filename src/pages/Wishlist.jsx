@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 function WishList() {
 
   return (
-    <div className='phone:px-[2%] bg-light2'>
+    <div className='phone:px-[2%] pt-[2%]  bg-light2 '> 
         <WishlistLayout/>
     </div>
   )

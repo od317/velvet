@@ -1,0 +1,19 @@
+.bgs{
+    background:url('https://n.nordstrommedia.com/it/bbb1e293-03ee-4753-87c4-ef9661cf7682.jpeg?h=180&w=1600'),#f6f6f6;
+    background-size:94%;
+    background-position: 1% 50%;
+    background-repeat: no-repeat;
+}
+
+.borderhover{
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.borderhover:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid black;
+  }

@@ -7,6 +7,8 @@ import Bttb from '../components/Home/Bttb'
 import SimDiv2 from '../components/Home/SimDiv2'
 import SecSlider2 from '../components/Home/SecSlider2'
 import Bslide from '../components/Sliders/Bslide'
+import Sbc from '../components/Home/Sbc'
+import Sbcsmall from '../components/Home/Sbcsmall'
 function Home() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -15,10 +17,12 @@ function Home() {
      <>
      <div className='bg-p1 mb-[10%]'>
       <Bttb></Bttb>
+      <Sbcsmall></Sbcsmall>
       <Header></Header>
       <Grid></Grid>
       <SimDiv2></SimDiv2>
       <SecSlider2></SecSlider2>
+      <Sbc></Sbc>
       <div className='phone:px-[2%]'>
          <Bslide text={'fall picks for you'} items={['t1','t2','t3','t4','t5','t6','t7','t1','t2','t3','t4','t5','t6','t7']} num={5}></Bslide>
       </div>

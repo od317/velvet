@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect} from 'react'
 import { filters } from '../../Data/FIlters'
 import './styles.css/scrollBar.css'
 import close from '../../assets/close.png'
@@ -8,7 +8,7 @@ import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
 import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
 
-function FIlters({sFilter,handlefilterChange,filter,searchq}) {
+function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq}) {
   const [searchParams, setSearchParams] = useSearchParams() 
   let nfilter = filter.map(i=>{
     return i.val
@@ -53,7 +53,7 @@ function FIlters({sFilter,handlefilterChange,filter,searchq}) {
                  {filters.map((filters,i)=>{
                   return(
                  <div key={filters.name}>
-                   <Filter sFilter={sFilter} handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
+                   <Filter handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
                  </div>)
                  })}
               </div>
@@ -70,8 +70,8 @@ function FIlters({sFilter,handlefilterChange,filter,searchq}) {
 }
 
 
-const Filter = ({sFilter,filters,handlefilterChange,filter})=>{
-  const [show,setShow] = useState(sFilter === filters.name ? true : false)
+const Filter = ({sFilter,handelSfiltersChange,filters,handlefilterChange,filter})=>{
+  const [show,setShow] = useState(false)
   let nfilter = filter.map(i=>{
     return i.val
   })
@@ -82,11 +82,13 @@ const Filter = ({sFilter,filters,handlefilterChange,filter})=>{
   return(<>
                   <div className=' flex flex-col overflow-hidden mb-[2%]'>
                         <div onClick={()=>{
-                          setShow(s=> !s)}} className='border-t-[1px] text-[105%] ms:px-[0%] px-[4%] cursor-pointer border-gray3 py-[8%]'>{filters.name}</div>
-                        <div className={` ${ show ? 'max-h-[30rem]':'max-h-0'} tmaxh duration-[300ms]`}>
+                          setShow(s=>!s)}} className='border-t-[1px] text-[105%] ms:px-[0%] px-[4%] cursor-pointer border-gray3 py-[8%]'>{filters.name} {sFilter}</div>
+                        <div className={` ${ show? 'max-h-[30rem]':'max-h-0'} tmaxh duration-[300ms]`}>
                           {filters.content.map(f=>{
                             return(<div key={f.val}>
-                                <button onClick={()=> handlefilterChange([[filters.name,f.val]])} className='flex w-full  ms:px-[0%] px-[4%] flex-row  items-center my-[.5%] '>
+                                <button onClick={()=>{
+                                  handlefilterChange([[filters.name,f.val]])
+                                  }} className='flex w-full  ms:px-[0%] px-[4%] flex-row  items-center my-[.5%] '>
                                     <div className={` ${filtersSet.has(f.val) ? 'bg-black':''} w-[5%] pb-[5%] mr-[1%] cursor-pointer border-[1px]`}></div>
                                     <label  className='flex  flex-row items-center justify-start cursor-pointer text-start'>{f.name}</label>
                                 </button>
@@ -116,7 +118,7 @@ const FilterTop = ({filters,handlefilterChange,filter})=>{
         return(<>
                                 {filters.content.map((f,i)=>{
                                   if(filtersSet.has(f.val))
-                                  return(<div className={` ${f.name.length>6 ? ' col-span-1 ms:col-span-2':'ms:col-span-1'} w-full  `} key={f.name}>
+                                  return(<div className={` ${f.name.length>6 ? 'col-span-2':'col-span-1'}  w-full  `} key={f.name}>
                                     <div   className=' w-full  mr-[2%] my-[1%] flex text-[100%] items-center cursor-pointer ' key={f.name+Math.random()}>
                                         <div onClick={()=> handlefilterChange([[filters.name,f.val]])} className=' items-center hover:bg-gray2 transition-all duration-200 flex'>
                                           <button  className='w-full  text-start'>{f.name}</button>
