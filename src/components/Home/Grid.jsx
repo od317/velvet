@@ -136,7 +136,7 @@ const Small = ()=>{
     const imgs = [
     'https://n.nordstrommedia.com/it/d3e253bb-291d-4e9a-854c-f6fd1cb5d486.jpeg?h=516&w=536',
     'https://clothedup.com/wp-content/uploads/2023/03/4881dff4-aa66-4942-b452-957be6ce7137-832x1024.jpeg',
-    'https://n.nordstrommedia.com/it/d3e253bb-291d-4e9a-854c-f6fd1cb5d486.jpeg?h=516&w=536',
+    'https://n.nordstrommedia.com/id/0bf18794-a902-4510-ad8b-b128288d4cf2.jpeg?h=500&w=500',
   ]
   return(<>
   <div className='navmid:hidden mt-[10%]'>

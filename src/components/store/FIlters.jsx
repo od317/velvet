@@ -82,13 +82,13 @@ const Filter = ({sFilter,handelSfiltersChange,filters,handlefilterChange,filter}
   return(<>
                   <div className=' flex flex-col overflow-hidden mb-[2%]'>
                         <div onClick={()=>{
-                          setShow(s=>!s)}} className='border-t-[1px] text-[105%] ms:px-[0%] px-[4%] cursor-pointer border-gray3 py-[8%]'>{filters.name} {sFilter}</div>
+                          setShow(s=>!s)}} className='border-t-[1px] text-[105%] navmid:px-[0%] px-[4%] cursor-pointer border-gray3 py-[8%]'>{filters.name} </div>
                         <div className={` ${ show? 'max-h-[30rem]':'max-h-0'} tmaxh duration-[300ms]`}>
                           {filters.content.map(f=>{
                             return(<div key={f.val}>
                                 <button onClick={()=>{
                                   handlefilterChange([[filters.name,f.val]])
-                                  }} className='flex w-full  ms:px-[0%] px-[4%] flex-row  items-center my-[.5%] '>
+                                  }} className='flex w-full  navmid:px-[0%] px-[4%] flex-row  items-center my-[.5%] '>
                                     <div className={` ${filtersSet.has(f.val) ? 'bg-black':''} w-[5%] pb-[5%] mr-[1%] cursor-pointer border-[1px]`}></div>
                                     <label  className='flex  flex-row items-center justify-start cursor-pointer text-start'>{f.name}</label>
                                 </button>
