@@ -14,8 +14,7 @@ function SFilters({handleClick}) {
                     spaceBetween={10}
                     freeMode={true}
                     modules={[FreeMode]}
-                    className=""
-                    
+                    className=""       
                   >
                     {filters.map((filters,i)=>{
                     return(

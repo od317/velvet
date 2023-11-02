@@ -8,7 +8,7 @@ import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
 import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
 
-function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq}) {
+function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq,setSFilter}) {
   const [searchParams, setSearchParams] = useSearchParams() 
   let nfilter = filter.map(i=>{
     return i.val
@@ -53,7 +53,7 @@ function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq
                  {filters.map((filters,i)=>{
                   return(
                  <div key={filters.name}>
-                   <Filter handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
+                   <Filter setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
                  </div>)
                  })}
               </div>
@@ -70,8 +70,8 @@ function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq
 }
 
 
-const Filter = ({sFilter,handelSfiltersChange,filters,handlefilterChange,filter})=>{
-  const [show,setShow] = useState(false)
+const Filter = ({sFilter,handelSfiltersChange,filters,handlefilterChange,filter,setSFilter})=>{
+  const [show,setShow] = useState(sFilter == filters.name)
   let nfilter = filter.map(i=>{
     return i.val
   })
@@ -80,10 +80,13 @@ const Filter = ({sFilter,handelSfiltersChange,filters,handlefilterChange,filter}
     return f
   }))
   return(<>
-                  <div className=' flex flex-col overflow-hidden mb-[2%]'>
+                  <div className=' flex  flex-col overflow-hidden mb-[2%]'>
                         <div onClick={()=>{
-                          setShow(s=>!s)}} className='border-t-[1px] text-[105%] navmid:px-[0%] px-[4%] cursor-pointer border-gray3 py-[8%]'>{filters.name} </div>
-                        <div className={` ${ show? 'max-h-[30rem]':'max-h-0'} tmaxh duration-[300ms]`}>
+                          
+                          setShow(s=> sFilter.length&&sFilter==filters.name ? false:!s)
+                          setSFilter('')
+                          }} className='border-t-[1px] text-[105%] navmid:px-[0%] px-[4%] cursor-pointer border-gray3 py-[8%]'>{filters.name}</div>
+                        <div className={` ${ sFilter == filters.name || show ? 'max-h-[30rem]':'max-h-0'} tmaxh duration-[300ms]`}>
                           {filters.content.map(f=>{
                             return(<div key={f.val}>
                                 <button onClick={()=>{

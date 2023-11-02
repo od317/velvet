@@ -144,12 +144,12 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
   return (<>
 
      <div className={` ${showSfilters ? 'translate-x-0':'translate-x-[100%]' } flex flex-row transition-all duration-200 h-screen fixed top-0 w-[100%]  z-[100] navmid:hidden`}>
-              <div onClick={()=>setShowSfilters(false)} className='w-[35%] h-screen bg-dark2 opacity-50'></div>
+              <div onClick={()=>handelSfiltersChange('',false)} className='w-[35%] h-screen bg-dark2 opacity-50'></div>
               <div className='bg-p1 w-[65%] flex flex-col items-center py-[5%]'>
                <button onClick={()=>handelSfiltersChange('',false)} className='py-[5%] border-black border-[1px] mb-[5%] w-[95%] text-center '>
                   done
                </button>
-              <FIlters handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} filter={filter}  handlefilterChange={handlefilterChange}></FIlters>
+              <FIlters setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} filter={filter}  handlefilterChange={handlefilterChange}></FIlters>
               </div>
       </div>
       
