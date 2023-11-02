@@ -103,7 +103,7 @@ function SmallSearchPage({show,setShow}) {
                       </form>
                       <div  className={`w-full  px-[2%] overflow-hidden flex flex-col h-fit  transition-all duration-[300ms] bg-p1 z-10 border-gray3  border-b-[1px]`}>
                           
-                           { loading && itemsShow.length == 0 && searchq.length>0 && <div className='w-full  flex items-center justify-center py-[5%] text-[200%]'>
+                           { loading && searchq.length>0 && <div className='w-full  flex items-center justify-center py-[5%] text-[200%]'>
                                     <div className=' animate-spin'>
                                         <ion-icon name="bag-outline"></ion-icon>
                                     </div>

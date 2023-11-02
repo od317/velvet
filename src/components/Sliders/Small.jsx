@@ -17,7 +17,6 @@ const Small = ({items,text})=>{
           slidesPerView={2.5}
           spaceBetween={15}
           freeMode={true}
-
           modules={[FreeMode]}
           className="mySwiper "
         >
