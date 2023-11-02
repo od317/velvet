@@ -8,11 +8,7 @@ import { m } from '../../Data/items'
 const Small = ({items,text})=>{
     let sim = []
     items.forEach(s=>{
-        if(m[s].simList)
-        sim = [...items,...m[s].simList]
-      })
-      sim = sim.map(i=>{
-        return m[i]
+        sim.push(m[s])
       })
     return(<>
       <div className=' navmid:hidden py-[3%] mt-[5%] px-[4%] bg-p1'>

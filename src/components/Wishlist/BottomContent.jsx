@@ -14,7 +14,7 @@ function BottomContent({sim}) {
   let c1 = []
 
   sim.map(s=>{
-      c1 = [...c1,...m[s].simList.slice(0,6)]
+      c1 = [...c1,...m[s].simList.slice(0,8)]
   })
   useEffect(()=>{
     const handleWindowResize = ()=>{

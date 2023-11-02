@@ -1,4 +1,5 @@
 import React from 'react'
+import { useContext } from 'react'
 import Small from './Small'
 import Large from './Large'
 function Bslide({items,num,text}) {
