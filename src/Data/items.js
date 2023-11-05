@@ -5134,7 +5134,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#292526",
                 "name": "black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/3cab48af-fc64-4b9e-b721-62ec74013111.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990",
@@ -5143,7 +5143,7 @@ let items =
                 "key": 47
             },
             {
-                "color": "",
+                "color": "#e6d1bc",
                 "name": "Sesame",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/21e45727-b6f0-4d8a-bd82-762511a5f172.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -5248,7 +5248,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#b4b2ae",
                 "name": "Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/7d8f63ca-7215-4ce5-ac7d-d3ab5663bc38.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -5349,7 +5349,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#434042",
                 "name": "Rich Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/f62c43bc-7393-4c66-a9e2-91413a7cece4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990",
@@ -5456,7 +5456,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#dbbc9d",
                 "name": "beige",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/b9b3e0fb-b743-4095-8318-23c741f2c557.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -5466,7 +5466,7 @@ let items =
                 "key": 50
             },
             {
-                "color": "",
+                "color": "#1b1a16",
                 "name": "black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/eeea51bd-e2dd-4994-8f05-5aff4b17ba67.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -5567,7 +5567,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#191c2b",
                 "name": "Navy",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/52f16ccc-d794-484a-bba3-2ca4b128934f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -5577,7 +5577,7 @@ let items =
                 "key": 51
             },
             {
-                "color": "",
+                "color": "#181415",
                 "name": "black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/05ec2c3e-5ef1-41c6-9b82-ec779122fcdc.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -5666,7 +5666,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#282631",
                 "name": "Black-Metallic",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/43160d91-077d-4efc-b763-4e28572c1a0c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -5766,7 +5766,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#695645",
                 "name": "Light Olive",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/8d3d138b-0ace-44a4-b15a-64be21191960.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -5776,17 +5776,16 @@ let items =
                 "key": 53
             },
             {
-                "color": "",
+                "color": "#482f2b",
                 "name": "Chocolate Trot",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/ebe0373c-ba6a-4191-abbf-91cd970d1da4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
                     "https://n.nordstrommedia.com/id/sr3/90b6e081-1aee-4a67-951f-4e254df2cc00.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
-                    ""
                 ],
                 "key": 54
             },
             {
-                "color": "",
+                "color": "#e8c1a4",
                 "name": "Fall Camel",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/6cd8ee63-ebd7-4e62-85e7-41d278ccbbab.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -5885,7 +5884,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#3f5351",
                 "name": "curt green",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/be053d21-df3f-4db4-92d1-cf2cc547e7d4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -5996,7 +5995,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#58535c",
                 "name": "Greige-Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/6f3b3b82-1b31-401b-801b-334d2d8c0cda.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -6101,7 +6100,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#bfb9bb",
                 "name": "Black Multi",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/f72649f1-2918-4671-a650-5bdfe1f80b08.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6189,7 +6188,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#3f262c",
                 "name": "Berry",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/9dddaaae-17f4-4d9f-8532-24e64de28851.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -6291,7 +6290,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#bdc8b8",
                 "name": "Green",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/aa8a03fd-fc8a-44d9-9adf-3e6628318aef.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -6396,7 +6395,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#c2c1bc",
                 "name": "Hthrgry",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/fb193d37-03c1-4a6f-8337-dbde6541fa39.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6503,7 +6502,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#272324",
                 "name": "Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/ebb064ee-b14c-49f8-9803-199177f1742a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6513,7 +6512,7 @@ let items =
                 "key": 60
             },
             {
-                "color": "",
+                "color": "#694e39",
                 "name": "Duffel Green",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/8f020c8c-a166-4125-9f04-e962173368ca.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -6523,7 +6522,7 @@ let items =
                 "key": 61
             },
             {
-                "color": "",
+                "color": "#2e2c3a",
                 "name": "Ultra Navy",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/b6f67e96-74df-4d5a-a514-452ab12e7719.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6637,7 +6636,7 @@ let items =
         "type": "suit",
         "img": [
             {
-                "color": "",
+                "color": "#242633",
                 "name": "Navy",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/e7b82023-737f-4398-b574-0aa282346057.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6647,7 +6646,7 @@ let items =
                 "key": 61
             },
             {
-                "color": "",
+                "color": "#6c514a",
                 "name": "Espresso",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/38c42211-007b-41bc-b811-9bc08c8ca3f0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6657,7 +6656,7 @@ let items =
                 "key": 62
             },
             {
-                "color": "",
+                "color":"#343537",
                 "name": "Noir",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/a4a41a30-3f0d-44b6-a50a-92936da6879c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6774,7 +6773,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#6f6a4d",
                 "name": "Olive Sarma",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/847019fa-79f0-4558-b56d-08f4abc37c22.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -6784,7 +6783,7 @@ let items =
                 "key": 62
             },
             {
-                "color": "",
+                "color": "#242021",
                 "name": "Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/9b235d82-c4c1-44c9-bf0d-db45b3f1a25a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6794,7 +6793,7 @@ let items =
                 "key": 63
             },
             {
-                "color": "",
+                "color": "#332d39",
                 "name": "Navy Night",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/bae8a366-5fe9-4df7-9250-a65c3cfba77c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6884,17 +6883,16 @@ let items =
         "type": "jeans",
         "img": [
             {
-                "color": "",
+                "color": "#404c6a",
                 "name": "Dark Retro",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/dc9d360d-e5c7-4383-86ba-e47f0e35ebd1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
                     "https://n.nordstrommedia.com/id/sr3/079a0ba8-8536-4a0e-8073-129b5c9242df.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
-                    ""
                 ],
                 "key": 63
             },
             {
-                "color": "",
+                "color": "#607695",
                 "name": "Light Retro",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/eaa5fa93-dba6-4e07-8527-54cbd8ecde58.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -6993,7 +6991,7 @@ let items =
         "type": "jeans",
         "img": [
             {
-                "color": "",
+                "color": "#3d485a",
                 "name": "Exhibited",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/c89f1510-d422-4e21-a67a-f06c11f0a701.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7092,7 +7090,7 @@ let items =
         "type": "jeans",
         "img": [
             {
-                "color": "",
+                "color": "#c1d3e0",
                 "name": "Hang Up",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/39728721-8730-4b88-96c0-7f77e790ccd2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7192,7 +7190,7 @@ let items =
         "type": "jeans",
         "img": [
             {
-                "color": "",
+                "color": "#5e83ac",
                 "name": "Fairmont",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/6241f72f-9373-4a0e-b86b-6b7c2a30aac5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7201,7 +7199,7 @@ let items =
                 "key": 66
             },
             {
-                "color": "",
+                "color": "#cad1db",
                 "name": "Westminster",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/3a730dbe-54d5-4923-ab95-91d6ea1cdefe.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7211,7 +7209,7 @@ let items =
                 "key": 67
             },
             {
-                "color": "",
+                "color": "#364a6d",
                 "name": "Northbridge",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/1965f816-493d-4fc4-9b74-627d377d984a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -7326,7 +7324,7 @@ let items =
         "type": "jeans",
         "img": [
             {
-                "color": "",
+                "color": "#313e6a",
                 "name": "dark blue",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/3e44072b-7b70-4486-bd75-74e7f74aca85.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7335,7 +7333,7 @@ let items =
                 "key": 67
             },
             {
-                "color": "",
+                "color": "#5178a7",
                 "name": "light blue",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/05404f6c-0f2d-450e-ad3d-615668fc282c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -7439,7 +7437,7 @@ let items =
         "type": "jeans",
         "img": [
             {
-                "color": "",
+                "color": "#48658f",
                 "name": "Washed Blue",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/1e083a2f-81fc-4105-837e-b1b5539e9c7a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7448,12 +7446,11 @@ let items =
                 "key": 68
             },
             {
-                "color": "",
+                "color": "#262d40",
                 "name": "Dark Blue",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/2d82b2d7-6665-4fa2-bc75-36d4861f112b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
                     "https://n.nordstrommedia.com/id/sr3/7762433c-985b-45b0-872d-ba4e6b07b2f3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
-                    ""
                 ],
                 "key": 69
             }
@@ -7549,7 +7546,7 @@ let items =
         "type": "jeans",
         "img": [
             {
-                "color": "",
+                "color": "#444557",
                 "name": "Lightweight Rinse",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/63974ee8-e186-48bd-b32f-ba51ec482709.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7558,7 +7555,7 @@ let items =
                 "key": 69
             },
             {
-                "color": "",
+                "color": "#2d3b5e",
                 "name": "Reminiscent",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/7a08f2d8-cfd1-4853-af9e-c82a9677db1f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7667,7 +7664,7 @@ let items =
         "type": "jeans",
         "img": [
             {
-                "color": "",
+                "color": "#e2a36d",
                 "name": "Almond",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/c0e05eb9-aabd-497e-8bae-adcb512ada9d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990",
@@ -7676,7 +7673,7 @@ let items =
                 "key": 70
             },
             {
-                "color": "",
+                "color": "#151513",
                 "name": "Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/828c976b-c927-40da-b948-61e2ae08ad11.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990",
@@ -7772,7 +7769,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#8b5d5a",
                 "name": "brown",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/9951d950-3454-4874-befa-d816c49c6306.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7782,7 +7779,7 @@ let items =
                 "key": 71
             },
             {
-                "color": "",
+                "color": "#504855",
                 "name": "navy",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/783b2a41-f1ca-4947-86c1-8a79dc1587ff.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -7792,7 +7789,7 @@ let items =
                 "key": 72
             },
             {
-                "color": "",
+                "color": "#3b3738",
                 "name": "black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/1aa46c92-4575-40c7-9260-262c3b0adb80.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -7895,7 +7892,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#91876b",
                 "name": "Kasey",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/1b909be5-991a-4b9f-a128-cbf008f2b63c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -7905,7 +7902,7 @@ let items =
                 "key": 72
             },
             {
-                "color": "",
+                "color": "#302f35",
                 "name": "Magnet",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/b5fb0d3b-9bbf-45cd-b993-b3f6fdf31fbe.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -7915,7 +7912,7 @@ let items =
                 "key": 73
             },
             {
-                "color": "",
+                "color": "#ea9552",
                 "name": "Maple",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/0475a812-5e47-487e-a642-45fa57518e4e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -8021,7 +8018,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color":"#f7f4ef",
                 "name": "Heather Grey",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/cf41a2a1-208a-4679-bc99-ce103681b81e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -8030,7 +8027,7 @@ let items =
                 "key": 73
             },
             {
-                "color": "",
+                "color":"#232122",
                 "name": "Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/2691d886-696e-471f-aad6-5d1e368dcb2b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -8137,7 +8134,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#181818",
                 "name": "Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/760e85e9-921d-4116-b154-64ba6200d4c8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2",
@@ -8146,7 +8143,7 @@ let items =
                 "key": 74
             },
             {
-                "color": "",
+                "color": "#ece5d3",
                 "name": "Heathered Coffee",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/58d0599c-a70b-41ee-aec9-518c8d2a9399.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990&dpr=2",
@@ -8156,7 +8153,7 @@ let items =
                 "key": 75
             },
             {
-                "color": "",
+                "color": "#df8a02",
                 "name": "Narcissus",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/a1a9f068-a384-4b3b-9963-6c72d1248e1e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990",
@@ -8261,7 +8258,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#c69b70",
                 "name": "Camel",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/0e42fdc8-ce77-4960-832c-6760f95d6e2f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -8271,7 +8268,7 @@ let items =
                 "key": 75
             },
             {
-                "color": "",
+                "color": "#1c1c28",
                 "name": "Sal",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/f54b46a8-dc88-49ba-bb19-8e9e39c25670.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -8377,7 +8374,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#ff73c1",
                 "name": "Very Berry",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/ebe4fea4-d0b1-4ec4-93fb-d115ecff24a1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -8386,7 +8383,7 @@ let items =
                 "key": 76
             },
             {
-                "color": "",
+                "color": "#715f51",
                 "name": "Burnt Olive",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/4218fe8c-962c-4188-b20a-d3db4a04746f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -8495,7 +8492,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#484a74",
                 "name": "Island Navy",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/19b99ac0-22d7-4f53-9d80-7d35964b302b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
@@ -8503,11 +8500,10 @@ let items =
                 "key": 77
             },
             {
-                "color": "",
+                "color": "#dfd5c6",
                 "name": "Natural",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/34a3d954-4fa8-4608-81bf-371b3c2088aa.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
-                    ""
                 ],
                 "key": 78
             }
@@ -8609,7 +8605,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#986305",
                 "name": "Antique Bronze",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/b5faaa27-6735-4cc3-80f9-bec436117c81.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -8618,7 +8614,7 @@ let items =
                 "key": 78
             },
             {
-                "color": "",
+                "color": "#414548",
                 "name": "Sancho Organic Stretch Cotton Utility Jacket",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/6b272ad4-f864-46e5-91ed-22feec931dd6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -8627,7 +8623,7 @@ let items =
                 "key": 79
             },
             {
-                "color": "",
+                "color": "#403926",
                 "name": " Cargo Green",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/d83e5a99-bfa9-4122-bf6e-8acd4d9bc4ed.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=1950&h=2990"
@@ -8724,7 +8720,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#1a2730",
                 "name": "black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/a70d4ee7-db56-4438-8389-958c328f2fb6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
@@ -8732,7 +8728,7 @@ let items =
                 "key": 79
             },
             {
-                "color": "",
+                "color": "#4f5748",
                 "name": "Kombu Green",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/fae9d61f-281b-4bd5-8513-5eae23e7abb5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2"
@@ -8740,7 +8736,7 @@ let items =
                 "key": 80
             },
             {
-                "color": "",
+                "color": "#bb9f87",
                 "name": "Nomad",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/d058f131-ea83-4667-b3a5-3413f456c281.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
@@ -8847,7 +8843,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#212123",
                 "name": "Black",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/efd7368c-c254-4963-9c26-4be468734f75.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -8856,7 +8852,7 @@ let items =
                 "key": 80
             },
             {
-                "color": "",
+                "color": "#3d1f1f",
                 "name": "Zinfandel",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/9771ecba-09b2-48c9-b492-5e8c411e52b9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -8969,7 +8965,7 @@ let items =
         "type": "jacket",
         "img": [
             {
-                "color": "",
+                "color": "#dcc2a9",
                 "name": "Tan Avery Plaid",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/f9eb8df0-5f27-4e15-991a-602311df8a08.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
@@ -8979,7 +8975,7 @@ let items =
                 "key": 81
             },
             {
-                "color": "",
+                "color": "#bdbdbf",
                 "name": "Grey Avery Plaid",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/50628741-e4b9-4078-826a-7ead3bd872b7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2",
@@ -9420,7 +9416,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#0f0f0f",
                 "name": "Black 001",
                 "sm": "https://n.nordstrommedia.com/id/sr3/78c30eeb-de7b-4a27-ad37-080679af73a5.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9431,7 +9427,7 @@ let items =
                 "key": 85
             },
             {
-                "color": "",
+                "color": "#2e1010",
                 "name": "Dark Red",
                 "sm": "https://n.nordstrommedia.com/id/sr3/0a5cda47-23d9-43b0-9a36-a2b19c83d380.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9548,7 +9544,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#f2eadf",
                 "name": "Modern Ivory",
                 "sm": "https://n.nordstrommedia.com/id/sr3/564e2cc9-d12e-4767-9d17-8700f2e195b5.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9559,7 +9555,7 @@ let items =
                 "key": 86
             },
             {
-                "color": "",
+                "color": "#191917",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/42054636-14d4-4e44-83b0-c1b386d82ed0.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9569,7 +9565,7 @@ let items =
                 "key": 87
             },
             {
-                "color": "",
+                "color": "#a67f54",
                 "name": "Caramel",
                 "sm": "https://n.nordstrommedia.com/id/sr3/8a869f06-8ace-4e0c-8efe-604fa0e1e248.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9670,7 +9666,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#2e2c2f",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/1772a05e-aace-496d-bdfa-30bc13b72b34.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9681,7 +9677,7 @@ let items =
                 "key": 87
             },
             {
-                "color": "",
+                "color": "#cebfa8",
                 "name": "Ivory Birch",
                 "sm": "https://n.nordstrommedia.com/id/sr3/b2e427ba-a7cf-4ad6-acbf-1c85ad147a2c.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9691,7 +9687,7 @@ let items =
                 "key": 88
             },
             {
-                "color": "",
+                "color": "#493433",
                 "name": "Burgundy",
                 "sm": "https://n.nordstrommedia.com/id/sr3/fb6ddb48-cc83-40b5-85e8-236ba6880729.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9803,7 +9799,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#1d1c22",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/0cd6cd28-c650-41ac-8941-fdb27acd18a1.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9813,7 +9809,7 @@ let items =
                 "key": 88
             },
             {
-                "color": "",
+                "color": "#613d2d",
                 "name": "Tan",
                 "sm": "https://n.nordstrommedia.com/id/sr3/f56d226c-6b6d-4432-beef-53af1f343b45.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9923,7 +9919,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#1f1f1d",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/1a198f6f-b974-4db4-9d20-7e2c47a2dfad.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -9934,7 +9930,7 @@ let items =
                 "key": 89
             },
             {
-                "color": "",
+                "color": "#b1875f",
                 "name": "Golden Caramel",
                 "sm": "https://n.nordstrommedia.com/id/sr3/ed9a33eb-0fbf-4b4a-9ef4-f730188197fc.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10028,7 +10024,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#181818",
                 "name": "Black Nubuck",
                 "sm": "https://n.nordstrommedia.com/id/sr3/2b6872f8-a273-47c0-bfe9-66215a7dbd86.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10039,7 +10035,7 @@ let items =
                 "key": 90
             },
             {
-                "color": "",
+                "color": "#e9caa8",
                 "name": "Sand Suede",
                 "sm": "https://n.nordstrommedia.com/id/sr3/5dde5421-9f75-4a76-b62a-617e8ef93436.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10166,7 +10162,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#1f1f21",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/1de93843-a4c9-4252-9ebb-79bf8020d57c.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10176,7 +10172,7 @@ let items =
                 "key": 91
             },
             {
-                "color": "",
+                "color": "#bcac9c",
                 "name": "Natural",
                 "sm": "https://n.nordstrommedia.com/id/sr3/e5adcf41-218c-4583-8032-214cf4e39818.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10187,7 +10183,7 @@ let items =
                 "key": 92
             },
             {
-                "color": "",
+                "color": "#422720",
                 "name": "Dark Brown",
                 "sm": "https://n.nordstrommedia.com/id/sr3/6ed76ffd-22b8-4f7d-aae1-98e026f05cd5.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10293,7 +10289,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#10110e",
                 "name": "Black Leather",
                 "sm": "https://n.nordstrommedia.com/id/sr3/e5132708-16d4-4f6b-ac64-1afde5eccf87.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10304,7 +10300,7 @@ let items =
                 "key": 92
             },
             {
-                "color": "",
+                "color": "#686159",
                 "name": "Graphite",
                 "sm": "https://n.nordstrommedia.com/id/sr3/79ef2497-5c44-4f80-854f-5a7547fe3ac6.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10314,7 +10310,7 @@ let items =
                 "key": 93
             },
             {
-                "color": "",
+                "color": "#efe8de",
                 "name": "Putty Leather",
                 "sm": "https://n.nordstrommedia.com/id/sr3/509a6a53-d0e1-4f43-9e98-d9a17ed52f39.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10406,7 +10402,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#312f32",
                 "name": "black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/460694ec-399d-49cb-9696-d5c5c5d054d3.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10417,7 +10413,7 @@ let items =
                 "key": 93
             },
             {
-                "color": "",
+                "color": "#d1b9ad",
                 "name": "Vintage Taupe Pisa",
                 "sm": "https://n.nordstrommedia.com/id/sr3/42d62007-ff4b-4672-bceb-7beab2e099c0.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10513,7 +10509,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#272727",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/c4fe43f7-3221-47db-bfcb-4e400e5561cd.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10524,7 +10520,7 @@ let items =
                 "key": 94
             },
             {
-                "color": "",
+                "color": "#393a2a",
                 "name": "Forest Night",
                 "sm": "https://n.nordstrommedia.com/id/sr3/a660c845-7e74-4201-9788-d2dbbcc73899.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10616,7 +10612,7 @@ let items =
         "type": "boot",
         "img": [
             {
-                "color": "",
+                "color": "#1b1b1b",
                 "name": "black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/4e50d84c-0d60-4bf1-8b9c-0b4be1b18c97.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10627,8 +10623,8 @@ let items =
                 "key": 95
             },
             {
-                "color": "",
-                "name": "",
+                "color": "#73300d",
+                "name": "British Ta",
                 "sm": "https://n.nordstrommedia.com/id/sr3/a45d34b6-d07b-4ec5-802a-8831eccee9d5.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/a45d34b6-d07b-4ec5-802a-8831eccee9d5.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
@@ -10729,7 +10725,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#212123",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/b27db94b-7d34-4af2-8d57-0eab78ff1ffb.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10739,7 +10735,7 @@ let items =
                 "key": 96
             },
             {
-                "color": "",
+                "color": "#212123",
                 "name": "White  ",
                 "sm": "https://n.nordstrommedia.com/id/sr3/2389b779-63ad-4481-99e9-8e45940f3190.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10749,7 +10745,7 @@ let items =
                 "key": 97
             },
             {
-                "color": "",
+                "color": "#94689b",
                 "name": "Fuchsia",
                 "sm": "https://n.nordstrommedia.com/id/sr3/1e3752e9-91bc-460d-8d75-5a5691f98e02.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10844,7 +10840,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#dbd7ce",
                 "name": "Pearl",
                 "sm": "https://n.nordstrommedia.com/id/sr3/c0eee7b4-f35a-4ad3-8276-6ab92d7d9b21.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10854,7 +10850,7 @@ let items =
                 "key": 97
             },
             {
-                "color": "",
+                "color": "#1a1819",
                 "name": "black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/c278c449-39db-4aec-8c96-317d9dddc049.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10864,7 +10860,7 @@ let items =
                 "key": 98
             },
             {
-                "color": "",
+                "color": "#9f9ca3",
                 "name": "Zinc",
                 "sm": "https://n.nordstrommedia.com/id/sr3/49e9deac-e34a-4e18-82c1-528df6ec5dfc.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10958,7 +10954,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#94a6b6",
                 "name": "Ice Water",
                 "sm": "https://n.nordstrommedia.com/id/sr3/181be1a2-5c9d-4c00-ae07-9e2de0426ad2.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10969,7 +10965,7 @@ let items =
                 "key": 98
             },
             {
-                "color": "",
+                "color": "#363437",
                 "name": "Copper",
                 "sm": "https://n.nordstrommedia.com/id/sr3/4f6907a6-f3e4-48ee-b677-25c3854795ee.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -10979,7 +10975,7 @@ let items =
                 "key": 99
             },
             {
-                "color": "",
+                "color": "#2b292a",
                 "name": "black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/31bf0fbc-eec2-41ca-9364-014fc8daa07a.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11072,7 +11068,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#2b292a",
                 "name": "black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/d1c018bd-8b03-49de-87a3-3ce5d5feb8e4.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11083,7 +11079,7 @@ let items =
                 "key": 99
             },
             {
-                "color": "",
+                "color": "#0a1e35",
                 "name": "Blue",
                 "sm": "https://n.nordstrommedia.com/id/sr3/42a1f4ad-1915-428a-b976-08cbf69cd841.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11179,7 +11175,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#cbc4b1",
                 "name": "White",
                 "sm": "https://n.nordstrommedia.com/id/sr3/b5876f34-6f32-4f06-ae68-1a8187dff92e.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11189,7 +11185,7 @@ let items =
                 "key": 100
             },
             {
-                "color": "",
+                "color": "#c7af8b",
                 "name": "Dune White",
                 "sm": "https://n.nordstrommedia.com/id/sr3/dd0e6279-3828-47af-a7cd-d9831fbb38f3.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11279,7 +11275,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#f5f5f5",
                 "name": "Bright White",
                 "sm": "https://n.nordstrommedia.com/id/sr3/32ed84e7-e575-4420-90cf-531d6ff67f36.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11389,8 +11385,8 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
-                "name": "",
+                "color": "#e9e7e8",
+                "name": "Frost",
                 "sm": "https://n.nordstrommedia.com/id/sr3/7ec44938-19a6-4f1d-b3dc-87dba73837f4.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
                     "https://n.nordstrommedia.com/id/sr3/7ec44938-19a6-4f1d-b3dc-87dba73837f4.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
@@ -11400,7 +11396,7 @@ let items =
                 "key": 102
             },
             {
-                "color": "",
+                "color": "#e7d8c5",
                 "name": "Fawn",
                 "sm": "https://n.nordstrommedia.com/id/sr3/9f93e5d2-ab45-47c9-bcb4-83152efc6f79.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11410,7 +11406,7 @@ let items =
                 "key": 103
             },
             {
-                "color": "",
+                "color": "#e4e3de",
                 "name": "Undyed White",
                 "sm": "https://n.nordstrommedia.com/id/sr3/bbb712d6-d3df-4aa0-90f3-7d01ea126cd9.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11516,7 +11512,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#d1c8c2",
                 "name": "White Multi",
                 "sm": "https://n.nordstrommedia.com/id/sr3/d60c0757-3e5f-45b1-a3f3-f107d557d74c.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11527,7 +11523,7 @@ let items =
                 "key": 103
             },
             {
-                "color": "",
+                "color": "#1f977e",
                 "name": "Green",
                 "sm": "https://n.nordstrommedia.com/id/sr3/9b39295f-1c9f-4af2-8233-26ed55a7fcda.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11537,7 +11533,7 @@ let items =
                 "key": 104
             },
             {
-                "color": "",
+                "color": "#2c3c4c",
                 "name": "Blue Stone",
                 "sm": "https://n.nordstrommedia.com/id/sr3/5443b69a-b69c-472f-94fe-5f97230fc0d9.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11630,7 +11626,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#d7d5c9",
                 "name": "Titanium",
                 "sm": "https://n.nordstrommedia.com/id/sr3/b8170949-3f5a-489a-8af4-5bd75c7e7b8c.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11641,7 +11637,7 @@ let items =
                 "key": 104
             },
             {
-                "color": "",
+                "color": "#456490",
                 "name": "Azul ",
                 "sm": "https://n.nordstrommedia.com/id/sr3/2991137d-eb64-47e8-9d4d-0ef3dfcab4ea.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11750,7 +11746,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#b7a1a3",
                 "name": "Mist Purple",
                 "sm": "https://n.nordstrommedia.com/id/sr3/183d43f3-bd01-435c-8cf3-6b4d0beca7ad.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11761,7 +11757,7 @@ let items =
                 "key": 105
             },
             {
-                "color": "",
+                "color": "#2a2a28",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/06f02a37-6fd5-4085-93b2-4e35fe0813db.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11869,7 +11865,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#d6d5da",
                 "name": "white",
                 "sm": "https://n.nordstrommedia.com/id/sr3/a6a2cca5-f180-484b-9308-7f9e0156395d.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -11880,7 +11876,7 @@ let items =
                 "key": 106
             },
             {
-                "color": "",
+                "color": "#242426",
                 "name": "black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/f944d7f3-d569-4c8c-9d52-1195af56cfec.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -12004,7 +12000,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#c77b7d",
                 "name": "Super Pop",
                 "sm": "https://n.nordstrommedia.com/id/sr3/12bbdb14-ac30-47b2-9d89-1d12a6118631.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -12015,7 +12011,7 @@ let items =
                 "key": 107
             },
             {
-                "color": "",
+                "color": "#cc5460",
                 "name": "Clear Pink",
                 "sm": "https://n.nordstrommedia.com/id/sr3/45336266-9dbb-4f23-898d-f7027ca49905.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -12105,7 +12101,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#e6d1d6",
                 "name": "Seashell Pink",
                 "sm": "https://n.nordstrommedia.com/id/sr3/fc095881-42db-49df-bec2-5136bd0e0989.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -12116,7 +12112,7 @@ let items =
                 "key": 108
             },
             {
-                "color": "",
+                "color": "#28282a",
                 "name": "Black",
                 "sm": "https://n.nordstrommedia.com/id/sr3/0aad3605-b6f0-4dd3-9b6d-1b5bd983bb20.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -12213,7 +12209,7 @@ let items =
         "type": "sneakers",
         "img": [
             {
-                "color": "",
+                "color": "#d4d4dc",
                 "name": "White",
                 "sm": "https://n.nordstrommedia.com/id/sr3/d03bfc1a-37b1-4bb8-8917-8e2b462a585d.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
@@ -12224,7 +12220,7 @@ let items =
                 "key": 109
             },
             {
-                "color": "",
+                "color": "#152874",
                 "name": "Racer Blue",
                 "sm": "https://n.nordstrommedia.com/id/sr3/9ebb3244-15c3-4307-b86d-9f0841bc9527.jpeg?h=365&w=240&dpr=2",
                 "imgs": [
