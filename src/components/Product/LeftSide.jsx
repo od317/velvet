@@ -13,14 +13,16 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
   const [allshow,setAllShow] = useState(false)
   useEffect(() => {
       const imgcur = document.querySelector('.imgcur')
+      const imgcur2 = document.querySelector('.imgcur2')
       const windowWidth = window.innerWidth / 2
       const windowHeight = window.innerHeight / 2
-      imgcur.addEventListener("mousemove", (e) => {
+      imgcur2.addEventListener("mousemove", (e) => {
         const mouseX = e.clientX / windowWidth;
         const mouseY = e.clientY / windowHeight;
-        imgcur.style.transform = `scale(2) translate3d(-${mouseX*50}%, -${mouseY*20}%, 0)`
+        imgcur.style.transform = `scale(2) translate3d(-${mouseX*60}%, -${mouseY*15}%, 0)`
+
       })
-      imgcur.addEventListener('mouseleave',(e)=>{
+      imgcur2.addEventListener('mouseleave',(e)=>{
         imgcur.style.transform = `translate3d(-${0}%, -${0}%, 0)`
       })
   },)
@@ -67,7 +69,7 @@ function LeftSide({product,color,curHeaderImg,setCurHeaderImg}) {
         <div className='hidden navmid:grid mr-[2%]  gap-x-[.5%] gap-y-[1%] h-fit grid-cols-2 phone:w-[55%] navmid:w-[55%]'>
                     {  product.img[color].imgs.map((image,index)=>{
                             return(
-                                  <div key={image} className='  overflow-hidden h-fit  relative'>
+                                  <div key={image} className='  overflow-hidden h-fit imgcur2 relative'>
                                       <div  style={{backgroundImage:`url(${image})`}}
                                             className={`   h-fit  imgcur transition-all duration-0 hover:duration-[10ms] bg-gray2 w-full  imgBack  `} key={index}>          
                                             <img className='w-full opacity-0' src={image} alt="" />
