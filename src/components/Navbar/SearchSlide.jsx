@@ -26,8 +26,8 @@ const Small = ({items,text})=>{
           className="mySwiper "
         >
           {sim.map((i,index)=>{
-            return(<div key={index+Math.random()}>
-                  <SwiperSlide key={index+Math.random()}>
+            return(<div key={i.id}>
+                  <SwiperSlide key={i.id}>
                     <Card product={i}></Card>
                   </SwiperSlide>
             </div>)

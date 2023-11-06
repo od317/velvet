@@ -116,15 +116,15 @@ const Large = ()=>{
   
         <div className=' hidden navmid:grid grid-cols-3 gap-x-[1%] mt-[3%] px-[2%]'>
              {imgs.map((i,index)=>{
-                return(<>
-                     <div className='flex flex-col'>
+                return(
+                     <div key={i} className='flex flex-col'>
                           <div style={{backgroundImage:`url(${i})`}} className=' relative pb-[100%] imgback w-full bg-light2'>
                                 <NavLink to='/store' className={'absolute w-full h-full'}></NavLink>
                           </div>
                           <label className='text-dark2 text-[120%] mb-[1%] font-semibold' htmlFor="">The Edit: Fall Accessories to Add to Your Wardrobe Now</label>
                           <NavLink className={'text-[90%] border-b-[1px] w-fit'} to='/store'>Shop Now</NavLink>
                     </div>    
-                </>)
+                )
              })}
         </div>
 
@@ -146,7 +146,7 @@ const Small = ()=>{
             >
             {imgs.map(i=>{
               return(
-              <SwiperSlide key={i+Math.random()}>
+              <SwiperSlide key={i}>
                         <div style={{backgroundImage:`url(${i})`}} className=' relative w-full pb-[100%] imgBack'>
                           <NavLink className='w-full h-full absolute' to={'/store'}></NavLink>
                         </div>

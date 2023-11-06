@@ -130,9 +130,9 @@ function SmallSearchPage({show,setShow}) {
                                     <label className='font-semibold mb-[.5%] text-[110%]' htmlFor="">Popular Searches</label>
                                     {psLinks.map(p=>{
                                         return(<>
-                                            <NavLink onClick={()=>{
+                                            <NavLink key={p.name} onClick={()=>{
                                         setShow(false)
-                                     }} key={p.name} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
+                                     }} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
                                         </>)
                                     })}
                                 </div>

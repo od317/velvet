@@ -131,23 +131,23 @@ function SearchBar() {
                         <div className='flex flex-col w-[50%]'>
                             <label className='font-semibold mb-[.5%] text-[110%]' htmlFor="">Popular Searches</label>
                             {psLinks.map(p=>{
-                                return(<>
+                                return(
                                      <NavLink onClick={()=>{
                                         setShow(false)
                                         setShow2(false)
-                                     }} key={p.name} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
-                                </>)
+                                     }} key={p.dist} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
+                                )
                             })}
                         </div>
                         <div className='flex flex-col w-[50%]'>
                             <label className='font-semibold mb-[.5%] text-[110%]' htmlFor="">suggested</label>
                             {sLinks.map(p=>{
-                                return(<>
+                                return(
                                      <NavLink onClick={()=>{
                                         setShow(false)
                                         setShow2(false)
                                      }} key={p.dist} className={' pl-[1%] w-fit mb-[2%]'} to={`/store?searchq=${p.dist}&page=1&sort=featured`}>{p.name}</NavLink>       
-                                </>)
+                                )
                             })}
                         </div>
                      </div>

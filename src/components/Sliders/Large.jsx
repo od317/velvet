@@ -8,18 +8,19 @@ const Large = ({items,text,num})=>{
     let flexes = []
     let tmp = []
     sim = items.map(i=>{
-        tmp.push(m[i])
-        if(tmp.length === num){
-          flexes.push([...tmp])
-          tmp = []
-        }
+        flexes.push(m[i])
+        // tmp.push(m[i])
+        // if(tmp.length === num){
+        //   flexes.push([...tmp])
+        //   tmp = []
+        // }
         return m[i]
       })
     
-    if(tmp.length){
-      flexes.push([...tmp])
-      tmp = []
-    }
+    // if(tmp.length){
+    //   flexes.push([...tmp])
+    //   tmp = []
+    // }
 
     const [len,setLen] = useState(sim.length-(num-1))
     const [slidePer,setSlidePer] = useState(0)
@@ -39,6 +40,7 @@ const Large = ({items,text,num})=>{
       setSlidePer(s=>s+perc)
     }
     
+
     const slidePrev = ()=>{
       if(len===sim.length-(num-1))
          return
@@ -64,20 +66,14 @@ const Large = ({items,text,num})=>{
                     </div>
                     <div className='w-[94%] overflow-hidden'>
                         <div style={{transform:`translateX(-${slidePer}%)`}} className=' top-0 whitespace-nowrap transition-all  duration-[500ms]'>
-                            {flexes.map((f,i)=>{
-                            return(<>
-                                     
-                                          {f.map((i,index)=>{
-                                            return(
+                            {flexes.map((i,f)=>{
+                            return(
                                             <div key={i.id} style={{width:`${100/num}%`}} className={`  px-[1.5%] top-0 sticky transition-all duration-300 inline-block   text-[100%] `} >
-                                              <Card product={i}></Card>
+                                              <Card key={i.id} product={i}></Card>
                                             </div>
-                                                  )
-                                            })
-                                          }
-                                      </>
+                                  
                                  )
-                                  })}
+                            })}
                         </div>
                     </div>
                     <div className='flex  items-center w-[3%]  justify-center'>

@@ -72,10 +72,6 @@ const links = [
         name:'Backpacks',
         dist:'backpacks'
       },
-      {
-        name:'Lauren Ralph Lauren',
-        dist:'Lauren Ralph Lauren'
-      },
     ]
   }
 ]
@@ -111,9 +107,9 @@ function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
           
           <div className=" w-[17%] flex flex-col">
                {mainLinks.map(l=>{
-                return(<>
-                       <label onClick={()=>handleLinkClick2(l.name)} className='font-semibold mb-[2%] cursor-pointer' htmlFor="">{l.name}</label>
-                </>)
+                return(
+                       <label key={l.name} onClick={()=>handleLinkClick2(l.name)} className='font-semibold mb-[2%] cursor-pointer' htmlFor="">{l.name}</label>
+                )
                })}
           </div>
 
@@ -140,9 +136,9 @@ const List = ({name,links,bold,handleLinkClick})=>{
       
             <label className=' font-bold text-[110%] capitalize ' htmlFor="">{name}</label>
                 {links.map(l=>{
-                  return(<>
+                  return(
                       <label key={l.name} onClick={()=>handleLinkClick(l.dist)} className=' border-b-2 border-b-p1 hover:border-b-black transition-all duration-200 inline-block mb-[2%] w-fit cursor-pointer'  htmlFor="">{l.name}</label>     
-                  </>)
+                  )
                 })}
 
       </>)
