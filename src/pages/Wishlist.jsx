@@ -10,7 +10,7 @@ function WishList() {
     <Helmet>
           <title>NordeStrom wishlist</title>
     </Helmet>
-    <div className='phone:px-[2%] pt-[2%]  bg-light2 '> 
+    <div className='phone:px-[2%] pt-[2%] flex flex-col bg-light2 '> 
         <WishlistLayout/>
     </div>
     </>

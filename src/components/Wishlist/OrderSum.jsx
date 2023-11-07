@@ -3,10 +3,12 @@ import {m} from '../../Data/items'
 
 function OrderSum({items}) {
   let total = 0
+  let tax = 0
   items.forEach(i => {
     let cur = i.split('-')
     total += parseFloat(m[cur[0]].price)
   })
+  tax = parseInt(total*5/100)
   return (
       <>
      {   
@@ -24,12 +26,12 @@ function OrderSum({items}) {
               </div>
               <div className='hidden mid:flex flex-row justify-between items-center mb-[5%]'>
                     <label htmlFor="">Estimated tax</label>
-                    <label htmlFor="">$18.45</label>
+                    <label htmlFor="">${tax}</label>
               </div>
          </div>
          <div className='hidden mid:flex flex-row justify-between items-center text-[128%] my-[5%]'>
                     <label htmlFor="">Estimated total</label>
-                    <label htmlFor="">$198.44</label>
+                    <label htmlFor="">${total+tax}</label>
               </div>
          <button className='bg-black text-white py-[3.5%] font-semibold mt-[5%] mb-[5%]'>Check Out</button>
          <label className='w-full text-center' htmlFor="">International Shipping</label>

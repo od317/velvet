@@ -16,7 +16,7 @@ function Content({items,text}) {
           color:cur[1],
           size:cur[2],
           brand:pro.brand,
-          img:pro.img[cur[1]].imgs[0],
+          img: pro.img[cur[1]].sm ? pro.img[cur[1]].sm : pro.img[cur[1]].imgs[0],
           price:pro.price,
           colorName:pro.img[cur[1]].name,
           p:i,

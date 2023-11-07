@@ -2,7 +2,7 @@ import React from 'react'
 
 function Fotter() {
   return (
-      <div className='w-full  relative  pb-[2%] hidden navmid:block bg-light2 text-black '>
+      <div className='w-full  relative  pb-[2%] hidden navmid:block bg-light2 text-black shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] '>
           
           <div className='  flex flex-row items-start justify-start pt-[3%] px-[2%]'>
                   <div className='flex flex-col w-[20%]'>

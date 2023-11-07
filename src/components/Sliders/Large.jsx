@@ -55,7 +55,7 @@ const Large = ({items,text,num})=>{
     
           <div className=' hidden navmid:flex  flex-col w-full  py-[2%] bg-p1'>
                 
-                {text?(<div className='text-[120%] font-semibold ' htmlFor="">{text}</div>):null}
+                {text?(<div className='text-[120%] font-semibold capitalize' htmlFor="">{text}</div>):null}
 
                 <div className={`flex justify-between  ${text?'mt-[2%]':''}`}>
                     
@@ -69,7 +69,7 @@ const Large = ({items,text,num})=>{
                             {flexes.map((i,f)=>{
                             return(
                                             <div key={i.id} style={{width:`${100/num}%`}} className={`  px-[1.5%] top-0 sticky transition-all duration-300 inline-block   text-[100%] `} >
-                                              <Card key={i.id} product={i}></Card>
+                                              <Card  product={i}></Card>
                                             </div>
                                   
                                  )

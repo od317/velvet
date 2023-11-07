@@ -8,7 +8,7 @@ function ShoppingBag({items,handleSbSflChange,children}) {
 
   return (
     <>
-    <div className='mid:w-[67%] mid:inline-block mid:float-left'>
+    <div className='mid:w-[67%]  mid:inline-block mid:float-left'>
         <div className=' px-[4%] bg-p1 mid:px-[2%] mid:w-full   ph:mb-[2%] '>
           <div className=' py-[5%] mid:py-[1%] mid:pt-[3%] border-b-[1px] border-gray2   flex flex-row'>
                 <div className='w-[10%] mid:w-[5%] '>

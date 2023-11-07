@@ -14,8 +14,9 @@ function BottomContent({sim}) {
   let c1 = []
 
   sim.map(s=>{
-      c1 = [...c1,...m[s].simList.slice(0,8)]
+      c1 = [...c1,...m[s].simList.slice(0,10)]
   })
+  c1 = Array.from(new Set(c1))
   useEffect(()=>{
     const handleWindowResize = ()=>{
         setWindowWidth(window.innerWidth)
@@ -29,13 +30,9 @@ function BottomContent({sim}) {
     <>
       { c1.length>0 &&        
       <div className=' mt-[1%]  w-full mb-[5%]    phone:inline-block'>
-              {windowWidth > 0 && <Small text={'people also viewed'} items={c1} />}
-              {windowWidth > 0 && <Small text={'people also viewed'} items={c1} />}
+              {windowWidth > 0 && <Small text={'you may  also like'} items={c1} />}
               <div className='mb-[1%] bg-p1 px-[4%]'>
-                 {windowWidth >= 0 && <Large text={'people also viewed'} num={4} items={c1} />}
-              </div>
-              <div className='mb-[1%] bg-p1 px-[4%]'>
-                 {windowWidth >= 0 && <Large text={'people also viewed'} num={4} items={c1} />}
+              {windowWidth >= 0 && <Large text={'you may  also like'} num={4} items={c1} />}
               </div>
         </div>
       }
