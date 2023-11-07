@@ -149,7 +149,7 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
                <button onClick={()=>handelSfiltersChange('',false)} className='py-[5%] border-black border-[1px] mb-[5%] w-[95%] text-center '>
                   done
                </button>
-              <FIlters setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} filter={filter}  handlefilterChange={handlefilterChange}></FIlters>
+              <FIlters showSfilters={showSfilters} setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} filter={filter}  handlefilterChange={handlefilterChange}></FIlters>
               </div>
       </div>
       
@@ -167,7 +167,7 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
 
    
          <div className='  hidden navmid:block ms:w-[18%]  ms:pl-[2%] z-[2]  top-[0%] ms:h-fit ms:sticky ms:top-[0%]  '>
-              <FIlters setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} filter={filter} searchq={searchq} handlefilterChange={handlefilterChange} />
+              <FIlters showSfilters={showSfilters} setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} filter={filter} searchq={searchq} handlefilterChange={handlefilterChange} />
          </div>
       
          <div className=' phone:w-[100%] navmid:w-[85%]  z-[1] bg-p1 px-[2%] h-auto '>

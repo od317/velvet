@@ -8,7 +8,7 @@ import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
 import { Routes, Route, useParams, useSearchParams } from 'react-router-dom'
 
-function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq,setSFilter}) {
+function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,showSfilters,setSFilter}) {
   const [searchParams, setSearchParams] = useSearchParams() 
   let nfilter = filter.map(i=>{
     return i.val
@@ -53,7 +53,7 @@ function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq
                  {filters.map((filters,i)=>{
                   return(
                  <div key={filters.name}>
-                   <Filter setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
+                   <Filter showSfilters={showSfilters} setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
                  </div>)
                  })}
               </div>
@@ -70,7 +70,7 @@ function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq
 }
 
 
-const Filter = ({sFilter,handelSfiltersChange,filters,handlefilterChange,filter,setSFilter})=>{
+const Filter = ({sFilter,showSfilters,handelSfiltersChange,filters,handlefilterChange,filter,setSFilter})=>{
   const [show,setShow] = useState(sFilter == filters.name)
   let nfilter = filter.map(i=>{
     return i.val
@@ -79,6 +79,16 @@ const Filter = ({sFilter,handelSfiltersChange,filters,handlefilterChange,filter,
   const filtersSet = new Set(nfilter.map(f=>{
     return f
   }))
+  useEffect(()=>{
+    if(!showSfilters)
+       setShow(false)
+  },[showSfilters])
+
+  useEffect(()=>{
+    if(sFilter == filters.name)
+       setShow(true)
+  },[sFilter])
+
   return(<>
                   <div className=' flex  flex-col overflow-hidden mb-[2%]'>
                         <div onClick={()=>{

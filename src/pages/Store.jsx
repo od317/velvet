@@ -16,7 +16,6 @@ function Store() {
   const searchq = !id ?  searchParams.get('searchq') : null
   const filterP = 
     filters.map(f=>{
-      console.log(searchParams.get(f.name) ? (pa(f.name,searchParams.get(f.name))) : [])
       return{
         name:f.name,
         val: searchParams.get(f.name) ? (pa(f.name,searchParams.get(f.name))) : []
