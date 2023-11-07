@@ -5,15 +5,11 @@ import {Routes,Route,NavLink, BrowserRouter,useNavigate,useLocation} from 'react
 const mainLinks = [
   {
     name:'New Arrivals',
-    dist:''
+    dist:'/store?page=1&sort=featured'
   },
   {
     name:'Womens sale',
-    dist:''
-  },
-  {
-    name:'NordStrom Made',
-    dist:''
+    dist:'/store?page=1&sort=featured&sale=sale'
   },
 ]
 
@@ -91,7 +87,7 @@ function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
     const handleLinkClick2 =(link)=>{
       setShowMore(false)
       setShowMoreMouseOver(false)
-      navigate(`/store?page=1&sort=featured`,{replace:true})
+      navigate(link)
 
     }
 
@@ -108,7 +104,7 @@ function Discover({showMore,setShowMore,setShowMoreMouseOver}) {
           <div className=" w-[17%] flex flex-col">
                {mainLinks.map(l=>{
                 return(
-                       <label key={l.name} onClick={()=>handleLinkClick2(l.name)} className='font-semibold mb-[2%] cursor-pointer' htmlFor="">{l.name}</label>
+                       <label key={l.name} onClick={()=>handleLinkClick2(l.dist)} className='font-semibold  w-fit mb-[2%] cursor-pointer' htmlFor="">{l.name}</label>
                 )
                })}
           </div>
