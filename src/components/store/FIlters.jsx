@@ -43,7 +43,7 @@ function FIlters({sFilter,handelSfiltersChange,handlefilterChange,filter,searchq
               <div className='grid grid-cols-2 ms:pl-[0%] pl-[5%] mb-[2%] w-[100%]'>
                   {filters.map((filters,i)=>{
                               return(
-                              <FilterTop  handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
+                              <FilterTop key={filters.name} handlefilterChange={handlefilterChange} filter={filter} filters={filters} />
                             )
                   })}
               </div>
@@ -121,8 +121,8 @@ const FilterTop = ({filters,handlefilterChange,filter})=>{
         return(<>
                                 {filters.content.map((f,i)=>{
                                   if(filtersSet.has(f.val))
-                                  return(<div className={` ${f.name.length>6 ? 'col-span-2':'col-span-1'}  w-full  `} key={f.name}>
-                                    <div   className=' w-full  mr-[2%] my-[1%] flex text-[100%] items-center cursor-pointer ' key={f.name+Math.random()}>
+                                  return(<div key={f.name} className={` ${f.name.length>6 ? 'col-span-2':'col-span-1'}  w-full  `} >
+                                    <div key={f.name}  className=' w-full  mr-[2%] my-[1%] flex text-[100%] items-center cursor-pointer '>
                                         <div onClick={()=> handlefilterChange([[filters.name,f.val]])} className=' items-center hover:bg-gray2 transition-all duration-200 flex'>
                                           <button  className='w-full  text-start'>{f.name}</button>
                                           <img src={close} className={'inline-block h-[1rem] w-[1rem] translate-y-[10%] '} alt="" />

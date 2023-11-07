@@ -167,7 +167,7 @@ function StoreLayout({id,sortP,filterP,page,searchq}) {
 
    
          <div className='  hidden navmid:block ms:w-[18%]  ms:pl-[2%] z-[2]  top-[0%] ms:h-fit ms:sticky ms:top-[0%]  '>
-              <FIlters handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} filter={filter} searchq={searchq} handlefilterChange={handlefilterChange} />
+              <FIlters setSFilter={setSFilter} handelSfiltersChange={handelSfiltersChange} sFilter={sFilter} filter={filter} searchq={searchq} handlefilterChange={handlefilterChange} />
          </div>
       
          <div className=' phone:w-[100%] navmid:w-[85%]  z-[1] bg-p1 px-[2%] h-auto '>

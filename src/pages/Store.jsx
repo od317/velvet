@@ -16,18 +16,19 @@ function Store() {
   const searchq = !id ?  searchParams.get('searchq') : null
   const filterP = 
     filters.map(f=>{
+      console.log(searchParams.get(f.name) ? (pa(f.name,searchParams.get(f.name))) : [])
       return{
         name:f.name,
         val: searchParams.get(f.name) ? (pa(f.name,searchParams.get(f.name))) : []
       } 
     })
-
     function pa(name,s){
              s = s.split(',')
              let vals = mfilters.get(name)
+             console.log(name,vals)
              s = s.filter(ss=>{
                 for(let v of vals){
-                  if (v.name == ss)
+                  if (v.name == ss || v.val == ss)
                   return true
                 }
                 return false
