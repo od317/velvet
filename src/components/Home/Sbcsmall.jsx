@@ -10,7 +10,7 @@ function Sbcsmall() {
         {
             name:'jackets',
             to:'jacket',
-            img:'https://cdn.media.amplience.net/i/rb/WAW19F4047LP41-001-H/Mack-Leather-Jacket-001?$large$&fmt=auto',
+            img:'https://di2ponv0v5otw.cloudfront.net/posts/2023/10/18/652fe7398bb2e205654151af/m_wp_652fe751a0e6c6e9f62855ef.webp',
         },
         {
             name:'boots',
@@ -20,7 +20,7 @@ function Sbcsmall() {
         {
             name:'coats',
             to:'coat',
-            img:'https://ae01.alicdn.com/kf/Sd2b2819fb33441ee81bbd5ac9055c2aeW.jpg_640x640q90.jpg'
+            img:'https://m.media-amazon.com/images/I/615fhYcbPzL._AC_SX385_.jpg'
         },
         {
             name:'sneakers',

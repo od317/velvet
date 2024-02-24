@@ -71,7 +71,7 @@ const SwiperCardL = ({image})=>{
     useEffect(()=>{
        const s =  setInterval(() => {
              swiper.slideNext()
-       },2500)
+       },3000)
        return()=>{
         clearInterval(s)
        }
@@ -79,7 +79,7 @@ const SwiperCardL = ({image})=>{
     return(
     <>
             <div className='pb-[43%] imgBack relative flex group' style={{backgroundImage: `url(${image})`}}>
-                 <button onClick={() => swiper.slideNext()} className=' opacity-0 group-hover:opacity-100 absolute top-[45%] left-[2%] z-10 text-[150%] hover:bg-dark2 hover:text-white flex items-center justify-center transition-all duration-200 h-[10%]'><ion-icon name="chevron-back-outline"></ion-icon></button>
+                 <button onClick={() => swiper.slidePrev()} className=' opacity-0 group-hover:opacity-100 absolute top-[45%] left-[2%] z-10 text-[150%] hover:bg-dark2 hover:text-white flex items-center justify-center transition-all duration-200 h-[10%]'><ion-icon name="chevron-back-outline"></ion-icon></button>
                  <button onClick={() => swiper.slideNext()} className=' opacity-0 group-hover:opacity-100 absolute top-[45%] left-[96.5%] z-10 text-[150%] hover:bg-dark2 hover:text-white flex items-center justify-center transition-all duration-200 h-[10%]'><ion-icon name="chevron-forward-outline"></ion-icon></button>
                  <div className=' absolute w-[20%] h-[40%] left-[72%]   top-[40%] text-white'>
                     <label className='text-[170%] ' htmlFor="">Fall Escape</label>
@@ -108,7 +108,7 @@ const SwiperCards = ({image})=>{
   <> 
       <div className='flex flex-col'>
           <div className='pb-[100%] imgBack relative flex group' style={{backgroundImage: `url(${image})`}}>
-               <button onClick={() => swiper.slideNext()} className='  absolute top-[45%] left-[2%] z-10 text-[150%] hover:bg-dark2 hover:text-white flex items-center justify-center transition-all duration-200 h-[10%]'><ion-icon name="chevron-back-outline"></ion-icon></button>
+               <button onClick={() => swiper.slidePrev()} className='  absolute top-[45%] left-[2%] z-10 text-[150%] hover:bg-dark2 hover:text-white flex items-center justify-center transition-all duration-200 h-[10%]'><ion-icon name="chevron-back-outline"></ion-icon></button>
                <button onClick={() => swiper.slideNext()} className='  absolute top-[45%] left-[92%] z-10 text-[150%] hover:bg-dark2 hover:text-white flex items-center justify-center transition-all duration-200 h-[10%]'><ion-icon name="chevron-forward-outline"></ion-icon></button>
 
                <NavLink to="/store" className="w-full h-full  absolute">

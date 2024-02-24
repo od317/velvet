@@ -109,13 +109,11 @@ const SwiperCards = ({image})=>{
       <div className='flex flex-col'>
           <div className='pb-[100%] imgBack relative flex group' style={{backgroundImage: `url(${image})`}}>
                <NavLink to="/store" className="w-full h-full  absolute">
-
                </NavLink>
           </div>
           <div className='flex flex-col px-[3%]'>
                     <label className='text-[140%] ' htmlFor="">Fall Escape</label>
                     <p htmlFor="">Get lost in a lush new season with picture-perfect outerwear, cozy knits and more</p>
-                 
           </div>
       </div>
 
